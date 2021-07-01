@@ -3,29 +3,10 @@
     <div>
         <main class="w-full flex-grow p-6">
             <h1 class="text-3xl text-black pb-6">Customers</h1>
-
-            <div class="flex flex-wrap mt-6">
-                <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
-                    <p class="text-xl pb-3 flex items-center">
-                        <i class="fas fa-plus mr-3"></i> Monthly Reports
-                    </p>
-                    <div class="p-6 bg-white">
-                        <canvas id="chartOne" width="400" height="200"></canvas>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
-                    <p class="text-xl pb-3 flex items-center">
-                        <i class="fas fa-check mr-3"></i> Resolved Reports
-                    </p>
-                    <div class="p-6 bg-white">
-                        <canvas id="chartTwo" width="400" height="200"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full mt-12">
+        
+            <div class="w-full mt-2">
                 <p class="text-xl pb-3 flex items-center">
-                    <i class="fas fa-list mr-3"></i> Latest Reports
+                    <i class="fas fa-list mr-3"></i> Customer List
                 </p>
                 <div class="bg-white overflow-auto">
                     <table class="min-w-full bg-white">
@@ -47,18 +28,6 @@
                             <tr class="bg-gray-200">
                                 <td class="w-1/3 text-left py-3 px-4">Emma</td>
                                 <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                            </tr>
-                            <tr>
-                                <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                <td class="w-1/3 text-left py-3 px-4">Brown</td>
                                 <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
                                 <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
                             </tr>

@@ -2414,37 +2414,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2460,73 +2429,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2647,6 +2549,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -12563,42 +12480,10 @@ var staticRenderFns = [
             _vm._v("Customers")
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "flex flex-wrap mt-6" }, [
-            _c("div", { staticClass: "w-full lg:w-1/2 pr-0 lg:pr-2" }, [
-              _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
-                _c("i", { staticClass: "fas fa-plus mr-3" }),
-                _vm._v(" Monthly Reports\r\n                    ")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "p-6 bg-white" }, [
-                _c("canvas", {
-                  attrs: { id: "chartOne", width: "400", height: "200" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0" },
-              [
-                _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
-                  _c("i", { staticClass: "fas fa-check mr-3" }),
-                  _vm._v(" Resolved Reports\r\n                    ")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "p-6 bg-white" }, [
-                  _c("canvas", {
-                    attrs: { id: "chartTwo", width: "400", height: "200" }
-                  })
-                ])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-full mt-12" }, [
+          _c("div", { staticClass: "w-full mt-2" }, [
             _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
               _c("i", { staticClass: "fas fa-list mr-3" }),
-              _vm._v(" Latest Reports\r\n                ")
+              _vm._v(" Customer List\r\n                ")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "bg-white overflow-auto" }, [
@@ -12683,70 +12568,6 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
                       _vm._v("Johnson")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Oliver")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Williams")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", { staticClass: "bg-gray-200" }, [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Isabella")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Brown")
                     ]),
                     _vm._v(" "),
                     _c("td", { staticClass: "text-left py-3 px-4" }, [
@@ -12948,7 +12769,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "w-full lg:w-1/2 pr-0 lg:pr-2" }, [
               _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
                 _c("i", { staticClass: "fas fa-plus mr-3" }),
-                _vm._v(" Monthly Reports\r\n                    ")
+                _vm._v(" Monthly Discounts\r\n                    ")
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "p-6 bg-white" }, [
@@ -12964,7 +12785,7 @@ var staticRenderFns = [
               [
                 _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
                   _c("i", { staticClass: "fas fa-check mr-3" }),
-                  _vm._v(" Resolved Reports\r\n                    ")
+                  _vm._v(" Resolved Discounts\r\n                    ")
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "p-6 bg-white" }, [
@@ -12974,315 +12795,6 @@ var staticRenderFns = [
                 ])
               ]
             )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-full mt-12" }, [
-            _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
-              _c("i", { staticClass: "fas fa-list mr-3" }),
-              _vm._v(" Latest Reports\r\n                ")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "bg-white overflow-auto" }, [
-              _c("table", { staticClass: "min-w-full bg-white" }, [
-                _c("thead", { staticClass: "bg-gray-800 text-white" }, [
-                  _c("tr", [
-                    _c(
-                      "th",
-                      {
-                        staticClass:
-                          "w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm"
-                      },
-                      [_vm._v("Name")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "th",
-                      {
-                        staticClass:
-                          "w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm"
-                      },
-                      [_vm._v("Last name")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "th",
-                      {
-                        staticClass:
-                          "text-left py-3 px-4 uppercase font-semibold text-sm"
-                      },
-                      [_vm._v("Phone")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "th",
-                      {
-                        staticClass:
-                          "text-left py-3 px-4 uppercase font-semibold text-sm"
-                      },
-                      [_vm._v("Email")]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("tbody", { staticClass: "text-gray-700" }, [
-                  _c("tr", [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Lian")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Smith")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", { staticClass: "bg-gray-200" }, [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Emma")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Johnson")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Oliver")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Williams")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", { staticClass: "bg-gray-200" }, [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Isabella")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Brown")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Lian")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Smith")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", { staticClass: "bg-gray-200" }, [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Emma")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Johnson")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Oliver")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Williams")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", { staticClass: "bg-gray-200" }, [
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Isabella")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "w-1/3 text-left py-3 px-4" }, [
-                      _vm._v("Brown")
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "tel:622322662" }
-                        },
-                        [_vm._v("622322662")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-left py-3 px-4" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "hover:text-blue-500",
-                          attrs: { href: "mailto:jonsmith@mail.com" }
-                        },
-                        [_vm._v("jonsmith@mail.com")]
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ])
           ])
         ])
       ])
@@ -13321,9 +12833,7 @@ var staticRenderFns = [
     return _c("div", [
       _c("div", [
         _c("main", { staticClass: "w-full flex-grow p-6" }, [
-          _c("h1", { staticClass: "text-3xl text-black pb-6" }, [
-            _vm._v("Orders")
-          ]),
+          _c("h1", { staticClass: "text-3xl text-black" }, [_vm._v("Orders")]),
           _vm._v(" "),
           _c("div", { staticClass: "w-full mt-2" }, [
             _c("div", { staticClass: "grid grid-cols-4 py-4 max-w-full" }, [
@@ -13331,11 +12841,11 @@ var staticRenderFns = [
                 "button",
                 {
                   staticClass:
-                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2"
+                    "py-3 px-2 bg-black text-white font-bold w-auto sm:w-32 mr-2 text-xs sm:text-lg"
                 },
                 [
                   _vm._v(
-                    "\r\n                        Proceed\r\n                    "
+                    "\r\n                        Done\r\n                    "
                   )
                 ]
               ),
@@ -13344,11 +12854,11 @@ var staticRenderFns = [
                 "button",
                 {
                   staticClass:
-                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2"
+                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2 text-xs sm:text-lg"
                 },
                 [
                   _vm._v(
-                    "\r\n                        Proceed\r\n                    "
+                    "\r\n                        Ready\r\n                    "
                   )
                 ]
               ),
@@ -13357,11 +12867,11 @@ var staticRenderFns = [
                 "button",
                 {
                   staticClass:
-                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2"
+                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2 text-xs sm:text-lg"
                 },
                 [
                   _vm._v(
-                    "\r\n                        Proceed\r\n                    "
+                    "\r\n                        Shipped\r\n                    "
                   )
                 ]
               ),
@@ -13370,11 +12880,11 @@ var staticRenderFns = [
                 "button",
                 {
                   staticClass:
-                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 text-xs sm:text-xl"
+                    "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 text-xs sm:text-lg"
                 },
                 [
                   _vm._v(
-                    "\r\n                        Proceed\r\n                    "
+                    "\r\n                        Pending\r\n                    "
                   )
                 ]
               )
@@ -13382,7 +12892,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
               _c("i", { staticClass: "fas fa-list mr-3" }),
-              _vm._v(" Finished Orders\r\n                ")
+              _vm._v(" Completed Orders\r\n                ")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "bg-white overflow-auto" }, [
@@ -13527,9 +13037,7 @@ var render = function() {
   return _c("div", [
     _c("div", [
       _c("main", { staticClass: "w-full flex-grow p-6" }, [
-        _c("h1", { staticClass: "text-3xl text-black pb-6" }, [
-          _vm._v("Products")
-        ]),
+        _c("h1", { staticClass: "text-3xl text-black" }, [_vm._v("Products")]),
         _vm._v(" "),
         _c(
           "button",
@@ -13697,7 +13205,53 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-full mt-8" }, [
+    return _c("div", { staticClass: "w-full mt-4" }, [
+      _c("div", { staticClass: "grid grid-cols-4 py-4 max-w-full" }, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "py-3 px-2 bg-black text-white font-bold w-auto sm:w-32 mr-2 text-xs sm:text-lg"
+          },
+          [_vm._v("\r\n                        All\r\n                    ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2 text-xs sm:text-lg"
+          },
+          [
+            _vm._v(
+              "\r\n                        Published\r\n                    "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 mr-2 text-xs sm:text-lg"
+          },
+          [_vm._v("\r\n                        Drafts\r\n                    ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "py-3 px-2 bg-blue-500 hover:bg-black text-white font-bold w-auto sm:w-32 text-xs sm:text-lg"
+          },
+          [
+            _vm._v(
+              "\r\n                        Archived\r\n                    "
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
       _c("p", { staticClass: "text-xl pb-3 flex items-center" }, [
         _c("i", { staticClass: "fas fa-list mr-3" }),
         _vm._v(" Added Products Table\r\n                ")
