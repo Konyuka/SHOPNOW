@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::inertia('/', '404');
+Route::inertia('/', 'Landing');
 Route::inertia('/register', 'Register');
 Route::inertia('/login', 'Login');
 Route::inertia('/admin', 'Dashboard');

@@ -2053,9 +2053,740 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {}
-});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+if (document.getElementById('nav-mobile-btn')) {
+  document.getElementById('nav-mobile-btn').addEventListener('click', function () {
+    if (this.classList.contains('close')) {
+      document.getElementById('nav').classList.add('hidden');
+      this.classList.remove('close');
+    } else {
+      document.getElementById('nav').classList.remove('hidden');
+      this.classList.add('close');
+    }
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -3283,6 +4014,30 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Karla:400,700&display=swap);"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.font-family-karla[data-v-097ba13b] { font-family: karla;\n}\n.bg-sidebar[data-v-097ba13b] { background: #3d68ff;\n}\n.cta-btn[data-v-097ba13b] { color: #3d68ff;\n}\n.upgrade-btn[data-v-097ba13b] { background: #1947ee;\n}\n.upgrade-btn[data-v-097ba13b]:hover { background: #0038fd;\n}\n.active-nav-link[data-v-097ba13b] { background: #1947ee;\n}\n.nav-item[data-v-097ba13b]:hover { background: #1947ee;\n}\n.account-link[data-v-097ba13b]:hover { background: #3d68ff;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media(max-width:1520px) {\n.left-svg[data-v-051daefe] {\r\n                display: none;\n}\n}\r\n\r\n        /* small css for the mobile nav close */\n#nav-mobile-btn.close span[data-v-051daefe]:first-child {\r\n            transform: rotate(45deg);\r\n            top: 4px;\r\n            position: relative;\r\n            background: #a0aec0;\n}\n#nav-mobile-btn.close span[data-v-051daefe]:nth-child(2) {\r\n            transform: rotate(-45deg);\r\n            margin-top: 0px;\r\n            background: #a0aec0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9917,6 +10672,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Login.vue?vue&type=style&index=0&id=0004d9e0&scoped=true&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Login.vue?vue&type=style&index=0&id=0004d9e0&scoped=true&lang=css& ***!
@@ -10347,15 +11132,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Landing.vue?vue&type=template&id=051daefe&scoped=true& */ "./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true&");
 /* harmony import */ var _Landing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Landing.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Landing.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& */ "./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
   _Landing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
   _Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -10858,6 +11645,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_style_index_0_id_097ba13b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dashboard.vue?vue&type=style&index=0&id=097ba13b&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Dashboard.vue?vue&type=style&index=0&id=097ba13b&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -11624,9 +12424,3036 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _c("body", { staticClass: "overflow-x-hidden antialiased" }, [
+      _c("div", { staticClass: "flex flex-col h-screen" }, [
+        _c("header", { staticClass: "relative z-50 w-full h-24 shadow-2xl" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0"
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "relative flex items-center inline-block h-5 h-full font-black leading-none",
+                  attrs: { href: "/" }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "w-auto h-6 text-indigo-600 fill-current",
+                      attrs: {
+                        viewBox: "0 0 194 116",
+                        xmlns: "http://www.w3.org/2000/svg"
+                      }
+                    },
+                    [
+                      _c("g", { attrs: { "fill-rule": "evenodd" } }, [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
+                          }
+                        })
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(0)
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between"
+                },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0",
+                      attrs: { href: "#_" }
+                    },
+                    [_vm._v("Login")]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c(
+                    "svg",
+                    {
+                      staticClass:
+                        "absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block",
+                      attrs: {
+                        viewBox: "0 0 818 815",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        "xmlns:xlink": "http://www.w3.org/1999/xlink"
+                      }
+                    },
+                    [
+                      _c(
+                        "defs",
+                        [
+                          _c(
+                            "linearGradient",
+                            {
+                              attrs: {
+                                x1: "0%",
+                                y1: "0%",
+                                x2: "100%",
+                                y2: "100%",
+                                id: "c"
+                              }
+                            },
+                            [
+                              _c("stop", {
+                                attrs: { "stop-color": "#E614F2", offset: "0%" }
+                              }),
+                              _vm._v(" "),
+                              _c("stop", {
+                                attrs: {
+                                  "stop-color": "#FC3832",
+                                  offset: "100%"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "linearGradient",
+                            {
+                              attrs: {
+                                x1: "0%",
+                                y1: "0%",
+                                x2: "100%",
+                                y2: "100%",
+                                id: "f"
+                              }
+                            },
+                            [
+                              _c("stop", {
+                                attrs: { "stop-color": "#657DE9", offset: "0%" }
+                              }),
+                              _vm._v(" "),
+                              _c("stop", {
+                                attrs: {
+                                  "stop-color": "#1C0FD7",
+                                  offset: "100%"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "filter",
+                            {
+                              attrs: {
+                                x: "-4.7%",
+                                y: "-3.3%",
+                                width: "109.3%",
+                                height: "109.3%",
+                                filterUnits: "objectBoundingBox",
+                                id: "a"
+                              }
+                            },
+                            [
+                              _c("feOffset", {
+                                attrs: {
+                                  dy: "8",
+                                  in: "SourceAlpha",
+                                  result: "shadowOffsetOuter1"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("feGaussianBlur", {
+                                attrs: {
+                                  stdDeviation: "8",
+                                  in: "shadowOffsetOuter1",
+                                  result: "shadowBlurOuter1"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("feColorMatrix", {
+                                attrs: {
+                                  values:
+                                    "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0",
+                                  in: "shadowBlurOuter1"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "filter",
+                            {
+                              attrs: {
+                                x: "-4.7%",
+                                y: "-3.3%",
+                                width: "109.3%",
+                                height: "109.3%",
+                                filterUnits: "objectBoundingBox",
+                                id: "d"
+                              }
+                            },
+                            [
+                              _c("feOffset", {
+                                attrs: {
+                                  dy: "8",
+                                  in: "SourceAlpha",
+                                  result: "shadowOffsetOuter1"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("feGaussianBlur", {
+                                attrs: {
+                                  stdDeviation: "8",
+                                  in: "shadowOffsetOuter1",
+                                  result: "shadowBlurOuter1"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("feColorMatrix", {
+                                attrs: {
+                                  values:
+                                    "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0",
+                                  in: "shadowBlurOuter1"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("path", {
+                            attrs: {
+                              d:
+                                "M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z",
+                              id: "b"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("path", {
+                            attrs: {
+                              d:
+                                "M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z",
+                              id: "e"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "g",
+                        {
+                          attrs: {
+                            fill: "none",
+                            "fill-rule": "evenodd",
+                            opacity: ".9"
+                          }
+                        },
+                        [
+                          _c(
+                            "g",
+                            {
+                              attrs: { transform: "rotate(65 416.452 409.167)" }
+                            },
+                            [
+                              _c("use", {
+                                attrs: {
+                                  fill: "#000",
+                                  filter: "url(#a)",
+                                  "xlink:href": "#b"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("use", {
+                                attrs: { fill: "url(#c)", "xlink:href": "#b" }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "g",
+                            {
+                              attrs: { transform: "rotate(29 421.929 414.496)" }
+                            },
+                            [
+                              _c("use", {
+                                attrs: {
+                                  fill: "#000",
+                                  filter: "url(#d)",
+                                  "xlink:href": "#e"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("use", {
+                                attrs: { fill: "url(#f)", "xlink:href": "#e" }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(3)
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("main", { staticClass: "flex-1 overflow-y-auto p-5 z-50   " }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "relative w-full px-8 py-10 md:py-16 lg:py-24 xl:py-40 xl:px-0",
+              attrs: { id: "features" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "container flex flex-col items-center justify-between h-full max-w-6xl mx-auto"
+                },
+                [
+                  _c(
+                    "h2",
+                    {
+                      staticClass:
+                        "my-5 text-base font-bold tracking-tight text-indigo-500 uppercase"
+                    },
+                    [_vm._v("Welcome")]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticClass:
+                                    "absolute w-full h-full text-gray-100 fill-current",
+                                  attrs: {
+                                    viewBox: "0 0 377 340",
+                                    xmlns: "http://www.w3.org/2000/svg"
+                                  }
+                                },
+                                [
+                                  _c("g", [
+                                    _c("g", [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M342.8 3.7c24.7 14 18.1 75 22.1 124s18.6 85.8 8.7 114.2c-9.9 28.4-44.4 48.3-76.4 62.4-32 14.1-61.6 22.4-95.9 28.9-34.3 6.5-73.3 11.1-95.5-6.2-22.2-17.2-27.6-56.5-47.2-96C38.9 191.4 5 151.5.9 108.2-3.1 64.8 22.7 18 61.8 8.7c39.2-9.2 91.7 19 146 16.6 54.2-2.4 110.3-35.6 135-21.6z"
+                                        }
+                                      })
+                                    ])
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "svg",
+                                {
+                                  staticClass: "relative w-20 h-20",
+                                  attrs: {
+                                    viewBox: "0 0 58 58",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "defs",
+                                    [
+                                      _c(
+                                        "linearGradient",
+                                        {
+                                          attrs: {
+                                            x1: "0%",
+                                            y1: "0%",
+                                            x2: "100%",
+                                            y2: "100%",
+                                            id: "linearGradient-1TriangleIcon1"
+                                          }
+                                        },
+                                        [
+                                          _c("stop", {
+                                            attrs: {
+                                              "stop-color": "#9C09DB",
+                                              offset: "0%"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("stop", {
+                                            attrs: {
+                                              "stop-color": "#1C0FD7",
+                                              offset: "100%"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "filter",
+                                        {
+                                          attrs: {
+                                            x: "-14%",
+                                            y: "-10%",
+                                            width: "128%",
+                                            height: "128%",
+                                            filterUnits: "objectBoundingBox",
+                                            id: "filter-3TriangleIcon1"
+                                          }
+                                        },
+                                        [
+                                          _c("feOffset", {
+                                            attrs: {
+                                              dy: "2",
+                                              in: "SourceAlpha",
+                                              result: "shadowOffsetOuter1"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("feGaussianBlur", {
+                                            attrs: {
+                                              stdDeviation: "2",
+                                              in: "shadowOffsetOuter1",
+                                              result: "shadowBlurOuter1"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("feColorMatrix", {
+                                            attrs: {
+                                              values:
+                                                "0 0 0 0 0.141176471 0 0 0 0 0.031372549 0 0 0 0 0.501960784 0 0 0 0.15 0",
+                                              in: "shadowBlurOuter1"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z",
+                                          id: "path-2TriangleIcon1"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "g",
+                                    {
+                                      attrs: {
+                                        id: "Page-1TriangleIcon1",
+                                        stroke: "none",
+                                        "stroke-width": "1",
+                                        fill: "none",
+                                        "fill-rule": "evenodd"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "g",
+                                        {
+                                          attrs: {
+                                            id: "Desktop-HDTriangleIcon1",
+                                            transform: "translate(-291 -1278)"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "g",
+                                            {
+                                              attrs: {
+                                                id: "FeaturesTriangleIcon1",
+                                                transform: "translate(170 915)"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "g",
+                                                {
+                                                  attrs: {
+                                                    id: "Group-9TriangleIcon1",
+                                                    transform:
+                                                      "translate(0 365)"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "g",
+                                                    {
+                                                      attrs: {
+                                                        id:
+                                                          "Group-8TriangleIcon1",
+                                                        transform:
+                                                          "translate(125)"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "g",
+                                                        {
+                                                          attrs: {
+                                                            id:
+                                                              "Rectangle-9TriangleIcon1"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("use", {
+                                                            attrs: {
+                                                              fill: "#000",
+                                                              filter:
+                                                                "url(#filter-3TriangleIcon1)",
+                                                              "xlink:href":
+                                                                "#path-2TriangleIcon1"
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c("use", {
+                                                            attrs: {
+                                                              fill:
+                                                                "url(#linearGradient-1TriangleIcon1)",
+                                                              "xlink:href":
+                                                                "#path-2TriangleIcon1"
+                                                            }
+                                                          })
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "g",
+                                                        {
+                                                          attrs: {
+                                                            id:
+                                                              "playTriangleIcon1",
+                                                            transform:
+                                                              "translate(18 15)",
+                                                            fill: "#FFF",
+                                                            "fill-rule":
+                                                              "nonzero"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("path", {
+                                                            attrs: {
+                                                              d:
+                                                                "M9.432 2.023l8.919 14.879a1.05 1.05 0 01-.384 1.452 1.097 1.097 0 01-.548.146H-.42A1.07 1.07 0 01-1.5 17.44c0-.19.052-.375.15-.538L7.567 2.023a1.092 1.092 0 011.864 0z",
+                                                              id:
+                                                                "TriangleIcon1",
+                                                              transform:
+                                                                "rotate(90 8.5 10)"
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h4",
+                                {
+                                  staticClass: "relative mt-6 text-lg font-bold"
+                                },
+                                [_vm._v("Automated Tools")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "relative mt-2 text-base text-center text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "Automate your workflow with these\n                              top of the\n                              line marketing tools."
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "relative flex mt-2 text-sm font-medium text-indigo-500 underline",
+                                  attrs: { href: "#_" }
+                                },
+                                [
+                                  _vm._v(
+                                    "Learn\n                              More"
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticClass:
+                                    "absolute w-full h-full text-gray-100 fill-current",
+                                  attrs: {
+                                    viewBox: "0 0 358 372",
+                                    xmlns: "http://www.w3.org/2000/svg"
+                                  }
+                                },
+                                [
+                                  _c("g", [
+                                    _c("g", [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M315.7 6.5c30.2 15.1 42.6 61.8 41.5 102.5-1.1 40.6-15.7 75.2-24.3 114.8-8.7 39.7-11.3 84.3-34.3 107.2-23 22.9-66.3 23.9-114.5 30.7-48.2 6.7-101.3 19.1-123.2-4.1-21.8-23.2-12.5-82.1-21.6-130.2C30.2 179.3 2.6 141.9.7 102c-2-39.9 21.7-82.2 57.4-95.6 35.7-13.5 83.3 2.1 131.2 1.7 47.9-.4 96.1-16.8 126.4-1.6z"
+                                        }
+                                      })
+                                    ])
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "svg",
+                                {
+                                  staticClass: "relative w-20 h-20",
+                                  attrs: {
+                                    viewBox: "0 0 58 58",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "defs",
+                                    [
+                                      _c(
+                                        "linearGradient",
+                                        {
+                                          attrs: {
+                                            x1: "0%",
+                                            y1: "0%",
+                                            x2: "100%",
+                                            y2: "100%",
+                                            id: "linearGradient-1Icon2"
+                                          }
+                                        },
+                                        [
+                                          _c("stop", {
+                                            attrs: {
+                                              "stop-color": "#F2C314",
+                                              offset: "0%"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("stop", {
+                                            attrs: {
+                                              "stop-color": "#FC3832",
+                                              offset: "100%"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "filter",
+                                        {
+                                          attrs: {
+                                            x: "-14%",
+                                            y: "-10%",
+                                            width: "128%",
+                                            height: "128%",
+                                            filterUnits: "objectBoundingBox",
+                                            id: "filter-3Icon2"
+                                          }
+                                        },
+                                        [
+                                          _c("feOffset", {
+                                            attrs: {
+                                              dy: "2",
+                                              in: "SourceAlpha",
+                                              result: "shadowOffsetOuter1"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("feGaussianBlur", {
+                                            attrs: {
+                                              stdDeviation: "2",
+                                              in: "shadowOffsetOuter1",
+                                              result: "shadowBlurOuter1"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("feColorMatrix", {
+                                            attrs: {
+                                              values:
+                                                "0 0 0 0 0.501960784 0 0 0 0 0.125490196 0 0 0 0 0 0 0 0 0.15 0",
+                                              in: "shadowBlurOuter1"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z",
+                                          id: "path-2Icon2"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "g",
+                                    {
+                                      attrs: {
+                                        id: "Page-1Icon2",
+                                        stroke: "none",
+                                        "stroke-width": "1",
+                                        fill: "none",
+                                        "fill-rule": "evenodd"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "g",
+                                        {
+                                          attrs: {
+                                            id: "Desktop-HDIcon2",
+                                            transform: "translate(-691 -1278)"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "g",
+                                            {
+                                              attrs: {
+                                                id: "FeaturesIcon2",
+                                                transform: "translate(170 915)"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "g",
+                                                {
+                                                  attrs: {
+                                                    id: "Group-9-CopyIcon2",
+                                                    transform:
+                                                      "translate(400 365)"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "g",
+                                                    {
+                                                      attrs: {
+                                                        id: "Group-8Icon2",
+                                                        transform:
+                                                          "translate(125)"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "g",
+                                                        {
+                                                          attrs: {
+                                                            id:
+                                                              "Rectangle-9Icon2"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("use", {
+                                                            attrs: {
+                                                              fill: "#000",
+                                                              filter:
+                                                                "url(#filter-3Icon2)",
+                                                              "xlink:href":
+                                                                "#path-2Icon2"
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c("use", {
+                                                            attrs: {
+                                                              fill:
+                                                                "url(#linearGradient-1Icon2)",
+                                                              "xlink:href":
+                                                                "#path-2Icon2"
+                                                            }
+                                                          })
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "g",
+                                                        {
+                                                          attrs: {
+                                                            id:
+                                                              "machine-learningIcon2",
+                                                            transform:
+                                                              "translate(14 12)",
+                                                            fill: "#FFF",
+                                                            "fill-rule":
+                                                              "nonzero"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("path", {
+                                                            attrs: {
+                                                              d:
+                                                                "M10.554 21.418v-2.68c-1.1-.204-1.932-1.143-1.932-2.271 0-.468.143-.903.388-1.267l-2.32-1.662L4.367 15.2a2.254 2.254 0 01-.005 2.541l5.28 4.05c.268-.182.577-.311.911-.373zm.892 0c.334.062.643.191.912.373l5.28-4.05a2.254 2.254 0 01-.006-2.54l-2.321-1.663L12.99 15.2c.245.364.388.8.388 1.267 0 1.128-.832 2.067-1.932 2.27v2.681zm1.538.997c.25.365.394.803.394 1.274C13.378 24.965 12.314 26 11 26s-2.378-1.035-2.378-2.311c0-.471.145-.91.394-1.274l-5.28-4.05c-.385.26-.853.413-1.358.413C1.065 18.778 0 17.743 0 16.467c0-1.129.832-2.068 1.932-2.27v-2.393C.832 11.6 0 10.662 0 9.534c0-1.277 1.065-2.312 2.378-2.312.505 0 .973.153 1.358.414l5.28-4.05a2.254 2.254 0 01-.394-1.275C8.622 1.035 9.686 0 11 0s2.378 1.035 2.378 2.311c0 .471-.145.91-.394 1.274l5.28 4.05c.385-.26.853-.413 1.358-.413C20.935 7.222 22 8.257 22 9.533c0 1.129-.832 2.068-1.932 2.27v2.393c1.1.203 1.932 1.142 1.932 2.27 0 1.277-1.065 2.312-2.378 2.312-.505 0-.973-.153-1.358-.414l-5.28 4.05zm-9.243-7.843L5.937 13l-2.196-1.572c-.27.183-.58.314-.917.376v2.392c.336.062.647.193.917.376zm.627-3.772l2.321 1.662L9.01 10.8a2.254 2.254 0 01-.388-1.267c0-1.128.832-2.067 1.932-2.27V4.582a2.403 2.403 0 01-.912-.373l-5.28 4.05a2.254 2.254 0 01.006 2.54zm13.89 3.772c.27-.183.582-.314.918-.376v-2.392a2.403 2.403 0 01-.917-.376L16.063 13l2.196 1.572zm-.62-6.313l-5.28-4.05a2.403 2.403 0 01-.912.373v2.68c1.1.204 1.932 1.143 1.932 2.271 0 .468-.143.903-.388 1.267l2.32 1.662 2.322-1.662a2.254 2.254 0 01.005-2.541zm-8 6.313A2.415 2.415 0 0111 14.156c.507 0 .977.154 1.363.416L14.559 13l-2.196-1.572a2.415 2.415 0 01-1.363.416c-.507 0-.977-.154-1.363-.416L7.441 13l2.196 1.572zM11 10.978c.821 0 1.486-.647 1.486-1.445 0-.797-.665-1.444-1.486-1.444s-1.486.647-1.486 1.444c0 .798.665 1.445 1.486 1.445zm0 6.933c.821 0 1.486-.647 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.486.647-1.486 1.445c0 .797.665 1.444 1.486 1.444zm8.622-6.933c.82 0 1.486-.647 1.486-1.445 0-.797-.665-1.444-1.486-1.444s-1.487.647-1.487 1.444c0 .798.666 1.445 1.487 1.445zm0 6.933c.82 0 1.486-.647 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.487.647-1.487 1.445c0 .797.666 1.444 1.487 1.444zM2.378 10.978c.821 0 1.487-.647 1.487-1.445 0-.797-.666-1.444-1.487-1.444-.82 0-1.486.647-1.486 1.444 0 .798.665 1.445 1.486 1.445zm0 6.933c.821 0 1.487-.647 1.487-1.444 0-.798-.666-1.445-1.487-1.445-.82 0-1.486.647-1.486 1.445 0 .797.665 1.444 1.486 1.444zM11 25.133c.821 0 1.486-.646 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.486.647-1.486 1.445.665 1.444 1.486 1.444zm0-21.377c.821 0 1.486-.647 1.486-1.445S11.821.867 11 .867s-1.486.646-1.486 1.444c0 .798.665 1.445 1.486 1.445z",
+                                                              id: "ShapeIcon2"
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h4",
+                                {
+                                  staticClass: "relative mt-6 text-lg font-bold"
+                                },
+                                [_vm._v("Market Network")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "relative mt-2 text-base text-center text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            The multiple vendors give you a chance to accces the best price range for a product.   \n                          "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "relative flex mt-2 text-sm font-medium text-indigo-500 underline",
+                                  attrs: { href: "#_" }
+                                },
+                                [
+                                  _vm._v(
+                                    "Learn\n                              More"
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "w-full max-w-md p-4 mx-auto mb-16 lg:mb-0 lg:w-1/3"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticClass:
+                                    "absolute w-full h-full text-gray-100 fill-current",
+                                  attrs: {
+                                    viewBox: "0 0 378 410",
+                                    xmlns: "http://www.w3.org/2000/svg"
+                                  }
+                                },
+                                [
+                                  _c("g", [
+                                    _c("g", [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M305.9 14.4c23.8 24.6 16.3 84.9 26.6 135.1 10.4 50.2 38.6 90.3 43.7 137.8 5.1 47.5-12.8 102.4-50.7 117.4-37.9 15.1-95.7-9.8-151.7-12.2-56.1-2.5-110.3 17.6-130-3.4-19.7-20.9-4.7-82.9-11.5-131.2C25.5 209.5-3 174.7 1.2 147c4.2-27.7 41-48.3 75-69.6C110.1 56.1 141 34.1 184 17.5c43.1-16.6 98.1-27.7 121.9-3.1z"
+                                        }
+                                      })
+                                    ])
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "svg",
+                                {
+                                  staticClass: "relative w-20 h-20",
+                                  attrs: {
+                                    viewBox: "0 0 58 58",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "defs",
+                                    [
+                                      _c(
+                                        "linearGradient",
+                                        {
+                                          attrs: {
+                                            x1: "0%",
+                                            y1: "0%",
+                                            x2: "100%",
+                                            y2: "100%",
+                                            id: "linearGradient-1Icon3"
+                                          }
+                                        },
+                                        [
+                                          _c("stop", {
+                                            attrs: {
+                                              "stop-color": "#32FBFC",
+                                              offset: "0%"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("stop", {
+                                            attrs: {
+                                              "stop-color": "#3214F2",
+                                              offset: "100%"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "filter",
+                                        {
+                                          attrs: {
+                                            x: "-14%",
+                                            y: "-10%",
+                                            width: "128%",
+                                            height: "128%",
+                                            filterUnits: "objectBoundingBox",
+                                            id: "filter-3Icon3"
+                                          }
+                                        },
+                                        [
+                                          _c("feOffset", {
+                                            attrs: {
+                                              dy: "2",
+                                              in: "SourceAlpha",
+                                              result: "shadowOffsetOuter1"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("feGaussianBlur", {
+                                            attrs: {
+                                              stdDeviation: "2",
+                                              in: "shadowOffsetOuter1",
+                                              result: "shadowBlurOuter1"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("feColorMatrix", {
+                                            attrs: {
+                                              values:
+                                                "0 0 0 0 0.031372549 0 0 0 0 0.149019608 0 0 0 0 0.658823529 0 0 0 0.15 0",
+                                              in: "shadowBlurOuter1"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z",
+                                          id: "path-2Icon3"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "g",
+                                    {
+                                      attrs: {
+                                        id: "Page-1Icon3",
+                                        stroke: "none",
+                                        "stroke-width": "1",
+                                        fill: "none",
+                                        "fill-rule": "evenodd"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "g",
+                                        {
+                                          attrs: {
+                                            id: "Desktop-HDIcon3",
+                                            transform: "translate(-1091 -1278)"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "g",
+                                            {
+                                              attrs: {
+                                                id: "FeaturesIcon3",
+                                                transform: "translate(170 915)"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "g",
+                                                {
+                                                  attrs: {
+                                                    id: "Group-9-Copy-2Icon3",
+                                                    transform:
+                                                      "translate(800 365)"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "g",
+                                                    {
+                                                      attrs: {
+                                                        id: "Group-8Icon3",
+                                                        transform:
+                                                          "translate(125)"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "g",
+                                                        {
+                                                          attrs: {
+                                                            id:
+                                                              "Rectangle-9Icon3"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("use", {
+                                                            attrs: {
+                                                              fill: "#000",
+                                                              filter:
+                                                                "url(#filter-3Icon3)",
+                                                              "xlink:href":
+                                                                "#path-2Icon3"
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c("use", {
+                                                            attrs: {
+                                                              fill:
+                                                                "url(#linearGradient-1Icon3)",
+                                                              "xlink:href":
+                                                                "#path-2Icon3"
+                                                            }
+                                                          })
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "g",
+                                                        {
+                                                          attrs: {
+                                                            id:
+                                                              "smart-notificationsIcon3",
+                                                            transform:
+                                                              "translate(15 11)",
+                                                            fill: "#FFF",
+                                                            "fill-rule":
+                                                              "nonzero"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("path", {
+                                                            attrs: {
+                                                              d:
+                                                                "M12.519 3.243a6.808 6.808 0 00-.187 1.298h-8.44a2.595 2.595 0 00-2.595 2.594v12.973a2.595 2.595 0 002.595 2.595h12.973a2.595 2.595 0 002.594-2.595v-8.44c.445-.02.88-.084 1.298-.187v8.627A3.892 3.892 0 0116.865 24H3.892A3.892 3.892 0 010 20.108V7.135a3.892 3.892 0 013.892-3.892h8.627zm6.616 6.487a4.865 4.865 0 110-9.73 4.865 4.865 0 010 9.73z",
+                                                              id: "IconIcon3"
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h4",
+                                {
+                                  staticClass: "relative mt-6 text-lg font-bold"
+                                },
+                                [_vm._v("Smart Notifications")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "relative mt-2 text-base text-center text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "Our smart notifications will notify\n                              you when\n                              users convert."
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "relative flex mt-2 text-sm font-medium text-indigo-500 underline",
+                                  attrs: { href: "#_" }
+                                },
+                                [
+                                  _vm._v(
+                                    "Learn\n                              More"
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "relative px-8 py-10 bg-white border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "container flex flex-col items-center h-full max-w-6xl mx-auto",
+                  attrs: { id: "pricing" }
+                },
+                [
+                  _c(
+                    "h2",
+                    {
+                      staticClass:
+                        "my-5 text-base font-medium tracking-tight text-indigo-500 uppercase"
+                    },
+                    [_vm._v("Our Pricing")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    {
+                      staticClass:
+                        "w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0"
+                    },
+                    [
+                      _vm._v(
+                        "\n                  Simple, Transparent Pricing for Everyone"
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "max-w-full mx-auto md:max-w-6xl sm:px-8" },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "relative flex flex-col items-center block sm:flex-row"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "relative z-0 w-11/12 max-w-sm my-8 border border-gray-200 rounded-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-mr-4"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "overflow-hidden text-black bg-white border-t border-gray-100 rounded-lg shadow-sm"
+                                },
+                                [
+                                  _vm._m(5),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-wrap px-6 mt-8" },
+                                    [
+                                      _c("ul", [
+                                        _c(
+                                          "li",
+                                          { staticClass: "flex items-center" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "p-2 text-green-500 rounded-full fill-current "
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "w-6 h-6 align-middle",
+                                                    attrs: {
+                                                      viewBox: "0 0 24 24",
+                                                      fill: "none",
+                                                      stroke: "currentColor",
+                                                      "stroke-width": "2",
+                                                      "stroke-linecap": "round",
+                                                      "stroke-linejoin": "round"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        d:
+                                                          "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("polyline", {
+                                                      attrs: {
+                                                        points:
+                                                          "22 4 12 14.01 9 11.01"
+                                                      }
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "ml-3 text-lg text-gray-700"
+                                              },
+                                              [_vm._v("Awesome Feature")]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "li",
+                                          { staticClass: "flex items-center" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "p-2 text-green-500 rounded-full fill-current "
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "w-6 h-6 align-middle",
+                                                    attrs: {
+                                                      viewBox: "0 0 24 24",
+                                                      fill: "none",
+                                                      stroke: "currentColor",
+                                                      "stroke-width": "2",
+                                                      "stroke-linecap": "round",
+                                                      "stroke-linejoin": "round"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        d:
+                                                          "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("polyline", {
+                                                      attrs: {
+                                                        points:
+                                                          "22 4 12 14.01 9 11.01"
+                                                      }
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "ml-3 text-lg text-gray-700"
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "And Another Cool Feature"
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "li",
+                                          { staticClass: "flex items-center" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "p-2 text-green-500 rounded-full fill-current "
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "w-6 h-6 align-middle",
+                                                    attrs: {
+                                                      viewBox: "0 0 24 24",
+                                                      fill: "none",
+                                                      stroke: "currentColor",
+                                                      "stroke-width": "2",
+                                                      "stroke-linecap": "round",
+                                                      "stroke-linejoin": "round"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        d:
+                                                          "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("polyline", {
+                                                      attrs: {
+                                                        points:
+                                                          "22 4 12 14.01 9 11.01"
+                                                      }
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "ml-3 text-lg text-gray-700"
+                                              },
+                                              [_vm._v("One More Feature")]
+                                            )
+                                          ]
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(6)
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "py-4 text-sm font-semibold leading-none tracking-wide text-center text-white uppercase bg-indigo-500 rounded-t"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                              Most Popular"
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm._m(7),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "flex justify-start pl-12 mt-8 sm:justify-start"
+                                },
+                                [
+                                  _c("ul", [
+                                    _c(
+                                      "li",
+                                      { staticClass: "flex items-center" },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "p-2 text-green-500 rounded-full fill-current"
+                                          },
+                                          [
+                                            _c(
+                                              "svg",
+                                              {
+                                                staticClass:
+                                                  "w-6 h-6 align-middle",
+                                                attrs: {
+                                                  viewBox: "0 0 24 24",
+                                                  fill: "none",
+                                                  stroke: "currentColor",
+                                                  "stroke-width": "2",
+                                                  "stroke-linecap": "round",
+                                                  "stroke-linejoin": "round"
+                                                }
+                                              },
+                                              [
+                                                _c("path", {
+                                                  attrs: {
+                                                    d:
+                                                      "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                  }
+                                                }),
+                                                _vm._v(" "),
+                                                _c("polyline", {
+                                                  attrs: {
+                                                    points:
+                                                      "22 4 12 14.01 9 11.01"
+                                                  }
+                                                })
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass:
+                                              "ml-3 text-lg text-gray-700"
+                                          },
+                                          [_vm._v("Really Cool Features")]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "li",
+                                      { staticClass: "flex items-center" },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "p-2 text-green-500 rounded-full fill-current "
+                                          },
+                                          [
+                                            _c(
+                                              "svg",
+                                              {
+                                                staticClass:
+                                                  "w-6 h-6 align-middle",
+                                                attrs: {
+                                                  viewBox: "0 0 24 24",
+                                                  fill: "none",
+                                                  stroke: "currentColor",
+                                                  "stroke-width": "2",
+                                                  "stroke-linecap": "round",
+                                                  "stroke-linejoin": "round"
+                                                }
+                                              },
+                                              [
+                                                _c("path", {
+                                                  attrs: {
+                                                    d:
+                                                      "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                  }
+                                                }),
+                                                _vm._v(" "),
+                                                _c("polyline", {
+                                                  attrs: {
+                                                    points:
+                                                      "22 4 12 14.01 9 11.01"
+                                                  }
+                                                })
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass:
+                                              "ml-3 text-lg text-gray-700"
+                                          },
+                                          [_vm._v("Another Cool Feature")]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "li",
+                                      { staticClass: "flex items-center" },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "p-2 text-green-500 rounded-full fill-current "
+                                          },
+                                          [
+                                            _c(
+                                              "svg",
+                                              {
+                                                staticClass:
+                                                  "w-6 h-6 align-middle",
+                                                attrs: {
+                                                  viewBox: "0 0 24 24",
+                                                  fill: "none",
+                                                  stroke: "currentColor",
+                                                  "stroke-width": "2",
+                                                  "stroke-linecap": "round",
+                                                  "stroke-linejoin": "round"
+                                                }
+                                              },
+                                              [
+                                                _c("path", {
+                                                  attrs: {
+                                                    d:
+                                                      "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                  }
+                                                }),
+                                                _vm._v(" "),
+                                                _c("polyline", {
+                                                  attrs: {
+                                                    points:
+                                                      "22 4 12 14.01 9 11.01"
+                                                  }
+                                                })
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass:
+                                              "ml-3 text-lg text-gray-700"
+                                          },
+                                          [_vm._v("And One More")]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm._m(8)
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "relative z-0 w-11/12 max-w-sm my-8 rounded-lg shadow-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-ml-4"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "overflow-hidden text-black bg-white rounded-lg shadow-lg shadow-inner"
+                                },
+                                [
+                                  _vm._m(9),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-wrap px-8 mt-8" },
+                                    [
+                                      _c("ul", [
+                                        _c(
+                                          "li",
+                                          { staticClass: "flex items-center" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "p-2 text-green-500 rounded-full fill-current "
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "w-6 h-6 align-middle",
+                                                    attrs: {
+                                                      viewBox: "0 0 24 24",
+                                                      fill: "none",
+                                                      stroke: "currentColor",
+                                                      "stroke-width": "2",
+                                                      "stroke-linecap": "round",
+                                                      "stroke-linejoin": "round"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        d:
+                                                          "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("polyline", {
+                                                      attrs: {
+                                                        points:
+                                                          "22 4 12 14.01 9 11.01"
+                                                      }
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "ml-3 text-lg text-gray-700"
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Totally Tubular Feature"
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "li",
+                                          { staticClass: "flex items-center" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "p-2 text-green-500 rounded-full fill-current "
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "w-6 h-6 align-middle",
+                                                    attrs: {
+                                                      viewBox: "0 0 24 24",
+                                                      fill: "none",
+                                                      stroke: "currentColor",
+                                                      "stroke-width": "2",
+                                                      "stroke-linecap": "round",
+                                                      "stroke-linejoin": "round"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        d:
+                                                          "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("polyline", {
+                                                      attrs: {
+                                                        points:
+                                                          "22 4 12 14.01 9 11.01"
+                                                      }
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "ml-3 text-lg text-gray-700"
+                                              },
+                                              [_vm._v("Super Cool Feature")]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "li",
+                                          { staticClass: "flex items-center" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "p-2 text-green-500 rounded-full fill-current "
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "w-6 h-6 align-middle",
+                                                    attrs: {
+                                                      viewBox: "0 0 24 24",
+                                                      fill: "none",
+                                                      stroke: "currentColor",
+                                                      "stroke-width": "2",
+                                                      "stroke-linecap": "round",
+                                                      "stroke-linejoin": "round"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        d:
+                                                          "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("polyline", {
+                                                      attrs: {
+                                                        points:
+                                                          "22 4 12 14.01 9 11.01"
+                                                      }
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "ml-3 text-lg text-gray-700"
+                                              },
+                                              [_vm._v("And One More")]
+                                            )
+                                          ]
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(10)
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "flex items-center justify-center w-full px-8 py-10 border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0",
+              attrs: { id: "testimonials" }
+            },
+            [
+              _c("div", { staticClass: "max-w-6xl mx-auto" }, [
+                _c("div", { staticClass: "flex-col items-center " }, [
+                  _vm._m(11),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full"
+                    },
+                    [
+                      _c("div", { staticClass: "w-full xl:w-1/2 xl:pr-8" }, [
+                        _c(
+                          "blockquote",
+                          {
+                            staticClass:
+                              "flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease"
+                          },
+                          [
+                            _c("div", { staticClass: "flex flex-col pr-8" }, [
+                              _c("div", { staticClass: "relative pl-12" }, [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "absolute left-0 w-10 h-10 text-indigo-500 fill-current",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 100 125"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "mt-2 text-base text-gray-600"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "I'm loving these templates! Very nice\n                                          features and layouts.\n                                      "
+                                    )
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(12),
+                              _vm._v(" "),
+                              _c("p", {
+                                staticClass:
+                                  "mt-1 text-sm leading-5 text-gray-500 truncate"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass:
+                                "flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0",
+                              attrs: {
+                                src:
+                                  "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "blockquote",
+                          {
+                            staticClass:
+                              "flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 mt-16 mb-16 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease xl:mb-0"
+                          },
+                          [
+                            _c("div", { staticClass: "flex flex-col pr-10" }, [
+                              _c("div", { staticClass: "relative pl-12" }, [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "absolute left-0 w-10 h-10 text-indigo-500 fill-current",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 100 125"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "mt-2 text-base text-gray-600"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Really digging this service. Now I can\n                                          quickly bootstrap any\n                                          project."
+                                    )
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(13),
+                              _vm._v(" "),
+                              _c("p", {
+                                staticClass:
+                                  "mt-1 text-sm leading-5 text-gray-500 truncate"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass:
+                                "flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0",
+                              attrs: {
+                                src:
+                                  "https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "w-full xl:w-1/2 xl:pl-8" }, [
+                        _c(
+                          "blockquote",
+                          {
+                            staticClass:
+                              "flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease"
+                          },
+                          [
+                            _c("div", { staticClass: "flex flex-col pr-10" }, [
+                              _c("div", { staticClass: "relative pl-12" }, [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "absolute left-0 w-10 h-10 text-indigo-500 fill-current",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 100 125"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "mt-2 text-base text-gray-600"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Extremely helpful in every single project we\n                                          have released.\n                                      "
+                                    )
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(14),
+                              _vm._v(" "),
+                              _c("p", {
+                                staticClass:
+                                  "mt-1 text-sm leading-5 text-gray-500 truncate"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass:
+                                "flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0",
+                              attrs: {
+                                src:
+                                  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "blockquote",
+                          {
+                            staticClass:
+                              "flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 mt-16 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease"
+                          },
+                          [
+                            _c("div", { staticClass: "flex flex-col pr-10" }, [
+                              _c("div", { staticClass: "relative pl-12" }, [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "absolute left-0 w-10 h-10 text-indigo-500 fill-current",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 100 125"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "mt-2 text-base text-gray-600"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Finally a quick and easy system I can use\n                                          for any type of\n                                          project."
+                                    )
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(15),
+                              _vm._v(" "),
+                              _c("p", {
+                                staticClass:
+                                  "mt-1 text-sm leading-5 text-gray-500 truncate"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass:
+                                "flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0",
+                              attrs: {
+                                src:
+                                  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "footer",
+            {
+              staticClass:
+                "px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row"
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left"
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "flex justify-start block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start",
+                          attrs: { href: "/" }
+                        },
+                        [
+                          _c(
+                            "span",
+                            { staticClass: "flex items-start sm:items-center" },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticClass:
+                                    "w-auto h-6 text-gray-800 fill-current",
+                                  attrs: {
+                                    viewBox: "0 0 194 116",
+                                    xmlns: "http://www.w3.org/2000/svg"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "g",
+                                    { attrs: { "fill-rule": "evenodd" } },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        { staticClass: "mt-6 mr-4 text-base text-gray-500" },
+                        [
+                          _vm._v(
+                            "Crafting the next-level of user experience and engagement.\n                  "
+                          )
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
+                    },
+                    [
+                      _vm._m(16),
+                      _vm._v(" "),
+                      _vm._m(17),
+                      _vm._v(" "),
+                      _vm._m(18),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "flex flex-col w-full text-gray-700" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0"
+                            },
+                            [_vm._v("Follow Us")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "flex justify-start pl-4 mt-2" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600",
+                                  attrs: {
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    href: "https://devdojo.com"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "w-5 h-5 fill-current",
+                                      attrs: {
+                                        viewBox: "0 0 24 24",
+                                        xmlns: "http://www.w3.org/2000/svg"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600",
+                                  attrs: {
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    href: "https://devdojo.com"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "w-5 h-5 fill-current",
+                                      attrs: {
+                                        viewBox: "0 0 24 24",
+                                        xmlns: "http://www.w3.org/2000/svg"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "flex items-center block text-gray-400 no-underline hover:text-gray-600",
+                                  attrs: {
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    href: "https://devdojo.com"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "w-5 h-5 fill-current",
+                                      attrs: {
+                                        viewBox: "0 0 24 24",
+                                        xmlns: "http://www.w3.org/2000/svg"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pt-4 pt-6 mt-10 text-center text-gray-400 border-t border-gray-100"
+                },
+                [_vm._v("© 2020 Landmark. All rights\n              reserved.")]
+              )
+            ]
+          )
+        ])
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "ml-3 text-xl text-gray-800" }, [
+      _vm._v("Multi Vendor"),
+      _c("span", { staticClass: "text-pink-500" }, [_vm._v(".")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "nav",
+      {
+        staticClass:
+          "absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative",
+        attrs: { id: "nav" }
+      },
+      [
+        _c(
+          "a",
+          {
+            staticClass:
+              "ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
+            attrs: { href: "#" }
+          },
+          [_vm._v("Home")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
+            attrs: { href: "#features" }
+          },
+          [_vm._v("Features")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
+            attrs: { href: "#pricing" }
+          },
+          [_vm._v("Pricing")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "font-bold duration-100 transition-color hover:text-indigo-600",
+            attrs: { href: "#testimonials" }
+          },
+          [_vm._v("Testimonials")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass: "w-full py-2 font-bold text-center text-pink-500",
+                attrs: { href: "#_" }
+              },
+              [_vm._v("Login")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold",
+                attrs: { href: "#_" }
+              },
+              [
+                _c("span", [
+                  _c("i", { staticClass: "fa fa-shopping-cart" }),
+                  _vm._v(" Cart ")
+                ])
+              ]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl",
+        attrs: { href: "#_" }
+      },
+      [
+        _c("span", [
+          _c("i", { staticClass: "fa fa-shopping-cart mr-2" }),
+          _vm._v(" Cart ")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10",
+        attrs: { id: "nav-mobile-btn" }
+      },
+      [
+        _c("span", {
+          staticClass:
+            "block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
+        }),
+        _vm._v(" "),
+        _c("span", {
+          staticClass:
+            "block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h3",
+      {
+        staticClass:
+          "max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl"
+      },
+      [
+        _vm._v("\n                  Multi Vendor "),
+        _c("br"),
+        _vm._v(" E-Commerce System")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6"
+      },
+      [
+        _c(
+          "h3",
+          {
+            staticClass:
+              "p-3 text-lg font-bold tracking-wide text-center uppercase"
+          },
+          [
+            _vm._v("Basic"),
+            _c("span", { staticClass: "ml-2 font-light" }, [_vm._v("Plan")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticClass:
+              "flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900"
+          },
+          [
+            _c("span", { staticClass: "mr-1 -ml-2 text-lg text-gray-700" }, [
+              _vm._v("$")
+            ]),
+            _vm._v("48")
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-sm text-gray-600" }, [
+          _vm._v(
+            "In our basic plan you can take advantage of all these\n                                      features below.\n                                  "
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex items-center block p-8 uppercase" }, [
+      _c(
+        "a",
+        {
+          staticClass:
+            "block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600",
+          attrs: { href: "#_" }
+        },
+        [_vm._v("Select\n                                      This Plan")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6"
+      },
+      [
+        _c(
+          "h3",
+          {
+            staticClass:
+              "p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase"
+          },
+          [
+            _vm._v("Pro"),
+            _c("span", { staticClass: "ml-2 font-light" }, [_vm._v("Plan")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticClass:
+              "flex items-center justify-center pb-6 text-5xl font-bold text-center text-gray-900"
+          },
+          [
+            _c("span", { staticClass: "mr-1 -ml-2 text-lg text-gray-700" }, [
+              _vm._v("$")
+            ]),
+            _vm._v("98")
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-sm text-gray-600" }, [
+          _vm._v(
+            "Our most popular package is the Pro Plan which gives you\n                                  access to the\n                                  following:"
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex items-center block p-8 uppercase" }, [
+      _c(
+        "a",
+        {
+          staticClass:
+            "block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-indigo-600",
+          attrs: { href: "#_" }
+        },
+        [_vm._v("Select\n                                  This Plan")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-8"
+      },
+      [
+        _c(
+          "h3",
+          {
+            staticClass:
+              "p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase"
+          },
+          [
+            _vm._v("Premium"),
+            _c("span", { staticClass: "ml-2 font-light" }, [_vm._v("Plan")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticClass:
+              "flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900"
+          },
+          [
+            _c("span", { staticClass: "mr-1 -ml-2 text-lg text-gray-700" }, [
+              _vm._v("$")
+            ]),
+            _vm._v("78")
+          ]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "pl-2 text-sm text-gray-600" }, [
+          _vm._v(
+            "With our premium plan you can take advantage of\n                                      all the following\n                                      features:"
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex items-center block p-8 uppercase" }, [
+      _c(
+        "a",
+        {
+          staticClass:
+            "block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600",
+          attrs: { href: "#_" }
+        },
+        [_vm._v("Select\n                                      This Plan")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center"
+      },
+      [
+        _c(
+          "p",
+          {
+            staticClass:
+              "my-5 text-base font-medium tracking-tight text-indigo-500 uppercase"
+          },
+          [
+            _vm._v(
+              "Our customers love\n                          our product\n                      "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "h2",
+          {
+            staticClass:
+              "text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
+          },
+          [_vm._v("\n                          Testimonials")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "my-6 text-xl font-medium text-gray-500" }, [
+          _vm._v(
+            "Don't just take our word for it, read from our\n                          extensive\n                          list of case studies and customer testimonials."
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h3",
+      {
+        staticClass:
+          "pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate"
+      },
+      [
+        _vm._v("Sandra\n                                      Walton "),
+        _c(
+          "span",
+          { staticClass: "mt-1 text-sm leading-5 text-gray-500 truncate" },
+          [
+            _vm._v(
+              "- CEO\n                                          SomeCompany"
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h3",
+      {
+        staticClass:
+          "pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate"
+      },
+      [
+        _vm._v("Kenny\n                                      Jones "),
+        _c(
+          "span",
+          { staticClass: "mt-1 text-sm leading-5 text-gray-500 truncate" },
+          [
+            _vm._v(
+              "- CEO\n                                          SomeCompany"
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h3",
+      {
+        staticClass:
+          "pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate"
+      },
+      [
+        _vm._v("Mike Smith\n                                      "),
+        _c(
+          "span",
+          { staticClass: "mt-1 text-sm leading-5 text-gray-500 truncate" },
+          [_vm._v("- CEO SomeCompany")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h3",
+      {
+        staticClass:
+          "pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate"
+      },
+      [
+        _vm._v("Molly\n                                      Sanchez "),
+        _c(
+          "span",
+          { staticClass: "mt-1 text-sm leading-5 text-gray-500 truncate" },
+          [
+            _vm._v(
+              "- CEO\n                                          SomeCompany"
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      {
+        staticClass:
+          "flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none"
+      },
+      [
+        _c(
+          "li",
+          {
+            staticClass:
+              "inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0"
+          },
+          [_vm._v("\n                          Product")]
+        ),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "#_" }
+            },
+            [_vm._v("Features")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "#_" }
+            },
+            [_vm._v("Integrations")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "#_" }
+            },
+            [_vm._v("Pricing")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "#_" }
+            },
+            [_vm._v("FAQ")]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      {
+        staticClass:
+          "flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none"
+      },
+      [
+        _c(
+          "li",
+          {
+            staticClass:
+              "inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0"
+          },
+          [_vm._v("\n                          Company")]
+        ),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "#_" }
+            },
+            [_vm._v("Privacy")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "#_" }
+            },
+            [
+              _vm._v(
+                "Terms\n                              of\n                              Service"
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      {
+        staticClass:
+          "flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none"
+      },
+      [
+        _c(
+          "li",
+          {
+            staticClass:
+              "inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0"
+          },
+          [
+            _vm._v(
+              "\n                          TailwindCSS\n                      "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "https://devdojo.com/tailwindcss/components" }
+            },
+            [_vm._v("Tailwind\n                              Components")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "https://devdojo.com/tailwindcss/templates" }
+            },
+            [_vm._v("Tailwind\n                              Templates")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              staticClass:
+                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
+              attrs: { href: "https://devdojo.com/tails" }
+            },
+            [_vm._v("Tails")]
+          )
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
