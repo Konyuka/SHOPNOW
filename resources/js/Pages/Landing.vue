@@ -24,13 +24,13 @@
                     <a href="#"
                         class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
                     <a href="#features"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Features</a>
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">About</a>
                     <a href="#pricing"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Pricing</a>
-                    <a href="#testimonials"
-                        class="font-bold duration-100 transition-color hover:text-indigo-600">Testimonials</a>
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
+                    <a href="/login"
+                        class="font-bold duration-100 transition-color hover:text-indigo-600">Vendor Portal</a>
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
-                        <a href="#_" class="w-full py-2 font-bold text-center text-pink-500">Login</a>
+                        <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
                             <span> <i class="fa fa-shopping-cart"> </i> Cart </span> 
                         </a>
@@ -39,11 +39,15 @@
 
                 <div
                     class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                    <a href="#_"
-                        class="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
-                    <a href="#_"
+                    <a href="/admin"
+                        class=" relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
+                    <!-- <a href="#_"
                         class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span> <i class="fa fa-shopping-cart mr-2"> </i> Cart </span> 
+                        <span class="text-xs"> <i class="fa fa-filter mr-1"> </i> Filter </span> 
+                    </a> -->
+                    <a href="#_"
+                        class="ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
+                        <span class="text-xs"> <i class="fa fa-shopping-cart mr-1"> </i> Cart </span> 
                     </a>
                     <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                         viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -164,10 +168,10 @@
                                     </g>
                                 </g>
                             </svg>
-                            <h4 class="relative mt-6 text-lg font-bold">Automated Tools</h4>
-                            <p class="relative mt-2 text-base text-center text-gray-600">Automate your workflow with these
-                                top of the
-                                line marketing tools.</p>
+                            <h4 class="relative mt-6 text-lg font-bold">Customer Journey</h4>
+                            <p class="relative mt-2 text-base text-center text-gray-600">
+                              Experience a simple user interface thats gets you to you product fast
+                            </p>
                             <a href="#_" class="relative flex mt-2 text-sm font-medium text-indigo-500 underline">Learn
                                 More</a>
                         </div>
@@ -290,10 +294,10 @@
                                     </g>
                                 </g>
                             </svg>
-                            <h4 class="relative mt-6 text-lg font-bold">Smart Notifications</h4>
-                            <p class="relative mt-2 text-base text-center text-gray-600">Our smart notifications will notify
-                                you when
-                                users convert.</p>
+                            <h4 class="relative mt-6 text-lg font-bold">Device Compatibilty</h4>
+                            <p class="relative mt-2 text-base text-center text-gray-600">
+                              Use any of your devices to track and make orders using one synchronized account
+                            </p>
                             <a href="#_" class="relative flex mt-2 text-sm font-medium text-indigo-500 underline">Learn
                                 More</a>
                         </div>
@@ -308,193 +312,99 @@
         <div class="relative px-8 py-10 bg-white border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
 
             <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
-                <h2 class="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">Our Pricing</h2>
                 <h3
                     class="w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
-                    Simple, Transparent Pricing for Everyone</h3>
+                    Products Section</h3>
 
                 <div class="max-w-full mx-auto md:max-w-6xl sm:px-8">
                     <!-- Basic Pricing -->
                     <div class="relative flex flex-col items-center block sm:flex-row">
-                        <div
-                            class="relative z-0 w-11/12 max-w-sm my-8 border border-gray-200 rounded-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-mr-4">
-                            <div class="overflow-hidden text-black bg-white border-t border-gray-100 rounded-lg shadow-sm">
-                                <div
-                                    class="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
-                                    <h3 class="p-3 text-lg font-bold tracking-wide text-center uppercase">Basic<span
-                                            class="ml-2 font-light">Plan</span></h3>
-                                    <h4
-                                        class="flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900">
-                                        <span class="mr-1 -ml-2 text-lg text-gray-700">$</span>48</h4>
-                                    <p class="text-sm text-gray-600">In our basic plan you can take advantage of all these
-                                        features below.
-                                    </p>
+                        <section class="text-gray-600 body-font">
+                          <div class="container px-5 py-24 mx-auto">
+                            <div class="flex flex-wrap -m-4">
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                                  <p class="mt-1">$16.00</p>
                                 </div>
-
-                                <div class="flex flex-wrap px-6 mt-8">
-                                    <ul>
-                                        <li class="flex items-center">
-                                            <div class="p-2 text-green-500 rounded-full fill-current ">
-                                                <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="ml-3 text-lg text-gray-700">Awesome Feature</span>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <div class="p-2 text-green-500 rounded-full fill-current ">
-                                                <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="ml-3 text-lg text-gray-700">And Another Cool Feature</span>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <div class="p-2 text-green-500 rounded-full fill-current ">
-                                                <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="ml-3 text-lg text-gray-700">One More Feature</span>
-                                        </li>
-                                    </ul>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+                                  <p class="mt-1">$21.15</p>
                                 </div>
-                                <div class="flex items-center block p-8 uppercase">
-                                    <a href="#_"
-                                        class="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600">Select
-                                        This Plan</a>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+                                  <p class="mt-1">$12.00</p>
                                 </div>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+                                  <p class="mt-1">$18.40</p>
+                                </div>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                                  <p class="mt-1">$16.00</p>
+                                </div>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+                                  <p class="mt-1">$21.15</p>
+                                </div>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+                                  <p class="mt-1">$12.00</p>
+                                </div>
+                              </div>
+                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <a class="block relative h-48 rounded overflow-hidden">
+                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+                                </a>
+                                <div class="mt-4">
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+                                  <p class="mt-1">$18.40</p>
+                                </div>
+                              </div>
                             </div>
-                        </div>
-                        <!-- Pro Pricing -->
-                        <div
-                            class="relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5">
-                            <div
-                                class="py-4 text-sm font-semibold leading-none tracking-wide text-center text-white uppercase bg-indigo-500 rounded-t">
-                                Most Popular</div>
-                            <div class="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
-                                <h3 class="p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase">Pro<span
-                                        class="ml-2 font-light">Plan</span></h3>
-                                <h4
-                                    class="flex items-center justify-center pb-6 text-5xl font-bold text-center text-gray-900">
-                                    <span class="mr-1 -ml-2 text-lg text-gray-700">$</span>98</h4>
-                                <p class="text-sm text-gray-600">Our most popular package is the Pro Plan which gives you
-                                    access to the
-                                    following:</p>
-                            </div>
-                            <div class="flex justify-start pl-12 mt-8 sm:justify-start">
-                                <ul>
-                                    <li class="flex items-center">
-                                        <div class="p-2 text-green-500 rounded-full fill-current">
-                                            <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                            </svg>
-                                        </div>
-                                        <span class="ml-3 text-lg text-gray-700">Really Cool Features</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <div class="p-2 text-green-500 rounded-full fill-current ">
-                                            <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                            </svg>
-                                        </div>
-                                        <span class="ml-3 text-lg text-gray-700">Another Cool Feature</span>
-                                    </li>
-                                    <li class="flex items-center">
-                                        <div class="p-2 text-green-500 rounded-full fill-current ">
-                                            <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                            </svg>
-                                        </div>
-                                        <span class="ml-3 text-lg text-gray-700">And One More</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="flex items-center block p-8 uppercase">
-                                <a href="#_"
-                                    class="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-indigo-600">Select
-                                    This Plan</a>
-                            </div>
-                        </div>
-                        <!-- Premium Pricing -->
-                        <div
-                            class="relative z-0 w-11/12 max-w-sm my-8 rounded-lg shadow-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-ml-4">
-                            <div class="overflow-hidden text-black bg-white rounded-lg shadow-lg shadow-inner">
-                                <div
-                                    class="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-8">
-                                    <h3 class="p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase">Premium<span
-                                            class="ml-2 font-light">Plan</span></h3>
-                                    <h4
-                                        class="flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900">
-                                        <span class="mr-1 -ml-2 text-lg text-gray-700">$</span>78</h4>
-                                    <p class="pl-2 text-sm text-gray-600">With our premium plan you can take advantage of
-                                        all the following
-                                        features:</p>
-                                </div>
-                                <div class="flex flex-wrap px-8 mt-8">
-                                    <ul>
-                                        <li class="flex items-center">
-                                            <div class="p-2 text-green-500 rounded-full fill-current ">
-                                                <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="ml-3 text-lg text-gray-700">Totally Tubular Feature</span>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <div class="p-2 text-green-500 rounded-full fill-current ">
-                                                <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="ml-3 text-lg text-gray-700">Super Cool Feature</span>
-                                        </li>
-                                        <li class="flex items-center">
-                                            <div class="p-2 text-green-500 rounded-full fill-current ">
-                                                <svg class="w-6 h-6 align-middle" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="ml-3 text-lg text-gray-700">And One More</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="flex items-center block p-8 uppercase">
-                                    <a href="#_"
-                                        class="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600">Select
-                                        This Plan</a>
-                                </div>
-                            </div>
-                        </div>
+                          </div>
+                        </section>
                     </div>
                 </div>
 
@@ -502,127 +412,6 @@
 
         </div>
         <!-- End Pricing Section -->
-
-        <!-- Start Testimonials -->
-        <div id="testimonials"
-            class="flex items-center justify-center w-full px-8 py-10 border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex-col items-center ">
-                    <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
-                        <p class="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">Our customers love
-                            our product
-                        </p>
-                        <h2
-                            class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-                            Testimonials</h2>
-                        <p class="my-6 text-xl font-medium text-gray-500">Don't just take our word for it, read from our
-                            extensive
-                            list of case studies and customer testimonials.</p>
-
-                    </div>
-                    <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
-                        <div class="w-full xl:w-1/2 xl:pr-8">
-                            <blockquote
-                                class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
-                                <div class="flex flex-col pr-8">
-                                    <div class="relative pl-12">
-                                        <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
-                                            <path
-                                                d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
-                                        </svg>
-                                        <p class="mt-2 text-base text-gray-600">I'm loving these templates! Very nice
-                                            features and layouts.
-                                        </p>
-                                    </div>
-
-                                    <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Sandra
-                                        Walton <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                            SomeCompany</span></h3>
-                                    <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
-                                </div>
-                                <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                    src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
-                                    alt="">
-                            </blockquote>
-                            <blockquote
-                                class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 mt-16 mb-16 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease xl:mb-0">
-                                <div class="flex flex-col pr-10">
-                                    <div class="relative pl-12">
-                                        <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
-                                            <path
-                                                d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
-                                        </svg>
-                                        <p class="mt-2 text-base text-gray-600">Really digging this service. Now I can
-                                            quickly bootstrap any
-                                            project.</p>
-                                    </div>
-                                    <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Kenny
-                                        Jones <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                            SomeCompany</span></h3>
-                                    <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
-                                </div>
-                                <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                    src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                                    alt="">
-                            </blockquote>
-                        </div>
-                        <div class="w-full xl:w-1/2 xl:pl-8">
-                            <blockquote
-                                class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
-                                <div class="flex flex-col pr-10">
-                                    <div class="relative pl-12">
-                                        <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
-                                            <path
-                                                d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
-                                        </svg>
-                                        <p class="mt-2 text-base text-gray-600">Extremely helpful in every single project we
-                                            have released.
-                                        </p>
-                                    </div>
-
-                                    <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Mike Smith
-                                        <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO SomeCompany</span>
-                                    </h3>
-                                    <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
-                                </div>
-                                <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80"
-                                    alt="">
-                            </blockquote>
-                            <blockquote
-                                class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 mt-16 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
-                                <div class="flex flex-col pr-10">
-                                    <div class="relative pl-12">
-                                        <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
-                                            <path
-                                                d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
-                                        </svg>
-                                        <p class="mt-2 text-base text-gray-600">Finally a quick and easy system I can use
-                                            for any type of
-                                            project.</p>
-                                    </div>
-
-                                    <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Molly
-                                        Sanchez <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
-                                            SomeCompany</span></h3>
-                                    <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
-                                </div>
-                                <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
-                                    alt="">
-                            </blockquote>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-        <!-- End Testimonials-->
 
         <footer class="px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200">
             <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">

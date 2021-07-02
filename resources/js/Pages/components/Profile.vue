@@ -312,7 +312,7 @@ export default {
     name:"Profile",
     data(){
         return{
-          openTab: 3,     
+          openTab: 1,     
         }
     }
 }

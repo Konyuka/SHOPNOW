@@ -7,6 +7,7 @@
         <title>Multi Vendor</title>
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
         <script src="{{ mix('/js/app.js') }}" defer></script>
+        @routes
 
         <!-- AlpineJS -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>

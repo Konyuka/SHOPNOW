@@ -4,25 +4,25 @@
     <div class="w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <h1 class="text-3xl font-semibold text-center text-gray-700 dark:text-white">Admin Login</h1>
 
-        <form class="mt-6">
+        <form class="mt-6" @submit.prevent="login">
             <div>
                 <label for="username" class="block text-sm text-gray-800 dark:text-gray-200">Email</label>
-                <input type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                <input v-model="form.email" :error="form.errors.email" autofocus autocapitalize="off" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
             </div>
-
             <div class="mt-4">
                 <div class="flex items-center justify-between">
                     <label for="password" class="block text-sm text-gray-800 dark:text-gray-200">Password</label>
                     <a href="#" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forgot Password?</a>
                 </div>
 
-                <input type="password"
-                    class="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                <input v-model="form.password" :error="form.errors.password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
             </div>
 
+            <div class="text-red-500 mt-5 italic">{{ $page.props.errors.email }}</div>
+
+
             <div class="mt-6">
-                <button
-                    class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-gray-600">
+                <button type="submit" class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-gray-600">
                     Login
                 </button>
             </div>
@@ -58,6 +58,29 @@
 
 <script>
 export default {
+    metaInfo: { title: 'Login' },
+    name:'Login',
+    props: {
+        // error: String,
+    },
+    computed: {
+        
+    },
+    data () {
+        return {
+            form: this.$inertia.form({
+                email: 'admin@admin.com',
+                password: 'password',
+                remember: false,
+            }),
+        }
+    },
+    methods: {
+        login(){
+            this.form.post(this.route('login.store'))
+            console.log(this.error)
+        }
+    }
     
 }
 </script>
