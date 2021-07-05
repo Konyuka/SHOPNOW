@@ -20,10 +20,12 @@
                         Products
                     </a>
                     </inertia-link>
+                    <inertia-link :href="route('orders')">
                     <a @click="setMenu('orders')" v-bind:class="{'bg-black': menuItem == 'orders'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-cash-register mr-3"></i>
                         Orders
                     </a>
+                    </inertia-link>
                     <a @click="setMenu('discount')" v-bind:class="{'bg-black': menuItem == 'discount'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-tags mr-3"></i>
                         Discount

@@ -29,6 +29,8 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
                     <a href="/login"
                         class="font-bold duration-100 transition-color hover:text-indigo-600">Vendor Portal</a>
+                    <a href="/register"
+                        class="font-bold duration-100 md:ml-3 lg:ml-8 transition-color hover:text-indigo-600">Register</a>    
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -101,7 +103,7 @@
             </div>
         </header>
         <!-- End Header Section-->
-      <main class="flex-1 overflow-y-auto p-5 z-50   ">
+      <main class="flex-1 overflow-y-auto  z-50   ">
 
         <!-- BEGIN FEATURES SECTION -->
         <div id="features" class="relative w-full px-8 py-10 md:py-16 lg:py-24 xl:py-40 xl:px-0">
@@ -311,11 +313,11 @@
         <!-- END FEATURES SECTION -->
 
         <!-- Pricing Section -->
-        <div class="relative px-8 py-10 bg-white border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
+        <div class="relative py-10 bg-white bg-opacity-75 border-t border-gray-200 md:py-1 lg:py-24 xl:py-40 xl:px-0">
 
             <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                 <h3
-                    class="w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
+                    class="w-full max-w-2xl px-5 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
                     Products Section</h3>
 
                 <div class="max-w-full mx-auto md:max-w-6xl sm:px-8">
@@ -325,7 +327,7 @@
                           <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-wrap -m-4">
 
-                              <div v-for="product in allProducts" :key="product.id" class="lg:w-1/4 md:w-1/2 min-w-1/2 p-4 w-full">
+                              <div v-for="product in allProducts" :key="product.id" class="shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 p-4 w-full">
                               <inertia-link :href="route('product.view', product.id)">
                                 <a class="block relative h-48 rounded overflow-hidden">
                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
@@ -374,16 +376,16 @@
                         <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
                             Product</li>
                         <li><a href="#_"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Features</a>
+                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Home</a>
                         </li>
                         <li><a href="#_"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Integrations</a>
+                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">About</a>
                         </li>
                         <li><a href="#_"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Pricing</a>
+                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Contacts</a>
                         </li>
                         <li><a href="#_"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">FAQ</a></li>
+                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Vendor Portal</a></li>
                     </ul>
                     <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
                         <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">

@@ -283,13 +283,13 @@ export default {
         return {
 
             form: this.$inertia.form({
-                name:'David Ngugi',
-                user_id:'david@gmail.com',
-                postal_code:'30259',
-                city:'nairobi',
-                country:'kenya',
-                zip:'00100',
-                card:'32342349497234',
+                name:'',
+                user_id:'',
+                postal_code:'',
+                city:'',
+                country:'',
+                zip:'',
+                card:'',
                 is_delivered: false,
                 product_id: this.$store.state.cartDetails.id,
             })

@@ -8,8 +8,6 @@ use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::inertia('/register', 'Register');
-Route::inertia('/Auth/login', 'Login');
 
 // Landing
 Route::get('/', [LandingController::class, 'index'])
@@ -22,7 +20,7 @@ Route::get('/checkout', [LandingController::class, 'checkout'])
     ->name('checkout');
  
 Route::post('/checkout/success', [OrderController::class, 'store'])
-    ->name('order.store');     
+    ->name('order.store');
 
 // Auth
 
@@ -36,6 +34,10 @@ Route::post('login', [AuthenticatedSessionController::class, 'store'])
 
 Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
+
+Route::post('register', [AuthenticatedSessionController::class, 'register'])
+    ->name('register')
+    ->middleware('guest');    
 
 // Dashboard
 
@@ -78,4 +80,11 @@ Route::put('products/{organization}/restore', [ProductController::class, 'restor
 Route::get('profile', [ProfileController::class, 'index'])
     ->name('profile')
     ->middleware('auth');
+
+
+// Order
+
+Route::get('orders', [OrderController::class, 'index'])
+    ->name('orders')
+    ->middleware('auth');    
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class OrderController extends Controller
@@ -16,7 +17,28 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        //  return Inertia::render('Order/Index');
+        //   return response()->json(Order::with(['product'])->get(),200);
+
+          return Inertia::render('Order/Index', [ 
+              'orders' =>  response()->json(Order::with(['product'])->get(),200)
+          ]);
+
+          return Inertia::render('Order/Index', [
+            'orders' => Auth::user()->account->orders()
+                ->orderBy('title')
+                ->paginate(10)
+                ->withQueryString()
+                ->through(fn ($order) => [
+                    'id' => $order->id,
+                    'product_id' => $order->product_id,
+                    'user_id' => $order->user_id,
+                    'quantity' => $order->quantity,
+                    'address' => $order->address,
+                    'is_delivered' => $order->is_delivered,
+                    'products' => $order->orders()->orderByName()->get()->map->only('id', 'name', 'city', 'phone'),
+                ]),
+        ]);
     }
 
     /**
