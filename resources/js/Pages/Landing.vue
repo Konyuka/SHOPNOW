@@ -102,11 +102,13 @@
         </header>
         <!-- End Header Section-->
       <main class="flex-1 overflow-y-auto p-5 z-50   ">
-      
 
         <!-- BEGIN FEATURES SECTION -->
         <div id="features" class="relative w-full px-8 py-10 md:py-16 lg:py-24 xl:py-40 xl:px-0">
             <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
+                 <div class="mb-5 flex justify-items-center">
+                    <flash-messages />
+                </div>
                 <h2 class="my-5 text-base font-bold tracking-tight text-indigo-500 uppercase">Welcome</h2>
                 <h3
                     class="max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
@@ -322,86 +324,20 @@
                         <section class="text-gray-600 body-font">
                           <div class="container px-5 py-24 mx-auto">
                             <div class="flex flex-wrap -m-4">
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+
+                              <div v-for="product in allProducts" :key="product.id" class="lg:w-1/4 md:w-1/2 min-w-1/2 p-4 w-full">
+                              <inertia-link :href="route('product.view', product.id)">
                                 <a class="block relative h-48 rounded overflow-hidden">
                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
                                 </a>
                                 <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                                  <p class="mt-1">$16.00</p>
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ product.type }}</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">{{ product.title }}</h2>
+                                  <p class="mt-1">KSh.{{ product.price }}</p>
                                 </div>
+                              </inertia-link>      
                               </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                                  <p class="mt-1">$21.15</p>
-                                </div>
-                              </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                                  <p class="mt-1">$12.00</p>
-                                </div>
-                              </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                                  <p class="mt-1">$18.40</p>
-                                </div>
-                              </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                                  <p class="mt-1">$16.00</p>
-                                </div>
-                              </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                                  <p class="mt-1">$21.15</p>
-                                </div>
-                              </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                                  <p class="mt-1">$12.00</p>
-                                </div>
-                              </div>
-                              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                                  <p class="mt-1">$18.40</p>
-                                </div>
-                              </div>
+
                             </div>
                           </div>
                         </section>
@@ -515,6 +451,8 @@
 </template>
 
 <script>
+import FlashMessages from './components/FlashMessages.vue'
+
 if (document.getElementById('nav-mobile-btn')) {
     document.getElementById('nav-mobile-btn').addEventListener('click', function () {
         if (this.classList.contains('close')) {
@@ -528,6 +466,18 @@ if (document.getElementById('nav-mobile-btn')) {
 }
 
 export default {
+    name:'Landing',
+    props: {
+        allProducts: '',
+    },
+    components: {
+        FlashMessages 
+    },
+    data () {
+        return {
+            
+        }
+    }
   
 }
 </script>

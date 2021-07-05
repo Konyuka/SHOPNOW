@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Inertia\Inertia;
-use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+
+
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +15,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Dashboard');
-        
+        return Inertia::render('Profile/Index');
     }
 
     /**

@@ -8,14 +8,18 @@
                     <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
                 </div>
                 <nav class="text-white text-base font-semibold pt-3">
-                    <a @click="setMenu('profile')"  v-bind:class="{'bg-black': menuItem == 'profile'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    <inertia-link :href="route('profile')">
+                    <a @click="setMenu('profile')" :class="isUrl('profile') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-id-badge mr-3"></i>
                         Profile
                     </a>
-                    <a @click="setMenu('products')" v-bind:class="{'bg-black': menuItem == 'products'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    </inertia-link>
+                    <inertia-link :href="route('products')">
+                    <a @click="setMenu('products')" :class="isUrl('products') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-box-open mr-3"></i>
                         Products
                     </a>
+                    </inertia-link>
                     <a @click="setMenu('orders')" v-bind:class="{'bg-black': menuItem == 'orders'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-cash-register mr-3"></i>
                         Orders
@@ -100,12 +104,10 @@
                 </header>
             
                 <div class="w-full overflow-x-hidden border-t flex flex-col">
-                    <Profile v-if="menuItem == 'profile' " />
-                    <Products v-if="menuItem == 'products' " />
-                    <Orders v-if="menuItem == 'orders' " />
-                    <Discount v-if="menuItem == 'discount' " />
-                    <Customer v-if="menuItem == 'customer' " />
-                    <Analytics v-if="menuItem == 'analytics' " />
+                    <div class="flex flex-row justify-center mt-5">
+                    <flash-messages />
+                    </div>
+                    <slot />
                 </div>
                 
             </div>
@@ -115,30 +117,27 @@
 </template>
 
 <script>
-import Profile from "./components/Profile";
-import Products from "./components/Products";
-import Orders from "./components/Orders";
-import Discount from "./components/Discount";
-import Customer from "./components/Customer";
-import Analytics from "./components/Analytics";
+import FlashMessages from './components/FlashMessages.vue'
 
 export default {
     name:"Dashboard",
     components: {
-        Profile, 
-        Products,
-        Orders,
-        Discount,
-        Customer,
-        Analytics,
+        FlashMessages 
     },
     data(){
        return{
            isOpen:false,
-           menuItem:'profile',
+           menuItem:'',
        } 
     },
     methods: {
+        isUrl(...urls) {
+            let currentUrl = this.$page.url.substr(1)
+            if (urls[0] === '') {
+                return currentUrl === ''
+            }
+            return urls.filter(url => currentUrl.startsWith(url)).length
+        },
         setMenu(value){
             this.menuItem = value
         },   

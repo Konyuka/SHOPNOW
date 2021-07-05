@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Inertia\Inertia;
 
 class OrderController extends Controller
 {
@@ -33,10 +35,10 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -44,9 +46,23 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function store(Request $request)
     {
-        //
+
+         $order = Order::create([
+                'product_id' => $request->product_id,
+                'user_id' =>  $request->product_id,
+                'quantity' => $request->quantity,
+                'address' => $request->address,
+                'is_delivered' => $request->is_delivered,
+                // 'country' => $request->country,
+                // 'postal_code' => $request->postal_code,
+                
+            ]);
+
+
+        return Redirect::route('landing')->with('success', 'Order Placed.');    
+
     }
 
     /**

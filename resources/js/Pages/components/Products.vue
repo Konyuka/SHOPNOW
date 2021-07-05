@@ -181,14 +181,7 @@
                                 </div>
                                 </div>
 
-                                <div class="-mx-3 md:flex mb-6">
-                                    <div class="md:w-full px-3">
-                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">
-                                    Product Vendor <span class="text-red-600 text-xl">*</span>
-                                    </label>
-                                    <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" type="text" placeholder="Jamia Cartel">
-                                </div>
-                                </div>
+                                
                                 <div class="-mx-3 md:flex mb-6">
                                 <div class="md:w-full px-3">
                                     <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
@@ -197,20 +190,7 @@
                                     <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="application-link" type="number" placeholder="Kshs. 5,000">
                                 </div>
                                 </div>
-                                <div class="-mx-3 md:flex mb-2">
-                                <div class="md:w-full px-3 mb-6 md:mb-0">
-                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="location">
-                                    Product Type  <span class="text-red-600 text-xl">*</span>
-                                    </label>
-                                    <div>
-                                    <select class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="location">
-                                        <option>Tshirt</option>
-                                        <option>Trouser</option>
-                                        <option>Blouse</option>
-                                    </select>
-                                    </div>
-                                </div>
-                                </div>
+
                                 <div class="-mx-3 md:flex mb-2">
                                 <div class="md:w-full px-3 mb-6 md:mb-0">
                                     <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="location">
@@ -219,6 +199,7 @@
                                     <textarea class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3 text-xs" rows="6" placeholder="Brief description about the product"></textarea>
                                 </div>
                                 </div>
+                                
                             </div>
                             </form>
 

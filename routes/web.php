@@ -1,16 +1,28 @@
 <?php
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('app');
-});
-
-Route::inertia('/', 'Landing');
 Route::inertia('/register', 'Register');
 Route::inertia('/Auth/login', 'Login');
+
+// Landing
+Route::get('/', [LandingController::class, 'index'])
+    ->name('landing');
+
+Route::get('/product/{product}', [LandingController::class, 'show'])
+    ->name('product.view');
+
+Route::get('/checkout', [LandingController::class, 'checkout'])
+    ->name('checkout');
+ 
+Route::post('/checkout/success', [OrderController::class, 'store'])
+    ->name('order.store');     
 
 // Auth
 
@@ -30,3 +42,40 @@ Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
 Route::get('/admin', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth');    
+
+// Products
+
+Route::get('products', [ProductController::class, 'index'])
+    ->name('products')
+    ->middleware('auth');
+
+Route::get('products/create', [ProductController::class, 'create'])
+    ->name('products.create')
+    ->middleware('auth');
+
+Route::post('products', [ProductController::class, 'store'])
+    ->name('products.store')
+    ->middleware('auth');
+
+Route::get('products/{organization}/edit', [ProductController::class, 'edit'])
+    ->name('products.edit')
+    ->middleware('auth');
+
+Route::put('products/{organization}', [ProductController::class, 'update'])
+    ->name('products.update')
+    ->middleware('auth');
+
+Route::delete('products/{organization}', [ProductController::class, 'destroy'])
+    ->name('products.destroy')
+    ->middleware('auth');
+
+Route::put('products/{organization}/restore', [ProductController::class, 'restore'])
+    ->name('products.restore')
+    ->middleware('auth');    
+  
+// Profile
+
+Route::get('profile', [ProfileController::class, 'index'])
+    ->name('profile')
+    ->middleware('auth');
+

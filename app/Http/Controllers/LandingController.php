@@ -1,20 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product;
 use Inertia\Inertia;
+
+
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class LandingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+    public function checkout()
+    {
+        return Inertia::render('Landing/Checkout');
+    }
+
     public function index()
     {
-        return Inertia::render('Dashboard');
-        
+        $data = Product::all();
+        return Inertia::render('Landing', ['allProducts' => $data]);
     }
 
     /**
@@ -44,9 +48,19 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        return Inertia::render('Landing/Product', [
+            'singleProduct' => [
+                'id' => $product->id,
+                'title' => $product->title,
+                'type' => $product->type,
+                'price' => $product->price,
+                'description' => $product->description,
+                'created_at' => date_format($product->created_at,'H:i:s D M Y '),
+                'deleted_at' => $product->deleted_at,
+            ],
+        ]);
     }
 
     /**
@@ -55,7 +69,7 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit( $id)
     {
         //
     }

@@ -2,18 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
+use Inertia\Inertia;
+
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return Inertia::render('Products/Index', [
+            // 'filters' => Request::all('search', 'trashed'),
+            'products' => Auth::user()->account->products()
+                ->orderBy('title')
+                // ->filter(Request::only('search', 'trashed'))
+                ->paginate(10)
+                ->withQueryString()
+                ->through(fn ($product) => [
+                    'id' => $product->id,
+                    'title' => $product->title,
+                    'type' => $product->type,
+                    'price' => $product->price,
+                    'description' => $product->description,
+                    // 'created_at' => $product->created_at,
+                    'created_at' => date_format($product->created_at,'H:i:s D M Y '),
+                    'deleted_at' => $product->deleted_at,
+                ]),
+        ]);
     }
 
     /**
@@ -23,37 +40,31 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Products/Create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
-        //
+        Auth::user()->account->products()->create(
+            Request::validate([
+                'type' => ['required', 'max:100'],
+                'title' => ['required', 'max:50'],
+                'price' => ['required', 'max:50'],
+                'description' => ['nullable', 'max:150'],
+            ])
+        );
+
+        return Redirect::route('products')->with('success', 'Product created.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         //
