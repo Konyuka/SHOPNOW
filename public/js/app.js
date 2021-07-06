@@ -2680,19 +2680,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 if (document.getElementById('nav-mobile-btn')) {
@@ -2733,19 +2720,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3045,19 +3019,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -16312,8 +16273,6 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(6),
                       _vm._v(" "),
-                      _vm._m(7),
-                      _vm._v(" "),
                       _c(
                         "div",
                         { staticClass: "flex flex-col w-full text-gray-700" },
@@ -16657,68 +16616,6 @@ var staticRenderFns = [
                 "Terms\n                              of\n                              Service"
               )
             ]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      {
-        staticClass:
-          "flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none"
-      },
-      [
-        _c(
-          "li",
-          {
-            staticClass:
-              "inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0"
-          },
-          [
-            _vm._v(
-              "\n                          TailwindCSS\n                      "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tailwindcss/components" }
-            },
-            [_vm._v("Tailwind\n                              Components")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tailwindcss/templates" }
-            },
-            [_vm._v("Tailwind\n                              Templates")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tails" }
-            },
-            [_vm._v("Tails")]
           )
         ])
       ]
@@ -17576,8 +17473,6 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(6),
                       _vm._v(" "),
-                      _vm._m(7),
-                      _vm._v(" "),
                       _c(
                         "div",
                         { staticClass: "flex flex-col w-full text-gray-700" },
@@ -17930,68 +17825,6 @@ var staticRenderFns = [
                 "Terms\n                              of\n                              Service"
               )
             ]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      {
-        staticClass:
-          "flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none"
-      },
-      [
-        _c(
-          "li",
-          {
-            staticClass:
-              "inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0"
-          },
-          [
-            _vm._v(
-              "\n                          TailwindCSS\n                      "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tailwindcss/components" }
-            },
-            [_vm._v("Tailwind\n                              Components")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tailwindcss/templates" }
-            },
-            [_vm._v("Tailwind\n                              Templates")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tails" }
-            },
-            [_vm._v("Tails")]
           )
         ])
       ]
@@ -18946,8 +18779,6 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(8),
                       _vm._v(" "),
-                      _vm._m(9),
-                      _vm._v(" "),
                       _c(
                         "div",
                         { staticClass: "flex flex-col w-full text-gray-700" },
@@ -19447,68 +19278,6 @@ var staticRenderFns = [
                 "Terms\n                              of\n                              Service"
               )
             ]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      {
-        staticClass:
-          "flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none"
-      },
-      [
-        _c(
-          "li",
-          {
-            staticClass:
-              "inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0"
-          },
-          [
-            _vm._v(
-              "\n                          TailwindCSS\n                      "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tailwindcss/components" }
-            },
-            [_vm._v("Tailwind\n                              Components")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tailwindcss/templates" }
-            },
-            [_vm._v("Tailwind\n                              Templates")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass:
-                "inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600",
-              attrs: { href: "https://devdojo.com/tails" }
-            },
-            [_vm._v("Tails")]
           )
         ])
       ]

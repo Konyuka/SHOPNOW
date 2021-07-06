@@ -204,19 +204,6 @@
                                 of
                                 Service</a></li>
                     </ul>
-                    <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                        <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
-                            TailwindCSS
-                        </li>
-                        <li><a href="https://devdojo.com/tailwindcss/components"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tailwind
-                                Components</a></li>
-                        <li><a href="https://devdojo.com/tailwindcss/templates"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tailwind
-                                Templates</a></li>
-                        <li><a href="https://devdojo.com/tails"
-                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tails</a></li>
-                    </ul>
                     <div class="flex flex-col w-full text-gray-700">
                         <div class="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0">Follow Us</div>
                         <div class="flex justify-start pl-4 mt-2">
