@@ -20,7 +20,8 @@
                 </a>
 
                 <nav id="nav"
-                    class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
+                    v-if="showMenu"
+                    class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
                     <a href="#"
                         class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
                     <a href="#features"
@@ -101,7 +102,7 @@
                     </svg>
                 </div>
 
-                <div id="nav-mobile-btn"
+                <div @click="showMenu = !showMenu" id="nav-mobile-btn"
                     class="absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10">
                     <span class="block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"></span>
                     <span class="block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"></span>
@@ -110,7 +111,7 @@
             </div>
         </header>
         <!-- End Header Section-->
-      <main class="flex-1 overflow-y-auto z-50">
+      <main class="flex-1 overflow-y-auto z-40 md:z-50">
 
         <!-- BEGIN FEATURES SECTION -->
         <div id="features" class="relative w-full px-8 py-10 md:py-1 lg:py-2 xl:py-1 xl:px-0">
@@ -118,7 +119,7 @@
                  <div class="mb-5 flex justify-items-center">
                     <flash-messages />
                 </div>
-                <h2 class="my-5 text-base font-bold tracking-tight text-indigo-500 uppercase">Welcome</h2>
+                <h2  class="my-5 text-base font-bold tracking-tight text-indigo-500 uppercase">Welcome</h2>
                 <h3
                     class="max-w-2xl px-5 mt-1 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
                     Multi Vendor <br> E-Commerce System</h3>
@@ -360,6 +361,7 @@
                                     </div>  
                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
                                 </div>
+                              </inertia-link>      
                                 <div class="mt-4 flex-auto justify-evenly">
 
                                     <div class="flex flex-wrap ">
@@ -384,7 +386,6 @@
                                     </div>
 
                                 </div>
-                              </inertia-link>      
                               </div>
 
                             </div>
@@ -421,6 +422,7 @@
                                     </div>  
                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
                                 </div>
+                              </inertia-link>      
                                 <div class="mt-4 flex-auto justify-evenly">
 
                                     <div class="flex flex-wrap ">
@@ -445,7 +447,6 @@
                                     </div>
 
                                 </div>
-                              </inertia-link>      
                               </div>
 
                             </div>
@@ -796,18 +797,6 @@
 <script>
 import FlashMessages from './components/FlashMessages.vue'
 
-if (document.getElementById('nav-mobile-btn')) {
-    document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-        if (this.classList.contains('close')) {
-            document.getElementById('nav').classList.add('hidden');
-            this.classList.remove('close');
-        } else {
-            document.getElementById('nav').classList.remove('hidden');
-            this.classList.add('close');
-        }
-    });
-}
-
 export default {
     name:'Landing',
     props: {
@@ -816,33 +805,24 @@ export default {
     components: {
         FlashMessages 
     },
+    watch: {
+       
+    },
     data () {
         return {
-            
+            showMenu: true,
         }
+    },
+    methods: {
+        
     }
-  
 }
 </script>
 
-<style scoped>
-@media(max-width:1520px) {
-            .left-svg {
-                display: none;
-            }
+<style>
+    @media(max-width:1520px) {
+        .left-svg {
+            display: none;
         }
-
-        /* small css for the mobile nav close */
-        #nav-mobile-btn.close span:first-child {
-            transform: rotate(45deg);
-            top: 4px;
-            position: relative;
-            background: #a0aec0;
-        }
-
-        #nav-mobile-btn.close span:nth-child(2) {
-            transform: rotate(-45deg);
-            margin-top: 0px;
-            background: #a0aec0;
-        }
+    }
 </style>

@@ -3249,19 +3249,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
-if (document.getElementById('nav-mobile-btn')) {
-  document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-    if (this.classList.contains('close')) {
-      document.getElementById('nav').classList.add('hidden');
-      this.classList.remove('close');
-    } else {
-      document.getElementById('nav').classList.remove('hidden');
-      this.classList.add('close');
-    }
-  });
-}
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Landing',
@@ -3271,9 +3259,13 @@ if (document.getElementById('nav-mobile-btn')) {
   components: {
     FlashMessages: _components_FlashMessages_vue__WEBPACK_IMPORTED_MODULE_0__.default
   },
+  watch: {},
   data: function data() {
-    return {};
-  }
+    return {
+      showMenu: true
+    };
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -5909,10 +5901,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.font-family-karla[data-v-097ba13b] 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5926,7 +5918,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media(max-width:1520px) {\n.left-svg[data-v-051daefe] {\r\n                display: none;\n}\n}\r\n\r\n        /* small css for the mobile nav close */\n#nav-mobile-btn.close span[data-v-051daefe]:first-child {\r\n            transform: rotate(45deg);\r\n            top: 4px;\r\n            position: relative;\r\n            background: #a0aec0;\n}\n#nav-mobile-btn.close span[data-v-051daefe]:nth-child(2) {\r\n            transform: rotate(-45deg);\r\n            margin-top: 0px;\r\n            background: #a0aec0;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media(max-width:1520px) {\n.left-svg {\n        display: none;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12621,10 +12613,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12634,7 +12626,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css&");
 
             
 
@@ -12643,11 +12635,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -13124,9 +13116,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Landing.vue?vue&type=template&id=051daefe&scoped=true& */ "./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true&");
+/* harmony import */ var _Landing_vue_vue_type_template_id_051daefe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Landing.vue?vue&type=template&id=051daefe& */ "./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&");
 /* harmony import */ var _Landing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Landing.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Landing.vue?vue&type=script&lang=js&");
-/* harmony import */ var _Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& */ "./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&");
+/* harmony import */ var _Landing_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Landing.vue?vue&type=style&index=0&lang=css& */ "./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -13138,11 +13130,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
   _Landing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Landing_vue_vue_type_template_id_051daefe___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Landing_vue_vue_type_template_id_051daefe___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "051daefe",
+  null,
   null
   
 )
@@ -14057,15 +14049,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& ***!
-  \*************************************************************************************************/
+/***/ "./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_051daefe_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&id=051daefe&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -14147,19 +14139,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true&":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true& ***!
-  \***********************************************************************************/
+/***/ "./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe& ***!
+  \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_template_id_051daefe___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_template_id_051daefe___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_template_id_051daefe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=template&id=051daefe&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_template_id_051daefe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=template&id=051daefe& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&");
 
 
 /***/ }),
@@ -16195,10 +16187,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Landing.vue?vue&type=template&id=051daefe& ***!
+  \**************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -16262,97 +16254,99 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "nav",
-                {
-                  staticClass:
-                    "absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative",
-                  attrs: { id: "nav" }
-                },
-                [
-                  _c(
-                    "a",
+              _vm.showMenu
+                ? _c(
+                    "nav",
                     {
                       staticClass:
-                        "ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Home")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600",
-                      attrs: { href: "#features" }
-                    },
-                    [_vm._v("About")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
-                      attrs: { href: "#pricing" }
-                    },
-                    [_vm._v("Contacts")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600",
-                      attrs: { href: "/register" }
-                    },
-                    [_vm._v("Register")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black",
-                      attrs: { href: "/login" }
-                    },
-                    [_vm._v("Buyer Portal")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black",
-                      attrs: { href: "/login" }
-                    },
-                    [_vm._v("Vendor Portal")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
+                        "absolute top-0 left-0 z-50 flex flex-col items-center justify-between w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative",
+                      attrs: { id: "nav" }
                     },
                     [
                       _c(
-                        "inertia-link",
+                        "a",
                         {
                           staticClass:
-                            "w-full py-2 font-bold text-center text-pink-500",
-                          attrs: { href: "/admin" }
+                            "ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
+                          attrs: { href: "#" }
                         },
-                        [_vm._v("Admin Login")]
+                        [_vm._v("Home")]
                       ),
                       _vm._v(" "),
-                      _vm._m(1)
-                    ],
-                    1
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600",
+                          attrs: { href: "#features" }
+                        },
+                        [_vm._v("About")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
+                          attrs: { href: "#pricing" }
+                        },
+                        [_vm._v("Contacts")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600",
+                          attrs: { href: "/register" }
+                        },
+                        [_vm._v("Register")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black",
+                          attrs: { href: "/login" }
+                        },
+                        [_vm._v("Buyer Portal")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black",
+                          attrs: { href: "/login" }
+                        },
+                        [_vm._v("Vendor Portal")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
+                        },
+                        [
+                          _c(
+                            "inertia-link",
+                            {
+                              staticClass:
+                                "w-full py-2 font-bold text-center text-pink-500",
+                              attrs: { href: "/admin" }
+                            },
+                            [_vm._v("Admin Login")]
+                          ),
+                          _vm._v(" "),
+                          _vm._m(1)
+                        ],
+                        1
+                      )
+                    ]
                   )
-                ]
-              ),
+                : _vm._e(),
               _vm._v(" "),
               _c(
                 "div",
@@ -16620,12 +16614,35 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(3)
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10",
+                  attrs: { id: "nav-mobile-btn" },
+                  on: {
+                    click: function($event) {
+                      _vm.showMenu = !_vm.showMenu
+                    }
+                  }
+                },
+                [
+                  _c("span", {
+                    staticClass:
+                      "block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
+                  }),
+                  _vm._v(" "),
+                  _c("span", {
+                    staticClass:
+                      "block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
+                  })
+                ]
+              )
             ]
           )
         ]),
         _vm._v(" "),
-        _c("main", { staticClass: "flex-1 overflow-y-auto z-50" }, [
+        _c("main", { staticClass: "flex-1 overflow-y-auto z-40 md:z-50" }, [
           _c(
             "div",
             {
@@ -16657,7 +16674,7 @@ var render = function() {
                     [_vm._v("Welcome")]
                   ),
                   _vm._v(" "),
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -17588,7 +17605,7 @@ var render = function() {
                                           "flex-1 my-3 relative rounded bg-gray-50 shadow"
                                       },
                                       [
-                                        _vm._m(5),
+                                        _vm._m(4),
                                         _vm._v(" "),
                                         _c(
                                           "inertia-link",
@@ -17701,42 +17718,68 @@ var render = function() {
                                                       }
                                                     })
                                                   ]
-                                                ),
-                                                _vm._v(" "),
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "mt-4 flex-auto justify-evenly"
+                                              },
+                                              [
                                                 _c(
                                                   "div",
                                                   {
                                                     staticClass:
-                                                      "mt-4 flex-auto justify-evenly"
+                                                      "flex flex-wrap "
                                                   },
                                                   [
                                                     _c(
                                                       "div",
                                                       {
                                                         staticClass:
-                                                          "flex flex-wrap "
+                                                          "w-full flex-none text-sm flex items-center text-gray-600"
                                                       },
                                                       [
                                                         _c(
-                                                          "div",
+                                                          "span",
                                                           {
                                                             staticClass:
-                                                              "w-full flex-none text-sm flex items-center text-gray-600"
+                                                              "text-gray-400 whitespace-nowrap mr-3 capitalize"
                                                           },
                                                           [
-                                                            _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "text-gray-400 whitespace-nowrap mr-3 capitalize"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  _vm._s(
-                                                                    product.type
-                                                                  )
-                                                                )
-                                                              ]
+                                                            _vm._v(
+                                                              _vm._s(
+                                                                product.type
+                                                              )
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex items-center w-full justify-between min-w-0 "
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "h2",
+                                                          {
+                                                            staticClass:
+                                                              "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                              " +
+                                                                _vm._s(
+                                                                  product.title
+                                                                ) +
+                                                                "\n                                          "
                                                             )
                                                           ]
                                                         ),
@@ -17745,82 +17788,34 @@ var render = function() {
                                                           "div",
                                                           {
                                                             staticClass:
-                                                              "flex items-center w-full justify-between min-w-0 "
+                                                              "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
                                                           },
                                                           [
-                                                            _c(
-                                                              "h2",
-                                                              {
-                                                                staticClass:
-                                                                  "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "\n                                              " +
-                                                                    _vm._s(
-                                                                      product.title
-                                                                    ) +
-                                                                    "\n                                          "
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "div",
-                                                              {
-                                                                staticClass:
-                                                                  "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "\n                                              INSTOCK\n                                          "
-                                                                )
-                                                              ]
+                                                            _vm._v(
+                                                              "\n                                              INSTOCK\n                                          "
                                                             )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "text-xl text-indigo-600 font-semibold mt-1"
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "KSh." +
-                                                            _vm._s(
-                                                              product.price
-                                                            )
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "flex space-x-2 text-sm font-medium justify-end mt-2"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "button",
-                                                          {
-                                                            staticClass:
-                                                              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 "
-                                                          },
-                                                          [
-                                                            _c("span", [
-                                                              _vm._v("Add Cart")
-                                                            ])
                                                           ]
                                                         )
                                                       ]
                                                     )
                                                   ]
-                                                )
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "text-xl text-indigo-600 font-semibold mt-1"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "KSh." +
+                                                        _vm._s(product.price)
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(5, true)
                                               ]
                                             )
                                           ],
@@ -17958,299 +17953,68 @@ var render = function() {
                                                       }
                                                     })
                                                   ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "mt-4 flex-auto justify-evenly"
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "flex flex-wrap "
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "w-full flex-none text-sm flex items-center text-gray-600"
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "text-gray-400 whitespace-nowrap mr-3 capitalize"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  _vm._s(
-                                                                    product.type
-                                                                  )
-                                                                )
-                                                              ]
-                                                            )
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "flex items-center w-full justify-between min-w-0 "
-                                                          },
-                                                          [
-                                                            _c(
-                                                              "h2",
-                                                              {
-                                                                staticClass:
-                                                                  "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "\n                                              " +
-                                                                    _vm._s(
-                                                                      product.title
-                                                                    ) +
-                                                                    "\n                                          "
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "div",
-                                                              {
-                                                                staticClass:
-                                                                  "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "\n                                              INSTOCK\n                                          "
-                                                                )
-                                                              ]
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "text-xl text-indigo-600 font-semibold mt-1"
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "KSh." +
-                                                            _vm._s(
-                                                              product.price
-                                                            )
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "flex space-x-2 text-sm font-medium justify-end mt-2"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "button",
-                                                          {
-                                                            staticClass:
-                                                              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 "
-                                                          },
-                                                          [
-                                                            _c("span", [
-                                                              _vm._v("Add Cart")
-                                                            ])
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
                                                 )
                                               ]
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      }
-                                    ),
-                                    0
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "container px-5 py-10 mx-auto" },
-                                [
-                                  _c("div", { staticClass: "flex w-full" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "flex-1 my-3 relative rounded bg-gray-50 shadow"
-                                      },
-                                      [
-                                        _vm._m(7),
-                                        _vm._v(" "),
-                                        _c(
-                                          "inertia-link",
-                                          {
-                                            attrs: {
-                                              href: _vm.route("landing")
-                                            }
-                                          },
-                                          [
+                                            ),
+                                            _vm._v(" "),
                                             _c(
                                               "div",
                                               {
                                                 staticClass:
-                                                  "group float-right top-0 right-0 m-3"
+                                                  "mt-4 flex-auto justify-evenly"
                                               },
                                               [
                                                 _c(
                                                   "div",
                                                   {
                                                     staticClass:
-                                                      "hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm"
-                                                  },
-                                                  [_vm._v("See All")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"
-                                                  },
-                                                  [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fa fa-directions"
-                                                    })
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ],
-                                      1
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "flex flex-wrap -m-4" },
-                                    _vm._l(
-                                      _vm.allProducts.slice(0, 4),
-                                      function(product) {
-                                        return _c(
-                                          "div",
-                                          {
-                                            key: product.id,
-                                            staticClass:
-                                              "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2"
-                                          },
-                                          [
-                                            _c(
-                                              "inertia-link",
-                                              {
-                                                attrs: {
-                                                  href: _vm.route(
-                                                    "product.view",
-                                                    product.id
-                                                  )
-                                                }
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "block relative h-48 rounded overflow-hidden"
+                                                      "flex flex-wrap "
                                                   },
                                                   [
                                                     _c(
                                                       "div",
                                                       {
                                                         staticClass:
-                                                          "absolute flex flex-col top-0 right-0 p-3"
+                                                          "w-full flex-none text-sm flex items-center text-gray-600"
                                                       },
                                                       [
                                                         _c(
-                                                          "button",
+                                                          "span",
                                                           {
                                                             staticClass:
-                                                              "hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1"
+                                                              "text-gray-400 whitespace-nowrap mr-3 capitalize"
                                                           },
                                                           [
-                                                            _c("i", {
-                                                              staticClass:
-                                                                "fa fa-star"
-                                                            })
+                                                            _vm._v(
+                                                              _vm._s(
+                                                                product.type
+                                                              )
+                                                            )
                                                           ]
                                                         )
                                                       ]
                                                     ),
                                                     _vm._v(" "),
-                                                    _c("img", {
-                                                      staticClass:
-                                                        "object-cover object-center w-full h-full block",
-                                                      attrs: {
-                                                        alt: "ecommerce",
-                                                        src:
-                                                          "https://dummyimage.com/420x260"
-                                                      }
-                                                    })
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "mt-4 flex-auto justify-evenly"
-                                                  },
-                                                  [
                                                     _c(
                                                       "div",
                                                       {
                                                         staticClass:
-                                                          "flex flex-wrap "
+                                                          "flex items-center w-full justify-between min-w-0 "
                                                       },
                                                       [
                                                         _c(
-                                                          "div",
+                                                          "h2",
                                                           {
                                                             staticClass:
-                                                              "w-full flex-none text-sm flex items-center text-gray-600"
+                                                              "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
                                                           },
                                                           [
-                                                            _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "text-gray-400 whitespace-nowrap mr-3 capitalize"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  _vm._s(
-                                                                    product.type
-                                                                  )
-                                                                )
-                                                              ]
+                                                            _vm._v(
+                                                              "\n                                              " +
+                                                                _vm._s(
+                                                                  product.title
+                                                                ) +
+                                                                "\n                                          "
                                                             )
                                                           ]
                                                         ),
@@ -18259,82 +18023,34 @@ var render = function() {
                                                           "div",
                                                           {
                                                             staticClass:
-                                                              "flex items-center w-full justify-between min-w-0 "
+                                                              "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
                                                           },
                                                           [
-                                                            _c(
-                                                              "h2",
-                                                              {
-                                                                staticClass:
-                                                                  "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "\n                                              " +
-                                                                    _vm._s(
-                                                                      product.title
-                                                                    ) +
-                                                                    "\n                                          "
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "div",
-                                                              {
-                                                                staticClass:
-                                                                  "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "\n                                              INSTOCK\n                                          "
-                                                                )
-                                                              ]
+                                                            _vm._v(
+                                                              "\n                                              INSTOCK\n                                          "
                                                             )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "text-xl text-indigo-600 font-semibold mt-1"
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "KSh." +
-                                                            _vm._s(
-                                                              product.price
-                                                            )
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "flex space-x-2 text-sm font-medium justify-end mt-2"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "button",
-                                                          {
-                                                            staticClass:
-                                                              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 "
-                                                          },
-                                                          [
-                                                            _c("span", [
-                                                              _vm._v("Add Cart")
-                                                            ])
                                                           ]
                                                         )
                                                       ]
                                                     )
                                                   ]
-                                                )
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "text-xl text-indigo-600 font-semibold mt-1"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "KSh." +
+                                                        _vm._s(product.price)
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(7, true)
                                               ]
                                             )
                                           ],
@@ -19116,6 +18832,263 @@ var render = function() {
                                     0
                                   )
                                 ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "container px-5 py-10 mx-auto" },
+                                [
+                                  _c("div", { staticClass: "flex w-full" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "flex-1 my-3 relative rounded bg-gray-50 shadow"
+                                      },
+                                      [
+                                        _vm._m(11),
+                                        _vm._v(" "),
+                                        _c(
+                                          "inertia-link",
+                                          {
+                                            attrs: {
+                                              href: _vm.route("landing")
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "group float-right top-0 right-0 m-3"
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm"
+                                                  },
+                                                  [_vm._v("See All")]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-directions"
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-wrap -m-4" },
+                                    _vm._l(
+                                      _vm.allProducts.slice(0, 4),
+                                      function(product) {
+                                        return _c(
+                                          "div",
+                                          {
+                                            key: product.id,
+                                            staticClass:
+                                              "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2"
+                                          },
+                                          [
+                                            _c(
+                                              "inertia-link",
+                                              {
+                                                attrs: {
+                                                  href: _vm.route(
+                                                    "product.view",
+                                                    product.id
+                                                  )
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "block relative h-48 rounded overflow-hidden"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "absolute flex flex-col top-0 right-0 p-3"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1"
+                                                          },
+                                                          [
+                                                            _c("i", {
+                                                              staticClass:
+                                                                "fa fa-star"
+                                                            })
+                                                          ]
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("img", {
+                                                      staticClass:
+                                                        "object-cover object-center w-full h-full block",
+                                                      attrs: {
+                                                        alt: "ecommerce",
+                                                        src:
+                                                          "https://dummyimage.com/420x260"
+                                                      }
+                                                    })
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "mt-4 flex-auto justify-evenly"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex flex-wrap "
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "w-full flex-none text-sm flex items-center text-gray-600"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "span",
+                                                              {
+                                                                staticClass:
+                                                                  "text-gray-400 whitespace-nowrap mr-3 capitalize"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  _vm._s(
+                                                                    product.type
+                                                                  )
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "flex items-center w-full justify-between min-w-0 "
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "h2",
+                                                              {
+                                                                staticClass:
+                                                                  "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "\n                                              " +
+                                                                    _vm._s(
+                                                                      product.title
+                                                                    ) +
+                                                                    "\n                                          "
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "\n                                              INSTOCK\n                                          "
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-xl text-indigo-600 font-semibold mt-1"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "KSh." +
+                                                            _vm._s(
+                                                              product.price
+                                                            )
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex space-x-2 text-sm font-medium justify-end mt-2"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 "
+                                                          },
+                                                          [
+                                                            _c("span", [
+                                                              _vm._v("Add Cart")
+                                                            ])
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      }
+                                    ),
+                                    0
+                                  )
+                                ]
                               )
                             ]
                           )
@@ -19217,9 +19190,9 @@ var render = function() {
                         "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                     },
                     [
-                      _vm._m(11),
-                      _vm._v(" "),
                       _vm._m(12),
+                      _vm._v(" "),
+                      _vm._m(13),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -19413,30 +19386,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
-      {
-        staticClass:
-          "absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10",
-        attrs: { id: "nav-mobile-btn" }
-      },
-      [
-        _c("span", {
-          staticClass:
-            "block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
-        }),
-        _vm._v(" "),
-        _c("span", {
-          staticClass:
-            "block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
       "h3",
       {
         staticClass:
@@ -19468,11 +19417,49 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
+      { staticClass: "flex space-x-2 text-sm font-medium justify-end mt-2" },
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 "
+          },
+          [_c("span", [_vm._v("Add Cart")])]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
       {
         staticClass:
           "bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl"
       },
       [_c("p", { staticClass: "italic" }, [_vm._v("Fashion")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex space-x-2 text-sm font-medium justify-end mt-2" },
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 "
+          },
+          [_c("span", [_vm._v("Add Cart")])]
+        )
+      ]
     )
   },
   function() {
