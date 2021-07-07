@@ -24,13 +24,16 @@
                     <a href="#"
                         class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
                     <a href="#features"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">About</a>
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a href="/login"
-                        class="font-bold duration-100 transition-color hover:text-indigo-600">Vendor Portal</a>
                     <a href="/register"
-                        class="font-bold duration-100 md:ml-3 lg:ml-8 transition-color hover:text-indigo-600">Register</a>    
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">Register</a>     
+                    <a href="/login"
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Buyer Portal</a>    
+                    <a href="/login"
+                        class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Vendor Portal</a>
+
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -41,15 +44,19 @@
 
                 <div
                     class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                    <a href="/admin"
-                        class=" relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
-                    <!-- <a href="#_"
-                        class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span class="text-xs"> <i class="fa fa-filter mr-1"> </i> Filter </span> 
+                    <!-- <a href="#" class="relative z-40 px-3 py-2 mr-15 text-lg font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">
+                        
                     </a> -->
+                    <a href="#" role="button" class="relative flex z-40 px-2 py-2 text-lg font-bold text-pink-500 lg:text-white  md:mt-0">
+                        <svg class="flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
+                        <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
+                        </svg>
+                        <span class="absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">5
+                        </span>
+                    </a>
                     <a href="#_"
-                        class="ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span class="text-xs"> <i class="fa fa-shopping-cart mr-1"> </i> Cart </span> 
+                        class="ml-16 relative z-40 inline-block w-auto h-full px-3 py-3 text-sm font-bold leading-none text-white bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
+                        <span class="text-xs"> <i class="fa fa-search mr-1"> </i> Filters </span> 
                     </a>
                     <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                         viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -103,21 +110,21 @@
             </div>
         </header>
         <!-- End Header Section-->
-      <main class="flex-1 overflow-y-auto  z-50   ">
+      <main class="flex-1 overflow-y-auto z-50">
 
         <!-- BEGIN FEATURES SECTION -->
-        <div id="features" class="relative w-full px-8 py-10 md:py-16 lg:py-24 xl:py-40 xl:px-0">
+        <div id="features" class="relative w-full px-8 py-10 md:py-1 lg:py-2 xl:py-1 xl:px-0">
             <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
                  <div class="mb-5 flex justify-items-center">
                     <flash-messages />
                 </div>
                 <h2 class="my-5 text-base font-bold tracking-tight text-indigo-500 uppercase">Welcome</h2>
                 <h3
-                    class="max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
+                    class="max-w-2xl px-5 mt-1 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
                     Multi Vendor <br> E-Commerce System</h3>
-                <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
+                <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-1 lg:mt-1">
 
-                    <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
+                    <div class="w-full max-w-md p-1 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
                         <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
                             <svg class="absolute w-full h-full text-gray-100 fill-current" viewBox="0 0 377 340"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +188,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
+                    <div class="w-full max-w-md p-1 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
                         <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
                             <svg class="absolute w-full h-full text-gray-100 fill-current" viewBox="0 0 358 372"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +251,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full max-w-md p-4 mx-auto mb-16 lg:mb-0 lg:w-1/3">
+                    <div class="w-full max-w-md p-1 mx-auto mb-16 lg:mb-0 lg:w-1/3">
                         <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
                             <svg class="absolute w-full h-full text-gray-100 fill-current" viewBox="0 0 378 410"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -313,35 +320,382 @@
         <!-- END FEATURES SECTION -->
 
         <!-- Pricing Section -->
-        <div class="relative py-10 bg-white bg-opacity-75 border-t border-gray-200 md:py-1 lg:py-24 xl:py-40 xl:px-0">
+        <div class="relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0">
 
             <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                 <h3
-                    class="w-full max-w-2xl px-5 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
-                    Products Section</h3>
+                    class="w-full max-w-2xl px-5 mt- text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
+                    Featured Products</h3>
 
                 <div class="max-w-full mx-auto md:max-w-6xl sm:px-8">
-                    <!-- Basic Pricing -->
-                    <div class="relative flex flex-col items-center block sm:flex-row">
-                        <section class="text-gray-600 body-font">
-                          <div class="container px-5 py-24 mx-auto">
-                            <div class="flex flex-wrap -m-4">
+                    <div class="relative flex flex-col items-center sm:flex-row">
+                        <section class="text-gray-600 body-font relative">
 
-                              <div v-for="product in allProducts" :key="product.id" class="shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 p-4 w-full">
+                          <div class="container px-5 py-10 mx-auto">
+                            <div class="flex w-full">
+                                <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                    <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                        <p class="italic">Electornics</p>
+                                    </div>
+
+                                    <inertia-link :href="route('landing')">
+                                    <div class="group float-right top-0 right-0 m-3">
+                                        <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                        <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                    </div>
+                                    </inertia-link>
+                                    
+                                </div>
+                            </div>  
+
+                            <div class="flex flex-wrap -m-4"> 
+
+                              <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
                               <inertia-link :href="route('product.view', product.id)">
-                                <a class="block relative h-48 rounded overflow-hidden">
-                                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
-                                </a>
-                                <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ product.type }}</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">{{ product.title }}</h2>
-                                  <p class="mt-1">KSh.{{ product.price }}</p>
+                                <div class="block relative h-48 rounded overflow-hidden">
+                                   <div class="absolute flex flex-col top-0 right-0 p-3">
+                                        <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                           <i class="fa fa-star"></i>
+                                        </button>
+                                    </div>  
+                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </div>
+                                <div class="mt-4 flex-auto justify-evenly">
+
+                                    <div class="flex flex-wrap ">
+                                        <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                            <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                        </div>
+                                        <div class="flex items-center w-full justify-between min-w-0 ">
+                                            <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                {{ product.title }}
+                                            </h2>
+                                            <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                INSTOCK
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                    <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                        <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <span>Add Cart</span>
+                                        </button>
+                                    </div>
+
                                 </div>
                               </inertia-link>      
                               </div>
 
                             </div>
                           </div>
+
+
+                          <div class="container px-5 py-10 mx-auto">
+
+                            <div class="flex w-full">
+                                <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                    <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                        <p class="italic">Fashion</p>
+                                    </div>
+
+                                    <inertia-link :href="route('landing')">
+                                    <div class="group float-right top-0 right-0 m-3">
+                                        <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                        <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                    </div>
+                                    </inertia-link>
+                                    
+                                </div>
+                            </div>  
+
+                            <div class="flex flex-wrap -m-4"> 
+
+                              <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                              <inertia-link :href="route('product.view', product.id)">
+                                <div class="block relative h-48 rounded overflow-hidden">
+                                   <div class="absolute flex flex-col top-0 right-0 p-3">
+                                        <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                           <i class="fa fa-star"></i>
+                                        </button>
+                                    </div>  
+                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </div>
+                                <div class="mt-4 flex-auto justify-evenly">
+
+                                    <div class="flex flex-wrap ">
+                                        <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                            <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                        </div>
+                                        <div class="flex items-center w-full justify-between min-w-0 ">
+                                            <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                {{ product.title }}
+                                            </h2>
+                                            <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                INSTOCK
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                    <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                        <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <span>Add Cart</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                              </inertia-link>      
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                          <div class="container px-5 py-10 mx-auto">
+
+                            <div class="flex w-full">
+                                <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                    <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                        <p class="italic">Phone & Tablets</p>
+                                    </div>
+
+                                    <inertia-link :href="route('landing')">
+                                    <div class="group float-right top-0 right-0 m-3">
+                                        <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                        <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                    </div>
+                                    </inertia-link>
+                                    
+                                </div>
+                            </div>  
+
+                            <div class="flex flex-wrap -m-4"> 
+
+                              <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                              <inertia-link :href="route('product.view', product.id)">
+                                <div class="block relative h-48 rounded overflow-hidden">
+                                   <div class="absolute flex flex-col top-0 right-0 p-3">
+                                        <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                           <i class="fa fa-star"></i>
+                                        </button>
+                                    </div>  
+                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </div>
+                                <div class="mt-4 flex-auto justify-evenly">
+
+                                    <div class="flex flex-wrap ">
+                                        <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                            <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                        </div>
+                                        <div class="flex items-center w-full justify-between min-w-0 ">
+                                            <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                {{ product.title }}
+                                            </h2>
+                                            <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                INSTOCK
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                    <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                        <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <span>Add Cart</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                              </inertia-link>      
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                          <div class="container px-5 py-10 mx-auto">
+
+                            <div class="flex w-full">
+                                <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                    <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                        <p class="italic">Computing</p>
+                                    </div>
+
+                                    <inertia-link :href="route('landing')">
+                                    <div class="group float-right top-0 right-0 m-3">
+                                        <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                        <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                    </div>
+                                    </inertia-link>
+                                    
+                                </div>
+                            </div>  
+
+                            <div class="flex flex-wrap -m-4"> 
+
+                              <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                              <inertia-link :href="route('product.view', product.id)">
+                                <div class="block relative h-48 rounded overflow-hidden">
+                                   <div class="absolute flex flex-col top-0 right-0 p-3">
+                                        <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                           <i class="fa fa-star"></i>
+                                        </button>
+                                    </div>  
+                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </div>
+                                <div class="mt-4 flex-auto justify-evenly">
+
+                                    <div class="flex flex-wrap ">
+                                        <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                            <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                        </div>
+                                        <div class="flex items-center w-full justify-between min-w-0 ">
+                                            <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                {{ product.title }}
+                                            </h2>
+                                            <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                INSTOCK
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                    <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                        <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <span>Add Cart</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                              </inertia-link>      
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                          <div class="container px-5 py-10 mx-auto">
+
+                            <div class="flex w-full">
+                                <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                    <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                        <p class="italic">Home & Office</p>
+                                    </div>
+
+                                    <inertia-link :href="route('landing')">
+                                    <div class="group float-right top-0 right-0 m-3">
+                                        <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                        <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                    </div>
+                                    </inertia-link>
+                                    
+                                </div>
+                            </div>  
+
+                            <div class="flex flex-wrap -m-4"> 
+
+                              <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                              <inertia-link :href="route('product.view', product.id)">
+                                <div class="block relative h-48 rounded overflow-hidden">
+                                   <div class="absolute flex flex-col top-0 right-0 p-3">
+                                        <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                           <i class="fa fa-star"></i>
+                                        </button>
+                                    </div>  
+                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </div>
+                                <div class="mt-4 flex-auto justify-evenly">
+
+                                    <div class="flex flex-wrap ">
+                                        <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                            <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                        </div>
+                                        <div class="flex items-center w-full justify-between min-w-0 ">
+                                            <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                {{ product.title }}
+                                            </h2>
+                                            <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                INSTOCK
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                    <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                        <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <span>Add Cart</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                              </inertia-link>      
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                          <div class="container px-5 py-10 mx-auto">
+
+                            <div class="flex w-full">
+                                <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                    <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                        <p class="italic">Sporting</p>
+                                    </div>
+
+                                    <inertia-link :href="route('landing')">
+                                    <div class="group float-right top-0 right-0 m-3">
+                                        <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                        <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                    </div>
+                                    </inertia-link>
+                                    
+                                </div>
+                            </div>  
+
+                            <div class="flex flex-wrap -m-4"> 
+
+                              <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                              <inertia-link :href="route('product.view', product.id)">
+                                <div class="block relative h-48 rounded overflow-hidden">
+                                   <div class="absolute flex flex-col top-0 right-0 p-3">
+                                        <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                           <i class="fa fa-star"></i>
+                                        </button>
+                                    </div>  
+                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                                </div>
+                                <div class="mt-4 flex-auto justify-evenly">
+
+                                    <div class="flex flex-wrap ">
+                                        <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                            <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                        </div>
+                                        <div class="flex items-center w-full justify-between min-w-0 ">
+                                            <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                {{ product.title }}
+                                            </h2>
+                                            <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                INSTOCK
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                    <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                        <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <span>Add Cart</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                              </inertia-link>      
+                              </div>
+
+                            </div>
+
+                          </div>
+
                         </section>
                     </div>
                 </div>
@@ -457,7 +811,7 @@ if (document.getElementById('nav-mobile-btn')) {
 export default {
     name:'Landing',
     props: {
-        allProducts: '',
+        allProducts: [],
     },
     components: {
         FlashMessages 
