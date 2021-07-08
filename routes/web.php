@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,9 +36,11 @@ Route::post('login', [AuthenticatedSessionController::class, 'store'])
 Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
 
-Route::post('register', [AuthenticatedSessionController::class, 'register'])
-    ->name('register')
-    ->middleware('guest');    
+Route::get('register/vendor', [UserController::class, 'vendor'])
+    ->name('registerVendor');
+
+Route::get('register/client', [UserController::class, 'client'])
+    ->name('registerClient');    
 
 // Dashboard
 

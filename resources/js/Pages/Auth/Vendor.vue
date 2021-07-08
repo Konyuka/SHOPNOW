@@ -27,8 +27,11 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a @click="regModal = !regModal" href="#"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Register</a>     
+                    <a href="/register/client"
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Client Register</a>
+                    <a href="/login"
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Login</a>    
+
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -42,6 +45,10 @@
                     <a href="#"
                         class=" relative z-40 px-3 py-2 mr-15 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">
                     </a>
+                    <!-- <a href="#_"
+                        class="ml-16 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
+                        <span class="text-xs"> <i class="fa fa-shopping-cart mr-1"> </i> Cart </span> 
+                    </a> -->
                     <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                         viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -105,9 +112,9 @@
                             
 
                             <h2 class="mt-6 text-3xl font-bold text-gray-900">
-                                Login
+                                Vendor Registration
                             </h2>
-                            <p class="mt-2 text-sm text-gray-600">Please sign in to your account</p>
+                            <p class="mt-2 text-sm text-gray-600">Welcome! Kindly Fill the form to register</p>
                             <div class="text-red-500 mt-5 italic">{{ $page.props.errors.email }}</div>
                             <div class="text-red-500 mt-5 italic">{{ $page.props.errors.password }}</div>
                         </div>
@@ -124,37 +131,42 @@
                         <form autocomplete="off" @submit.prevent="login" class="mt-8 space-y-6">
                             <input type="hidden" name="remember" value="true">
                             <div class="relative">
-                                <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Full Name</label>
+                                <input v-model="form.name" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Samuel Jackson">
+                            </div>
+                            <div class="relative">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Email Address</label>
                                 <input v-model="form.email" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" placeholder="mail@gmail.com">
                             </div>
+                            <div class="relative">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Phone Number</label>
+                                <input v-model="form.phone" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="number" placeholder="+254 7XX XXX XXX">
+                            </div>
+
+                            <div class="relative">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">ID or Passport Number</label>
+                                <input v-model="form.identification" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="number" placeholder="XX XX XX XX">
+                            </div>
+
                             <div class="mt-8 content-center">
-                                <label class="text-sm font-bold text-gray-700 tracking-wide">
-                                    Password
-                                </label>
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Password</label>
                                 <input v-model="form.password" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your password">
                             </div>
-                            <div class="flex items-center justify-between">
-                                    <div class="flex items-center">
-                                        <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded">
-                                        <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-                                            Remember me
-                                        </label>
-                                    </div>
-                                <div class="text-sm">
-                                    <a href="#" class="font-medium text-indigo-500 hover:text-indigo-500">
-                                                Forgot your password?
-                                    </a>
-                                </div>
+
+                            <div class="mt-8 content-center">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Confirm Password</label>
+                                <input v-model="form.confirmPass" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Confirm your password">
                             </div>
+                            
                             <div>
                                 <button type="submit" class="w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
                                                 font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                    Sign in
+                                    Sign Up
                                 </button>
                             </div>
                             <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
-                                <span>Don't have an account?</span>
-                                <a href="#" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
+                                <span>Have an account already?</span>
+                                <a href="/login" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign in</a>
                             </p>
                         </form>
                     </div>
@@ -242,35 +254,6 @@
         </footer>
 
       </main>
-
-       <!-- Modal -->
-        <div v-if="regModal" class="min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover"  id="modal-id">
-            <div class="absolute bg-black opacity-80 inset-0 z-0"></div>
-            <div class="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
-            <!--content-->
-            <div class="">
-                <!--body-->
-                <div class="text-center p-5 flex-auto justify-center">
-                        <svg class="w-16 h-16 flex items-center text-indigo-500 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
-                        <h2 class="text-xl font-bold py-4 ">Choose Registration Type</h2>
-                        <p class="text-sm text-gray-500 px-8">Select your prefered account. <br> Register either as a <b>Vendor</b> or a <b>Client</b> </p>    
-                </div>
-                <!--footer-->
-                <div class="p-3  mt-2 text-center space-x-4 md:block">
-                    <intertia-link :href="route('registerClient')">
-                    <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
-                        Client Registration
-                    </button>
-                    </intertia-link>
-                    <inertia-link :href="route('registerVendor')">
-                    <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
-                        Vendor Registration
-                    </button>
-                    </inertia-link>
-                </div>
-            </div>
-            </div>
-        </div>
         
     </div>
 
@@ -309,7 +292,6 @@ export default {
                 password: '',
                 remember: false,
             }),
-            regModal: false,
         }
     },
     methods: {
@@ -326,22 +308,20 @@ export default {
 
 <style scoped>
 @media(max-width:1520px) {
-            .left-svg {
-                display: none;
-            }
-        }
+    .left-svg {
+        display: none;
+    }
+}
 
-        /* small css for the mobile nav close */
-        #nav-mobile-btn.close span:first-child {
-            transform: rotate(45deg);
-            top: 4px;
-            position: relative;
-            background: #a0aec0;
-        }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
-        #nav-mobile-btn.close span:nth-child(2) {
-            transform: rotate(-45deg);
-            margin-top: 0px;
-            background: #a0aec0;
-        }
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+   
 </style>
