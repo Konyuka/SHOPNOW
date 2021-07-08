@@ -21,7 +21,7 @@ class UserController extends Controller
 
     public function client()
     {
-        return Inertia::render('Auth/Register');
+        return Inertia::render('Auth/Client');
     }
 
     public function store(Request $request)
@@ -49,6 +49,39 @@ class UserController extends Controller
                 'email' => $postData['email'],
                 'phone' => $postData['phone'],
                 'identification' => $postData['identification'],
+                'password' => bcrypt($postData['password']),
+                'owner' => $postData['vendor'],
+            ]);
+
+            return redirect()
+            ->route('login')
+            ->with('success', 'Welcome! Login to Continue');
+
+    }
+
+    public function storeUser(Request $request)
+    { 
+            
+            $postData = Request::validate([
+                'name' => ['required', 'max:50'],
+                'store' => ['required', 'max:100'],
+                'email' => ['required', 'max:100'],
+                'phone' => ['required', 'max:100'],
+                'password' => ['required', 'max:100'],
+                'vendor' => ['required', 'max:100'],
+            ]);
+
+            $account = Account::create([
+                'name' => $postData['store'],
+            ]);
+
+            $accountId =  json_decode($account['id']);  
+
+            $registerUser = User::create([
+                'account_id' => $accountId,
+                'name' => $postData['name'],
+                'email' => $postData['email'],
+                'phone' => $postData['phone'],
                 'password' => bcrypt($postData['password']),
                 'owner' => $postData['vendor'],
             ]);

@@ -43,7 +43,10 @@ Route::get('register/client', [UserController::class, 'client'])
     ->name('registerClient');   
 
 Route::post('register', [UserController::class, 'store'])
-    ->name('register');     
+    ->name('register'); 
+
+Route::post('register', [UserController::class, 'storeUser'])
+    ->name('registerUser');     
 
 // Dashboard
 
@@ -86,6 +89,12 @@ Route::put('products/{organization}/restore', [ProductController::class, 'restor
 Route::get('profile', [ProfileController::class, 'index'])
     ->name('profile')
     ->middleware('auth');
+
+Route::get('profile', [ProfileController::class, 'clientIndex'])
+    ->name('clientProfile')
+    ->middleware('auth');
+
+    
 
 
 // Order

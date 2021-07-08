@@ -4,11 +4,14 @@
         <div class="bg-gray-100 font-family-karla flex">
 
             <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
-                <div class="p-6">
-                    <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                <div v-if="$page.props.auth.user.owner" class="p-6">
+                    <a href="index.html" class="text-white text-sm font-semibold uppercase hover:text-gray-300">Admin Dashboard</a>
                 </div>
-                <nav class="text-white text-base font-semibold pt-3">
-                    <inertia-link :href="route('profile')">
+                <div v-if="!$page.props.auth.user.owner" class="p-6">
+                    <a href="index.html" class="text-white text-sm font-semibold uppercase hover:text-gray-300">Client Dashboard</a>
+                </div>
+                <nav v-if="$page.props.auth.user.owner" class="text-white text-base font-semibold pt-3">
+                    <inertia-link inertia-link :href="route('profile')">
                     <a @click="setMenu('profile')" :class="isUrl('profile') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-id-badge mr-3"></i>
                         Profile
@@ -37,6 +40,30 @@
                     <a @click="setMenu('analytics')" v-bind:class="{'bg-black': menuItem == 'analytics'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-chart-line mr-3"></i>
                         Analytics
+                    </a>
+                </nav>
+                <nav v-if="!$page.props.auth.user.owner" class="text-white text-base font-semibold pt-3">
+                    <inertia-link inertia-link :href="route('clientProfile')">
+                    <a @click="setMenu('profile')" :class="isUrl('clientProfile') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <i class="fas fa-id-badge mr-3"></i>
+                        Profile
+                    </a>
+                    </inertia-link>
+                    <inertia-link :href="route('products')">
+                    <a @click="setMenu('products')" :class="isUrl('products') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <i class="fas fa-box-open mr-3"></i>
+                        Orders
+                    </a>
+                    </inertia-link>
+                    <inertia-link :href="route('orders')">
+                    <a @click="setMenu('orders')" v-bind:class="{'bg-black': menuItem == 'orders'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <i class="fas fa-truck-moving mr-3"></i>
+                        Delivery
+                    </a>
+                    </inertia-link>
+                    <a @click="setMenu('discount')" v-bind:class="{'bg-black': menuItem == 'discount'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <i class="fas fa-star mr-3"></i>
+                        Wishlist
                     </a>
                 </nav>
                 <a href="/" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
@@ -70,27 +97,27 @@
 
                     <!-- Dropdown Nav -->
                     <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-                        <a @click="setMenu('profile')"  v-bind:class="{'bg-black': menuItem == 'profile'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <a v-if="this.$page.props.auth.user.owner" @click="setMenu('profile')"  v-bind:class="{'bg-black': menuItem == 'profile'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-id-badge mr-3"></i>
                         Profile
                         </a>
-                        <a @click="setMenu('products')" v-bind:class="{'bg-black': menuItem == 'products'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <a v-if="this.$page.props.auth.user.owner" @click="setMenu('products')" v-bind:class="{'bg-black': menuItem == 'products'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-table mr-3"></i>
                         Products
                         </a>
-                        <a @click="setMenu('orders')" v-bind:class="{'bg-black': menuItem == 'orders'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <a v-if="this.$page.props.auth.user.owner" @click="setMenu('orders')" v-bind:class="{'bg-black': menuItem == 'orders'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                             <i class="fas fa-sticky-note mr-3"></i>
                             Orders
                         </a>
-                        <a @click="setMenu('discount')" v-bind:class="{'bg-black': menuItem == 'discount'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <a v-if="this.$page.props.auth.user.owner" @click="setMenu('discount')" v-bind:class="{'bg-black': menuItem == 'discount'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                             <i class="fas fa-calendar mr-3"></i>
                             Discount
                         </a>
-                        <a @click="setMenu('customer')" v-bind:class="{'bg-black': menuItem == 'customer'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <a v-if="this.$page.props.auth.user.owner" @click="setMenu('customer')" v-bind:class="{'bg-black': menuItem == 'customer'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                             <i class="fas fa-align-left mr-3"></i>
                             Customers
                         </a>
-                        <a @click="setMenu('analytics')" v-bind:class="{'bg-black': menuItem == 'analytics'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                        <a v-if="this.$page.props.auth.user.owner" @click="setMenu('analytics')" v-bind:class="{'bg-black': menuItem == 'analytics'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                             <i class="fas fa-tablet-alt mr-3"></i>
                             Analytics
                         </a>
@@ -130,7 +157,14 @@ export default {
        return{
            isOpen:false,
            menuItem:'',
+           isVendor:'',
        } 
+    },
+    mounted () {
+        this.isVendor = this.$page.props.auth.user.owner
+    },
+    computed: {
+    
     },
     methods: {
         isUrl(...urls) {

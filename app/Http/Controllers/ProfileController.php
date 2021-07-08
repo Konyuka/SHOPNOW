@@ -18,6 +18,11 @@ class ProfileController extends Controller
         return Inertia::render('Profile/Index');
     }
 
+    public function clientIndex()
+    {
+        return Inertia::render('clientProfile/Index');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

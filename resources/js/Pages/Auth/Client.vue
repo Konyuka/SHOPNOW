@@ -27,8 +27,8 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a href="/register/client"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Client Register</a>
+                    <a href="/register/vendor"
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Vendor Register</a>
                     <a href="/login"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Login</a>    
 
@@ -112,7 +112,7 @@
                             
 
                             <h2 class="mt-6 text-3xl font-bold text-gray-900">
-                                Vendor Registration
+                                Client Registration
                             </h2>
                             <p class="mt-2 text-sm text-gray-600">Welcome! Kindly Fill the form to register</p>
                             <div class="text-red-500 mt-5 italic">{{ $page.props.errors.email }}</div>
@@ -135,10 +135,6 @@
                                 <input v-model="form.name" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Samuel Jackson">
                             </div>
                             <div class="relative">
-                                <label class="text-sm font-bold text-gray-700 tracking-wide">Store Name</label>
-                                <input v-model="form.store" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Western Computers">
-                            </div>
-                            <div class="relative">
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Email Address</label>
                                 <input v-model="form.email" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" placeholder="mail@gmail.com">
                             </div>
@@ -146,12 +142,6 @@
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Phone Number</label>
                                 <input v-model="form.phone" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="number" placeholder="+254 7XX XXX XXX">
                             </div>
-
-                            <div class="relative">
-                                <label class="text-sm font-bold text-gray-700 tracking-wide">ID or Passport Number</label>
-                                <input v-model="form.identification" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="number" placeholder="XX XX XX XX">
-                            </div>
-
                             <div class="mt-8 content-center">
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Password</label>
                                 <input v-model="form.password" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your password">
@@ -271,17 +261,7 @@
 </template>
 
 <script>
-if (document.getElementById('nav-mobile-btn')) {
-    document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-        if (this.classList.contains('close')) {
-            document.getElementById('nav').classList.add('hidden');
-            this.classList.remove('close');
-        } else {
-            document.getElementById('nav').classList.remove('hidden');
-            this.classList.add('close');
-        }
-    });
-}
+
 
 export default {
     metaInfo: { title: 'Login' },
@@ -295,14 +275,13 @@ export default {
     data () {
         return {
             form: this.$inertia.form({
-                name:'',
-                store:'',
-                email: '',
-                phone:'',
-                identification:'',
-                password: '',
-                confirmPass:'',
-                vendor:1,
+                name:'admin',
+                store:'userAccount',
+                email: 'admin@gmail.com',
+                phone:'7162922876',
+                password: 'password',
+                confirmPass:'password',
+                vendor:0,
             }),
             passError:'',
         }
@@ -311,7 +290,7 @@ export default {
         register(){
             if( this.form.password == this.form.confirmPass ){
                 this.passError = ''
-                this.form.post(this.route('register'))
+                this.form.post(this.route('registerUser'))
                 localStorage.setItem('email', this.form.email)
             }else{
                 this.passError = 'Passwords do not match'
