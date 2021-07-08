@@ -96,12 +96,20 @@
         <!-- End Header Section-->
       <main class="flex-1 overflow-y-auto z-50">
 
+          
+
         <!-- Pricing Section -->
         <div class="relative px-8 py-1 md:py-16 lg:py-24 xl:py-0 h-auto xl:px-0">
+
+                
 
                 <div class="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                     <div class="shadow-2xl max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
                         <div class="text-center">
+
+                            <div class="mb-5 flex justify-center">
+                                <flash-messages />
+                            </div>
                             
 
                             <h2 class="mt-6 text-3xl font-bold text-gray-900">
@@ -281,26 +289,23 @@
 </template>
 
 <script>
-if (document.getElementById('nav-mobile-btn')) {
-    document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-        if (this.classList.contains('close')) {
-            document.getElementById('nav').classList.add('hidden');
-            this.classList.remove('close');
-        } else {
-            document.getElementById('nav').classList.remove('hidden');
-            this.classList.add('close');
-        }
-    });
-}
+import FlashMessages from '../components/FlashMessages.vue'
+
 
 export default {
     metaInfo: { title: 'Login' },
     name:'Login',
+    components: {
+        FlashMessages, 
+    },
     props: {
-        // error: String,
+        email: '',
     },
     computed: {
         
+    },
+    created () {
+      this.form.email = localStorage.getItem('email')   
     },
     data () {
         return {

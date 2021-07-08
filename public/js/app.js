@@ -1881,6 +1881,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _components_FlashMessages_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/FlashMessages.vue */ "./resources/js/Pages/components/FlashMessages.vue");
 //
 //
 //
@@ -2163,26 +2164,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-if (document.getElementById('nav-mobile-btn')) {
-  document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-    if (this.classList.contains('close')) {
-      document.getElementById('nav').classList.add('hidden');
-      this.classList.remove('close');
-    } else {
-      document.getElementById('nav').classList.remove('hidden');
-      this.classList.add('close');
-    }
-  });
-}
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   metaInfo: {
     title: 'Login'
   },
   name: 'Login',
-  props: {// error: String,
+  components: {
+    FlashMessages: _components_FlashMessages_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  props: {
+    email: ''
   },
   computed: {},
+  created: function created() {
+    this.form.email = localStorage.getItem('email');
+  },
   data: function data() {
     return {
       form: this.$inertia.form({
@@ -2480,6 +2485,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 if (document.getElementById('nav-mobile-btn')) {
   document.getElementById('nav-mobile-btn').addEventListener('click', function () {
     if (this.classList.contains('close')) {
@@ -2503,17 +2515,28 @@ if (document.getElementById('nav-mobile-btn')) {
   data: function data() {
     return {
       form: this.$inertia.form({
+        name: '',
+        store: '',
         email: '',
+        phone: '',
+        identification: '',
         password: '',
-        remember: false
-      })
+        confirmPass: '',
+        vendor: 1
+      }),
+      passError: ''
     };
   },
   methods: {
-    login: function login() {
-      window.scrollTo(0, 0);
-      this.form.post(this.route('login.store'));
-      console.log(this.error);
+    register: function register() {
+      if (this.form.password == this.form.confirmPass) {
+        this.passError = '';
+        this.form.post(this.route('register'));
+        localStorage.setItem('email', this.form.email);
+      } else {
+        this.passError = 'Passwords do not match';
+      } // console.log(this.error)
+
     }
   }
 });
@@ -3528,7 +3551,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Landing',
   props: {
-    allProducts: []
+    allProducts: [],
+    account: ''
   },
   components: {
     FlashMessages: _components_FlashMessages_vue__WEBPACK_IMPORTED_MODULE_0__.default
@@ -15097,6 +15121,13 @@ var render = function() {
                     [
                       _c("div", { staticClass: "text-center" }, [
                         _c(
+                          "div",
+                          { staticClass: "mb-5 flex justify-center" },
+                          [_c("flash-messages")],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
                           "h2",
                           {
                             staticClass: "mt-6 text-3xl font-bold text-gray-900"
@@ -16312,7 +16343,7 @@ var render = function() {
                           on: {
                             submit: function($event) {
                               $event.preventDefault()
-                              return _vm.login.apply(null, arguments)
+                              return _vm.register.apply(null, arguments)
                             }
                           }
                         },
@@ -16360,6 +16391,48 @@ var render = function() {
                                   _vm.$set(
                                     _vm.form,
                                     "name",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "relative" }, [
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "text-sm font-bold text-gray-700 tracking-wide"
+                              },
+                              [_vm._v("Store Name")]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.store,
+                                  expression: "form.store"
+                                }
+                              ],
+                              staticClass:
+                                " w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500",
+                              attrs: {
+                                autocomplete: "off",
+                                type: "text",
+                                placeholder: "Western Computers"
+                              },
+                              domProps: { value: _vm.form.store },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "store",
                                     $event.target.value
                                   )
                                 }
@@ -16576,6 +16649,18 @@ var render = function() {
                               }
                             })
                           ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "text-red-500 mt-5 italic" },
+                            [_vm._v(_vm._s(_vm.$page.props.errors.password))]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "text-red-500 mt-5 italic" },
+                            [_vm._v(_vm._s(this.passError))]
+                          ),
                           _vm._v(" "),
                           _vm._m(3),
                           _vm._v(" "),
@@ -16810,7 +16895,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "pt-4 pt-6 mt-10 text-center text-gray-400 border-t border-gray-100"
+                    "pt-6 mt-10 text-center text-gray-400 border-t border-gray-100"
                 },
                 [_vm._v("© 2020 Landmark. All rights\n              reserved.")]
               )

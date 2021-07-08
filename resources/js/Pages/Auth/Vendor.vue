@@ -128,11 +128,15 @@
                             <span class="text-gray-500 font-normal">OR</span>
                             <span class="h-px w-16 bg-gray-300"></span>
                         </div> -->
-                        <form autocomplete="off" @submit.prevent="login" class="mt-8 space-y-6">
+                        <form autocomplete="off" @submit.prevent="register" class="mt-8 space-y-6">
                             <input type="hidden" name="remember" value="true">
                             <div class="relative">
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Full Name</label>
                                 <input v-model="form.name" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Samuel Jackson">
+                            </div>
+                            <div class="relative">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Store Name</label>
+                                <input v-model="form.store" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Western Computers">
                             </div>
                             <div class="relative">
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Email Address</label>
@@ -157,6 +161,9 @@
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Confirm Password</label>
                                 <input v-model="form.confirmPass" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Confirm your password">
                             </div>
+
+                            <div class="text-red-500 mt-5 italic">{{ $page.props.errors.password }}</div>
+                            <div class="text-red-500 mt-5 italic">{{ this.passError }}</div>
                             
                             <div>
                                 <button type="submit" class="w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
@@ -249,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pt-4 pt-6 mt-10 text-center text-gray-400 border-t border-gray-100">© 2020 Landmark. All rights
+            <div class="pt-6 mt-10 text-center text-gray-400 border-t border-gray-100">© 2020 Landmark. All rights
                 reserved.</div>
         </footer>
 
@@ -288,17 +295,28 @@ export default {
     data () {
         return {
             form: this.$inertia.form({
+                name:'',
+                store:'',
                 email: '',
+                phone:'',
+                identification:'',
                 password: '',
-                remember: false,
+                confirmPass:'',
+                vendor:1,
             }),
+            passError:'',
         }
     },
     methods: {
-        login(){
-            window.scrollTo(0, 0);
-            this.form.post(this.route('login.store'))
-            console.log(this.error)
+        register(){
+            if( this.form.password == this.form.confirmPass ){
+                this.passError = ''
+                this.form.post(this.route('register'))
+                localStorage.setItem('email', this.form.email)
+            }else{
+                this.passError = 'Passwords do not match'
+            }
+            // console.log(this.error)
         }
     }
     

@@ -40,11 +40,14 @@ Route::get('register/vendor', [UserController::class, 'vendor'])
     ->name('registerVendor');
 
 Route::get('register/client', [UserController::class, 'client'])
-    ->name('registerClient');    
+    ->name('registerClient');   
+
+Route::post('register', [UserController::class, 'store'])
+    ->name('register');     
 
 // Dashboard
 
-Route::get('/admin', [DashboardController::class, 'index'])
+Route::get('admin', [DashboardController::class, 'index'])
     ->name('dashboard')
     ->middleware('auth');    
 
