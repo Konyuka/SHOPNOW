@@ -2154,12 +2154,12 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: this.$inertia.form({
-        name: 'admin',
+        name: '',
         store: 'userAccount',
-        email: 'admin@ebay.ke',
-        phone: '7162922876',
-        password: 'password',
-        confirmPass: 'password',
+        email: '',
+        phone: '',
+        password: '',
+        confirmPass: '',
         vendor: 0
       }),
       passError: ''
