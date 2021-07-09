@@ -321,7 +321,7 @@
             <!-- Pricing Section -->
             <div class="relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0">
 
-                <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
+                <div v-if="showProducts" id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                     <h3
                         class="w-full max-w-2xl px-5 mt- text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
                         Featured Products</h3>
@@ -856,7 +856,14 @@ export default {
     computed: {
       cartNumber(){
           return this.$store.state.cartItems.length
-      }  
+      }, 
+      showProducts(){
+          if(this.allProducts != null){
+              return true
+          }else{
+            return false
+          }
+      } 
     },
     data () {
         return {

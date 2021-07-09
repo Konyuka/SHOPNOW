@@ -37,7 +37,7 @@
                         <tbody class="text-gray-700">
                             <tr v-for="order in orders.original" :key="order.id">
                                 <td class="w-1/3 text-left py-3 px-4"></td>
-                                <td class="w-1/3 text-left py-3 px-4"></td>
+                                <td class="w-1/3 text-left py-3 px-4"> </td>
                                 <td class="w-1/3 text-left py-3 px-4">{{ order.product.title }}</td>
                                 <td class="w-1/3 text-left py-3 px-4">{{ order.address }}</td>
                                 <td class="w-1/3 text-left py-3 px-4">

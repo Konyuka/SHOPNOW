@@ -4004,6 +4004,13 @@ window.Toast = Toast;
   computed: {
     cartNumber: function cartNumber() {
       return this.$store.state.cartItems.length;
+    },
+    showProducts: function showProducts() {
+      if (this.allProducts != null) {
+        return true;
+      } else {
+        return false;
+      }
     }
   },
   data: function data() {
@@ -46556,225 +46563,214 @@ var render = function() {
             "div",
             { staticClass: "relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0" },
             [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "container flex flex-col items-center h-full max-w-6xl mx-auto",
-                  attrs: { id: "pricing" }
-                },
-                [
-                  _c(
-                    "h3",
+              _vm.showProducts
+                ? _c(
+                    "div",
                     {
                       staticClass:
-                        "w-full max-w-2xl px-5 mt- text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0"
+                        "container flex flex-col items-center h-full max-w-6xl mx-auto",
+                      attrs: { id: "pricing" }
                     },
-                    [_vm._v("\n                      Featured Products")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "max-w-full mx-auto md:max-w-6xl sm:px-8" },
                     [
+                      _c(
+                        "h3",
+                        {
+                          staticClass:
+                            "w-full max-w-2xl px-5 mt- text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0"
+                        },
+                        [_vm._v("\n                      Featured Products")]
+                      ),
+                      _vm._v(" "),
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "relative flex flex-col items-center sm:flex-row"
+                          staticClass: "max-w-full mx-auto md:max-w-6xl sm:px-8"
                         },
                         [
                           _c(
-                            "section",
-                            { staticClass: "text-gray-600 body-font relative" },
+                            "div",
+                            {
+                              staticClass:
+                                "relative flex flex-col items-center sm:flex-row"
+                            },
                             [
                               _c(
-                                "div",
-                                { staticClass: "container px-5 py-10 mx-auto" },
+                                "section",
+                                {
+                                  staticClass:
+                                    "text-gray-600 body-font relative"
+                                },
                                 [
-                                  _c("div", { staticClass: "flex w-full" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "flex-1 my-3 relative rounded bg-gray-50 shadow"
-                                      },
-                                      [
-                                        _vm._m(4),
-                                        _vm._v(" "),
-                                        _c(
-                                          "inertia-link",
-                                          {
-                                            attrs: {
-                                              href: _vm.route("landing")
-                                            }
-                                          },
-                                          [
-                                            _c(
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "container px-5 py-10 mx-auto"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex w-full" },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "flex-1 my-3 relative rounded bg-gray-50 shadow"
+                                            },
+                                            [
+                                              _vm._m(4),
+                                              _vm._v(" "),
+                                              _c(
+                                                "inertia-link",
+                                                {
+                                                  attrs: {
+                                                    href: _vm.route("landing")
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "group float-right top-0 right-0 m-3"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm"
+                                                        },
+                                                        [_vm._v("See All")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"
+                                                        },
+                                                        [
+                                                          _c("i", {
+                                                            staticClass:
+                                                              "fa fa-directions"
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex flex-wrap -m-4" },
+                                        _vm._l(
+                                          _vm.allProducts.slice(0, 4),
+                                          function(product) {
+                                            return _c(
                                               "div",
                                               {
+                                                key: product.id,
                                                 staticClass:
-                                                  "group float-right top-0 right-0 m-3"
+                                                  "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2"
                                               },
                                               [
                                                 _c(
-                                                  "div",
+                                                  "inertia-link",
                                                   {
-                                                    staticClass:
-                                                      "hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm"
+                                                    attrs: {
+                                                      href: _vm.route(
+                                                        "product.view",
+                                                        product.id
+                                                      )
+                                                    }
                                                   },
-                                                  [_vm._v("See All")]
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "block relative h-48 rounded overflow-hidden"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "absolute flex flex-col top-0 right-0 p-3"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "button",
+                                                              {
+                                                                staticClass:
+                                                                  "hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1"
+                                                              },
+                                                              [
+                                                                _c("i", {
+                                                                  staticClass:
+                                                                    "fa fa-star"
+                                                                })
+                                                              ]
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c("img", {
+                                                          staticClass:
+                                                            "object-cover object-center w-full h-full block",
+                                                          attrs: {
+                                                            alt: "ecommerce",
+                                                            src:
+                                                              "https://dummyimage.com/420x260"
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ]
                                                 ),
                                                 _vm._v(" "),
                                                 _c(
                                                   "div",
                                                   {
                                                     staticClass:
-                                                      "hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"
-                                                  },
-                                                  [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fa fa-directions"
-                                                    })
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ],
-                                      1
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "flex flex-wrap -m-4" },
-                                    _vm._l(
-                                      _vm.allProducts.slice(0, 4),
-                                      function(product) {
-                                        return _c(
-                                          "div",
-                                          {
-                                            key: product.id,
-                                            staticClass:
-                                              "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2"
-                                          },
-                                          [
-                                            _c(
-                                              "inertia-link",
-                                              {
-                                                attrs: {
-                                                  href: _vm.route(
-                                                    "product.view",
-                                                    product.id
-                                                  )
-                                                }
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "block relative h-48 rounded overflow-hidden"
+                                                      "mt-4 flex-auto justify-evenly"
                                                   },
                                                   [
                                                     _c(
                                                       "div",
                                                       {
                                                         staticClass:
-                                                          "absolute flex flex-col top-0 right-0 p-3"
+                                                          "flex flex-wrap "
                                                       },
                                                       [
                                                         _c(
-                                                          "button",
+                                                          "div",
                                                           {
                                                             staticClass:
-                                                              "hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1"
+                                                              "w-full flex-none text-sm flex items-center text-gray-600"
                                                           },
                                                           [
-                                                            _c("i", {
-                                                              staticClass:
-                                                                "fa fa-star"
-                                                            })
-                                                          ]
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c("img", {
-                                                      staticClass:
-                                                        "object-cover object-center w-full h-full block",
-                                                      attrs: {
-                                                        alt: "ecommerce",
-                                                        src:
-                                                          "https://dummyimage.com/420x260"
-                                                      }
-                                                    })
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              {
-                                                staticClass:
-                                                  "mt-4 flex-auto justify-evenly"
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "flex flex-wrap "
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "w-full flex-none text-sm flex items-center text-gray-600"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "span",
-                                                          {
-                                                            staticClass:
-                                                              "text-gray-400 whitespace-nowrap mr-3 capitalize"
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              _vm._s(
-                                                                product.type
-                                                              )
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "flex items-center w-full justify-between min-w-0 "
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "h2",
-                                                          {
-                                                            staticClass:
-                                                              "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              "\n                                                  " +
-                                                                _vm._s(
-                                                                  product.title
-                                                                ) +
-                                                                "\n                                              "
+                                                            _c(
+                                                              "span",
+                                                              {
+                                                                staticClass:
+                                                                  "text-gray-400 whitespace-nowrap mr-3 capitalize"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  _vm._s(
+                                                                    product.type
+                                                                  )
+                                                                )
+                                                              ]
                                                             )
                                                           ]
                                                         ),
@@ -46783,72 +46779,100 @@ var render = function() {
                                                           "div",
                                                           {
                                                             staticClass:
-                                                              "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
+                                                              "flex items-center w-full justify-between min-w-0 "
                                                           },
                                                           [
-                                                            _vm._v(
-                                                              "\n                                                  INSTOCK\n                                              "
+                                                            _c(
+                                                              "h2",
+                                                              {
+                                                                staticClass:
+                                                                  "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "\n                                                  " +
+                                                                    _vm._s(
+                                                                      product.title
+                                                                    ) +
+                                                                    "\n                                              "
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "\n                                                  INSTOCK\n                                              "
+                                                                )
+                                                              ]
                                                             )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "text-xl text-indigo-600 font-semibold mt-1"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "KSh." +
+                                                            _vm._s(
+                                                              product.price
+                                                            )
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex space-x-2 text-sm font-medium justify-end mt-2"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ",
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                return _vm.addToCart(
+                                                                  product.id
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("span", [
+                                                              _vm._v("Add Cart")
+                                                            ])
                                                           ]
                                                         )
                                                       ]
                                                     )
                                                   ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "text-xl text-indigo-600 font-semibold mt-1"
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      "KSh." +
-                                                        _vm._s(product.price)
-                                                    )
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "flex space-x-2 text-sm font-medium justify-end mt-2"
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "button",
-                                                      {
-                                                        staticClass:
-                                                          "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ",
-                                                        on: {
-                                                          click: function(
-                                                            $event
-                                                          ) {
-                                                            $event.preventDefault()
-                                                            return _vm.addToCart(
-                                                              product.id
-                                                            )
-                                                          }
-                                                        }
-                                                      },
-                                                      [
-                                                        _c("span", [
-                                                          _vm._v("Add Cart")
-                                                        ])
-                                                      ]
-                                                    )
-                                                  ]
                                                 )
-                                              ]
+                                              ],
+                                              1
                                             )
-                                          ],
-                                          1
-                                        )
-                                      }
-                                    ),
-                                    0
+                                          }
+                                        ),
+                                        0
+                                      )
+                                    ]
                                   )
                                 ]
                               )
@@ -46858,8 +46882,7 @@ var render = function() {
                       )
                     ]
                   )
-                ]
-              )
+                : _vm._e()
             ]
           ),
           _vm._v(" "),
