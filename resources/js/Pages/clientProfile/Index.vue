@@ -13,10 +13,7 @@
                                 <a :class="openTab === 1 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Client Details</a>
                             </li>
                             <li class="mr-1" @click="openTab = 2">
-                                <a :class="openTab === 2 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Businness Details</a>
-                            </li>
-                            <li class="mr-1" @click="openTab = 3">
-                                <a :class="openTab === 3 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Payment Details</a>
+                                <a :class="openTab === 2 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Security Details</a>
                             </li>
                         </ul>
                     </div>
@@ -91,7 +88,7 @@
 
                                 <div class="grid grid-cols-2 gap-2 max-w-full m-auto">
 
-                                    <div class="col-span-2 lg:col-span-1">
+                                    <div class="col-span-2 lg:col-span-3">
                                     <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Business Name"/>
                                     </div>
 
@@ -107,195 +104,17 @@
                                     <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Secondary Business Phone Number"/>
                                     </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Choose Business County -</option>
-                                        <option value='Baringo'>Baringo</option>
-                                        <option value='Bomet'>Bomet</option>
-                                        <option value='Bungoma'>Bungoma</option>
-                                        <option value='Busia'>Busia</option>
-                                        <option value='Elgeyo-Marakwet'>Elgeyo-Marakwet</option>
-                                        <option value='Embu'>Embu</option>
-                                        <option value='Garissa'>Garissa</option>
-                                        <option value='Homa Bay'>Homa Bay</option>
-                                        <option value='Isiolo'>Isiolo</option>
-                                        <option value='Kajiado'>Kajiado</option>
-                                        <option value='Kakamega'>Kakamega</option>
-                                        <option value='Kericho'>Kericho</option>
-                                        <option value='Kiambu'>Kiambu</option>
-                                        <option value='Kilifi'>Kilifi</option>
-                                        <option value='Kirinyaga'>Kirinyaga</option>
-                                        <option value='Kisii'>Kisii</option>
-                                        <option value='Kisumu'>Kisumu</option>
-                                        <option value='Kitui'>Kitui</option>
-                                        <option value='Kwale'>Kwale</option>
-                                        <option value='Laikipia'>Laikipia</option>
-                                        <option value='Lamu'>Lamu</option>
-                                        <option value='Machakos'>Machakos</option>
-                                        <option value='Makueni'>Makueni</option>
-                                        <option value='Mandera'>Mandera</option>
-                                        <option value='Marsabit'>Marsabit</option>
-                                        <option value='Meru'>Meru</option>
-                                        <option value='Migori'>Migori</option>
-                                        <option value='Mombasa'>Mombasa</option>
-                                        <option value='Muranga'>Murang'a</option>
-                                        <option value='Nairobi City'>Nairobi City</option>
-                                        <option value='Nakuru'>Nakuru</option>
-                                        <option value='Nandi'>Nandi</option>
-                                        <option value='Narok'>Narok</option>
-                                        <option value='Nyamira'>Nyamira</option>
-                                        <option value='Nyandarua'>Nyandarua</option>
-                                        <option value='Nyeri'>Nyeri</option>
-                                        <option value='Samburu'>Samburu</option>
-                                        <option value='Siaya'>Siaya</option>
-                                        <option value='Taita-Taveta'>Taita-Taveta</option>
-                                        <option value='Tana River'>Tana River</option>
-                                        <option value='Tharaka-Nithi'>Tharaka-Nithi</option>
-                                        <option value='Trans Nzoia'>Trans Nzoia</option>
-                                        <option value='Turkana'>Turkana</option>
-                                        <option value='Uasin Gishu'>Uasin Gishu</option>
-                                        <option value='Vihiga'>Vihiga</option>
-                                        <option value='West Pokot'>West Pokot</option>
-                                        <option value='wajir'>wajir</option>
-                                    </select>    
-                                    </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Business Address and Code"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Choose Business Category -</option>
-                                        <option value="0">Automobile</option>
-                                        <option value="1">Baby Products</option>
-                                        <option value="2">Books, Movies and Music</option>
-                                        <option value="3">Computing</option>
-                                        <option value="4">Electronics</option>
-                                        <option value="5">Fashion</option>
-                                        <option value="6">Gaming</option>
-                                        <option value="7">Garden &amp; Outdoors</option>
-                                        <option value="8">Grocery</option>
-                                        <option value="9">Health &amp; Beauty</option>
-                                        <option value="10">Home &amp; Office</option>
-                                        <option value="11">Industrial &amp; Scientific</option>
-                                        <option value="12">Livestock</option>
-                                        <option value="13">Miscellaneous</option>
-                                        <option value="14">Musical Instruments</option>
-                                        <option value="15">Pet Supplies</option>
-                                        <option value="16">Phones &amp; Tablets</option>
-                                        <option value="17">Services</option>
-                                        <option value="18">Sporting Goods</option>
-                                        <option value="19">Toys &amp; Games</option>
-                                    </select>    
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Choose Business Type -</option>
-                                        <option value="0">Individual</option>
-                                        <option value="1">Company</option>
-                                    </select>    
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Registered your Business?  -</option>
-                                        <option value="0">Yes</option>
-                                        <option value="1">No</option>
-                                    </select>    
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Busniess Registration Number"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Do you have a Pin or Vat Number?  -</option>
-                                        <option value="0">Yes</option>
-                                        <option value="1">No</option>
-                                    </select>    
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Busniess Pin or VAT Number"/>
-                                    </div>
-
-                                    <div class="col-span-2 text-right">
+                                    <div class="col-span-3 text-right">
                                     <button class="py-3 px-6 bg-blue-500 hover:bg-black text-white font-bold w-full sm:w-32">
-                                        Proceed
+                                        Change Password
                                     </button>
                                     </div>
-
                                 </div>
                                 </div>
                             </div> 
                         </div>
-                        <div id="" class="" v-if="openTab === 3">
-                            <div class="">
-                                <div class="max-w-full bg-white py-2 m-auto w-full">
-
-                                <div class="col-span-2 lg:col-span-1 pb-10">
-                                <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                    <option value="">- Prefered Payment Mode  -</option>
-                                    <option value="1">Any</option>
-                                    <option value="0">Mpesa only</option>
-                                    <option value="0">Bank only</option>
-                                    <option value="1">Cash only</option>
-                                    <option value="1">Bank & Mpesa only</option>
-                                    <option value="1">Mpesa & Cash only</option>
-                                    <option value="1">Bank & Cash only</option>
-                                </select>    
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-2 max-w-full m-auto">
-
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="MPESA Registered Name"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1 pb-10">
-                                    <input type="email" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Mpesa Phone Number"/>
-                                    </div>
-
-                                   
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Bank"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Branch"/>
-                                    </div>
-
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Account Name"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Account Number"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="SWIFT CODE"/>
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="IBAN CODE"/>
-                                    </div>
                         
-                                    <div class="col-span-2 text-right">
-                                    <button class="py-3 px-6 bg-blue-500 hover:bg-black text-white font-bold w-full sm:w-32">
-                                        Submit
-                                    </button>
-                                    </div>
-
-                                </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

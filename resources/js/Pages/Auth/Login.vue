@@ -27,8 +27,11 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a @click="regModal = !regModal" href="#"
+                    <a @click="regModal = ! regModal" href="#"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Register</a>     
+                    <a href="/login"
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Buyer Portal</a>    
+
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -41,6 +44,10 @@
                     class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
                     <a href="#"
                         class=" relative z-40 px-3 py-2 mr-15 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">
+                    </a>
+                    <a href="#_"
+                        class="ml-16 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
+                        <span class="text-xs"> <i class="fa fa-shopping-cart mr-1"> </i> Cart </span> 
                     </a>
                     <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                         viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -96,24 +103,16 @@
         <!-- End Header Section-->
       <main class="flex-1 overflow-y-auto z-50">
 
-          
-
         <!-- Pricing Section -->
         <div class="relative px-8 py-1 md:py-16 lg:py-24 xl:py-0 h-auto xl:px-0">
-
-                
 
                 <div class="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                     <div class="shadow-2xl max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
                         <div class="text-center">
-
-                            <div class="mb-5 flex justify-center">
-                                <flash-messages />
-                            </div>
                             
 
                             <h2 class="mt-6 text-3xl font-bold text-gray-900">
-                                Login
+                                Vendor Login
                             </h2>
                             <p class="mt-2 text-sm text-gray-600">Please sign in to your account</p>
                             <div class="text-red-500 mt-5 italic">{{ $page.props.errors.email }}</div>
@@ -289,23 +288,15 @@
 </template>
 
 <script>
-import FlashMessages from '../components/FlashMessages.vue'
-
 
 export default {
     metaInfo: { title: 'Login' },
     name:'Login',
-    components: {
-        FlashMessages, 
-    },
     props: {
-        email: '',
+        // error: String,
     },
     computed: {
         
-    },
-    created () {
-      this.form.email = localStorage.getItem('email')   
     },
     data () {
         return {
@@ -314,7 +305,7 @@ export default {
                 password: '',
                 remember: false,
             }),
-            regModal: false,
+            regModal:false
         }
     },
     methods: {
@@ -331,22 +322,10 @@ export default {
 
 <style scoped>
 @media(max-width:1520px) {
-            .left-svg {
-                display: none;
-            }
-        }
+    .left-svg {
+        display: none;
+    }
+}
 
-        /* small css for the mobile nav close */
-        #nav-mobile-btn.close span:first-child {
-            transform: rotate(45deg);
-            top: 4px;
-            position: relative;
-            background: #a0aec0;
-        }
-
-        #nav-mobile-btn.close span:nth-child(2) {
-            transform: rotate(-45deg);
-            margin-top: 0px;
-            background: #a0aec0;
-        }
+        
 </style>

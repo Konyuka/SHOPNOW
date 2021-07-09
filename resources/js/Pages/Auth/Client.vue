@@ -277,7 +277,7 @@ export default {
             form: this.$inertia.form({
                 name:'admin',
                 store:'userAccount',
-                email: 'admin@gmail.com',
+                email: 'admin@ebay.ke',
                 phone:'7162922876',
                 password: 'password',
                 confirmPass:'password',

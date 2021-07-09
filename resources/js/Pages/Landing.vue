@@ -43,16 +43,16 @@
 
                 <div
                     class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                    <!-- <a href="#" class="relative z-40 px-3 py-2 mr-15 text-lg font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">
-                        
-                    </a> -->
+                    <inertia-link :href="route('cart')">
                     <a href="#" role="button" class="relative flex z-40 px-2 py-2 text-lg font-bold text-pink-500 lg:text-white  md:mt-0">
                         <svg class="flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
                         <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
                         </svg>
-                        <span class="absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">5
+                        <span class="absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">
+                            {{ cartNumber }}
                         </span>
                     </a>
+                    </inertia-link>
                     <a href="#_"
                         class="ml-16 relative z-40 inline-block w-auto h-full px-3 py-3 text-sm font-bold leading-none text-white bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
                         <span class="text-xs"> <i class="fa fa-search mr-1"> </i> Filters </span> 
@@ -378,7 +378,7 @@
                                         <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
 
                                         <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
-                                            <button class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <button @click.prevent="addToCart(product.id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
                                                 <span>Add Cart</span>
                                             </button>
                                         </div>
@@ -390,7 +390,7 @@
                             </div>
 
 
-                            <div class="container px-5 py-10 mx-auto">
+                            <!-- <div class="container px-5 py-10 mx-auto">
 
                                 <div class="flex w-full">
                                     <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
@@ -693,7 +693,7 @@
 
                                 </div>
 
-                            </div>
+                            </div> -->
 
                             </section>
                         </div>
@@ -799,11 +799,11 @@
                 </div>
                 <!--footer-->
                 <div class="p-3  mt-2 text-center space-x-4 md:block">
-                    <intertia-link :href="route('registerClient')">
+                    <inertia-link :href="route('registerClient')">
                     <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
                         Client Registration
                     </button>
-                    </intertia-link>
+                    </inertia-link>
                     <inertia-link :href="route('registerVendor')">
                     <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
                         Vendor Registration
@@ -825,6 +825,22 @@
 <script>
 import FlashMessages from './components/FlashMessages.vue'
 
+import Swal from 'sweetalert2';
+
+window.Swal = Swal;
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 1000,
+  timerProgressBar: false,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
+window.Toast = Toast;
+
 export default {
     name:'Landing',
     props: {
@@ -837,6 +853,11 @@ export default {
     watch: {
        
     },
+    computed: {
+      cartNumber(){
+          return this.$store.state.cartItems.length
+      }  
+    },
     data () {
         return {
             showMenu: true,
@@ -844,7 +865,17 @@ export default {
         }
     },
     methods: {
-        
+      addToCart(product){
+         var data =  this.allProducts.find(x => x.id == product )
+         this.$store.dispatch('addedToCart', data)
+
+          Toast.fire({
+            icon: 'success',
+            title: 'Added to Cart'
+          })
+
+        //   alert(product)
+      }  
     }
 }
 </script>
@@ -854,5 +885,8 @@ export default {
         .left-svg {
             display: none;
         }
+    }
+    #summary {
+      background-color: #f6f6f6;
     }
 </style>

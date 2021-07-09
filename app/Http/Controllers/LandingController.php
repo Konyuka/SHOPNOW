@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 
 class LandingController extends Controller
 {
-    
+    public function cart()
+    {
+        return Inertia::render('Landing/Cart');
+    }
+
     public function checkout()
     {
         return Inertia::render('Landing/Checkout');
@@ -42,12 +46,6 @@ class LandingController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show(Product $product)
     {
         return Inertia::render('Landing/Product', [

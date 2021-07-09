@@ -26,8 +26,8 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a href="/login"
-                        class="font-bold duration-100 transition-color hover:text-indigo-600">Vendor Portal</a>
+                    <a href="/admin"
+                        class="font-bold duration-100 transition-color hover:text-black text-indigo-600">Portal</a>
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -38,16 +38,6 @@
 
                 <div
                     class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                    <a href="/admin"
-                        class=" relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
-                    <!-- <a href="#_"
-                        class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span class="text-xs"> <i class="fa fa-filter mr-1"> </i> Filter </span> 
-                    </a> -->
-                    <a href="#_"
-                        class="ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span class="text-xs"> <i class="fa fa-shopping-cart mr-1"> </i> Cart </span> 
-                    </a>
                     <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                         viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -103,7 +93,7 @@
       <main class="flex-1 overflow-y-auto z-50">
 
         <!-- Pricing Section -->
-        <div class="relative px-8 py-10 bg-white bg-opacity-90  border-t border-gray-200 md:py-16 lg:py-24 xl:py-4 h-auto xl:px-0">
+        <div class="relative px-8 py-10 md:py-16 lg:py-24 xl:py-4 h-auto xl:px-0">
 
             <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                 <h3 class="w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
@@ -116,36 +106,42 @@
                     <p class="text-gray-800 font-medium">Customer information</p>
                     <div class="">
                     <label class="block text-sm text-gray-00" for="cus_name">Name</label>
-                    <input v-model="form.name" class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Your Name" aria-label="Name">
+                    <input v-model="form.name" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Delivery Name" aria-label="Name">
                     </div>
                     <div class="mt-2">
-                    <label class="block text-sm text-gray-600" for="cus_email">Email</label>
-                    <input v-model="form.user_id" class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Your Email" aria-label="Email">
+                    <label class="block text-sm text-gray-600" for="cus_email">Phone</label>
+                    <input v-model="form.phone" class="w-full px-5  py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="number" required="" placeholder="Delivery Contacts" aria-label="Number">
                     </div>
                     <div class="mt-2">
                     <label class=" block text-sm text-gray-600" for="cus_email">Address</label>
-                    <input v-model="form.postal_code" class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Street" aria-label="Email">
+                    <input v-model="form.address" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Delivery Street" aria-label="Email">
                     </div>
                     <div class="mt-2">
                     <label class="hidden text-sm block text-gray-600" for="cus_email">City</label>
-                    <input v-model="form.city" class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="City" aria-label="Email">
+                    <input v-model="form.city" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Delivery City" aria-label="Email">
                     </div>
                     <div class="inline-block mt-2 w-1/2 pr-1">
                     <label class="hidden block text-sm text-gray-600" for="cus_email">Country</label>
-                    <input v-model="form.country" class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Country" aria-label="Email">
+                    <input v-model="form.country" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Delivery Country" aria-label="Email">
                     </div>
                     <div class="inline-block mt-2 -mx-1 pl-1 w-1/2">
                     <label class="hidden block text-sm text-gray-600" for="cus_email">Zip</label>
-                    <input v-model="form.zip" class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email"  name="cus_email" type="text" required="" placeholder="Zip" aria-label="Email">
+                    <input v-model="form.zip" class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email"  name="cus_email" type="text" required="" placeholder="Zip Code" aria-label="Email">
                     </div>
-                    <p class="mt-4 text-gray-800 font-medium">Payment information</p>
+                    <p class="mt-4 text-gray-800 font-medium">Payment Method</p>
                     <div class="">
-                    <label class="block text-sm text-gray-600" for="cus_name">Card</label>
-                    <input v-model="form.card" class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Card Number MM/YY CVC" aria-label="Name">
+                    <select v-model="form.payment" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="location">
+                        <option value="cash">Cash</option>
+                        <option value="mpesa">Mpesa</option>
+                        <option value="card">Card</option>
+                    </select>
+                    <!-- <input v-model="form.card" class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Card Number MM/YY CVC" aria-label="Name"> -->
                     </div>
                     <div class="mt-4 flex justify-between">
-                    <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded" type="submit">View Cart Details</button>
-                    <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded" type="submit">Place your order</button>
+                    <inertia-link :href="route('cart')">
+                    <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded">View Cart Details</button>
+                    </inertia-link>       
+                    <button type="submit" class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded">Place your order</button>
                     </div>
                 </form>
                 </div>
@@ -236,6 +232,87 @@
                 reserved.</div>
         </footer>
 
+        <!-- Modal -->
+        <div v-if="noAuth" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen  pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!--
+            Background overlay, show/hide based on modal state.
+
+            Entering: "ease-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+            Leaving: "ease-in duration-200"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <!--
+            Modal panel, show/hide based on modal state.
+
+            Entering: "ease-out duration-300"
+                From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                To: "opacity-100 translate-y-0 sm:scale-100"
+            Leaving: "ease-in duration-200"
+                From: "opacity-100 translate-y-0 sm:scale-100"
+                To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            -->
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white  px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                <div class="group mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 group-hover:bg-indigo-600 sm:mx-0 sm:h-10 sm:w-10">
+                    <!-- Heroicon name: outline/exclamation -->
+                   <i class="fa fa-window-close text-indigo-600 group-hover:text-black"> </i>
+                </div>
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <div class="mt-2">
+                        <div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
+                        <div class="text-center">
+                            
+
+                            <h2 class="mt-6 text-3xl font-bold text-gray-900">
+                                Login
+                            </h2>
+                            <p class="mt-2 text-sm text-gray-600">Sign in to checkout</p>
+                            <div class="text-red-500 mt-5 italic">{{ $page.props.errors.email }}</div>
+                            <div class="text-red-500 mt-5 italic">{{ $page.props.errors.password }}</div>
+                        </div>
+                        <form autocomplete="off" @submit.prevent="login" class="mt-8 space-y-6">
+                            <input type="hidden" name="remember" value="true">
+                            <div class="relative">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
+                                <input v-model="form.email" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" placeholder="mail@gmail.com">
+                            </div>
+                            <div class="mt-8 content-center">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">
+                                    Password
+                                </label>
+                                <input v-model="form.password" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your password">
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
+                                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
+                                    Sign in
+                                </button>
+                            </div>
+                            <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
+                                <span>Don't have an account?</span>
+                                <a href="#" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
+                            </p>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
       </main>
         
     </div>
@@ -247,44 +324,53 @@
 </template>
 
 <script>
-if (document.getElementById('nav-mobile-btn')) {
-    document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-        if (this.classList.contains('close')) {
-            document.getElementById('nav').classList.add('hidden');
-            this.classList.remove('close');
-        } else {
-            document.getElementById('nav').classList.remove('hidden');
-            this.classList.add('close');
-        }
-    });
-}
 
 export default {
     name:'Checkout',
     props: {
     },
     computed: {
-        
+        noAuth(){
+            if(this.$page.props.auth.user != null){
+                return false
+            }else{
+                return true
+            } 
+        },
+        productId(){
+            
+        }
     },
     data () {
         return {
-
+            // noAuth:'',
             form: this.$inertia.form({
-                name:'',
-                user_id:'',
-                postal_code:'',
-                city:'',
-                country:'',
-                zip:'',
-                card:'',
-                is_delivered: false,
-                product_id: this.$store.state.cartDetails.id,
-            })
+                email:'',
+                password:'',
+                name:'Michael',
+                phone:'0716202298',
+                address:'302686',
+                city:'Nairobi',
+                country:'Kenya',
+                zip:'00100',
+                payment:'Mpesa',
+                products:'',
+            }),
         }
     },
     methods: {
         submit(){
+            let item = this.$store.state.cartItems
+            this.form.products = item[0].id
+            // this.form.products = 
+            // let prod = this.$store.state.cartItems
+            // for (let i = 0; i <= prod.length; i++) {
+            //     this.form.products.push(prod[i++].id)
+            // }
             this.form.post(this.route('order.store'))
+        },
+        login(){
+            this.form.post(this.route('login.checkout'))
         }
     }
   

@@ -16,12 +16,16 @@ Route::get('/', [LandingController::class, 'index'])
 
 Route::get('/product/{product}', [LandingController::class, 'show'])
     ->name('product.view');
+   
+Route::get('/cart', [LandingController::class, 'cart'])
+    ->name('cart');    
 
 Route::get('/checkout', [LandingController::class, 'checkout'])
     ->name('checkout');
  
 Route::post('/checkout/success', [OrderController::class, 'store'])
     ->name('order.store');
+
 
 // Auth
 
@@ -33,6 +37,10 @@ Route::post('login', [AuthenticatedSessionController::class, 'store'])
     ->name('login.store')
     ->middleware('guest');
 
+Route::post('/checkout/login', [AuthenticatedSessionController::class, 'storeCheckout'])
+    ->name('login.checkout')
+    ->middleware('guest');
+
 Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
 
@@ -42,10 +50,10 @@ Route::get('register/vendor', [UserController::class, 'vendor'])
 Route::get('register/client', [UserController::class, 'client'])
     ->name('registerClient');   
 
-Route::post('register', [UserController::class, 'store'])
-    ->name('register'); 
+Route::post('register/admin', [UserController::class, 'store'])
+    ->name('registerAdmin'); 
 
-Route::post('register', [UserController::class, 'storeUser'])
+Route::post('register/user', [UserController::class, 'storeUser'])
     ->name('registerUser');     
 
 // Dashboard
@@ -90,7 +98,7 @@ Route::get('profile', [ProfileController::class, 'index'])
     ->name('profile')
     ->middleware('auth');
 
-Route::get('profile', [ProfileController::class, 'clientIndex'])
+Route::get('profile/client', [ProfileController::class, 'clientIndex'])
     ->name('clientProfile')
     ->middleware('auth');
 

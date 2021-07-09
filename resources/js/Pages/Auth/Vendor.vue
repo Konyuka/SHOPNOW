@@ -311,7 +311,8 @@ export default {
         register(){
             if( this.form.password == this.form.confirmPass ){
                 this.passError = ''
-                this.form.post(this.route('register'))
+                console.log(Ziggy.routes)
+                this.form.post(this.route('registerAdmin'))
                 localStorage.setItem('email', this.form.email)
             }else{
                 this.passError = 'Passwords do not match'

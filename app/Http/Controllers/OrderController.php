@@ -15,30 +15,16 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Order $order)
     {
-        //  return Inertia::render('Order/Index');
-        //   return response()->json(Order::with(['product'])->get(),200);
 
           return Inertia::render('Order/Index', [ 
-              'orders' =>  response()->json(Order::with(['product'])->get(),200)
+              'orders' =>  response()->json(
+                    Order::with(['product'])->get()
+              ),
+            //  'user' => $order->user()->get()
           ]);
 
-          return Inertia::render('Order/Index', [
-            'orders' => Auth::user()->account->orders()
-                ->orderBy('title')
-                ->paginate(10)
-                ->withQueryString()
-                ->through(fn ($order) => [
-                    'id' => $order->id,
-                    'product_id' => $order->product_id,
-                    'user_id' => $order->user_id,
-                    'quantity' => $order->quantity,
-                    'address' => $order->address,
-                    'is_delivered' => $order->is_delivered,
-                    'products' => $order->orders()->orderByName()->get()->map->only('id', 'name', 'city', 'phone'),
-                ]),
-        ]);
     }
 
     /**
@@ -70,20 +56,38 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-
          $order = Order::create([
-                'product_id' => $request->product_id,
-                'user_id' =>  $request->product_id,
-                'quantity' => $request->quantity,
-                'address' => $request->address,
-                'is_delivered' => $request->is_delivered,
-                // 'country' => $request->country,
-                // 'postal_code' => $request->postal_code,
-                
+                'product_id' => $request->products,
+                'user_id' => Auth::user()->account_id,
+                // 'quantity' => $request->quantity,
+                'address' => $request->address
             ]);
+         
+         return Redirect::route('landing')->with('success', 'Order Placed Successfully.');    
+    
+
+         $postData = Request::validate([
+                'name' => [ 'max:50'],
+                'phone' => [ 'max:100'],
+                'address' => [ 'max:100'],
+                'city' => [ 'max:100'],
+                'county' => [ 'max:100'],
+                'zip' => [ 'max:100'],
+                'payment' => [ 'max:100'],
+                'products' => [ 'max:100'],
+                'userId' => [ 'max:100'],
+            ]);   
+
+            $order = Order::create([
+                    'product_id' => $postData['products'],
+                    'user_id' =>   Auth::user()->account_id,
+                    // 'quantity' => $postData['userId'],
+                    'address' => $postData['address'],
+                    // 'is_delivered' => $request->is_delivered,                
+                ]);
 
 
-        return Redirect::route('landing')->with('success', 'Order Placed.');    
+        return Redirect::route('landing')->with('success', 'Order Placed Successfully.');    
 
     }
 
