@@ -89,6 +89,7 @@ export default {
                 title: '',
                 price: '',
                 description: '',
+                account_id: this.$page.props.auth.user.account.id,
             }),
         }
     },

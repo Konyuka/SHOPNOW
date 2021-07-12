@@ -40,7 +40,7 @@
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
-                            <tr v-for="product in products.data" :key="product.id">
+                            <tr v-for="product in products" :key="product.id">
                                 <td class="w-1/4 text-left py-3 px-4">{{ product.title }}</td>
                                 <td class="w-1/4 text-left py-3 px-4">{{ product.type }}</td>
                                 <td class="w-1/4 text-left py-3 px-4">{{ product.price }}</td>

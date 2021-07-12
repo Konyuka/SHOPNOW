@@ -8,8 +8,6 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-
-
 // Landing
 Route::get('/', [LandingController::class, 'index'])
     ->name('landing');

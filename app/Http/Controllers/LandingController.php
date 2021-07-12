@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\DB;
 
 
 use Illuminate\Http\Request;
@@ -21,6 +22,10 @@ class LandingController extends Controller
 
     public function index()
     {
+        // $product=Product::all();
+        // return $product->collect();
+        // return dd(DB::connection('mongodb')->collection('myCollection')->get());
+
         $data = Product::all();
         return Inertia::render('Landing', ['allProducts' => $data]);
     }

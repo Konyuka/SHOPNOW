@@ -5353,7 +5353,8 @@ __webpack_require__.r(__webpack_exports__);
         type: '',
         title: '',
         price: '',
-        description: ''
+        description: '',
+        account_id: this.$page.props.auth.user.account.id
       })
     };
   },
@@ -52528,7 +52529,7 @@ var render = function() {
                 _c(
                   "tbody",
                   { staticClass: "text-gray-700" },
-                  _vm._l(_vm.products.data, function(product) {
+                  _vm._l(_vm.products, function(product) {
                     return _c("tr", { key: product.id }, [
                       _c("td", { staticClass: "w-1/4 text-left py-3 px-4" }, [
                         _vm._v(_vm._s(product.title))
@@ -54705,7 +54706,7 @@ var render = function() {
                     { staticClass: "py-4 text-white text-sm font-medium" },
                     [
                       Object.keys(_vm.$page.props.errors).length === 1
-                        ? _c("span", [_vm._v("There is one form error.")])
+                        ? _c("span", [_vm._v(_vm._s(_vm.$page.props.errors))])
                         : _c("span", [
                             _vm._v(
                               "There are " +
