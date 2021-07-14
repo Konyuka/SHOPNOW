@@ -15,8 +15,8 @@ return [
     |
     */
 
-    // 'default' => env('DB_CONNECTION', 'pgsql'),
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,6 +46,7 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
+            'dsn'=> env('DB_DSN_SECOND', '127.0.0.1'),
             'host' => env('DB_HOST_SECOND', '127.0.0.1'),
             'port' => env('DB_PORT_SECOND', 27017),
             'database' => env('DB_DATABASE_SECOND', 'homestead'),
