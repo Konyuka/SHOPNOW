@@ -4760,13 +4760,13 @@ __webpack_require__.r(__webpack_exports__);
       form: this.$inertia.form({
         email: '',
         password: '',
-        name: 'Michael',
-        phone: '0716202298',
-        address: '302686',
-        city: 'Nairobi',
-        country: 'Kenya',
-        zip: '00100',
-        payment: 'mpesa',
+        name: '',
+        phone: '',
+        address: '',
+        city: '',
+        country: '',
+        zip: '',
+        payment: '',
         products: this.$store.state.cartItems,
         userAccount: this.$page.props.auth.user
       })
