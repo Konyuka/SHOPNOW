@@ -317,7 +317,6 @@ export default {
     },
     data () {
         return {
-           
             regModal:false
         }
     },

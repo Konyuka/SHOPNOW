@@ -24,14 +24,15 @@ class ProductController extends Controller
         $account_id = $user_account->account_id; 
 
         $products = Product::where('account_id', $account_id)
-               ->orderBy('title')
+               ->orderBy('updated_at', 'desc')
                ->take(10)
                ->get();
 
-        return Inertia::render('Products/Index', [ 'products' =>  $products ]);       
+        return Inertia::render('Products/Index', [ 'products' =>  $products ]); 
+        
+        
 
         return json_decode($products);
-        
         
         $account = User::where('account_id', $id);
        

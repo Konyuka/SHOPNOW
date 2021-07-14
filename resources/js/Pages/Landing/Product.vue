@@ -21,32 +21,42 @@
 
                 <nav id="nav"
                     class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
-                    <a href="/" class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
+                    <a href="#"
+                        class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
                     <a href="#features"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">About</a>
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
+                    <a @click="regModal = !regModal" href="#"
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Register</a>     
                     <a href="/login"
-                        class="font-bold duration-100 transition-color hover:text-indigo-600">Vendor Portal</a>
+                        class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Login</a>
+
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
-                        <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
-                        <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
+                        <inertia-link href="#" class="w-full py-2 font-bold text-center text-pink-500">Filters</inertia-link>
+                        <inertia-link :href="route('cart')">    
+                        <a href="#" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
                             <span> <i class="fa fa-shopping-cart"> </i> Cart </span> 
                         </a>
+                        </inertia-link> 
                     </div>
                 </nav>
 
                 <div
                     class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
-                    <a href="/admin"
-                        class=" relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
-                    <!-- <a href="#_"
-                        class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span class="text-xs"> <i class="fa fa-filter mr-1"> </i> Filter </span> 
-                    </a> -->
+                    <inertia-link :href="route('cart')">
+                    <a href="#" role="button" class="relative flex z-40 px-2 py-2 text-lg font-bold text-pink-500 lg:text-white  md:mt-0">
+                        <svg class="flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
+                        <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
+                        </svg>
+                        <span class="absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">
+                            {{ cartNumber }}
+                        </span>
+                    </a>
+                    </inertia-link>
                     <a href="#_"
-                        class="ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
-                        <span class="text-xs"> <i class="fa fa-shopping-cart mr-1"> </i> Cart </span> 
+                        class="ml-16 relative z-40 inline-block w-auto h-full px-3 py-3 text-sm font-bold leading-none text-white bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
+                        <span class="text-xs"> <i class="fa fa-search mr-1"> </i> Filters </span> 
                     </a>
                     <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                         viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -103,7 +113,7 @@
       <main class="flex-1 overflow-y-auto z-50">
 
         <!-- Pricing Section -->
-        <div class="relative px-8 py-10 bg-white bg-opacity-90  border-t border-gray-200 md:py-16 lg:py-24 xl:py-4 h-auto xl:px-0">
+        <div class="relative px-8 py-10 bg-white bg-opacity-60 md:py-16 lg:py-24 xl:py-4 h-auto xl:px-0">
 
             <div id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                 <h3 class="w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
@@ -186,7 +196,7 @@
                             </div>
                             <div class="flex">
                             <span class="title-font font-medium text-2xl text-gray-900">KSh.{{ singleProduct.price}}</span>
-                            <button @click="addToCart" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
+                            <button @click="addToCart(singleProduct._id)" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
                             <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
@@ -235,19 +245,19 @@
                         </div>
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                             <h3 class="text-lg leading-6 font-bold text-gray-900" id="modal-title">
-                             Added to Cart
+                             Where are we Headed?
                             </h3>
                             <div class="mt-5 ml-8">
                                 <div class="grid grid-cols-2 gap-6 justify-center w-full">
                                     <a href="/">
                                     <button class="bg-blue-500 hover:bg-black text-white font-bold py-2 px-4 rounded inline-flex items-center">
                                         <i class="fa fa-arrow-left text-black hover:text-white mr-2"> </i>
-                                        <span>Shopping</span>
+                                        <span>Market</span>
                                     </button>  
                                     </a>
-                                    <a href="/checkout">
+                                    <a href="/cart">
                                     <button href="'/'" class="bg-blue-500 hover:bg-black text-white font-bold py-2 px-4 rounded inline-flex items-center">
-                                        <span>Checkout</span>
+                                        <span>Cart</span>
                                         <i class="fa fa-arrow-right text-black hover:text-white ml-2"> </i>
                                     </button>                                  
                                     </a>
@@ -347,6 +357,35 @@
 
       </main>
         
+      </div>
+
+    <!-- Modal -->
+    <div v-if="regModal" class="min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover"  id="modal-id">
+        <div class="absolute bg-black opacity-80 inset-0 z-0"></div>
+        <div class="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
+        <!--content-->
+        <div class="">
+            <!--body-->
+            <div class="text-center p-5 flex-auto justify-center">
+                    <svg class="w-16 h-16 flex items-center text-indigo-500 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+                    <h2 class="text-xl font-bold py-4 ">Choose Registration Type</h2>
+                    <p class="text-sm text-gray-500 px-8">Select your prefered account. <br> Register either as a <b>Vendor</b> or a <b>Client</b> </p>    
+            </div>
+            <!--footer-->
+            <div class="p-3  mt-2 text-center space-x-4 md:block">
+                <inertia-link :href="route('registerClient')">
+                <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
+                    Client Registration
+                </button>
+                </inertia-link>
+                <inertia-link :href="route('registerVendor')">
+                <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
+                    Vendor Registration
+                </button>
+                </inertia-link>
+            </div>
+        </div>
+        </div>
     </div>
 
 
@@ -356,32 +395,58 @@
 </template>
 
 <script>
-if (document.getElementById('nav-mobile-btn')) {
-    document.getElementById('nav-mobile-btn').addEventListener('click', function () {
-        if (this.classList.contains('close')) {
-            document.getElementById('nav').classList.add('hidden');
-            this.classList.remove('close');
-        } else {
-            document.getElementById('nav').classList.remove('hidden');
-            this.classList.add('close');
-        }
-    });
-}
+import Swal from 'sweetalert2';
+
+window.Swal = Swal;
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: false,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
+window.Toast = Toast;
 
 export default {
     name:'View_Product',
     props: {
         singleProduct: '',
     },
+    computed: {
+      cartNumber(){
+          return this.$store.state.cartItems.length
+      },  
+      cartItems(){
+          return this.$store.state.cartItems
+      }  
+    },
     data () {
         return {
-            modal:false
+            modal:false,
+            regModal: false,
+
         }
     },
     methods: {
-        addToCart(){
+        addToCart(product){
+            var item =  this.cartItems.find(x => x._id == product )
+            if(item == undefined){
+                this.$store.dispatch('addedToCart', this.singleProduct)
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Added to Cart'
+                })
+            }else{
+                Toast.fire({
+                    icon: 'warning',
+                    title: 'Item Already in Cart'
+                })
+            }
             this.modal = true
-            this.$store.dispatch('addCartDetails', this.singleProduct)
         }
     }
   

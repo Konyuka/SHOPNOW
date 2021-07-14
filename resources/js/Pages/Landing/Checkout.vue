@@ -140,8 +140,11 @@
                     <div class="mt-4 flex justify-between">
                     <inertia-link :href="route('cart')">
                     <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded">View Cart Details</button>
+                    </inertia-link>
+                    <inertia-link v-if="cartEmpty" :href="route('landing')">
+                    <button class="px-4 py-1 text-white font-light tracking-wider bg-red-500 hover:bg-black  rounded">Add Items to Cart</button>
                     </inertia-link>       
-                    <button type="submit" class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded">Place your order</button>
+                    <button v-else type="submit" class="px-4 py-1 text-white font-light tracking-wider bg-blue-500 hover:bg-black  rounded">Place your order</button>
                     </div>
                 </form>
                 </div>
@@ -324,10 +327,30 @@
 </template>
 
 <script>
+// window.Swal = Swal;
+// const Toast = Swal.mixin({
+//   toast: true,
+//   position: 'top-end',
+//   showConfirmButton: false,
+//   timer: 2000,
+//   timerProgressBar: false,
+//   didOpen: (toast) => {
+//     toast.addEventListener("mouseenter", Swal.stopTimer);
+//     toast.addEventListener("mouseleave", Swal.resumeTimer);
+//   },
+// });
+// window.Toast = Toast;
 
 export default {
     name:'Checkout',
     props: {
+    },
+    mounted () {
+      if(this.$store.state.cartItems == ''){
+          this.cartEmpty = true
+      }else{
+          this.cartEmpty = false
+      }  
     },
     computed: {
         noAuth(){
@@ -337,13 +360,10 @@ export default {
                 return true
             } 
         },
-        productId(){
-            
-        }
     },
     data () {
         return {
-            // noAuth:'',
+            cartEmpty:'',
             form: this.$inertia.form({
                 email:'',
                 password:'',
@@ -353,21 +373,25 @@ export default {
                 city:'Nairobi',
                 country:'Kenya',
                 zip:'00100',
-                payment:'Mpesa',
-                products:'',
+                payment:'mpesa',
+                products:this.$store.state.cartItems,
+                userAccount:this.$page.props.auth.user
             }),
         }
     },
     methods: {
         submit(){
-            let item = this.$store.state.cartItems
-            this.form.products = item[0].id
-            // this.form.products = 
-            // let prod = this.$store.state.cartItems
-            // for (let i = 0; i <= prod.length; i++) {
-            //     this.form.products.push(prod[i++].id)
-            // }
-            this.form.post(this.route('order.store'))
+            // let item = this.$store.state.cartItems
+            // this.form.products = item[0].id
+            if(this.$store.state.cartItems == ''){
+                Swal.fire(
+                    'Your Cart is Empty',
+                    'Please add products to cart for checkout',
+                    'question'
+                )
+            }else{
+                this.form.post(this.route('order.store'))
+            }
         },
         login(){
             this.form.post(this.route('login.checkout'))

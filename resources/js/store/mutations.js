@@ -1,9 +1,10 @@
 const mutations = {
   addedToCart(state, data) {
+    // state.cartItems = 1
     state.cartItems.push(data)
   },
-  addCartDetails(state, data){
-    state.cartDetails = data
+  resetCart(state, data){
+    state.cartItems = data
   }
 };
 

@@ -17,7 +17,7 @@ export default new Vuex.Store({
     strict: process.env.NODE_ENV !== "development",
     plugins: [
         createPersistedState({
-            storage: window.sessionStorage,
+            // storage: window.sessionStorage,
             storage: window.localStorage,
         }),
     ],

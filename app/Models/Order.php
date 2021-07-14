@@ -1,19 +1,15 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Order extends Model
+class Order extends Eloquent
 {
-    use HasFactory;
-    use SoftDeletes;
-
-    protected $fillable = [
-            'product_id', 'user_id', 'quantity', 'address' 
-        ];
+        protected $connection = 'mongodb';
+        protected $collection = 'Orders';
 
         public function user()
         {

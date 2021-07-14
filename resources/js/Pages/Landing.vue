@@ -34,10 +34,12 @@
                         class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Login</a>
 
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
-                        <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
-                        <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
+                        <inertia-link href="#" class="w-full py-2 font-bold text-center text-pink-500">Filters</inertia-link>
+                        <inertia-link :href="route('cart')">    
+                        <a href="#" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
                             <span> <i class="fa fa-shopping-cart"> </i> Cart </span> 
                         </a>
+                        </inertia-link> 
                     </div>
                 </nav>
 
@@ -349,8 +351,8 @@
 
                                 <div class="flex flex-wrap -m-4"> 
 
-                                <div v-for="product in allProducts.slice(0, 4)" :key="product.id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
-                                <inertia-link :href="route('product.view', product.id)">
+                                <div v-for="product in allProducts" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
                                     <div class="block relative h-48 rounded overflow-hidden">
                                     <div class="absolute flex flex-col top-0 right-0 p-3">
                                             <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
@@ -378,7 +380,7 @@
                                         <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
 
                                         <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
-                                            <button @click.prevent="addToCart(product.id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
                                                 <span>Add Cart</span>
                                             </button>
                                         </div>
@@ -826,7 +828,6 @@
 import FlashMessages from './components/FlashMessages.vue'
 
 import Swal from 'sweetalert2';
-
 window.Swal = Swal;
 const Toast = Swal.mixin({
   toast: true,
@@ -853,6 +854,13 @@ export default {
     watch: {
        
     },
+    mounted () {
+        if(this.$page.props.flash.success == 'Order Placed Successfully'){
+               this.resetCart()
+          }else{
+            //   this.resetCart()
+          }
+    },
     computed: {
       cartNumber(){
           return this.$store.state.cartItems.length
@@ -872,8 +880,11 @@ export default {
         }
     },
     methods: {
+      resetCart(){
+        this.$store.dispatch('resetCart', [])
+      },  
       addToCart(product){
-         var data =  this.allProducts.find(x => x.id == product )
+         var data =  this.allProducts.find(x => x._id == product )
          this.$store.dispatch('addedToCart', data)
 
           Toast.fire({

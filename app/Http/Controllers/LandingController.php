@@ -53,9 +53,10 @@ class LandingController extends Controller
 
     public function show(Product $product)
     {
+
         return Inertia::render('Landing/Product', [
             'singleProduct' => [
-                'id' => $product->id,
+                '_id' => $product->_id,
                 'title' => $product->title,
                 'type' => $product->type,
                 'price' => $product->price,
