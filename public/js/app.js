@@ -49222,7 +49222,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                              Vendor Login\n                          "
+                              "\n                              Login\n                          "
                             )
                           ]
                         ),
@@ -49657,7 +49657,7 @@ var render = function() {
                         },
                         [
                           _c(
-                            "intertia-link",
+                            "inertia-link",
                             { attrs: { href: _vm.route("registerClient") } },
                             [
                               _c(

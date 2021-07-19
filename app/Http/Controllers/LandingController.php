@@ -104,6 +104,7 @@ class LandingController extends Controller
                 'price' => $product->price,
                 'description' => $product->description,
                 'photos' => $product->photos,
+                'account_id' => $product->account_id,
                 'created_at' => date_format($product->created_at,'H:i:s D M Y '),
                 'deleted_at' => $product->deleted_at,
             ],

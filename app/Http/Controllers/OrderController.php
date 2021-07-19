@@ -27,9 +27,12 @@ class OrderController extends Controller
         $user = Auth::id();
         $user_account = DB::table('users')->where('id', $user)->first();
         $account_id = $user_account->account_id; 
-       
+
+        
         $orders = Order::where('products.account_id', $account_id)
-                ->get()->map->only('products');
+        ->get()->map->only('products');
+        
+        // return dd($orders);
 
         $orderDetails = Order::where('products.account_id', $account_id)
                 ->get()->map->only('name', 'phone', 'address');       

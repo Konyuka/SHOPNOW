@@ -94,7 +94,7 @@ class ProductController extends Controller
                 // 'photos' => $upload_url
             ]);
 
-            // return dd($addedProduct['_id']);
+            // return dd($addedProduct['account_id']);
 
             $images=$postData['photos'];
             $collection = collect([]);
