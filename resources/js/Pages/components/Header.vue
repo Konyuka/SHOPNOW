@@ -29,7 +29,7 @@
                     <a @click="regModal = !regModal" href="#"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Register</a>     
                     <a href="/login"
-                        class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Login</a>
+                        class="mr-0 font-bold duration-100  transition-color text-pink-600 hover:text-black">Login</a>
                 </div>   
                 <div v-else>
                     <a href="/admin"
@@ -56,19 +56,19 @@
             </nav>
 
             <!-- Search Form -->
-            <div class="relative ml-10">
+            <div class="relative ml-10 hidden md:flex">
             <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
                 <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
                     <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </span>
-            <input v-model="form.search" @keyup.enter="search" class="w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline" type="text" placeholder="Search">
+            <input v-model="form.search" @keyup.enter="search" class="text-sm w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline" type="text" placeholder="Type and Press Enter">
             </div>
             <!-- <Search   @reset="reset"  /> -->
             
 
             
-            <inertia-link :href="route('cart')">
+            <inertia-link class="hidden md:flex" :href="route('cart')">
                 <a href="#" role="button" class="group relative flex z-40 px-2 py-2 text-lg font-bold text-indigo-600 md:mt-0">
                     <span class="mr-1 font-bold duration-100 transition-color text-indigo-600 group-hover:text-black">Cart</span>
                     <svg class="group-hover:text-black flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
@@ -203,6 +203,14 @@ export default {
       },
       regModal: false,
     }
+  },
+  watch: {
+    //   form: {
+    //     deep: true,
+    //     handler: throttle(function() {
+    //             this.$inertia.get(this.route('product.search'), pickBy(this.form), { preserveState: true })
+    //         }, 150),
+    //     },
   },
   computed: {
       noAuth(){

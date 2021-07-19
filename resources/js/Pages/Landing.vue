@@ -11,7 +11,7 @@
             <!-- BEGIN FEATURES SECTION -->
             <div id="features" class="relative w-full px-8 py-10 md:py-1 lg:py-2 xl:py-1 xl:px-0">
                 <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
-                    <div class="mb-5 flex justify-items-center">
+                    <div class="mb-5 mt-4 flex justify-items-center">
                         <flash-messages />
                     </div>
                     <h3

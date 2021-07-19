@@ -27,7 +27,7 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <div v-if="noAuth">
+                    <!-- <div v-if="noAuth">
                         <a @click="regModal = !regModal" href="#"
                             class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Register</a>     
                         <a href="/login"
@@ -36,7 +36,7 @@
                     <div v-else>
                         <a href="/admin"
                             class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Dashboard</a>
-                    </div>     
+                    </div>      -->
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -105,9 +105,9 @@
         <!-- Pricing Section -->
         <div class="relative px-8 py-1 md:py-16 lg:py-24 xl:py-0 h-auto xl:px-0">         
 
-                    <div class="mt-20 bg-gray-200 bg-opacity-90">
+                    <div class="mt-20 bg-white bg-opacity-90">
                         <div class="container mx-auto mt-10">
-                            <div class="flex shadow-md my-10">
+                            <div class="flex shadow-2xl my-10">
                             <div class="w-3/4 bg-white px-10 py-10">
                                 <div class="flex justify-between border-b pb-8">
                                 <h1 class="font-semibold text-2xl">Shopping Cart</h1>
@@ -141,8 +141,8 @@
                                     <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                     </svg>
                                 </div>
-                                <span class="text-center w-1/5 font-semibold text-sm">KShs.{{item.price}}</span>
-                                <span class="text-center w-1/5 font-semibold text-sm">KShs.400</span>
+                                <span class="text-center w-1/5 font-semibold text-sm">KShs.{{item.price  }}</span>
+                                <span class="text-center w-1/5 font-semibold text-sm">KShs.{{ item.price * quantity }}</span>
                                 </div>
 
                                 <inertia-link :href="route('landing')">
@@ -174,7 +174,7 @@
                                 <div class="border-t mt-8">
                                 <div class="flex font-semibold justify-between py-6 text-sm uppercase">
                                     <span>Total cost</span>
-                                    <span>Kshs.600</span>
+                                    <span>Kshs.{{ itemSum }}</span>
                                 </div>
                                 <button v-if="noAuth" @click="showAuth = !showAuth" class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Login & Checkout</button>
                                 <inertia-link v-else :href="route('checkout')">
@@ -399,6 +399,13 @@ export default {
         // error: String,
     },
     computed: {
+        itemSum(){
+            let total = 0;
+            Object.values(this.cartItems).forEach(
+                (item) => (total =  total + item.price * item.quantity)
+            );
+            return total;
+        },
         cartItems(){
             return this.$store.state.cartItems
         },
@@ -410,8 +417,12 @@ export default {
             } 
         },
     },
+    mounted(){
+        this.setquantity()
+    },
     data () {
         return {
+            quantity:1,
             regModal:false,
             showAuth:false,
             form: this.$inertia.form({
@@ -422,6 +433,27 @@ export default {
         }
     },
     methods: {
+       setquantity(){
+
+       }, 
+       checkTotal(item){
+            // return console.log(price)
+            // var price =  this.cartItems.find(x => x._id == product )
+
+            let total = 0;
+            this.cartItems.find(x => {
+             x._id == item._id   
+             let total = total + (x.price * 1)
+            })
+            console.log(total)
+            return total;
+
+            // let total = 0;
+            // item.forEach((item, i) => {
+            //     total += item.price * item.qty;
+            // });
+            // return total;
+       },
        login(){
             this.form.post(this.route('login.checkout'))
         },

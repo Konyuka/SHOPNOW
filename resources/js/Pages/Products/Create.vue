@@ -118,11 +118,11 @@ export default {
                 },
                 {
                   label: "Computing",
-                  options: ["MacBooks", "NetBooks", "UltrBooks", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards & Mice", "External Drives", "Cable & Adaptors", "Networking Products", "Printer Ink & Toner", "Graphic Cards", "2-in-1 Laptops", "Computer Accessories"]
+                  options: ["MacBooks", "NetBooks", "UltraBooks", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards & Mice", "External Drives", "Cable & Adaptors", "Networking Products", "Printer Ink & Toner", "Graphic Cards", "2-in-1 Laptops", "Computer Accessories"]
                 },
                 {
                   label: "Electronics",
-                  options: ["Smart TV's", "LED & LCD TV's", "Data Projectors", "Music Speakers", "Home Theater", "Bluetooth Speakers", "Electronic Cables", "Camera", "Power Protection", "CCTV Cameras", "Television Accessories"]
+                  options: ["Smart TVs", "LED & LCD TVs", "Data Projectors", "Music Speakers", "Home Theater", "Bluetooth Speakers", "Electronic Cables", "Batteries", "Camera", "Power Protection", "CCTV Cameras", "Television Accessories"]
                 },
                 {
                   label: "Fashion",
@@ -138,23 +138,23 @@ export default {
                 },
                 {
                   label: "Sporting",
-                  options: ["Excercise & Fitness", "Accessories", "Clothing", "Team Sports", "Huawei", "Supplementaries", "Camping & Hiking", "Skate board & Scooters", "Cycling", "Accesories"]
+                  options: ["Excercise & Fitness", "Accessories", "Clothing", "Team Sports", "Supplementaries", "Camping & Hiking", "Skate board & Scooters", "Cycling", "Accesories"]
                 },
                 {
                   label: "Health & Beauty",
-                  options: ["Fragrances", "Hair Products", "Make Up", "Skin Care", "Men's Grooming", "Bathing Accessories", "Health Care & Drugs"]
+                  options: ["Fragrances", "Hair Products", "Make Up", "Skin Care", "Oral Care", "Mens Grooming", "Bathing Accessories", "Health Care & Drugs"]
                 },
                 {
                   label: "Outdoor",
-                  options: ["Hand Tools ", "Watering Equipment", "Grills", "Outdoor Cooking & Accessories", "Lighting", "Tables", "Patio Seating ", "Pest Control", "Hammock & Stands"]
+                  options: ["Hand Tools", "Watering Equipment", "Grills", "Outdoor Cooking & Accessories", "Lighting", "Tables", "Patio Seating", "Pest Control", "Hammock & Stands"]
                 },
                 {
                   label: "Home & Office",
-                  options: ["Home Decor", "Bedding", "Wall Art ", "Lighting", "Storage & Organization ", "Furniture", "Kitchen Dining", "Office Electornics", "Stationery", "Cookers", "Microwaves & Ovens", "Refrigerators", "Laundy Electronics", "Water Dispensers & Coolers", "Kitchen Elecronic"]
+                  options: ["Home Decor", "Bedding", "Wall Art", "Lighting", "Storage & Organization", "Furniture", "Kitchen Dining", "Office Electornics", "Stationery", "Cookers", "Microwaves & Ovens", "Refrigerators", "Laundy Electronics", "Water Dispensers & Coolers", "Kitchen Elecronic"]
                 },
                 {
                   label: "Other Categories",
-                  options: ["Books", "Movies & Music", "Automobile ", "Toys and Gaming", "Groceries", "Music Instruments ", "Pet Supplies ", "Livestock", "Industrial & Scientific", "Services"]
+                  options: ["Books", "Movies & Music", "Automobile", "Toys and Gaming", "Groceries", "Music Instruments", "Pet Supplies", "Livestock", "Industrial & Scientific", "Services"]
                 },
             ],
 

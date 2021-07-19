@@ -56,10 +56,13 @@ class LandingController extends Controller
         $key = \Request::get('search');
         $search = Product::where('title', 'like', '%' . $key . '%')
                 ->orWhere('description', 'like', '%' . $key . '%')
+                ->orWhere('subCategory', 'like', '%' . $key . '%')
+                ->orWhere('category', 'like', '%' . $key . '%')
                 ->get();
 
         return Inertia::render('Landing/Result', [
-            'allProducts' => $search
+            'allProducts' => $search,
+            'category' =>  $key,
         ]);
     }
 
@@ -88,18 +91,24 @@ class LandingController extends Controller
     public function show(Product $product)
 
     {
+        $account_id = $product->account_id; 
+        $user_account = DB::table('users')->where('account_id', $account_id)->first();
+        $account = DB::table('accounts')->where('id', $user_account->account_id)->first();
 
         return Inertia::render('Landing/Product', [
             'singleProduct' => [
                 '_id' => $product->_id,
                 'title' => $product->title,
-                'type' => $product->type,
+                'category' => $product->category,
+                'subCategory' => $product->subCategory,
                 'price' => $product->price,
                 'description' => $product->description,
                 'photos' => $product->photos,
                 'created_at' => date_format($product->created_at,'H:i:s D M Y '),
                 'deleted_at' => $product->deleted_at,
             ],
+            'account' => $account,
+            'vendor' => $user_account
         ]);
     }
 

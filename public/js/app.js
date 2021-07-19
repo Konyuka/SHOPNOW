@@ -4399,6 +4399,13 @@ __webpack_require__.r(__webpack_exports__);
   props: {// error: String,
   },
   computed: {
+    itemSum: function itemSum() {
+      var total = 0;
+      Object.values(this.cartItems).forEach(function (item) {
+        return total = total + item.price * item.quantity;
+      });
+      return total;
+    },
     cartItems: function cartItems() {
       return this.$store.state.cartItems;
     },
@@ -4410,8 +4417,12 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
+  mounted: function mounted() {
+    this.setquantity();
+  },
   data: function data() {
     return {
+      quantity: 1,
       regModal: false,
       showAuth: false,
       form: this.$inertia.form({
@@ -4422,6 +4433,22 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    setquantity: function setquantity() {},
+    checkTotal: function checkTotal(item) {
+      // return console.log(price)
+      // var price =  this.cartItems.find(x => x._id == product )
+      var total = 0;
+      this.cartItems.find(function (x) {
+        x._id == item._id;
+        var total = total + x.price * 1;
+      });
+      console.log(total);
+      return total; // let total = 0;
+      // item.forEach((item, i) => {
+      //     total += item.price * item.qty;
+      // });
+      // return total;
+    },
     login: function login() {
       this.form.post(this.route('login.checkout'));
     }
@@ -4873,154 +4900,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/Pages/components/SubNav.vue");
+/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/Pages/components/Header.vue");
 //
 //
 //
@@ -5274,6 +5155,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
 window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default());
 var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().mixin({
   toast: true,
@@ -5289,8 +5172,14 @@ var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().mixin({
 window.Toast = Toast;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'View_Product',
+  components: {
+    Categeories: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    MainNavigation: _components_Header_vue__WEBPACK_IMPORTED_MODULE_2__.default
+  },
   props: {
-    singleProduct: ''
+    singleProduct: '',
+    account: '',
+    vendor: ''
   },
   computed: {
     cartNumber: function cartNumber() {
@@ -5300,11 +5189,7 @@ window.Toast = Toast;
       return this.$store.state.cartItems;
     }
   },
-  mounted: function mounted() {//   alert(this.singleProduct.photos) 
-    // let url = url(this.singleProduct.photos)
-    // alert(url) 
-    // console.log(url)
-  },
+  mounted: function mounted() {},
   data: function data() {
     return {
       modal: false,
@@ -5327,9 +5212,8 @@ window.Toast = Toast;
       } else {
         sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire('Cannot Add Item', 'This item is already in your cart', 'warning');
         return;
-      }
+      } // this.modal = true
 
-      this.modal = true;
     }
   }
 });
@@ -6194,10 +6078,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       options: ["Samsung", "Iphone", "Tecno", "Xiaomi", "Huawei", "Techno", "Oppo", "Nokia", "Accessories"]
     }, {
       label: "Computing",
-      options: ["MacBooks", "NetBooks", "UltrBooks", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards & Mice", "External Drives", "Cable & Adaptors", "Networking Products", "Printer Ink & Toner", "Graphic Cards", "2-in-1 Laptops", "Computer Accessories"]
+      options: ["MacBooks", "NetBooks", "UltraBooks", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards & Mice", "External Drives", "Cable & Adaptors", "Networking Products", "Printer Ink & Toner", "Graphic Cards", "2-in-1 Laptops", "Computer Accessories"]
     }, {
       label: "Electronics",
-      options: ["Smart TV's", "LED & LCD TV's", "Data Projectors", "Music Speakers", "Home Theater", "Bluetooth Speakers", "Electronic Cables", "Camera", "Power Protection", "CCTV Cameras", "Television Accessories"]
+      options: ["Smart TVs", "LED & LCD TVs", "Data Projectors", "Music Speakers", "Home Theater", "Bluetooth Speakers", "Electronic Cables", "Batteries", "Camera", "Power Protection", "CCTV Cameras", "Television Accessories"]
     }, {
       label: "Fashion",
       options: ["Dresses", "Suits & Blazers", "Ankara", "Coats & Jackets", "Trousers", "Skirts", "Baby Clothing", "Jeans", "Shorts", "Fashion Accessories", "Handbag & Wallets", "Shirts", "Innerwear", "Fashion Sneakers", "Sunglasses & Eyewear"]
@@ -6209,19 +6093,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       options: ["Diapers", "Walkers", "Backpack & Carriers", "Swings, Jumpers & Bouncers", "Toys", "Bathing & Skin Care", "Apparels & Accessories", "Music & Sound", "Feeding", "Health & Baby Care", "Potty Training", "Baby Safety"]
     }, {
       label: "Sporting",
-      options: ["Excercise & Fitness", "Accessories", "Clothing", "Team Sports", "Huawei", "Supplementaries", "Camping & Hiking", "Skate board & Scooters", "Cycling", "Accesories"]
+      options: ["Excercise & Fitness", "Accessories", "Clothing", "Team Sports", "Supplementaries", "Camping & Hiking", "Skate board & Scooters", "Cycling", "Accesories"]
     }, {
       label: "Health & Beauty",
-      options: ["Fragrances", "Hair Products", "Make Up", "Skin Care", "Men's Grooming", "Bathing Accessories", "Health Care & Drugs"]
+      options: ["Fragrances", "Hair Products", "Make Up", "Skin Care", "Oral Care", "Mens Grooming", "Bathing Accessories", "Health Care & Drugs"]
     }, {
       label: "Outdoor",
-      options: ["Hand Tools ", "Watering Equipment", "Grills", "Outdoor Cooking & Accessories", "Lighting", "Tables", "Patio Seating ", "Pest Control", "Hammock & Stands"]
+      options: ["Hand Tools", "Watering Equipment", "Grills", "Outdoor Cooking & Accessories", "Lighting", "Tables", "Patio Seating", "Pest Control", "Hammock & Stands"]
     }, {
       label: "Home & Office",
-      options: ["Home Decor", "Bedding", "Wall Art ", "Lighting", "Storage & Organization ", "Furniture", "Kitchen Dining", "Office Electornics", "Stationery", "Cookers", "Microwaves & Ovens", "Refrigerators", "Laundy Electronics", "Water Dispensers & Coolers", "Kitchen Elecronic"]
+      options: ["Home Decor", "Bedding", "Wall Art", "Lighting", "Storage & Organization", "Furniture", "Kitchen Dining", "Office Electornics", "Stationery", "Cookers", "Microwaves & Ovens", "Refrigerators", "Laundy Electronics", "Water Dispensers & Coolers", "Kitchen Elecronic"]
     }, {
       label: "Other Categories",
-      options: ["Books", "Movies & Music", "Automobile ", "Toys and Gaming", "Groceries", "Music Instruments ", "Pet Supplies ", "Livestock", "Industrial & Scientific", "Services"]
+      options: ["Books", "Movies & Music", "Automobile", "Toys and Gaming", "Groceries", "Music Instruments", "Pet Supplies", "Livestock", "Industrial & Scientific", "Services"]
     }]), _defineProperty(_ref, "form", this.$inertia.form({
       category: '',
       subCategory: '',
@@ -7147,6 +7031,13 @@ __webpack_require__.r(__webpack_exports__);
       regModal: false
     };
   },
+  watch: {//   form: {
+    //     deep: true,
+    //     handler: throttle(function() {
+    //             this.$inertia.get(this.route('product.search'), pickBy(this.form), { preserveState: true })
+    //         }, 150),
+    //     },
+  },
   computed: {
     noAuth: function noAuth() {
       if (this.$page.props.auth.user != null) {
@@ -7181,6 +7072,388 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52096,7 +52369,7 @@ var render = function() {
                   [
                     _c(
                       "div",
-                      { staticClass: "mb-5 flex justify-items-center" },
+                      { staticClass: "mb-5 mt-4 flex justify-items-center" },
                       [_c("flash-messages")],
                       1
                     ),
@@ -53816,45 +54089,6 @@ var render = function() {
                     [_vm._v("Contacts")]
                   ),
                   _vm._v(" "),
-                  _vm.noAuth
-                    ? _c("div", [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black",
-                            attrs: { href: "#" },
-                            on: {
-                              click: function($event) {
-                                _vm.regModal = !_vm.regModal
-                              }
-                            }
-                          },
-                          [_vm._v("Register")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black",
-                            attrs: { href: "/login" }
-                          },
-                          [_vm._v("Login")]
-                        )
-                      ])
-                    : _c("div", [
-                        _c(
-                          "a",
-                          {
-                            staticClass:
-                              "mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black",
-                            attrs: { href: "/admin" }
-                          },
-                          [_vm._v("Dashboard")]
-                        )
-                      ]),
-                  _vm._v(" "),
                   _c(
                     "div",
                     {
@@ -54121,9 +54355,9 @@ var render = function() {
                 "relative px-8 py-1 md:py-16 lg:py-24 xl:py-0 h-auto xl:px-0"
             },
             [
-              _c("div", { staticClass: "mt-20 bg-gray-200 bg-opacity-90" }, [
+              _c("div", { staticClass: "mt-20 bg-white bg-opacity-90" }, [
                 _c("div", { staticClass: "container mx-auto mt-10" }, [
-                  _c("div", { staticClass: "flex shadow-md my-10" }, [
+                  _c("div", { staticClass: "flex shadow-2xl my-10" }, [
                     _c(
                       "div",
                       { staticClass: "w-3/4 bg-white px-10 py-10" },
@@ -54252,7 +54486,11 @@ var render = function() {
                                   staticClass:
                                     "text-center w-1/5 font-semibold text-sm"
                                 },
-                                [_vm._v("KShs.400")]
+                                [
+                                  _vm._v(
+                                    "KShs." + _vm._s(item.price * _vm.quantity)
+                                  )
+                                ]
                               )
                             ]
                           )
@@ -54349,7 +54587,20 @@ var render = function() {
                           "div",
                           { staticClass: "border-t mt-8" },
                           [
-                            _vm._m(7),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex font-semibold justify-between py-6 text-sm uppercase"
+                              },
+                              [
+                                _c("span", [_vm._v("Total cost")]),
+                                _vm._v(" "),
+                                _c("span", [
+                                  _vm._v("Kshs." + _vm._s(_vm.itemSum))
+                                ])
+                              ]
+                            ),
                             _vm._v(" "),
                             _vm.noAuth
                               ? _c(
@@ -54443,7 +54694,7 @@ var render = function() {
                                 "div",
                                 { staticClass: "sm:flex sm:items-start" },
                                 [
-                                  _vm._m(8),
+                                  _vm._m(7),
                                   _vm._v(" "),
                                   _c(
                                     "div",
@@ -54666,9 +54917,9 @@ var render = function() {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(9),
+                                                _vm._m(8),
                                                 _vm._v(" "),
-                                                _vm._m(10)
+                                                _vm._m(9)
                                               ]
                                             )
                                           ]
@@ -54777,9 +55028,9 @@ var render = function() {
                         "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                     },
                     [
-                      _vm._m(11),
+                      _vm._m(10),
                       _vm._v(" "),
-                      _vm._m(12),
+                      _vm._m(11),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -54970,7 +55221,7 @@ var render = function() {
                             _vm._v("Choose Registration Type")
                           ]),
                           _vm._v(" "),
-                          _vm._m(13)
+                          _vm._m(12)
                         ]
                       ),
                       _vm._v(" "),
@@ -55173,22 +55424,6 @@ var staticRenderFns = [
         attrs: { type: "text", id: "promo", placeholder: "Enter your code" }
       })
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "flex font-semibold justify-between py-6 text-sm uppercase"
-      },
-      [
-        _c("span", [_vm._v("Total cost")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("Kshs.600")])
-      ]
-    )
   },
   function() {
     var _vm = this
@@ -57131,1256 +57366,699 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("body", { staticClass: "overflow-x-hidden antialiased" }, [
-      _c("div", { staticClass: "flex flex-col h-screen" }, [
-        _c("header", { staticClass: "relative z-50 w-full h-24 shadow-2xl" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0"
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "relative flex items-center inline-block h-5 h-full font-black leading-none",
-                  attrs: { href: "/" }
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "w-auto h-6 text-indigo-600 fill-current",
-                      attrs: {
-                        viewBox: "0 0 194 116",
-                        xmlns: "http://www.w3.org/2000/svg"
-                      }
-                    },
-                    [
-                      _c("g", { attrs: { "fill-rule": "evenodd" } }, [
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
-                          }
-                        })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(0)
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "nav",
-                {
-                  staticClass:
-                    "absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative",
-                  attrs: { id: "nav" }
-                },
-                [
-                  _c(
-                    "inertia-link",
-                    { attrs: { href: _vm.route("landing") } },
-                    [
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Home")]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600",
-                      attrs: { href: "#features" }
-                    },
-                    [_vm._v("About")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
-                      attrs: { href: "#pricing" }
-                    },
-                    [_vm._v("Contacts")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black",
-                      attrs: { href: "#" },
-                      on: {
-                        click: function($event) {
-                          _vm.regModal = !_vm.regModal
-                        }
-                      }
-                    },
-                    [_vm._v("Register")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black",
-                      attrs: { href: "/login" }
-                    },
-                    [_vm._v("Login")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
-                    },
-                    [
-                      _c(
-                        "inertia-link",
-                        {
-                          staticClass:
-                            "w-full py-2 font-bold text-center text-pink-500",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Filters")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "inertia-link",
-                        { attrs: { href: _vm.route("cart") } },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold",
-                              attrs: { href: "#" }
-                            },
-                            [
-                              _c("span", [
-                                _c("i", { staticClass: "fa fa-shopping-cart" }),
-                                _vm._v(" Cart ")
-                              ])
-                            ]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between"
-                },
-                [
-                  _c("inertia-link", { attrs: { href: _vm.route("cart") } }, [
+      _c(
+        "div",
+        { staticClass: "flex flex-col h-screen" },
+        [
+          _c("main-navigation"),
+          _vm._v(" "),
+          _c("main", { staticClass: "flex-1 overflow-y-auto z-10 py-10" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "relative px-8 py-10 bg-white bg-opacity-60 md:py-16 lg:py-24 xl:py-4 h-auto xl:px-0"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "container flex flex-col items-center h-full max-w-6xl mx-auto",
+                    attrs: { id: "pricing" }
+                  },
+                  [
                     _c(
-                      "a",
+                      "h3",
                       {
                         staticClass:
-                          "relative flex z-40 px-2 py-2 text-lg font-bold text-pink-500 lg:text-white  md:mt-0",
-                        attrs: { href: "#", role: "button" }
+                          "w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0"
+                      },
+                      [
+                        _vm._v(
+                          "\n                  Product View\n              "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "section",
+                      {
+                        staticClass: "text-gray-600 body-font overflow-hidden"
                       },
                       [
                         _c(
-                          "svg",
-                          {
-                            staticClass: "flex-1 w-8 h-8 fill-current",
-                            attrs: { viewbox: "0 0 24 24" }
-                          },
+                          "div",
+                          { staticClass: "container px-5 py-5 mx-auto" },
                           [
-                            _c("path", {
-                              attrs: {
-                                d:
-                                  "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass:
-                              "absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
-                          },
-                          [
-                            _vm._v(
-                              "\n                          " +
-                                _vm._s(_vm.cartNumber) +
-                                "\n                      "
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block",
-                      attrs: {
-                        viewBox: "0 0 818 815",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        "xmlns:xlink": "http://www.w3.org/1999/xlink"
-                      }
-                    },
-                    [
-                      _c(
-                        "defs",
-                        [
-                          _c(
-                            "linearGradient",
-                            {
-                              attrs: {
-                                x1: "0%",
-                                y1: "0%",
-                                x2: "100%",
-                                y2: "100%",
-                                id: "c"
-                              }
-                            },
-                            [
-                              _c("stop", {
-                                attrs: { "stop-color": "#E614F2", offset: "0%" }
-                              }),
-                              _vm._v(" "),
-                              _c("stop", {
-                                attrs: {
-                                  "stop-color": "#FC3832",
-                                  offset: "100%"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "linearGradient",
-                            {
-                              attrs: {
-                                x1: "0%",
-                                y1: "0%",
-                                x2: "100%",
-                                y2: "100%",
-                                id: "f"
-                              }
-                            },
-                            [
-                              _c("stop", {
-                                attrs: { "stop-color": "#657DE9", offset: "0%" }
-                              }),
-                              _vm._v(" "),
-                              _c("stop", {
-                                attrs: {
-                                  "stop-color": "#1C0FD7",
-                                  offset: "100%"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "filter",
-                            {
-                              attrs: {
-                                x: "-4.7%",
-                                y: "-3.3%",
-                                width: "109.3%",
-                                height: "109.3%",
-                                filterUnits: "objectBoundingBox",
-                                id: "a"
-                              }
-                            },
-                            [
-                              _c("feOffset", {
-                                attrs: {
-                                  dy: "8",
-                                  in: "SourceAlpha",
-                                  result: "shadowOffsetOuter1"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("feGaussianBlur", {
-                                attrs: {
-                                  stdDeviation: "8",
-                                  in: "shadowOffsetOuter1",
-                                  result: "shadowBlurOuter1"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("feColorMatrix", {
-                                attrs: {
-                                  values:
-                                    "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0",
-                                  in: "shadowBlurOuter1"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "filter",
-                            {
-                              attrs: {
-                                x: "-4.7%",
-                                y: "-3.3%",
-                                width: "109.3%",
-                                height: "109.3%",
-                                filterUnits: "objectBoundingBox",
-                                id: "d"
-                              }
-                            },
-                            [
-                              _c("feOffset", {
-                                attrs: {
-                                  dy: "8",
-                                  in: "SourceAlpha",
-                                  result: "shadowOffsetOuter1"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("feGaussianBlur", {
-                                attrs: {
-                                  stdDeviation: "8",
-                                  in: "shadowOffsetOuter1",
-                                  result: "shadowBlurOuter1"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("feColorMatrix", {
-                                attrs: {
-                                  values:
-                                    "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0",
-                                  in: "shadowBlurOuter1"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z",
-                              id: "b"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z",
-                              id: "e"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "g",
-                        {
-                          attrs: {
-                            fill: "none",
-                            "fill-rule": "evenodd",
-                            opacity: ".9"
-                          }
-                        },
-                        [
-                          _c(
-                            "g",
-                            {
-                              attrs: { transform: "rotate(65 416.452 409.167)" }
-                            },
-                            [
-                              _c("use", {
-                                attrs: {
-                                  fill: "#000",
-                                  filter: "url(#a)",
-                                  "xlink:href": "#b"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("use", {
-                                attrs: { fill: "url(#c)", "xlink:href": "#b" }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "g",
-                            {
-                              attrs: { transform: "rotate(29 421.929 414.496)" }
-                            },
-                            [
-                              _c("use", {
-                                attrs: {
-                                  fill: "#000",
-                                  filter: "url(#d)",
-                                  "xlink:href": "#e"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("use", {
-                                attrs: { fill: "url(#f)", "xlink:href": "#e" }
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _vm._m(2)
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("main", { staticClass: "flex-1 overflow-y-auto z-50" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "relative px-8 py-10 bg-white bg-opacity-60 md:py-16 lg:py-24 xl:py-4 h-auto xl:px-0"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "container flex flex-col items-center h-full max-w-6xl mx-auto",
-                  attrs: { id: "pricing" }
-                },
-                [
-                  _c(
-                    "h3",
-                    {
-                      staticClass:
-                        "w-full max-w-2xl px-5 px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0"
-                    },
-                    [_vm._v("\n                  Product View\n              ")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "section",
-                    { staticClass: "text-gray-600 body-font overflow-hidden" },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "container px-5 py-5 mx-auto" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "lg:w-4/5 mx-auto flex flex-wrap" },
-                            [
-                              _c("img", {
-                                staticClass:
-                                  "lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded",
-                                attrs: {
-                                  alt: "ecommerce",
-                                  src: "/" + _vm.singleProduct.photos
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
+                            _c(
+                              "div",
+                              {
+                                staticClass: "lg:w-4/5 mx-auto flex flex-wrap"
+                              },
+                              [
+                                _c("img", {
                                   staticClass:
-                                    "lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0"
-                                },
-                                [
-                                  _c(
-                                    "h2",
-                                    {
-                                      staticClass:
-                                        "text-sm title-font text-gray-500 tracking-widest"
-                                    },
-                                    [
-                                      _vm._v(
-                                        " " +
-                                          _vm._s(_vm.singleProduct.type) +
-                                          " "
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h1",
-                                    {
-                                      staticClass:
-                                        "text-gray-900 text-3xl title-font font-medium mb-1"
-                                    },
-                                    [
-                                      _vm._v(
-                                        " " +
-                                          _vm._s(_vm.singleProduct.title) +
-                                          " "
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "flex mb-4" }, [
+                                    "lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded",
+                                  attrs: {
+                                    alt: "ecommerce",
+                                    src: "/" + _vm.singleProduct.photos
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0"
+                                  },
+                                  [
                                     _c(
-                                      "span",
-                                      { staticClass: "flex items-center" },
+                                      "h2",
+                                      {
+                                        staticClass:
+                                          "text-sm title-font text-gray-500 tracking-widest"
+                                      },
                                       [
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass:
-                                              "w-4 h-4 text-indigo-500",
-                                            attrs: {
-                                              fill: "currentColor",
-                                              stroke: "currentColor",
-                                              "stroke-linecap": "round",
-                                              "stroke-linejoin": "round",
-                                              "stroke-width": "2",
-                                              viewBox: "0 0 24 24"
-                                            }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                              }
-                                            })
-                                          ]
+                                        _vm._v(
+                                          " " +
+                                            _vm._s(_vm.singleProduct.category) +
+                                            " | "
                                         ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass:
-                                              "w-4 h-4 text-indigo-500",
-                                            attrs: {
-                                              fill: "currentColor",
-                                              stroke: "currentColor",
-                                              "stroke-linecap": "round",
-                                              "stroke-linejoin": "round",
-                                              "stroke-width": "2",
-                                              viewBox: "0 0 24 24"
-                                            }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass:
-                                              "w-4 h-4 text-indigo-500",
-                                            attrs: {
-                                              fill: "currentColor",
-                                              stroke: "currentColor",
-                                              "stroke-linecap": "round",
-                                              "stroke-linejoin": "round",
-                                              "stroke-width": "2",
-                                              viewBox: "0 0 24 24"
-                                            }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass:
-                                              "w-4 h-4 text-indigo-500",
-                                            attrs: {
-                                              fill: "currentColor",
-                                              stroke: "currentColor",
-                                              "stroke-linecap": "round",
-                                              "stroke-linejoin": "round",
-                                              "stroke-width": "2",
-                                              viewBox: "0 0 24 24"
-                                            }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "svg",
-                                          {
-                                            staticClass:
-                                              "w-4 h-4 text-indigo-500",
-                                            attrs: {
-                                              fill: "none",
-                                              stroke: "currentColor",
-                                              "stroke-linecap": "round",
-                                              "stroke-linejoin": "round",
-                                              "stroke-width": "2",
-                                              viewBox: "0 0 24 24"
-                                            }
-                                          },
-                                          [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "text-gray-600 ml-3" },
-                                          [_vm._v("4 Reviews")]
-                                        )
+                                        _c("span", { staticClass: "text-xs" }, [
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(
+                                                _vm.singleProduct.subCategory
+                                              ) +
+                                              " "
+                                          )
+                                        ])
                                       ]
                                     ),
                                     _vm._v(" "),
                                     _c(
-                                      "span",
+                                      "h1",
                                       {
                                         staticClass:
-                                          "flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s"
+                                          "text-gray-900 text-3xl title-font font-medium mb-1"
                                       },
                                       [
-                                        _c(
-                                          "a",
-                                          { staticClass: "text-gray-500" },
-                                          [
-                                            _c(
-                                              "svg",
-                                              {
-                                                staticClass: "w-5 h-5",
-                                                attrs: {
-                                                  fill: "currentColor",
-                                                  "stroke-linecap": "round",
-                                                  "stroke-linejoin": "round",
-                                                  "stroke-width": "2",
-                                                  viewBox: "0 0 24 24"
-                                                }
-                                              },
-                                              [
-                                                _c("path", {
-                                                  attrs: {
-                                                    d:
-                                                      "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                                                  }
-                                                })
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          { staticClass: "text-gray-500" },
-                                          [
-                                            _c(
-                                              "svg",
-                                              {
-                                                staticClass: "w-5 h-5",
-                                                attrs: {
-                                                  fill: "currentColor",
-                                                  "stroke-linecap": "round",
-                                                  "stroke-linejoin": "round",
-                                                  "stroke-width": "2",
-                                                  viewBox: "0 0 24 24"
-                                                }
-                                              },
-                                              [
-                                                _c("path", {
-                                                  attrs: {
-                                                    d:
-                                                      "M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                                                  }
-                                                })
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          { staticClass: "text-gray-500" },
-                                          [
-                                            _c(
-                                              "svg",
-                                              {
-                                                staticClass: "w-5 h-5",
-                                                attrs: {
-                                                  fill: "currentColor",
-                                                  "stroke-linecap": "round",
-                                                  "stroke-linejoin": "round",
-                                                  "stroke-width": "2",
-                                                  viewBox: "0 0 24 24"
-                                                }
-                                              },
-                                              [
-                                                _c("path", {
-                                                  attrs: {
-                                                    d:
-                                                      "M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
-                                                  }
-                                                })
-                                              ]
-                                            )
-                                          ]
+                                        _vm._v(
+                                          " " +
+                                            _vm._s(_vm.singleProduct.title) +
+                                            " "
                                         )
                                       ]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "leading-relaxed" }, [
-                                    _vm._v(
-                                      "\n                              Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY.\n                               XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. \n                               Everyday carry +1 seitan poutine tumeric. \n                               Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.\n                          "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"
-                                    },
-                                    [
-                                      _vm._m(3),
-                                      _vm._v(" "),
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "flex mb-4" }, [
                                       _c(
-                                        "div",
-                                        {
-                                          staticClass: "flex ml-6 items-center"
-                                        },
+                                        "span",
+                                        { staticClass: "flex items-center" },
                                         [
-                                          _c("span", { staticClass: "mr-3" }, [
-                                            _vm._v("Size")
-                                          ]),
+                                          _c(
+                                            "svg",
+                                            {
+                                              staticClass:
+                                                "w-4 h-4 text-indigo-500",
+                                              attrs: {
+                                                fill: "currentColor",
+                                                stroke: "currentColor",
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                viewBox: "0 0 24 24"
+                                              }
+                                            },
+                                            [
+                                              _c("path", {
+                                                attrs: {
+                                                  d:
+                                                    "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                                }
+                                              })
+                                            ]
+                                          ),
                                           _vm._v(" "),
                                           _c(
-                                            "div",
-                                            { staticClass: "relative" },
+                                            "svg",
+                                            {
+                                              staticClass:
+                                                "w-4 h-4 text-indigo-500",
+                                              attrs: {
+                                                fill: "currentColor",
+                                                stroke: "currentColor",
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                viewBox: "0 0 24 24"
+                                              }
+                                            },
                                             [
-                                              _vm._m(4),
-                                              _vm._v(" "),
+                                              _c("path", {
+                                                attrs: {
+                                                  d:
+                                                    "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "svg",
+                                            {
+                                              staticClass:
+                                                "w-4 h-4 text-indigo-500",
+                                              attrs: {
+                                                fill: "currentColor",
+                                                stroke: "currentColor",
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                viewBox: "0 0 24 24"
+                                              }
+                                            },
+                                            [
+                                              _c("path", {
+                                                attrs: {
+                                                  d:
+                                                    "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "svg",
+                                            {
+                                              staticClass:
+                                                "w-4 h-4 text-indigo-500",
+                                              attrs: {
+                                                fill: "currentColor",
+                                                stroke: "currentColor",
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                viewBox: "0 0 24 24"
+                                              }
+                                            },
+                                            [
+                                              _c("path", {
+                                                attrs: {
+                                                  d:
+                                                    "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "svg",
+                                            {
+                                              staticClass:
+                                                "w-4 h-4 text-indigo-500",
+                                              attrs: {
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                "stroke-linecap": "round",
+                                                "stroke-linejoin": "round",
+                                                "stroke-width": "2",
+                                                viewBox: "0 0 24 24"
+                                              }
+                                            },
+                                            [
+                                              _c("path", {
+                                                attrs: {
+                                                  d:
+                                                    "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "text-gray-600 ml-3"
+                                            },
+                                            [_vm._v("4 Reviews")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s"
+                                        },
+                                        [
+                                          _c(
+                                            "a",
+                                            { staticClass: "text-gray-500" },
+                                            [
                                               _c(
-                                                "span",
+                                                "svg",
                                                 {
-                                                  staticClass:
-                                                    "absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center"
+                                                  staticClass: "w-5 h-5",
+                                                  attrs: {
+                                                    fill: "currentColor",
+                                                    "stroke-linecap": "round",
+                                                    "stroke-linejoin": "round",
+                                                    "stroke-width": "2",
+                                                    viewBox: "0 0 24 24"
+                                                  }
                                                 },
                                                 [
-                                                  _c(
-                                                    "svg",
-                                                    {
-                                                      staticClass: "w-4 h-4",
-                                                      attrs: {
-                                                        fill: "none",
-                                                        stroke: "currentColor",
-                                                        "stroke-linecap":
-                                                          "round",
-                                                        "stroke-linejoin":
-                                                          "round",
-                                                        "stroke-width": "2",
-                                                        viewBox: "0 0 24 24"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("path", {
-                                                        attrs: {
-                                                          d: "M6 9l6 6 6-6"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
+                                                  _c("path", {
+                                                    attrs: {
+                                                      d:
+                                                        "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            { staticClass: "text-gray-500" },
+                                            [
+                                              _c(
+                                                "svg",
+                                                {
+                                                  staticClass: "w-5 h-5",
+                                                  attrs: {
+                                                    fill: "currentColor",
+                                                    "stroke-linecap": "round",
+                                                    "stroke-linejoin": "round",
+                                                    "stroke-width": "2",
+                                                    viewBox: "0 0 24 24"
+                                                  }
+                                                },
+                                                [
+                                                  _c("path", {
+                                                    attrs: {
+                                                      d:
+                                                        "M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            { staticClass: "text-gray-500" },
+                                            [
+                                              _c(
+                                                "svg",
+                                                {
+                                                  staticClass: "w-5 h-5",
+                                                  attrs: {
+                                                    fill: "currentColor",
+                                                    "stroke-linecap": "round",
+                                                    "stroke-linejoin": "round",
+                                                    "stroke-width": "2",
+                                                    viewBox: "0 0 24 24"
+                                                  }
+                                                },
+                                                [
+                                                  _c("path", {
+                                                    attrs: {
+                                                      d:
+                                                        "M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                                                    }
+                                                  })
                                                 ]
                                               )
                                             ]
                                           )
                                         ]
                                       )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "flex" }, [
+                                    ]),
+                                    _vm._v(" "),
                                     _c(
-                                      "span",
+                                      "p",
                                       {
                                         staticClass:
-                                          "title-font font-medium text-2xl text-gray-900"
+                                          "leading-relaxed h-10 md:h-48"
                                       },
                                       [
                                         _vm._v(
-                                          "KSh." +
-                                            _vm._s(_vm.singleProduct.price)
+                                          "\n                              " +
+                                            _vm._s(
+                                              _vm.singleProduct.description
+                                            ) +
+                                            "\n                          "
                                         )
                                       ]
                                     ),
                                     _vm._v(" "),
                                     _c(
-                                      "button",
+                                      "div",
                                       {
                                         staticClass:
-                                          "flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded",
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.addToCart(
-                                              _vm.singleProduct._id
-                                            )
-                                          }
-                                        }
-                                      },
-                                      [_vm._v("Add to Cart")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass:
-                                          "rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
+                                          "flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"
                                       },
                                       [
                                         _c(
-                                          "svg",
-                                          {
-                                            staticClass: "w-5 h-5",
-                                            attrs: {
-                                              fill: "currentColor",
-                                              "stroke-linecap": "round",
-                                              "stroke-linejoin": "round",
-                                              "stroke-width": "2",
-                                              viewBox: "0 0 24 24"
-                                            }
-                                          },
+                                          "div",
+                                          { staticClass: "flex items-center" },
                                           [
-                                            _c("path", {
-                                              attrs: {
-                                                d:
-                                                  "M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
-                                              }
-                                            })
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "mr-3 text-lg text-green-600"
+                                              },
+                                              [_vm._v(_vm._s(_vm.account.name))]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(0),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "flex ml-4" },
+                                          [
+                                            _c(
+                                              "a",
+                                              {
+                                                attrs: {
+                                                  href:
+                                                    "tel:" + _vm.vendor.phone
+                                                }
+                                              },
+                                              [_vm._m(1)]
+                                            )
                                           ]
                                         )
                                       ]
-                                    )
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm.modal
-                    ? _c(
-                        "div",
-                        {
-                          staticClass: "fixed z-10 inset-0 overflow-y-auto",
-                          attrs: {
-                            "aria-labelledby": "modal-title",
-                            role: "dialog",
-                            "aria-modal": "true"
-                          }
-                        },
-                        [_vm._m(5)]
-                      )
-                    : _vm._e()
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "footer",
-            {
-              staticClass:
-                "px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row"
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left"
-                    },
-                    [
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "flex justify-start block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start",
-                          attrs: { href: "/" }
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticClass: "flex items-start sm:items-center" },
-                            [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "w-auto h-6 text-gray-800 fill-current",
-                                  attrs: {
-                                    viewBox: "0 0 194 116",
-                                    xmlns: "http://www.w3.org/2000/svg"
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "g",
-                                    { attrs: { "fill-rule": "evenodd" } },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
-                                        }
-                                      }),
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "flex" }, [
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "title-font font-medium text-2xl text-gray-900"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "KSh." +
+                                              _vm._s(_vm.singleProduct.price)
+                                          )
+                                        ]
+                                      ),
                                       _vm._v(" "),
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        { staticClass: "mt-6 mr-4 text-base text-gray-500" },
-                        [
-                          _vm._v(
-                            "Crafting the next-level of user experience and engagement.\n                  "
-                          )
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
-                    },
-                    [
-                      _vm._m(6),
-                      _vm._v(" "),
-                      _vm._m(7),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "flex flex-col w-full text-gray-700" },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0"
-                            },
-                            [_vm._v("Follow Us")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "flex justify-start pl-4 mt-2" },
-                            [
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600",
-                                  attrs: {
-                                    target: "_blank",
-                                    rel: "noopener noreferrer",
-                                    href: "https://devdojo.com"
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "svg",
-                                    {
-                                      staticClass: "w-5 h-5 fill-current",
-                                      attrs: {
-                                        viewBox: "0 0 24 24",
-                                        xmlns: "http://www.w3.org/2000/svg"
-                                      }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600",
-                                  attrs: {
-                                    target: "_blank",
-                                    rel: "noopener noreferrer",
-                                    href: "https://devdojo.com"
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "svg",
-                                    {
-                                      staticClass: "w-5 h-5 fill-current",
-                                      attrs: {
-                                        viewBox: "0 0 24 24",
-                                        xmlns: "http://www.w3.org/2000/svg"
-                                      }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "flex items-center block text-gray-400 no-underline hover:text-gray-600",
-                                  attrs: {
-                                    target: "_blank",
-                                    rel: "noopener noreferrer",
-                                    href: "https://devdojo.com"
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "svg",
-                                    {
-                                      staticClass: "w-5 h-5 fill-current",
-                                      attrs: {
-                                        viewBox: "0 0 24 24",
-                                        xmlns: "http://www.w3.org/2000/svg"
-                                      }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "pt-4 pt-6 mt-10 text-center text-gray-400 border-t border-gray-100"
-                },
-                [_vm._v("© 2020 Landmark. All rights\n              reserved.")]
-              )
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _vm.regModal
-        ? _c(
-            "div",
-            {
-              staticClass:
-                "min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover",
-              attrs: { id: "modal-id" }
-            },
-            [
-              _c("div", {
-                staticClass: "absolute bg-black opacity-80 inset-0 z-0"
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white "
-                },
-                [
-                  _c("div", {}, [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "flex ml-auto text-white text-sm bg-indigo-500 border-0 py-3 px-3 focus:outline-none hover:bg-indigo-600 rounded",
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.addToCart(
+                                                _vm.singleProduct._id
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [_vm._v("Add to Cart")]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(2)
+                                    ])
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.modal
+                      ? _c(
+                          "div",
+                          {
+                            staticClass: "fixed z-10 inset-0 overflow-y-auto",
+                            attrs: {
+                              "aria-labelledby": "modal-title",
+                              role: "dialog",
+                              "aria-modal": "true"
+                            }
+                          },
+                          [_vm._m(3)]
+                        )
+                      : _vm._e()
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "footer",
+              {
+                staticClass:
+                  "px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row"
+                  },
+                  [
                     _c(
                       "div",
                       {
-                        staticClass: "text-center p-5 flex-auto justify-center"
+                        staticClass:
+                          "w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left"
                       },
                       [
                         _c(
-                          "svg",
+                          "a",
                           {
                             staticClass:
-                              "w-16 h-16 flex items-center text-indigo-500 mx-auto",
-                            attrs: {
-                              fill: "currentColor",
-                              viewBox: "0 0 20 20",
-                              xmlns: "http://www.w3.org/2000/svg"
-                            }
+                              "flex justify-start block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start",
+                            attrs: { href: "/" }
                           },
                           [
-                            _c("path", {
-                              attrs: {
-                                d:
-                                  "M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
-                              }
-                            })
+                            _c(
+                              "span",
+                              {
+                                staticClass: "flex items-start sm:items-center"
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "w-auto h-6 text-gray-800 fill-current",
+                                    attrs: {
+                                      viewBox: "0 0 194 116",
+                                      xmlns: "http://www.w3.org/2000/svg"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "g",
+                                      { attrs: { "fill-rule": "evenodd" } },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
                           ]
                         ),
                         _vm._v(" "),
-                        _c("h2", { staticClass: "text-xl font-bold py-4 " }, [
-                          _vm._v("Choose Registration Type")
-                        ]),
-                        _vm._v(" "),
-                        _vm._m(8)
+                        _c(
+                          "p",
+                          { staticClass: "mt-6 mr-4 text-base text-gray-500" },
+                          [
+                            _vm._v(
+                              "Crafting the next-level of user experience and engagement.\n                  "
+                            )
+                          ]
+                        )
                       ]
                     ),
                     _vm._v(" "),
                     _c(
                       "div",
                       {
-                        staticClass: "p-3  mt-2 text-center space-x-4 md:block"
+                        staticClass:
+                          "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                       },
                       [
-                        _c(
-                          "inertia-link",
-                          { attrs: { href: _vm.route("registerClient") } },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                  Client Registration\n              "
-                                )
-                              ]
-                            )
-                          ]
-                        ),
+                        _vm._m(4),
+                        _vm._v(" "),
+                        _vm._m(5),
                         _vm._v(" "),
                         _c(
-                          "inertia-link",
-                          { attrs: { href: _vm.route("registerVendor") } },
+                          "div",
+                          { staticClass: "flex flex-col w-full text-gray-700" },
                           [
                             _c(
-                              "button",
+                              "div",
                               {
                                 staticClass:
-                                  "mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black"
+                                  "inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0"
                               },
+                              [_vm._v("Follow Us")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "flex justify-start pl-4 mt-2" },
                               [
-                                _vm._v(
-                                  "\n                  Vendor Registration\n              "
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600",
+                                    attrs: {
+                                      target: "_blank",
+                                      rel: "noopener noreferrer",
+                                      href: "https://devdojo.com"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-5 h-5 fill-current",
+                                        attrs: {
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600",
+                                    attrs: {
+                                      target: "_blank",
+                                      rel: "noopener noreferrer",
+                                      href: "https://devdojo.com"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-5 h-5 fill-current",
+                                        attrs: {
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "flex items-center block text-gray-400 no-underline hover:text-gray-600",
+                                    attrs: {
+                                      target: "_blank",
+                                      rel: "noopener noreferrer",
+                                      href: "https://devdojo.com"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-5 h-5 fill-current",
+                                        attrs: {
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
                                 )
                               ]
                             )
                           ]
                         )
-                      ],
-                      1
+                      ]
                     )
-                  ])
-                ]
-              )
-            ]
-          )
-        : _vm._e()
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "pt-4 pt-6 mt-10 text-center text-gray-400 border-t border-gray-100"
+                  },
+                  [
+                    _vm._v(
+                      "© 2020 Landmark. All rights\n              reserved."
+                    )
+                  ]
+                )
+              ]
+            )
+          ])
+        ],
+        1
+      )
     ])
   ])
 }
@@ -58389,9 +58067,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "ml-3 text-xl text-gray-800" }, [
-      _vm._v("Multi Vendor"),
-      _c("span", { staticClass: "text-pink-500" }, [_vm._v(".")])
+    return _c("div", { staticClass: "flex ml-4" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "mr-3 border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"
+        },
+        [_c("i", { staticClass: "fa fa-check text-green-600" })]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "mr-3 text-md text-gray-500" }, [
+        _vm._v("Verified")
+      ])
     ])
   },
   function() {
@@ -58399,17 +58087,16 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "a",
+      "button",
       {
         staticClass:
-          "ml-16 relative z-40 inline-block w-auto h-full px-3 py-3 text-sm font-bold leading-none text-white bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl",
-        attrs: { href: "/" }
+          "flex text-black hover:text-white text-xm bg-green-200 border-0 py-1 px-2 focus:outline-none hover:bg-green-600 rounded"
       },
       [
-        _c("span", { staticClass: "text-xs" }, [
-          _c("i", { staticClass: "fa fa-search mr-1" }),
-          _vm._v(" Filters ")
-        ])
+        _vm._v(
+          " \n                                  Call\n                                  "
+        ),
+        _c("i", { staticClass: "h-5 w-5 fa fa-phone text-green-500 ml-2" })
       ]
     )
   },
@@ -58418,67 +58105,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
+      "button",
       {
         staticClass:
-          "absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10",
-        attrs: { id: "nav-mobile-btn" }
+          "rounded-full w-10 h-10 bg-gray-200 hover:bg-yellow-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 hover:text-yellow-600 ml-4"
       },
-      [
-        _c("span", {
-          staticClass:
-            "block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
-        }),
-        _vm._v(" "),
-        _c("span", {
-          staticClass:
-            "block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex" }, [
-      _c("span", { staticClass: "mr-3" }, [_vm._v("Color")]),
-      _vm._v(" "),
-      _c("button", {
-        staticClass:
-          "border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"
-      }),
-      _vm._v(" "),
-      _c("button", {
-        staticClass:
-          "border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"
-      }),
-      _vm._v(" "),
-      _c("button", {
-        staticClass:
-          "border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "select",
-      {
-        staticClass:
-          "rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10"
-      },
-      [
-        _c("option", [_vm._v("SM")]),
-        _vm._v(" "),
-        _c("option", [_vm._v("M")]),
-        _vm._v(" "),
-        _c("option", [_vm._v("L")]),
-        _vm._v(" "),
-        _c("option", [_vm._v("XL")])
-      ]
+      [_c("i", { staticClass: "fa fa-star" })]
     )
   },
   function() {
@@ -58574,7 +58206,7 @@ var staticRenderFns = [
                                       "fa fa-arrow-left text-black hover:text-white mr-2"
                                   }),
                                   _vm._v(" "),
-                                  _c("span", [_vm._v("Market")])
+                                  _c("span", [_vm._v("Home")])
                                 ]
                               )
                             ]),
@@ -58729,19 +58361,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "text-sm text-gray-500 px-8" }, [
-      _vm._v("Select your prefered account. "),
-      _c("br"),
-      _vm._v(" Register either as a "),
-      _c("b", [_vm._v("Vendor")]),
-      _vm._v(" or a "),
-      _c("b", [_vm._v("Client")])
-    ])
   }
 ]
 render._withStripped = true
@@ -59108,9 +58727,11 @@ var render = function() {
                               "max-w-2xl px-5 mt-1 text-3xl font-black leading-tight text-center text-pink-600 sm:mt-0 sm:px-0 sm:text-2xl"
                           },
                           [
-                            _vm._v(
-                              "\n                      No products in Category Yet\n              "
-                            )
+                            _vm._v("\n                      No products in "),
+                            _c("span", { staticClass: "text-gray-400" }, [
+                              _vm._v(_vm._s(this.category))
+                            ]),
+                            _vm._v(" Yet\n              ")
                           ]
                         )
                       ]
@@ -62016,7 +61637,7 @@ var render = function() {
                             "a",
                             {
                               staticClass:
-                                "mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black",
+                                "mr-0 font-bold duration-100  transition-color text-pink-600 hover:text-black",
                               attrs: { href: "/login" }
                             },
                             [_vm._v("Login")]
@@ -62111,7 +61732,7 @@ var render = function() {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _c("div", { staticClass: "relative ml-10" }, [
+            _c("div", { staticClass: "relative ml-10 hidden md:flex" }, [
               _c(
                 "span",
                 {
@@ -62151,8 +61772,8 @@ var render = function() {
                   }
                 ],
                 staticClass:
-                  "w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline",
-                attrs: { type: "text", placeholder: "Search" },
+                  "text-sm w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline",
+                attrs: { type: "text", placeholder: "Type and Press Enter" },
                 domProps: { value: _vm.form.search },
                 on: {
                   keyup: function($event) {
@@ -62174,58 +61795,65 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("inertia-link", { attrs: { href: _vm.route("cart") } }, [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "group relative flex z-40 px-2 py-2 text-lg font-bold text-indigo-600 md:mt-0",
-                  attrs: { href: "#", role: "button" }
-                },
-                [
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "mr-1 font-bold duration-100 transition-color text-indigo-600 group-hover:text-black"
-                    },
-                    [_vm._v("Cart")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        "group-hover:text-black flex-1 w-8 h-8 fill-current",
-                      attrs: { viewbox: "0 0 24 24" }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "absolute right-0 top-0 rounded-full bg-black group-hover:bg-indigo-600 w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
-                    },
-                    [
-                      _vm._v(
-                        "\n                      " +
-                          _vm._s(_vm.cartNumber) +
-                          "\n                  "
-                      )
-                    ]
-                  )
-                ]
-              )
-            ]),
+            _c(
+              "inertia-link",
+              {
+                staticClass: "hidden md:flex",
+                attrs: { href: _vm.route("cart") }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "group relative flex z-40 px-2 py-2 text-lg font-bold text-indigo-600 md:mt-0",
+                    attrs: { href: "#", role: "button" }
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "mr-1 font-bold duration-100 transition-color text-indigo-600 group-hover:text-black"
+                      },
+                      [_vm._v("Cart")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "svg",
+                      {
+                        staticClass:
+                          "group-hover:text-black flex-1 w-8 h-8 fill-current",
+                        attrs: { viewbox: "0 0 24 24" }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "absolute right-0 top-0 rounded-full bg-black group-hover:bg-indigo-600 w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
+                      },
+                      [
+                        _vm._v(
+                          "\n                      " +
+                            _vm._s(_vm.cartNumber) +
+                            "\n                  "
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
             _vm._v(" "),
             _c(
               "div",
@@ -62744,7 +62372,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                More Products in the Category\n              "
+                                        "\n                All Products in the Category\n              "
                                       )
                                     ]
                                   )
@@ -62772,25 +62400,4679 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(6),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Computing\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute left-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "MacBooks"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                MacBooks\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "NetBooks"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                NetBooks\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "UltraBooks"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                UltraBooks\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Desktops"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Desktops\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Monitors"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Monitors\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Scanners"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Scanners\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Printers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Printers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Keyboards & Mice"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Keyboards & Mice\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "External Drives"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                External Drives \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Cable & Adaptors"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Cable & Adaptors\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Networking Products"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Networking Products\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Printer Ink & Toner"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Printer Ink & Toner\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Graphic Cards"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Graphic Cards\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "2-in-1 Laptops"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                2-in-1 Laptops\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Computer Accessorie"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Computer Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Computing"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in the Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(7),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Electronics\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute left-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Smart TVs"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Smart TV's\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "LED & LCD TVs"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                LED & LCD TV's\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Data Projectors"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Data Projectors\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Music Speakers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Music Speakers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Home Theater"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Home Theater \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Bluetooth Speakers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Bluetooth Speakers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Electronic Cables"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Electronic Cables\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Batteries"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Batteries\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Camera")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Camera\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Power Protection"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Power Protection\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "CCTV Cameras"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                CCTV Cameras\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Television Accessories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Television Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Electronics"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm._m(6),
+                          _vm._v(" "),
+                          _vm._m(7),
+                          _vm._v(" "),
+                          _vm._m(8)
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(8),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Fashion\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute left-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Dresses")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Dresses\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Suits & Blazer"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Suits & Blazers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Ankara")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Ankara\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Coats & Jackets"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Coats & Jackets\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Trousers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Trousers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Skirts")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Skirts\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Baby Clothing"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Baby Clothing\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Jeans")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Jeans\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Shorts")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Shorts\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Fashion Accessories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Fashion Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Handbag & Wallets"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Handbag & Wallets\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Shirts")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Shirts\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Innerwear"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Innerwear\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Fashion Sneakers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Fashion Sneakers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Sunglasses & Eyewear"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Sunglasses & Eyewear\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Fashion"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(9),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Supermarket\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Cooking Ingredients"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Cooking Ingredients\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Snacks")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Snacks\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Grains & Rice"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Grains & Rice\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Sugar & Flour"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Sugar & Flour\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Breakfast Cereals"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Breakfast Cereals\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Candy & Chocolate"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Candy & Chocolate\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Margarine, Jam & Spreads"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Margarine, Jam & Spreads\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Alcoholic Drinks"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Alcoholic Drinks\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Non Alcoholic Drinks"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Non Alcoholic Drinks\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Beverages"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Beverages\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Water")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Water\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Cleaning Products"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Cleaning Products\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Papers & Rolls"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Papers & Rolls\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Bulb & Batteries"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Bulb & Batteries\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Dairy")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Dairy\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Supermarket"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(10),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Baby\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Diapers")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Diapers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Walkers")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Walkers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Backpack & Carriers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Backpack & Carriers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Swings, Jumpers & Bouncers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Swings, Jumpers & Bouncers\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Toys")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Toys\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Bathing & Skin Care"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Bathing & Skin Care\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Apparels & Accessories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Apparels & Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Music & Sound"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Music & Sound\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Feeding")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Feeding \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Health & Baby Care"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Health & Baby Care\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Potty Training"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Potty Training\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Baby Safety"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Baby Safety\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.allResult", "Baby")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Prodcuts in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm._m(9),
+                          _vm._v(" "),
+                          _vm._m(10),
+                          _vm._v(" "),
+                          _vm._m(11)
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(11),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Sporting\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Excercise & Fitness"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Excercise & Fitness\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Accessories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Clothing"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Clothing\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Team Sports"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Team Sports\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Supplementaries"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Supplementaries\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Camping & Hiking"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Camping & Hiking\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Skate board & Scooters"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Skate board & Scooters\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Cycling")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Cycling \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Accesories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Accesories \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Sporting"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm._m(12),
+                          _vm._v(" "),
+                          _vm._m(13),
+                          _vm._v(" "),
+                          _vm._m(14),
+                          _vm._v(" "),
+                          _vm._m(15),
+                          _vm._v(" "),
+                          _vm._m(16),
+                          _vm._v(" "),
+                          _vm._m(17)
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(12),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Health & Beauty\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Fragrances"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Fragrances\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Hair Products"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Hair Products\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Make Up")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Make Up\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Skin Care"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Skin Care\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Oral Care"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Oral care\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Bathing Accessories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Bathing Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Mens Grooming"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Men's Grooming \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Health Care & Drugs"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Health Care & Drugs\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Health & Beauty"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm._m(18),
+                          _vm._v(" "),
+                          _vm._m(19),
+                          _vm._v(" "),
+                          _vm._m(20),
+                          _vm._v(" "),
+                          _vm._m(21),
+                          _vm._v(" "),
+                          _vm._m(22),
+                          _vm._v(" "),
+                          _vm._m(23),
+                          _vm._v(" "),
+                          _vm._m(24)
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(13),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Outdoor\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Hand Tools"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Hand Tools \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Watering Equipment"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Watering Equipment \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Grills")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Grills\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Outdoor Cooking & Accessories"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Outdoor Cooking & Accessories\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Lighting"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Lighting\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Tables")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Tables \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Patio Seating"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Patio Seating \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Pest Control"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Pest Control  \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Hammock & Stands"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Hammock & Stands \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.allResult",
+                                      "Outdoor"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                All Products in Category\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm._m(25),
+                          _vm._v(" "),
+                          _vm._m(26),
+                          _vm._v(" "),
+                          _vm._m(27),
+                          _vm._v(" "),
+                          _vm._m(28),
+                          _vm._v(" "),
+                          _vm._m(29),
+                          _vm._v(" "),
+                          _vm._m(30)
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(14),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Home & Office\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Home Decor"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Home Decor\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Bedding")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Bedding\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Wall Art"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Wall Art \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Lighting"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Lighting \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Storage & Organization"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Storage & Organization \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Furniture"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Furniture \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Kitchen Dining"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Kitchen Dining \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Office Electornics"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Office Electornics \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Stationery"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Stationery \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Cookers")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Cookers \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Microwaves & Ovens"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Microwaves & Ovens\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Refrigerators"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Refrigerators\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Laundy Electronics"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Laundy Electronics\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Water Dispensers & Coolers"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Water Dispensers & Coolers \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Kitchen Elecronic"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Kitchen Elecronic\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c("inertia-link", {
+                                attrs: {
+                                  href: _vm.route(
+                                    "product.allResult",
+                                    "Home & Office"
+                                  )
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                  attrs: { href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                All Products in Category\n              "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _vm._m(15)
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
+                },
+                [
+                  _vm._v("\n            Other Categories\n          "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
+                      attrs: {
+                        role: "menu",
+                        "aria-orientation": "vertical",
+                        "aria-labelledby": "user-menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "bg-indigo-100 grid grid-cols-2" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route("product.result", "Books")
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Books\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Movies & Music"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Movies & Music\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Automobile"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Automobile \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Toys and Gaming"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Toys and Gaming\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Groceries"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Groceries\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Music Instruments"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Music Instruments \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Pet Supplies"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Pet Supplies \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Livestock"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Livestock\n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c("inertia-link", {
+                                attrs: {
+                                  href: _vm.route(
+                                    "product.result",
+                                    "Industrial & Scientific"
+                                  )
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                  attrs: { href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                Industrial & Scientific \n              "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-2 px-4" },
+                            [
+                              _c(
+                                "inertia-link",
+                                {
+                                  attrs: {
+                                    href: _vm.route(
+                                      "product.result",
+                                      "Services"
+                                    )
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+                                      attrs: { href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                Services \n              "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm._m(31),
+                          _vm._v(" "),
+                          _vm._m(32),
+                          _vm._v(" "),
+                          _vm._m(33),
+                          _vm._v(" "),
+                          _vm._m(34),
+                          _vm._v(" "),
+                          _vm._m(35),
+                          _vm._v(" "),
+                          _vm._m(36)
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
             ])
           ]),
           _vm._v(" "),
@@ -62861,13 +67143,13 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "hidden sm:hidden" }, [
-        _vm._m(16),
+        _vm._m(37),
         _vm._v(" "),
         _c("div", { staticClass: "pt-4 pb-3 border-t border-gray-200" }, [
           _c("div", { staticClass: "flex items-center px-4" }, [
-            _vm._m(17),
+            _vm._m(38),
             _vm._v(" "),
-            _vm._m(18),
+            _vm._m(39),
             _vm._v(" "),
             _c(
               "button",
@@ -62908,7 +67190,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(19)
+          _vm._m(40)
         ])
       ])
     ])
@@ -62991,2273 +67273,373 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Computing\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute left-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                MacBooks\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                NetBooks\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                UltrBooks\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Desktops\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Monitors\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Scanners\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Printers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Keyboards & Mice\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                External Drives \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Cable & Adaptors\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Networking Products\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Printer Ink & Toner\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Graphic Cards\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                2-in-1 Laptops\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Computer Accessories\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                All Products in the Category\n              "
-                    )
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Electronics\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute left-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Smart TV's\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                LED & LCD TV's\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Data Projectors\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Music Speakers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Home Theater \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Bluetooth Speakers\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Electronic Cables\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Batteries\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Camera\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Power Protection\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                CCTV Cameras\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Television Accessories\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                More Products in Category\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Fashion\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute left-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Dresses\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Suits & Blazers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Ankara\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Coats & Jackets\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Trousers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Skirts\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Baby Clothing\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Jeans\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Shorts\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Fashion Accessories\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Handbag & Wallets\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Shirts\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Innerwear\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Fashion Sneakers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Sunglasses & Eyewear\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                More Products in Category\n              "
-                    )
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Supermarket\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Cooking Ingredients\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Snacks\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Grains & Rice\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Sugar & Flour\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Breakfast Cereals\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Candy & Chocolate\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Margarine, Jam & Spreads\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Alcoholic Drinks\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Non Alcoholic Drinks\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Beverages\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Water\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Cleaning Products\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Papers & Rolls\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Bulb & Batteries\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Dairy\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                More Products in Category\n              "
-                    )
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Baby\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Diapers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Walkers\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Backpack & Carriers\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Swings, Jumpers & Bouncers\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Toys\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Bathing & Skin Care\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Apparels & Accessories\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Music & Sound\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Feeding \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Health & Baby Care\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Potty Training\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Baby Safety\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                More Prodcuts in Category\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Sporting\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Excercise & Fitness\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Accessories\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Clothing\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Team Sports\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Supplementaries\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Camping & Hiking\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Skate board & Scooters\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Cycling \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Accesories \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                More Products in Category\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Health & Beauty\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Fragrances\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Hair Products\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Make Up\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Skin Care\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Oral care\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Bathing Accessories\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Men's Grooming \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Health Care & Drugs\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                More Products in Category\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Outdoor\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Hand Tools \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Watering Equipment \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Grills\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Outdoor Cooking & Accessories\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Lighting\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Tables \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Patio Seating \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Pest Control  \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Hammock & Stands \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                All Products in Category\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Home & Office\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Home Decor\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Bedding\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Wall Art \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Lighting \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Storage & Organization \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Furniture \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Kitchen Dining \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Office Electornics \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Stationery \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Cookers \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Microwaves & Ovens\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Refrigerators\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Laundy Electronics\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Water Dispensers & Coolers \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Kitchen Elecronic\n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                All Products in Category\n              "
-                    )
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
         staticClass:
-          "cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out"
-      },
-      [
-        _vm._v("\n            Other Categories\n          "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "hidden group-hover:block absolute right-0 mt-80  w-96 rounded-md shadow-lg py-1 bg-indigo-500 ring-1 ring-black ring-opacity-5",
-            attrs: {
-              role: "menu",
-              "aria-orientation": "vertical",
-              "aria-labelledby": "user-menu"
-            }
-          },
-          [
-            _c("div", { staticClass: "bg-indigo-100 grid grid-cols-2" }, [
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Books\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Movies & Music\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Automobile \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Toys and Gaming\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Groceries\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Music Instruments \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Pet Supplies \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Livestock\n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                Industrial & Scientific \n              "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("\n                Services \n              ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "py-2 px-4" }, [
-                _c("a", {
-                  staticClass:
-                    "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
-                  attrs: { href: "#" }
-                })
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-2 px-4" }, [
+      _c("a", {
+        staticClass:
+          "border-transparent text-gray-500 hover:border-indigo-500 hover:text-gray-700 inline-flex items-center  border-b-2 text-xs font-medium",
+        attrs: { href: "#" }
+      })
+    ])
   },
   function() {
     var _vm = this
