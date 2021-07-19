@@ -7,22 +7,35 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
+// use Illuminate\Http\Request;
+
+
 
 // Landing
 Route::get('/', [LandingController::class, 'index'])
     ->name('landing');
 
-Route::get('/product/{product}', [LandingController::class, 'show'])
+Route::get('product/{product}', [LandingController::class, 'show'])
     ->name('product.view');
    
-Route::get('/cart', [LandingController::class, 'cart'])
+Route::get('cart', [LandingController::class, 'cart'])
     ->name('cart');    
 
-Route::get('/checkout', [LandingController::class, 'checkout'])
+Route::get('checkout', [LandingController::class, 'checkout'])
     ->name('checkout');
  
-Route::post('/checkout/success', [OrderController::class, 'store'])
+Route::post('checkout/success', [OrderController::class, 'store'])
     ->name('order.store');
+
+Route::get('subcategory/{result}', [LandingController::class, 'result'])
+    ->name('product.result');   
+
+Route::get('category/{result}', [LandingController::class, 'allResult'])
+    ->name('product.allResult');  
+
+Route::get('search', [LandingController::class, 'search'])
+    ->name('product.search');    
 
 
 // Auth
@@ -43,10 +56,12 @@ Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
 
 Route::get('register/vendor', [UserController::class, 'vendor'])
-    ->name('registerVendor');
+    ->name('registerVendor')
+    ->middleware('guest');
 
 Route::get('register/client', [UserController::class, 'client'])
-    ->name('registerClient');   
+    ->name('registerClient')
+    ->middleware('guest');   
 
 Route::post('register/admin', [UserController::class, 'store'])
     ->name('registerAdmin'); 

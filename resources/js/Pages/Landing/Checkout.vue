@@ -26,8 +26,16 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a href="/admin"
-                        class="font-bold duration-100 transition-color hover:text-black text-indigo-600">Portal</a>
+                    <div v-if="noAuth">
+                        <a @click="regModal = !regModal" href="#"
+                            class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Register</a>     
+                        <a href="/login"
+                            class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Login</a>
+                    </div>   
+                    <div v-else>
+                        <a href="/admin"
+                            class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Dashboard</a>
+                    </div> 
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -315,6 +323,35 @@
         </div>
         </div>
 
+        <!-- Modal -->
+        <div v-if="regModal" class="min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover"  id="modal-id">
+            <div class="absolute bg-black opacity-80 inset-0 z-0"></div>
+            <div class="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
+            <!--content-->
+            <div class="">
+                <!--body-->
+                <div class="text-center p-5 flex-auto justify-center">
+                        <svg class="w-16 h-16 flex items-center text-indigo-500 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+                        <h2 class="text-xl font-bold py-4 ">Choose Registration Type</h2>
+                        <p class="text-sm text-gray-500 px-8">Select your prefered account. <br> Register either as a <b>Vendor</b> or a <b>Client</b> </p>    
+                </div>
+                <!--footer-->
+                <div class="p-3  mt-2 text-center space-x-4 md:block">
+                    <intertia-link :href="route('registerClient')">
+                    <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
+                        Client Registration
+                    </button>
+                    </intertia-link>
+                    <inertia-link :href="route('registerVendor')">
+                    <button class="mb-2 md:mb-0 bg-indigo-600 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-black">
+                        Vendor Registration
+                    </button>
+                    </inertia-link>
+                </div>
+            </div>
+            </div>
+        </div>
+
 
       </main>
         
@@ -327,19 +364,6 @@
 </template>
 
 <script>
-// window.Swal = Swal;
-// const Toast = Swal.mixin({
-//   toast: true,
-//   position: 'top-end',
-//   showConfirmButton: false,
-//   timer: 2000,
-//   timerProgressBar: false,
-//   didOpen: (toast) => {
-//     toast.addEventListener("mouseenter", Swal.stopTimer);
-//     toast.addEventListener("mouseleave", Swal.resumeTimer);
-//   },
-// });
-// window.Toast = Toast;
 
 export default {
     name:'Checkout',
@@ -363,6 +387,7 @@ export default {
     },
     data () {
         return {
+            regModal:false,
             cartEmpty:'',
             form: this.$inertia.form({
                 email:'',
@@ -375,14 +400,12 @@ export default {
                 zip:'',
                 payment:'',
                 products:this.$store.state.cartItems,
-                userAccount:this.$page.props.auth.user
+                userAccount:this.$page.props.auth.user,
             }),
         }
     },
     methods: {
         submit(){
-            // let item = this.$store.state.cartItems
-            // this.form.products = item[0].id
             if(this.$store.state.cartItems == ''){
                 Swal.fire(
                     'Your Cart is Empty',
@@ -403,22 +426,20 @@ export default {
 
 <style scoped>
 @media(max-width:1520px) {
-            .left-svg {
-                display: none;
-            }
-        }
+    .left-svg {
+        display: none;
+    }
+}
 
-        /* small css for the mobile nav close */
-        #nav-mobile-btn.close span:first-child {
-            transform: rotate(45deg);
-            top: 4px;
-            position: relative;
-            background: #a0aec0;
-        }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
-        #nav-mobile-btn.close span:nth-child(2) {
-            transform: rotate(-45deg);
-            margin-top: 0px;
-            background: #a0aec0;
-        }
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+   
 </style>

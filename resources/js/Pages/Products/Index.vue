@@ -72,7 +72,7 @@ export default {
     layout: Layout,
     props: {
         // filters: Object,
-        products: Object,
+        products: Array,
     },
     data () {
         return {

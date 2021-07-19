@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 use App\Models\Product;
 use Inertia\Inertia;
-use Illuminate\Support\Facades\DB;
 
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
 class LandingController extends Controller
 {
@@ -22,9 +24,6 @@ class LandingController extends Controller
 
     public function index()
     {
-        // $product=Product::all();
-        // return $product->collect();
-        // return dd(DB::connection('mongodb')->collection('myCollection')->get());
 
         $data = Product::all();
         return Inertia::render('Landing', ['allProducts' => $data]);
@@ -51,7 +50,43 @@ class LandingController extends Controller
         //
     }
 
+    public function search()
+    {
+        
+        $key = \Request::get('search');
+        $search = Product::where('title', 'like', '%' . $key . '%')
+                ->orWhere('description', 'like', '%' . $key . '%')
+                ->get();
+
+        return Inertia::render('Landing/Result', [
+            'allProducts' => $search
+        ]);
+    }
+
+    public function allResult($result)
+    {
+        $results = Product::where('category', $result)
+            ->get();
+        
+        return Inertia::render('Landing/Result', [
+             'allProducts' =>  $results,
+             'category' =>  $result,
+        ]);
+    }
+    
+    public function result($result)
+    {
+        $results = Product::where('subCategory', $result)
+            ->get();
+        
+        return Inertia::render('Landing/Result', [
+             'allProducts' =>  $results,
+             'category' =>  $result,
+        ]);
+    }
+
     public function show(Product $product)
+
     {
 
         return Inertia::render('Landing/Product', [
@@ -61,6 +96,7 @@ class LandingController extends Controller
                 'type' => $product->type,
                 'price' => $product->price,
                 'description' => $product->description,
+                'photos' => $product->photos,
                 'created_at' => date_format($product->created_at,'H:i:s D M Y '),
                 'deleted_at' => $product->deleted_at,
             ],

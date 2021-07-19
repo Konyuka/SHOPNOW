@@ -21,8 +21,10 @@
 
                 <nav id="nav"
                     class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
+                    <inertia-link :href="route('landing')">
                     <a href="#"
                         class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
+                    </inertia-link>
                     <a href="#features"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
@@ -54,7 +56,7 @@
                         </span>
                     </a>
                     </inertia-link>
-                    <a href="#_"
+                    <a href="/"
                         class="ml-16 relative z-40 inline-block w-auto h-full px-3 py-3 text-sm font-bold leading-none text-white bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">
                         <span class="text-xs"> <i class="fa fa-search mr-1"> </i> Filters </span> 
                     </a>
@@ -123,7 +125,9 @@
                 <section class="text-gray-600 body-font overflow-hidden">
                     <div class="container px-5 py-5 mx-auto">
                         <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+                        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" :src="'/' + singleProduct.photos" >
+                        <!-- <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ public_path('/image/products/1626511247-.jpeg') }}" > -->
+                        <!-- <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400"> -->
                         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                             <h2 class="text-sm title-font text-gray-500 tracking-widest"> {{ singleProduct.type }} </h2>
                             <h1 class="text-gray-900 text-3xl title-font font-medium mb-1"> {{ singleProduct.title }} </h1>
@@ -424,10 +428,17 @@ export default {
           return this.$store.state.cartItems
       }  
     },
+    mounted () {
+    //   alert(this.singleProduct.photos) 
+    // let url = url(this.singleProduct.photos)
+    // alert(url) 
+    // console.log(url)
+    },
     data () {
         return {
             modal:false,
             regModal: false,
+            image_src: this.singleProduct.photos,
 
         }
     },
@@ -441,10 +452,12 @@ export default {
                     title: 'Added to Cart'
                 })
             }else{
-                Toast.fire({
-                    icon: 'warning',
-                    title: 'Item Already in Cart'
-                })
+                Swal.fire(
+                    'Cannot Add Item',
+                    'This item is already in your cart',
+                    'warning'
+                )
+                return
             }
             this.modal = true
         }

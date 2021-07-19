@@ -27,11 +27,16 @@
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
-                    <a @click="regModal = ! regModal" href="#"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Register</a>     
-                    <a href="/login"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Login</a>    
-
+                    <div v-if="noAuth">
+                        <a @click="regModal = !regModal" href="#"
+                            class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Register</a>     
+                        <a href="/login"
+                            class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Login</a>
+                    </div>   
+                    <div v-else>
+                        <a href="/admin"
+                            class="mr-0 font-bold duration-100 transition-color text-pink-600 hover:text-black">Dashboard</a>
+                    </div>     
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
                         <a href="#_" class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">
@@ -171,7 +176,8 @@
                                     <span>Total cost</span>
                                     <span>Kshs.600</span>
                                 </div>
-                                <inertia-link :href="route('checkout')">
+                                <button v-if="noAuth" @click="showAuth = !showAuth" class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Login & Checkout</button>
+                                <inertia-link v-else :href="route('checkout')">
                                 <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
                                 </inertia-link>
                                 </div>
@@ -184,6 +190,86 @@
             
         </div>
         <!-- End Pricing Section -->
+
+        <!--Auth Modal -->
+        <div v-if="showAuth" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen  pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!--
+            Background overlay, show/hide based on modal state.
+
+            Entering: "ease-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+            Leaving: "ease-in duration-200"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <!--
+            Modal panel, show/hide based on modal state.
+
+            Entering: "ease-out duration-300"
+                From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                To: "opacity-100 translate-y-0 sm:scale-100"
+            Leaving: "ease-in duration-200"
+                From: "opacity-100 translate-y-0 sm:scale-100"
+                To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            -->
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white  px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                <div class="group mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 group-hover:bg-indigo-600 sm:mx-0 sm:h-10 sm:w-10">
+                    <!-- Heroicon name: outline/exclamation -->
+                   <i class="fa fa-window-close text-indigo-600 group-hover:text-black"> </i>
+                </div>
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <div class="mt-2">
+                        <div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
+                        <div class="text-center">
+                            
+
+                            <h2 class="mt-6 text-3xl font-bold text-gray-900">
+                                Login
+                            </h2>
+                            <p class="mt-2 text-sm text-gray-600">Sign in to checkout</p>
+                            <div class="text-red-500 mt-5 italic">{{ $page.props.errors.email }}</div>
+                            <div class="text-red-500 mt-5 italic">{{ $page.props.errors.password }}</div>
+                        </div>
+                        <form autocomplete="off" @submit.prevent="login" class="mt-8 space-y-6">
+                            <input type="hidden" name="remember" value="true">
+                            <div class="relative">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
+                                <input v-model="form.email" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" placeholder="mail@gmail.com">
+                            </div>
+                            <div class="mt-8 content-center">
+                                <label class="text-sm font-bold text-gray-700 tracking-wide">
+                                    Password
+                                </label>
+                                <input v-model="form.password" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your password">
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
+                                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
+                                    Sign in
+                                </button>
+                            </div>
+                            <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
+                                <span>Don't have an account?</span>
+                                <a href="#" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
+                            </p>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div> 
 
         <footer class="px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200">
             <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">
@@ -293,6 +379,8 @@
             </div>
             </div>
         </div>
+
+       
         
     </div>
 
@@ -313,15 +401,30 @@ export default {
     computed: {
         cartItems(){
             return this.$store.state.cartItems
-        }
+        },
+        noAuth(){
+            if(this.$page.props.auth.user != null){
+                return false
+            }else{
+                return true
+            } 
+        },
     },
     data () {
         return {
-            regModal:false
+            regModal:false,
+            showAuth:false,
+            form: this.$inertia.form({
+                email:'',
+                password:'',
+                name:'',
+            }),
         }
     },
     methods: {
-       
+       login(){
+            this.form.post(this.route('login.checkout'))
+        },
     }
     
 }

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
+// use Illuminate\Http\Request;
 
 use Inertia\Inertia;
 
@@ -25,11 +26,10 @@ class ProductController extends Controller
 
         $products = Product::where('account_id', $account_id)
                ->orderBy('updated_at', 'desc')
-               ->take(10)
+            //    ->take(10)
                ->get();
 
         return Inertia::render('Products/Index', [ 'products' =>  $products ]); 
-        
         
 
         return json_decode($products);
@@ -73,56 +73,48 @@ class ProductController extends Controller
    
     public function store(Request $request)
     {
-        // Auth::user()->account->products()->create(
-        //     Request::validate([
-        //         'type' => ['required', 'max:100'],
-        //         'title' => ['required', 'max:50'],
-        //         'price' => ['required', 'max:50'],
-        //         'description' => ['nullable', 'max:150'],
-        //     ])
-        // );
-
+        
             $postData = Request::validate([
-                'type' => ['nullable', 'max:100'],
+                'category' => ['nullable', 'max:100'],
+                'subCategory' => ['nullable', 'max:100'],
                 'title' => ['required', 'max:50'],
                 'price' => ['nullable', 'max:50'],
                 'description' => ['nullable', 'max:150'],
-                'account_id' => ['required', 'max:150'],
+                'account_id' => ['required', 'integer'],
+                'photos' => ['nullable'],
             ]);
 
-            // $account = Account::create([
-            //     'name' => $postData['store'],
-            // ]);
-
-            // $accountId =  json_decode($account['id']);  
-
-            Product::create([
+            $addedProduct = Product::create([
+                'category' => $postData['category'],
+                'subCategory' => $postData['subCategory'],
                 'title' => $postData['title'],
-                'type' => $postData['type'],
                 'price' => $postData['price'],
                 'description' => $postData['description'],
-                'account_id' => $postData['account_id'],
+                'account_id' => (int) $postData['account_id'],
+                // 'photos' => $upload_url
             ]);
+
+            // return dd($addedProduct['_id']);
+
+            $images=$postData['photos'];
+            $collection = collect([]);
+            if ($images) {
+                foreach ($images as $file) {
+                    $ext = $file->getClientOriginalExtension();
+                    $name = time().'-'.".".$ext;
+                    $upload_path = 'image/products/';
+                    $upload_url = $upload_path.$name;
+                    // $collection->push($upload_path.$name);
+                    // $upload_url[0] = array_push($upload_path.$name);
+                    $file->move(public_path($upload_path),$upload_url);
+                    Product::where('_id', $addedProduct['_id'])
+                        ->update(['photos' => (array) $upload_url]);
+
+                }
+            }
 
             return Redirect::route('products')->with('success', 'Product created.');
 
-
-
-        // Request::validate([
-        //     'title' => ['required', 'max:50'],
-        //     'type' => ['nullable', 'max:100'],
-        //     'price' => ['nullable', 'max:50'],
-        //     'description' => ['nullable', 'max:150'],
-        // ]);
-
-        // $product=new Product();
-        // $product->type = $request->get('type');
-        // $product->title = $request->get('title');
-        // $product->price = $request->get('price');        
-        // $product->description = $request->get('description');        
-        // $product->save();
-
-        return Redirect::route('products')->with('success', 'Product created.');
     }
 
    
