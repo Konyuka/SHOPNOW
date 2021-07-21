@@ -598,6 +598,14 @@
 
                 </div>
 
+                <div v-else class="flex justify-center h-24 mt-14">
+
+                <h3 class="max-w-2xl px-5 mt-1 text-3xl font-black leading-tight text-center text-pink-600 sm:mt-0 sm:px-0 sm:text-2xl">
+                    No products Yet
+                </h3>
+
+                </div>
+
             </div>
             <!-- End Pricing Section -->
 
@@ -736,12 +744,15 @@ export default {
           return this.$store.state.cartItems
       }, 
       showProducts(){
-          if(this.allProducts != null){
-              return true
-          }else{
-            return false
+           if(this.allProducts.length == 0)
+          {
+              return false
           }
-      } 
+          else
+          {
+              return true
+          }
+      }, 
     },
     data () {
         return { 

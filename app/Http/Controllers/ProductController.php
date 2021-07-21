@@ -54,7 +54,7 @@ class ProductController extends Controller
                     'price' => $product->price,
                     'description' => $product->description,
                     // 'created_at' => $product->created_at,
-                    'created_at' => date_format($product->created_at,'H:i:s D M Y '),
+                    'created_at' => format($product->created_at,'H:i:s D M Y '),
                     'deleted_at' => $product->deleted_at,
                 ]),
         ]);
@@ -79,7 +79,7 @@ class ProductController extends Controller
                 'subCategory' => ['nullable', 'max:100'],
                 'title' => ['required', 'max:50'],
                 'price' => ['nullable', 'max:50'],
-                'description' => ['nullable', 'max:150'],
+                'description' => ['nullable'],
                 'account_id' => ['required', 'integer'],
                 'photos' => ['nullable'],
             ]);

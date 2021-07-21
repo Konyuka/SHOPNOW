@@ -24,10 +24,9 @@
 
                 <div v-if="showProducts" id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                    
-                    <div class="max-w-full mx-auto md:max-w-6xl sm:px-8">
+                    <div class="max-w-full mx-auto md:max-w-6xl ">
                         <div class="relative flex flex-col items-center sm:flex-row">
                             <section class="text-gray-600 body-font relative">
-
                             <div class="container px-5 py-2 mx-auto">
                                 <div class="flex w-full">
                                     <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">

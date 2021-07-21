@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Request;
 
 
 // Landing
+
 Route::get('/', [LandingController::class, 'index'])
     ->name('landing');
 
@@ -115,12 +116,13 @@ Route::get('profile/client', [ProfileController::class, 'clientIndex'])
     ->name('clientProfile')
     ->middleware('auth');
 
-    
-
-
 // Order
 
 Route::get('orders', [OrderController::class, 'index'])
     ->name('orders')
     ->middleware('auth');    
+
+Route::get('orders/{order}', [OrderController::class, 'show'])
+    ->name('order.view')
+    ->middleware('auth');        
 

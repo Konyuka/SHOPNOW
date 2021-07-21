@@ -27,23 +27,25 @@
                     <table class="min-w-full bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Ordered By</th>
-                                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Item</th>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Address</th>
+                                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Client Name</th>
+                                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Phone Number</th>
+                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Order Time</th>
+                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">City</th>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
-                            <tr v-for="product in products" :key="product._id">
-                                <td class="w-1/3 text-left py-3 px-4"> {{ name }} </td>
-                                <td class="w-1/3 text-left py-3 px-4"> {{ phone }} </td>
-                                <td class="w-1/3 text-left py-3 px-4">{{ product.title }}</td>
-                                <td class="w-1/3 text-left py-3 px-4"> {{ address }} </td>
+                            <tr v-for="order in orders" :key="order._id">
+                                <td class="w-1/3 text-left py-3 px-4"> {{ order.name }} </td>
+                                <td class="w-1/3 text-left py-3 px-4"> {{ order.phone }} </td>
+                                <td class="w-1/3 text-left py-3 px-4"> {{ moment(order.updated_at) }} </td>
+                                <td class="w-1/3 text-left py-3 px-4">{{ order.city }}</td>
                                 <td class="w-1/3 text-left py-3 px-4">
                                     <span class="flex flex-row justify-around">
-                                    <a href="" class="mr-5"> <i class="fas fa-edit mr-3 text-green-600"></i> Edit </a>   
-                                    <a href=""> <i class="fas fa-trash mr-3 text-red-600"></i> Delete </a> 
+                                    <inertia-link :href="route('order.view', order._id)">
+                                    <a href="" class="mr-5"> <i class="fas fa-eye mr-3 text-blue-600"></i> View </a>   
+                                    </inertia-link>    
+                                    <a href=""> <i class="fas fa-truck mr-3 text-blue-600"></i> Deliver </a> 
                                     </span>
                                 </td>
                             </tr>
@@ -67,7 +69,6 @@ export default {
         orders:Array,
     },
     mounted () {
-        this.setOrders()
     },
     computed: {
     },

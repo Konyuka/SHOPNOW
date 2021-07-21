@@ -3,7 +3,7 @@
 
         <div class="bg-gray-100 font-family-karla flex">
 
-            <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+            <aside class="relative bg-blue-800 h-screen w-64 hidden sm:block shadow-xl">
                 <div v-if="$page.props.auth.user.owner" class="p-6">
                     <a href="index.html" class="text-white text-sm font-semibold uppercase hover:text-gray-300">{{ this.$page.props.auth.user.account.name }}</a>
                 </div>

@@ -30,29 +30,40 @@ class OrderController extends Controller
 
         
         $orders = Order::where('products.account_id', $account_id)
-        ->get()->map->only('products');
+        ->orderBy('updated_at', 'desc')
+        ->get();
         
-        // return dd($orders);
-
-        $orderDetails = Order::where('products.account_id', $account_id)
-                ->get()->map->only('name', 'phone', 'address');       
-                
-        return Inertia::render('Order/Index', [ 'orders' =>  $orders, 'orderDetails' =>  $orderDetails ]);    
+        return Inertia::render('Order/Index', [ 
+            'orders' =>  $orders, 
+        ]);    
 
 
-        $orders = Order::where('account_id', $account_id)
-               ->orderBy('updated_at', 'desc')
-               ->take(10)
-               ->get();
-               
-        return Inertia::render('Products/Index', [ 'products' =>  $products ]); 
-          return Inertia::render('Order/Index', [ 
-              'orders' =>  response()->json(
-                    Order::with(['product'])->get()
-              ),
-            //  'user' => $order->user()->get()
-          ]);
+    }
 
+    public function show(Order $order)
+
+    {
+        // $order_id = $product->account_id; 
+        // $user_account = DB::table('users')->where('account_id', $account_id)->first();
+        // $account = DB::table('accounts')->where('id', $user_account->account_id)->first();
+
+        return Inertia::render('Order/Show', [
+            'orderDetails' => [
+                '_id' => $order->_id,
+                'name' => $order->name,
+                'phone' => $order->phone,
+                'address' => $order->address,
+                'city' => $order->city,
+                'zip' => $order->zip,
+                'payment' => $order->payment,
+                'products' => $order->products,
+                'userAccount' => $order->userAccount,
+                'created_at' => date_format($order->created_at,'H:i:s D M Y '),
+                'updated_at' => $order->updated_at,
+            ],
+            // 'account' => $account,
+            // 'vendor' => $user_account
+        ]);
     }
 
     /**
@@ -107,6 +118,7 @@ class OrderController extends Controller
                 'payment' => $postData['payment'],
                 'products' => $postData['products'],
                 'userAccount' => $postData['userAccount'],
+                'orderTime' => now()->format('Y-m-d'),
             ]);
 
         return Redirect::route('landing')->with('success', 'Order Placed Successfully');    
