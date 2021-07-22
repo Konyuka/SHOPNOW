@@ -59,7 +59,7 @@
                                 </a>
                             </span>
                             </div>
-                            <p class="leading-relaxed h-10 md:h-48">
+                            <p class="leading-relaxed min-h-10 h-auto md:min-h-48">
                                 {{ singleProduct.description }}
                             </p>
 

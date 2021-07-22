@@ -34,7 +34,7 @@
                             <div class="md:p-7 p-4">
                                 <h2 class="text-lg text-center text-gray-400 capitalize" style="">Payment</h2>
                                 <h3 class="text-sm text-white  text-center capitalize"> <i class="fa fa-wallet ml-3 text-black"></i> {{ orderDetails.payment }}</h3>
-                                <h3 class="text-sm text-white  text-center capitalize"> <i class="fa fa-money-bill-wave ml-3 text-black"></i> {{ orderTotals }}</h3>
+                                <h3 class="text-sm text-white  text-center capitalize"> <i class="fa fa-money-bill-wave ml-3 text-black"></i> <span class="text-gray-400 text-xs">KSHS.</span> {{ orderTotals }}</h3>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                 </div>
             <!-- Products -->
             <main class="px-3">
-                <div class="text-2xl sm:text-2xl text-center my-5">Products Ordered?</div>
+                <div class="text-2xl sm:text-2xl text-center my-5">Products Ordered</div>
                 <div class="grid md:grid-cols-3 gap-8 m-2 max-w-5xl m-auto">
                     <div v-for="product in products" :key="product._id" class="bg-white">
                     <img :src="'/' + product.photos" alt="" class="w-full h-48 sm:h-56 object-cover" />
@@ -57,7 +57,7 @@
                         <span class="text-sm">{{ product.description }}</span>
                     </div>
 
-                    <button class="w-full text-md h-8 text-white font-extrabold bg-blue-800">View in Products</button>
+                    <button class="w-full text-md h-8 text-white font-extrabold bg-blue-800">More Product Details</button>
                     </div>
                 </div>
             </main>

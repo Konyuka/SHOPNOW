@@ -4461,7 +4461,7 @@ window.Toast = Toast;
       }
     }
   },
-  mounted: function mounted() {
+  created: function created() {
     this.setCartProducts();
   },
   data: function data() {
@@ -58156,7 +58156,7 @@ var render = function() {
                                       "p",
                                       {
                                         staticClass:
-                                          "leading-relaxed h-10 md:h-48"
+                                          "leading-relaxed min-h-10 h-auto md:min-h-48"
                                       },
                                       [
                                         _vm._v(
@@ -59988,6 +59988,12 @@ var render = function() {
                                 staticClass:
                                   "fa fa-money-bill-wave ml-3 text-black"
                               }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "text-gray-400 text-xs" },
+                                [_vm._v("KSHS.")]
+                              ),
                               _vm._v(" " + _vm._s(_vm.orderTotals))
                             ]
                           )
@@ -60003,7 +60009,7 @@ var render = function() {
         _vm._v(" "),
         _c("main", { staticClass: "px-3" }, [
           _c("div", { staticClass: "text-2xl sm:text-2xl text-center my-5" }, [
-            _vm._v("Products Ordered?")
+            _vm._v("Products Ordered")
           ]),
           _vm._v(" "),
           _c(
@@ -60073,7 +60079,7 @@ var render = function() {
                     staticClass:
                       "w-full text-md h-8 text-white font-extrabold bg-blue-800"
                   },
-                  [_vm._v("View in Products")]
+                  [_vm._v("More Product Details")]
                 )
               ])
             }),
