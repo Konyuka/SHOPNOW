@@ -111,7 +111,7 @@
                             <div class="w-3/4 bg-white px-10 py-10">
                                 <div class="flex justify-between border-b pb-8">
                                 <h1 class="font-semibold text-2xl">Shopping Cart</h1>
-                                <h2 class="font-semibold text-2xl">{{ cartItems.length }} Items</h2>
+                                <h2 class="font-semibold text-2xl">{{ products.length }} Items</h2>
                                 </div>
                                 <div class="flex mt-10 mb-5">
                                 <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
@@ -123,26 +123,36 @@
                                 <div v-for="item in cartItems" :key="item.id" class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
                                 <div class="flex w-2/5"> <!-- product -->
                                     <div class="w-20">
-                                    <img class="h-24" src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z" alt="">
+                                    <img class="h-24" :src="'/' + item.photos" alt="">
                                     </div>
                                     <div class="flex flex-col justify-between ml-4 flex-grow">
                                     <span class="font-bold text-sm">{{ item.title }}</span>
                                     <span class="text-red-500 text-xs"> {{ item.type }} </span>
-                                    <a href="#" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                                    <a @click="removeItem(item._id)" href="#" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                                     </div>
                                 </div>
                                 <div class="flex justify-center w-1/5">
-                                    <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+                                    <a @click.prevent="subtractQuantity(item._id)" class="mt-2">
+                                    <svg class="cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                     </svg>
+                                    </a>
 
-                                    <input class="mx-2 border text-center w-8" type="text" value="1">
+                                    <div class="px-4 bg-gay-200">
+                                        <span class="font-bold text-lg">
+                                        {{ item.quantity }}
+                                        </span>
+                                    </div>
 
-                                    <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                                    <!-- <input class="mx-2 border text-center w-8" type="text" :value="item.quantity"> -->
+
+                                    <a @click.prevent="addQuantity(item._id)" class="mt-2">
+                                    <svg class="cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                     <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                     </svg>
+                                    </a>
                                 </div>
-                                <span class="text-center w-1/5 font-semibold text-sm">KShs.{{item.price  }}</span>
-                                <span class="text-center w-1/5 font-semibold text-sm">KShs.{{ item.price * quantity }}</span>
+                                <span class="text-center w-1/5 font-semibold text-sm"><span class="text-gray-400 text-xs">KSHS.</span> {{item.price  }}</span>
+                                <span class="text-center w-1/5 font-semibold text-sm"><span class="text-gray-400 text-xs">KSHS.</span> {{ item.total }}</span>
                                 </div>
 
                                 <inertia-link :href="route('landing')">
@@ -157,15 +167,17 @@
                             <div id="summary" class="w-1/4 px-8 py-10">
                                 <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
                                 <div class="flex justify-between mt-10 mb-5">
-                                <span class="font-semibold text-sm uppercase">Items {{ cartItems.length}}</span>
-                                <span class="font-semibold text-sm">KShs.590</span>
+                                <span class="font-semibold text-sm uppercase">Items {{ products.length}}</span>
+                                <span class="font-semibold text-sm"><span class="text-gray-400 text-xs">KSHS.</span>{{ cartTotals }}</span>
                                 </div>
-                                <div>
+
+                                <!-- <div>
                                 <label class="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
                                 <select class="block p-2 text-gray-600 w-full text-sm">
                                     <option>Standard shipping - KShs.10.00</option>
                                 </select>
-                                </div>
+                                </div> -->
+
                                 <div class="py-10">
                                 <label for="promo" class="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
                                 <input type="text" id="promo" placeholder="Enter your code" class="p-2 text-sm w-full">
@@ -174,7 +186,7 @@
                                 <div class="border-t mt-8">
                                 <div class="flex font-semibold justify-between py-6 text-sm uppercase">
                                     <span>Total cost</span>
-                                    <span>Kshs.{{ itemSum }}</span>
+                                    <span><span class="text-gray-400 text-xs">KSHS.</span> {{ cartTotals }} </span>
                                 </div>
                                 <button v-if="noAuth" @click="showAuth = !showAuth" class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Login & Checkout</button>
                                 <inertia-link v-else :href="route('checkout')">
@@ -391,6 +403,20 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
+window.Swal = Swal;
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: false,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
+window.Toast = Toast;
 
 export default {
     metaInfo: { title: 'Login' },
@@ -399,15 +425,21 @@ export default {
         // error: String,
     },
     computed: {
-        itemSum(){
-            let total = 0;
-            Object.values(this.cartItems).forEach(
-                (item) => (total =  total + item.price * item.quantity)
-            );
-            return total;
+        cartTotals(){
+            var cartCalculation = this.cartItems.reduce(function(prev, cur) {
+                return prev + cur.total;
+            }, 0);
+            return cartCalculation
         },
         cartItems(){
             return this.$store.state.cartItems
+        },
+        itemSum(){
+            let total = 0;
+            Object.values(this.products).forEach(
+                (item) => (total =  total + item.price * item.quantity)
+            );
+            return total;
         },
         noAuth(){
             if(this.$page.props.auth.user != null){
@@ -418,11 +450,10 @@ export default {
         },
     },
     mounted(){
-        this.setquantity()
+        this.setCartProducts()
     },
     data () {
         return {
-            quantity:1,
             regModal:false,
             showAuth:false,
             form: this.$inertia.form({
@@ -430,18 +461,51 @@ export default {
                 password:'',
                 name:'',
             }),
+            products:[],
         }
     },
     methods: {
-       setquantity(){
-
+       addQuantity(item){
+           for (var i in this.products) {
+               if (this.products[i]._id == item) {
+                   this.products[i].quantity = this.products[i].quantity + 1;
+                   this.products[i].total = this.products[i].quantity * this.products[i].price
+                   break;
+                }
+            }
+            this.$store.dispatch('updateCart', this.products)
+       }, 
+       subtractQuantity(item){
+           for (var i in this.products) {
+               if (this.products[i]._id == item) {
+                   if(this.products[i].quantity != 1){
+                       this.products[i].quantity = this.products[i].quantity - 1;
+                       this.products[i].total = this.products[i].quantity * this.products[i].price
+                       break;
+                    }else{
+                        Toast.fire({
+                            icon: 'warning',
+                            title: 'Cannot be less than one'
+                        })
+                    }
+                   break;
+                }
+            }
+            this.$store.dispatch('updateCart', this.products)
+       },         
+       removeItem(item){
+           this.$store.dispatch('removeFromCart', item)
+           Toast.fire({
+                icon: 'success',
+                title: 'Item Removed From Cart'
+            })
        }, 
        checkTotal(item){
             // return console.log(price)
             // var price =  this.cartItems.find(x => x._id == product )
 
             let total = 0;
-            this.cartItems.find(x => {
+            this.products.find(x => {
              x._id == item._id   
              let total = total + (x.price * 1)
             })
@@ -453,6 +517,14 @@ export default {
             //     total += item.price * item.qty;
             // });
             // return total;
+       },
+       setCartProducts(){
+           this.products = this.$store.state.cartItems
+            for(const element of this.products) {
+                 element.quantity = 1;
+                 element.total = element.price * element.quantity
+            }
+            this.$store.dispatch('updateCart', this.products)
        },
        login(){
             this.form.post(this.route('login.checkout'))

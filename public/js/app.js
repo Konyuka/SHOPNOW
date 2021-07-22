@@ -3205,14 +3205,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_FlashMessages_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/FlashMessages.vue */ "./resources/js/Pages/components/FlashMessages.vue");
 /* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Header.vue */ "./resources/js/Pages/components/Header.vue");
-/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
-/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/mapValues */ "./node_modules/lodash/mapValues.js");
-/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_mapValues__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash_pickBy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/pickBy */ "./node_modules/lodash/pickBy.js");
-/* harmony import */ var lodash_pickBy__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_pickBy__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/mapValues */ "./node_modules/lodash/mapValues.js");
+/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_mapValues__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
 //
 //
 //
@@ -3914,21 +3910,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+ // import throttle from 'lodash/throttle'
+
+ // import pickBy from 'lodash/pickBy'
 
 
-
-
-
-window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_5___default());
-var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_5___default().mixin({
+window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_3___default());
+var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().mixin({
   toast: true,
   position: 'top-end',
   showConfirmButton: false,
   timer: 2000,
   timerProgressBar: false,
   didOpen: function didOpen(toast) {
-    toast.addEventListener("mouseenter", (sweetalert2__WEBPACK_IMPORTED_MODULE_5___default().stopTimer));
-    toast.addEventListener("mouseleave", (sweetalert2__WEBPACK_IMPORTED_MODULE_5___default().resumeTimer));
+    toast.addEventListener("mouseenter", (sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().stopTimer));
+    toast.addEventListener("mouseleave", (sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().resumeTimer));
   }
 });
 window.Toast = Toast;
@@ -3965,7 +3961,7 @@ window.Toast = Toast;
   },
   methods: {
     reset: function reset() {
-      this.form = lodash_mapValues__WEBPACK_IMPORTED_MODULE_3___default()(this.form, function () {
+      this.form = lodash_mapValues__WEBPACK_IMPORTED_MODULE_2___default()(this.form, function () {
         return null;
       });
     },
@@ -3987,7 +3983,7 @@ window.Toast = Toast;
           title: 'Added to Cart'
         });
       } else {
-        sweetalert2__WEBPACK_IMPORTED_MODULE_5___default().fire('Cannot Add Item', 'This item is already in your cart', 'warning');
+        sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire('Cannot Add Item', 'This item is already in your cart', 'warning');
       } //   alert(product)
 
     }
@@ -4007,6 +4003,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 //
 //
 //
@@ -4399,6 +4403,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default());
+var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: false,
+  didOpen: function didOpen(toast) {
+    toast.addEventListener("mouseenter", (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().stopTimer));
+    toast.addEventListener("mouseleave", (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().resumeTimer));
+  }
+});
+window.Toast = Toast;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   metaInfo: {
     title: 'Login'
@@ -4407,15 +4437,21 @@ __webpack_require__.r(__webpack_exports__);
   props: {// error: String,
   },
   computed: {
-    itemSum: function itemSum() {
-      var total = 0;
-      Object.values(this.cartItems).forEach(function (item) {
-        return total = total + item.price * item.quantity;
-      });
-      return total;
+    cartTotals: function cartTotals() {
+      var cartCalculation = this.cartItems.reduce(function (prev, cur) {
+        return prev + cur.total;
+      }, 0);
+      return cartCalculation;
     },
     cartItems: function cartItems() {
       return this.$store.state.cartItems;
+    },
+    itemSum: function itemSum() {
+      var total = 0;
+      Object.values(this.products).forEach(function (item) {
+        return total = total + item.price * item.quantity;
+      });
+      return total;
     },
     noAuth: function noAuth() {
       if (this.$page.props.auth.user != null) {
@@ -4426,27 +4462,64 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.setquantity();
+    this.setCartProducts();
   },
   data: function data() {
     return {
-      quantity: 1,
       regModal: false,
       showAuth: false,
       form: this.$inertia.form({
         email: '',
         password: '',
         name: ''
-      })
+      }),
+      products: []
     };
   },
   methods: {
-    setquantity: function setquantity() {},
+    addQuantity: function addQuantity(item) {
+      for (var i in this.products) {
+        if (this.products[i]._id == item) {
+          this.products[i].quantity = this.products[i].quantity + 1;
+          this.products[i].total = this.products[i].quantity * this.products[i].price;
+          break;
+        }
+      }
+
+      this.$store.dispatch('updateCart', this.products);
+    },
+    subtractQuantity: function subtractQuantity(item) {
+      for (var i in this.products) {
+        if (this.products[i]._id == item) {
+          if (this.products[i].quantity != 1) {
+            this.products[i].quantity = this.products[i].quantity - 1;
+            this.products[i].total = this.products[i].quantity * this.products[i].price;
+            break;
+          } else {
+            Toast.fire({
+              icon: 'warning',
+              title: 'Cannot be less than one'
+            });
+          }
+
+          break;
+        }
+      }
+
+      this.$store.dispatch('updateCart', this.products);
+    },
+    removeItem: function removeItem(item) {
+      this.$store.dispatch('removeFromCart', item);
+      Toast.fire({
+        icon: 'success',
+        title: 'Item Removed From Cart'
+      });
+    },
     checkTotal: function checkTotal(item) {
       // return console.log(price)
       // var price =  this.cartItems.find(x => x._id == product )
       var total = 0;
-      this.cartItems.find(function (x) {
+      this.products.find(function (x) {
         x._id == item._id;
         var total = total + x.price * 1;
       });
@@ -4456,6 +4529,26 @@ __webpack_require__.r(__webpack_exports__);
       //     total += item.price * item.qty;
       // });
       // return total;
+    },
+    setCartProducts: function setCartProducts() {
+      this.products = this.$store.state.cartItems;
+
+      var _iterator = _createForOfIteratorHelper(this.products),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var element = _step.value;
+          element.quantity = 1;
+          element.total = element.price * element.quantity;
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      this.$store.dispatch('updateCart', this.products);
     },
     login: function login() {
       this.form.post(this.route('login.checkout'));
@@ -6034,6 +6127,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6045,7 +6141,14 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.setOrders();
   },
-  computed: {},
+  computed: {
+    orderTotals: function orderTotals() {
+      var cartCalculation = this.products.reduce(function (prev, cur) {
+        return prev + cur.total;
+      }, 0);
+      return cartCalculation;
+    }
+  },
   data: function data() {
     return {
       products: [],
@@ -8918,13 +9021,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var actions = {
-  addedToCart: function addedToCart(_ref, data) {
+  updateCart: function updateCart(_ref, data) {
     var commit = _ref.commit;
+    commit("updateCart", data);
+  },
+  addedToCart: function addedToCart(_ref2, data) {
+    var commit = _ref2.commit;
     commit("addedToCart", data);
   },
-  resetCart: function resetCart(_ref2, data) {
-    var commit = _ref2.commit;
+  resetCart: function resetCart(_ref3, data) {
+    var commit = _ref3.commit;
     commit("resetCart", data);
+  },
+  removeFromCart: function removeFromCart(_ref4, data) {
+    var commit = _ref4.commit;
+    commit("removeFromCart", data);
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actions);
@@ -9009,12 +9120,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var mutations = {
+  updateCart: function updateCart(state, data) {
+    state.cartItems = data;
+  },
   addedToCart: function addedToCart(state, data) {
     // state.cartItems = 1
     state.cartItems.push(data);
   },
   resetCart: function resetCart(state, data) {
     state.cartItems = data;
+  },
+  removeFromCart: function removeFromCart(state, data) {
+    var item = state.cartItems.find(function (x) {
+      return x._id == data;
+    });
+    state.cartItems.splice(state.cartItems.indexOf(item), 1);
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mutations);
@@ -54666,7 +54786,7 @@ var render = function() {
                             _c(
                               "h2",
                               { staticClass: "font-semibold text-2xl" },
-                              [_vm._v(_vm._s(_vm.cartItems.length) + " Items")]
+                              [_vm._v(_vm._s(_vm.products.length) + " Items")]
                             )
                           ]
                         ),
@@ -54683,7 +54803,12 @@ var render = function() {
                             },
                             [
                               _c("div", { staticClass: "flex w-2/5" }, [
-                                _vm._m(4, true),
+                                _c("div", { staticClass: "w-20" }, [
+                                  _c("img", {
+                                    staticClass: "h-24",
+                                    attrs: { src: "/" + item.photos, alt: "" }
+                                  })
+                                ]),
                                 _vm._v(" "),
                                 _c(
                                   "div",
@@ -54709,7 +54834,12 @@ var render = function() {
                                       {
                                         staticClass:
                                           "font-semibold hover:text-red-500 text-gray-500 text-xs",
-                                        attrs: { href: "#" }
+                                        attrs: { href: "#" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.removeItem(item._id)
+                                          }
+                                        }
                                       },
                                       [_vm._v("Remove")]
                                     )
@@ -54722,41 +54852,82 @@ var render = function() {
                                 { staticClass: "flex justify-center w-1/5" },
                                 [
                                   _c(
-                                    "svg",
+                                    "a",
                                     {
-                                      staticClass:
-                                        "fill-current text-gray-600 w-3",
-                                      attrs: { viewBox: "0 0 448 512" }
+                                      staticClass: "mt-2",
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.subtractQuantity(item._id)
+                                        }
+                                      }
                                     },
                                     [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                                        }
-                                      })
+                                      _c(
+                                        "svg",
+                                        {
+                                          staticClass:
+                                            "cursor-pointer fill-current text-gray-600 w-3",
+                                          attrs: { viewBox: "0 0 448 512" }
+                                        },
+                                        [
+                                          _c("path", {
+                                            attrs: {
+                                              d:
+                                                "M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                                            }
+                                          })
+                                        ]
+                                      )
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c("input", {
-                                    staticClass: "mx-2 border text-center w-8",
-                                    attrs: { type: "text", value: "1" }
-                                  }),
+                                  _c(
+                                    "div",
+                                    { staticClass: "px-4 bg-gay-200" },
+                                    [
+                                      _c(
+                                        "span",
+                                        { staticClass: "font-bold text-lg" },
+                                        [
+                                          _vm._v(
+                                            "\n                                      " +
+                                              _vm._s(item.quantity) +
+                                              "\n                                      "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  ),
                                   _vm._v(" "),
                                   _c(
-                                    "svg",
+                                    "a",
                                     {
-                                      staticClass:
-                                        "fill-current text-gray-600 w-3",
-                                      attrs: { viewBox: "0 0 448 512" }
+                                      staticClass: "mt-2",
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.addQuantity(item._id)
+                                        }
+                                      }
                                     },
                                     [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                                        }
-                                      })
+                                      _c(
+                                        "svg",
+                                        {
+                                          staticClass:
+                                            "cursor-pointer fill-current text-gray-600 w-3",
+                                          attrs: { viewBox: "0 0 448 512" }
+                                        },
+                                        [
+                                          _c("path", {
+                                            attrs: {
+                                              d:
+                                                "M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                                            }
+                                          })
+                                        ]
+                                      )
                                     ]
                                   )
                                 ]
@@ -54768,7 +54939,14 @@ var render = function() {
                                   staticClass:
                                     "text-center w-1/5 font-semibold text-sm"
                                 },
-                                [_vm._v("KShs." + _vm._s(item.price))]
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-400 text-xs" },
+                                    [_vm._v("KSHS.")]
+                                  ),
+                                  _vm._v(" " + _vm._s(item.price))
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54778,9 +54956,12 @@ var render = function() {
                                     "text-center w-1/5 font-semibold text-sm"
                                 },
                                 [
-                                  _vm._v(
-                                    "KShs." + _vm._s(item.price * _vm.quantity)
-                                  )
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-400 text-xs" },
+                                    [_vm._v("KSHS.")]
+                                  ),
+                                  _vm._v(" " + _vm._s(item.total))
                                 ]
                               )
                             ]
@@ -54850,20 +55031,25 @@ var render = function() {
                               {
                                 staticClass: "font-semibold text-sm uppercase"
                               },
-                              [_vm._v("Items " + _vm._s(_vm.cartItems.length))]
+                              [_vm._v("Items " + _vm._s(_vm.products.length))]
                             ),
                             _vm._v(" "),
                             _c(
                               "span",
                               { staticClass: "font-semibold text-sm" },
-                              [_vm._v("KShs.590")]
+                              [
+                                _c(
+                                  "span",
+                                  { staticClass: "text-gray-400 text-xs" },
+                                  [_vm._v("KSHS.")]
+                                ),
+                                _vm._v(_vm._s(_vm.cartTotals))
+                              ]
                             )
                           ]
                         ),
                         _vm._v(" "),
-                        _vm._m(5),
-                        _vm._v(" "),
-                        _vm._m(6),
+                        _vm._m(4),
                         _vm._v(" "),
                         _c(
                           "button",
@@ -54888,7 +55074,12 @@ var render = function() {
                                 _c("span", [_vm._v("Total cost")]),
                                 _vm._v(" "),
                                 _c("span", [
-                                  _vm._v("Kshs." + _vm._s(_vm.itemSum))
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-400 text-xs" },
+                                    [_vm._v("KSHS.")]
+                                  ),
+                                  _vm._v(" " + _vm._s(_vm.cartTotals) + " ")
                                 ])
                               ]
                             ),
@@ -54985,7 +55176,7 @@ var render = function() {
                                 "div",
                                 { staticClass: "sm:flex sm:items-start" },
                                 [
-                                  _vm._m(7),
+                                  _vm._m(5),
                                   _vm._v(" "),
                                   _c(
                                     "div",
@@ -55208,9 +55399,9 @@ var render = function() {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(8),
+                                                _vm._m(6),
                                                 _vm._v(" "),
-                                                _vm._m(9)
+                                                _vm._m(7)
                                               ]
                                             )
                                           ]
@@ -55319,9 +55510,9 @@ var render = function() {
                         "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                     },
                     [
-                      _vm._m(10),
+                      _vm._m(8),
                       _vm._v(" "),
-                      _vm._m(11),
+                      _vm._m(9),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -55512,7 +55703,7 @@ var render = function() {
                             _vm._v("Choose Registration Type")
                           ]),
                           _vm._v(" "),
-                          _vm._m(12)
+                          _vm._m(10)
                         ]
                       ),
                       _vm._v(" "),
@@ -55663,37 +55854,6 @@ var staticRenderFns = [
         },
         [_vm._v("Total")]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-20" }, [
-      _c("img", {
-        staticClass: "h-24",
-        attrs: {
-          src:
-            "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
-          alt: ""
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "label",
-        { staticClass: "font-medium inline-block mb-3 text-sm uppercase" },
-        [_vm._v("Shipping")]
-      ),
-      _vm._v(" "),
-      _c("select", { staticClass: "block p-2 text-gray-600 w-full text-sm" }, [
-        _c("option", [_vm._v("Standard shipping - KShs.10.00")])
-      ])
     ])
   },
   function() {
@@ -59815,6 +59975,21 @@ var render = function() {
                               }),
                               _vm._v(" " + _vm._s(_vm.orderDetails.payment))
                             ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "h3",
+                            {
+                              staticClass:
+                                "text-sm text-white  text-center capitalize"
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "fa fa-money-bill-wave ml-3 text-black"
+                              }),
+                              _vm._v(" " + _vm._s(_vm.orderTotals))
+                            ]
                           )
                         ])
                       ]
@@ -59844,11 +60019,48 @@ var render = function() {
                 _c("div", { staticClass: "px-1 py-1 mb-2 text-center" }, [
                   _c(
                     "div",
-                    { staticClass: "text-md font-bold text-blue-700" },
+                    { staticClass: "text-md font-bold text-blue-700 mb-5" },
                     [_vm._v(_vm._s(product.title))]
                   ),
                   _vm._v(" "),
-                  _vm._m(0, true),
+                  _c(
+                    "div",
+                    { staticClass: "text-sm font-bold text-gray-700" },
+                    [
+                      _c("span", { staticClass: "text-blue-700 text-sm" }, [
+                        _vm._v("Quantity:")
+                      ]),
+                      _vm._v(" " + _vm._s(product.quantity))
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: " text-sm font-bold text-gray-700" },
+                    [
+                      _c("span", { staticClass: "text-blue-700 text-sm" }, [
+                        _vm._v("Price: ")
+                      ]),
+                      _c("span", { staticClass: "text-gray-400 text-xs" }, [
+                        _vm._v("KSHS.")
+                      ]),
+                      _vm._v(" " + _vm._s(product.price))
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "text-sm font-bold text-gray-700" },
+                    [
+                      _c("span", { staticClass: "text-blue-700 text-sm" }, [
+                        _vm._v("Total: ")
+                      ]),
+                      _c("span", { staticClass: "text-gray-400 text-xs" }, [
+                        _vm._v("KSHS.")
+                      ]),
+                      _vm._v(" " + _vm._s(product.total))
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("span", { staticClass: "text-sm" }, [
                     _vm._v(_vm._s(product.description))
@@ -59872,19 +60084,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-lg font-bold text-gray-700" }, [
-      _c("span", { staticClass: "text-blue-700 text-sm" }, [
-        _vm._v("Quantity:")
-      ]),
-      _vm._v(" 1")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

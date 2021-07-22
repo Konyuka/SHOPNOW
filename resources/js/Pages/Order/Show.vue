@@ -34,6 +34,7 @@
                             <div class="md:p-7 p-4">
                                 <h2 class="text-lg text-center text-gray-400 capitalize" style="">Payment</h2>
                                 <h3 class="text-sm text-white  text-center capitalize"> <i class="fa fa-wallet ml-3 text-black"></i> {{ orderDetails.payment }}</h3>
+                                <h3 class="text-sm text-white  text-center capitalize"> <i class="fa fa-money-bill-wave ml-3 text-black"></i> {{ orderTotals }}</h3>
                             </div>
                         </div>
                     </div>
@@ -47,9 +48,11 @@
                     <div v-for="product in products" :key="product._id" class="bg-white">
                     <img :src="'/' + product.photos" alt="" class="w-full h-48 sm:h-56 object-cover" />
                     <div class="px-1 py-1 mb-2 text-center">
-                        <div class="text-md font-bold text-blue-700">{{ product.title }}</div>
+                        <div class="text-md font-bold text-blue-700 mb-5">{{ product.title }}</div>
 
-                        <div class="text-lg font-bold text-gray-700"><span class="text-blue-700 text-sm">Quantity:</span> 1</div>
+                        <div class="text-sm font-bold text-gray-700"><span class="text-blue-700 text-sm">Quantity:</span> {{product.quantity }}</div>
+                        <div class=" text-sm font-bold text-gray-700"><span class="text-blue-700 text-sm">Price: </span><span class="text-gray-400 text-xs">KSHS.</span> {{product.price }}</div>
+                        <div class="text-sm font-bold text-gray-700"><span class="text-blue-700 text-sm">Total: </span><span class="text-gray-400 text-xs">KSHS.</span> {{product.total }}</div>
 
                         <span class="text-sm">{{ product.description }}</span>
                     </div>
@@ -78,6 +81,12 @@ export default {
         this.setOrders()
     },
     computed: {
+        orderTotals(){
+            var cartCalculation = this.products.reduce(function(prev, cur) {
+                return prev + cur.total;
+            }, 0);
+            return cartCalculation
+        },
     },
     data () {
         return {
