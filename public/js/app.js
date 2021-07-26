@@ -4927,7 +4927,15 @@ window.Toast = Toast;
     }
   },
   created: function created() {
-    this.setCartProducts();
+    this.setCartProducts(); // if(productSet == true){
+    //     window.location.reload()
+    // }
+  },
+  watch: {
+    productSet: function productSet(value) {//   if(value == true ){
+      //     window.location.reload()
+      //   }
+    }
   },
   data: function data() {
     return {
@@ -4938,7 +4946,8 @@ window.Toast = Toast;
         password: '',
         name: ''
       }),
-      products: []
+      products: [],
+      productSet: ''
     };
   },
   methods: {
@@ -4954,6 +4963,8 @@ window.Toast = Toast;
       this.$store.dispatch('updateCart', this.products);
     },
     subtractQuantity: function subtractQuantity(item) {
+      window.location.reload();
+
       for (var i in this.products) {
         if (this.products[i]._id == item) {
           if (this.products[i].quantity != 1) {
@@ -5014,6 +5025,8 @@ window.Toast = Toast;
       }
 
       this.$store.dispatch('updateCart', this.products);
+      this.productSet = true;
+      return;
     },
     login: function login() {
       this.form.post(this.route('login.checkout'));
@@ -6630,15 +6643,13 @@ __webpack_require__.r(__webpack_exports__);
       this.orderDetails.products.find(function (obj) {
         _this.products.push(obj);
       });
-      var id = this.$page.props.auth.user.account.id;
 
       for (var i = 0; i <= this.products.length; i++) {
-        if (this.products[i].account_id != id) {
-          this.products.splice(i); // break;
-        }
+        var prodId = this.$page.props.auth.user.account.id;
+        this.products = this.products.filter(function (i) {
+          return i.account_id == prodId;
+        });
       }
-
-      console.log(this.products);
     },
     moment: function moment(time) {
       return moment__WEBPACK_IMPORTED_MODULE_1___default()(time);
@@ -56082,7 +56093,6 @@ var render = function() {
                                       staticClass: "mt-2",
                                       on: {
                                         click: function($event) {
-                                          $event.preventDefault()
                                           return _vm.subtractQuantity(item._id)
                                         }
                                       }
@@ -56131,7 +56141,6 @@ var render = function() {
                                       staticClass: "mt-2",
                                       on: {
                                         click: function($event) {
-                                          $event.preventDefault()
                                           return _vm.addQuantity(item._id)
                                         }
                                       }

@@ -77,7 +77,7 @@ export default {
     props: {
         orderDetails:Object,
     },
-    mounted () {
+    mounted() {
         this.setOrders()
     },
     computed: {
@@ -102,15 +102,12 @@ export default {
             this.orderDetails.products.find(obj => {
                this.products.push(obj) 
             })
-            var id =  this.$page.props.auth.user.account.id;
-            for(var i = 0; i <= this.products.length; i++) {
-                if(this.products[i].account_id != id) {
-                    this.products.splice(i);
-                    // break;
-                }
-            }
-            console.log(this.products)
 
+            for(var i = 0; i <= this.products.length; i++) {
+                var prodId = this.$page.props.auth.user.account.id
+                this.products = this.products.filter(i=>i.account_id == prodId)
+            }
+                   
         },
         moment: function (time) {
             return moment(time);

@@ -132,7 +132,7 @@
                                     </div>
                                 </div>
                                 <div class="flex justify-center w-1/5">
-                                    <a @click.prevent="subtractQuantity(item._id)" class="mt-2">
+                                    <a @click="subtractQuantity(item._id)" class="mt-2">
                                     <svg class="cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                     </svg>
                                     </a>
@@ -145,7 +145,7 @@
 
                                     <!-- <input class="mx-2 border text-center w-8" type="text" :value="item.quantity"> -->
 
-                                    <a @click.prevent="addQuantity(item._id)" class="mt-2">
+                                    <a @click="addQuantity(item._id)" class="mt-2">
                                     <svg class="cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                                     <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                     </svg>
@@ -451,6 +451,16 @@ export default {
     },
     created(){
         this.setCartProducts()
+        // if(productSet == true){
+        //     window.location.reload()
+        // }
+    },
+    watch: {
+      productSet(value){
+        //   if(value == true ){
+        //     window.location.reload()
+        //   }
+      }  
     },
     data () {
         return {
@@ -462,6 +472,7 @@ export default {
                 name:'',
             }),
             products:[],
+            productSet:''
         }
     },
     methods: {
@@ -476,6 +487,8 @@ export default {
             this.$store.dispatch('updateCart', this.products)
        }, 
        subtractQuantity(item){
+           
+           window.location.reload()
            for (var i in this.products) {
                if (this.products[i]._id == item) {
                    if(this.products[i].quantity != 1){
@@ -525,6 +538,8 @@ export default {
                  element.total = element.price * element.quantity
             }
             this.$store.dispatch('updateCart', this.products)
+            this.productSet = true
+            return
        },
        login(){
             this.form.post(this.route('login.checkout'))
