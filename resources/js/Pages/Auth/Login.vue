@@ -28,9 +28,7 @@
                     <a href="#pricing"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
                     <a @click="regModal = ! regModal" href="#"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-pink-600">Register</a>     
-                    <a href="/login"
-                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Buyer Portal</a>    
+                        class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-black text-blue-600">Register</a>                            
 
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <inertia-link href="/admin" class="w-full py-2 font-bold text-center text-pink-500">Admin Login</inertia-link>
@@ -103,12 +101,16 @@
         <!-- End Header Section-->
       <main class="flex-1 overflow-y-auto z-50">
 
+          <div class="flex flex-row justify-center mt-5">
+            <flash-messages />
+          </div>
         <!-- Pricing Section -->
-        <div class="relative px-8 py-1 md:py-16 lg:py-24 xl:py-0 h-auto xl:px-0">
+        <div class="shadow-2xl relative px-8 py-1 md:py-16 lg:py-24 xl:py-0 h-auto xl:px-0">
 
                 <div class="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                     <div class="shadow-2xl max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
                         <div class="text-center">
+
                             
 
                             <h2 class="mt-6 text-3xl font-bold text-gray-900">
@@ -132,37 +134,27 @@
                             <input type="hidden" name="remember" value="true">
                             <div class="relative">
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
-                                <input v-model="form.email" autocomplete="off" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" placeholder="mail@gmail.com">
+                                <input v-model="form.email" autocomplete="off" class="shadow-2xl w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" placeholder="mail@gmail.com">
                             </div>
                             <div class="mt-8 content-center">
                                 <label class="text-sm font-bold text-gray-700 tracking-wide">
                                     Password
                                 </label>
-                                <input v-model="form.password" autocomplete="off" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your password">
+                                <input v-model="form.password" autocomplete="off" class="shadow-2xl w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="Enter your password">
                             </div>
                             <div class="flex items-center justify-between">
-                                    <div class="flex items-center">
-                                        <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded">
-                                        <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-                                            Remember me
-                                        </label>
-                                    </div>
                                 <div class="text-sm">
-                                    <a href="#" class="font-medium text-indigo-500 hover:text-indigo-500">
+                                    <a href="#" class="font-bold text-indigo-500 hover:text-pink-500">
                                                 Forgot your password?
                                     </a>
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" class="w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
+                                <button type="submit" class="hover:shadow-2xl w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
                                                 font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
                                     Sign in
                                 </button>
                             </div>
-                            <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
-                                <span>Don't have an account?</span>
-                                <a href="#" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
-                            </p>
                         </form>
                     </div>
                 </div>
@@ -288,6 +280,7 @@
 </template>
 
 <script>
+import FlashMessages from '../components/FlashMessages.vue'
 
 export default {
     metaInfo: { title: 'Login' },
@@ -297,6 +290,9 @@ export default {
     },
     computed: {
         
+    },
+    components: {
+      FlashMessages,  
     },
     data () {
         return {

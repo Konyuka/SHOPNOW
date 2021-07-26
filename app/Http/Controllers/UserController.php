@@ -92,5 +92,79 @@ class UserController extends Controller
 
     }
 
+    public function updateClient(Request $request)
+    {       
+            $user = Auth::id();
+            $postData = Request::validate([
+                'name' => [ 'max:50'],
+                'email' => [ 'max:100'],
+                'primary' => ['nullable'],
+                'alternate' => ['nullable'],
+            ]);
+
+            User::where('id', $user)
+            ->update([
+                'name' => $postData['name'],
+                'email' => $postData['email'],
+                'primary_number' => $postData['primary'],
+                'secondary_number' => $postData['alternate'],
+            ]);
+
+            return redirect()
+            ->route('clientProfile')
+            ->with('success', 'Updated Succesfully');
+
+    }
+
+    public function updateVendor(Request $request)
+    {       
+            $user = Auth::id();
+            $postData = Request::validate([
+                'name' => [ 'max:50'],
+                'email' => [ 'max:100'],
+                'primary' => ['nullable'],
+                'alternate' => ['nullable'],
+                'location' => ['nullable'],
+                'address' => ['nullable'],
+                'identification' => ['nullable'],
+                'gender' => ['nullable'],
+            ]);
+
+            User::where('id', $user)
+            ->update([
+                'name' => $postData['name'],
+                'email' => $postData['email'],
+                'primary_number' => $postData['primary'],
+                'secondary_number' => $postData['alternate'],
+                'location' => $postData['location'],
+                'address' => $postData['address'],
+                'identification' => $postData['identification'],
+                'gender' => $postData['gender'],
+            ]);
+
+            return redirect()
+            ->route('profile')
+            ->with('success', 'Updated Succesfully');
+
+    }
+
+    public function updatePass(Request $request)
+    {       
+            $user = Auth::id();
+            $postData = Request::validate([
+                'newPass' => [ 'required'],
+            ]);
+
+            User::where('id', $user)
+            ->update([
+                'password' => bcrypt($postData['newPass']),
+            ]);
+
+            return redirect()
+            ->route('clientProfile')
+            ->with('success', 'Password Updated Succesfully');
+
+    }
+
 
 }

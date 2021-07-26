@@ -40,6 +40,23 @@ class OrderController extends Controller
 
     }
 
+    public function clientIndex(Order $order )
+    {
+        $user = Auth::id();
+        $user_account = DB::table('users')->where('id', $user)->first();
+        $account_id = $user_account->account_id; 
+
+        // return dd($account_id);
+
+        $orders = Order::where('userAccount.account.id', $account_id)
+        ->orderBy('updated_at', 'desc')
+        ->get();
+
+        return Inertia::render('Client/Orders', [ 
+            'orders' =>  $orders, 
+        ]); 
+    }
+
     public function show(Order $order)
 
     {
@@ -48,6 +65,32 @@ class OrderController extends Controller
         // $account = DB::table('accounts')->where('id', $user_account->account_id)->first();
 
         return Inertia::render('Order/Show', [
+            'orderDetails' => [
+                '_id' => $order->_id,
+                'name' => $order->name,
+                'phone' => $order->phone,
+                'address' => $order->address,
+                'city' => $order->city,
+                'zip' => $order->zip,
+                'payment' => $order->payment,
+                'products' => $order->products,
+                'userAccount' => $order->userAccount,
+                'created_at' => date_format($order->created_at,'H:i:s D M Y '),
+                'updated_at' => $order->updated_at,
+            ],
+            // 'account' => $account,
+            // 'vendor' => $user_account
+        ]);
+    }
+
+    public function clientShow(Order $order)
+
+    {
+        // $order_id = $product->account_id; 
+        // $user_account = DB::table('users')->where('account_id', $account_id)->first();
+        // $account = DB::table('accounts')->where('id', $user_account->account_id)->first();
+
+        return Inertia::render('Client/showOrder', [
             'orderDetails' => [
                 '_id' => $order->_id,
                 'name' => $order->name,

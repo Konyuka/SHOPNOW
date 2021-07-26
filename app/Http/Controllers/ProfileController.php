@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -15,12 +19,22 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Profile/Index');
+        $user = Auth::id();
+        $user_account = DB::table('users')->where('id', $user)->first();
+
+        return Inertia::render('Profile/Index', [
+            'user' =>  $user_account,
+        ]);
     }
 
     public function clientIndex()
     {
-        return Inertia::render('clientProfile/Index');
+        $user = Auth::id();
+        $user_account = DB::table('users')->where('id', $user)->first();
+        
+        return Inertia::render('Client/Profile', [
+            'user' =>  $user_account,
+        ]);
     }
 
     /**

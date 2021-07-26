@@ -44,24 +44,24 @@
                 </nav>
                 <nav v-if="!$page.props.auth.user.owner" class="text-white text-base font-semibold pt-3">
                     <inertia-link inertia-link :href="route('clientProfile')">
-                    <a @click="setMenu('profile')" :class="isUrl('clientProfile') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    <a @click="setMenu('profile')"  :class="isUrl('profile') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-id-badge mr-3"></i>
                         Profile
                     </a>
                     </inertia-link>
-                    <inertia-link :href="route('products')">
-                    <a @click="setMenu('products')" :class="isUrl('products') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    <inertia-link :href="route('clientOrders')">
+                    <a @click="setMenu('orders')" :class="isUrl('orders') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-box-open mr-3"></i>
                         Orders
                     </a>
                     </inertia-link>
                     <inertia-link :href="route('orders')">
-                    <a @click="setMenu('orders')" v-bind:class="{'bg-black': menuItem == 'orders'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    <a @click="setMenu('delivery')" :class="isUrl('delivery') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-truck-moving mr-3"></i>
                         Delivery
                     </a>
                     </inertia-link>
-                    <a @click="setMenu('discount')" v-bind:class="{'bg-black': menuItem == 'discount'}" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    <a @click="setMenu('whishlist')" :class="isUrl('whishlist') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-star mr-3"></i>
                         Wishlist
                     </a>
@@ -136,7 +136,7 @@
                     <div class="flex flex-row justify-center mt-5">
                     <flash-messages />
                     </div>
-                    <div v-if="welcome" class="absolute flex-col items-center justify-center hidden h-screen w-full pb-8 mt-48 md:relative md:w-auto md:bg-transparent md:border-none md:mt-12 md:ml-52  md:flex-row md:p-0 md:items-end md:flex md:justify-between">
+                    <!-- <div v-if="welcome" class="absolute flex-col items-center justify-center hidden h-screen w-full pb-8 mt-48 md:relative md:w-auto md:bg-transparent md:border-none md:mt-12 md:ml-52  md:flex-row md:p-0 md:items-end md:flex md:justify-between">
                         <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
                             viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs>
@@ -178,9 +178,9 @@
                                 </g>
                             </g>
                         </svg>
-                    </div>
+                    </div> -->
                     
-                    <slot v-else />
+                    <slot />
                 </div>
                 
             </div>

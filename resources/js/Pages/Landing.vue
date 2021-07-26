@@ -3,7 +3,7 @@
     <body class="overflow-x-hidden antialiased">
       <div class="flex flex-col h-screen">
       <!-- Header Section -->
-       <main-navigation /> 
+       <main-navigation  /> 
 
         <!-- End Header Section-->
         <main class="flex-1 overflow-y-auto z-40 mt-10">
@@ -215,7 +215,7 @@
             <!-- END FEATURES SECTION -->
 
             <!-- Pricing Section -->
-            <div class="relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0">
+            <div class="shadow-2xl relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0">
 
                 <div v-if="showProducts" id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                     <h3

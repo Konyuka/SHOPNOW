@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-center h-12">
         <div class="flex">
-          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <div class="shadow-2xl hidden sm:ml-6 sm:flex sm:space-x-8">
             <!-- Music & Audio -->
             <a class="cursor-pointer relative group text-gray-400 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out">
               Phones

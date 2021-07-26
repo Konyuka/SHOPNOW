@@ -28,56 +28,76 @@
                                 <div class="grid grid-cols-2 gap-2 max-w-full m-auto">
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Full Name"/>
+                                    <input v-model="form.name" type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="name"/>
                                     </div>
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <input type="email" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Email Address"/>
+                                    <input v-model="form.email" type="email" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="email"/>
                                     </div>
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Primary Number"/>
+                                    <input v-model="form.primary" type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="user.phone"/>
                                     </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Alternate Number"/>
+                                    <div v-if="showSecNumber" class="col-span-2 lg:col-span-1">
+                                    <input v-model="form.alternate" type="text" class="bg-gray-300 border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Secondary Number"/>
                                     </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="City or County"/>
+                                    <div v-else class="col-span-2 lg:col-span-1">
+                                    <input v-model="form.alternate" type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="user.secondary_number"/>
                                     </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Postal Address"/>
+                                    <div v-if="showLocation" class="col-span-2 lg:col-span-1">
+                                    <input v-model="form.location" type="text" class="bg-gray-300 border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="City or County"/>
                                     </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="ID or Passport Number"/>
+                                    <div v-else class="col-span-2 lg:col-span-1">
+                                    <input v-model="form.location" type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="user.address"/>
                                     </div>
 
-                                    <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Gender  -</option>
-                                        <option value="0">Male</option>
-                                        <option value="1">Female</option>
+                                    <div v-if="showAddress" class="col-span-2 lg:col-span-1">
+                                    <input  v-model="form.address" type="text" class="bg-gray-300 border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Postal Address"/>
+                                    </div>
+
+                                    <div v-else class="col-span-2 lg:col-span-1">
+                                    <input v-model="form.address" type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="user.address"/>
+                                    </div>
+
+                                    <div  class="col-span-2 lg:col-span-1">
+                                    <input v-model="form.identification" type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" :placeholder="user.identification"/>
+                                    </div>
+
+                                    <div v-if="showGender" class="col-span-2 lg:col-span-1">
+                                    <select v-model="form.gender" :value="user.gender"  class="bg-gray-300 border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
+                                        <option disabled value="">- Gender  -</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
                                     </select>    
                                     </div>
 
-                                    <div class="mt-5 w-full col-span-2 lg:col-span-1">
+                                    <div v-else class="col-span-2 lg:col-span-1">
+                                    <select v-model="form.gender" :value="user.gender" class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
+                                        <option disabled value="">- Gender  -</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>    
+                                    </div>
+
+                                    <!-- <div class="mt-5 w-full col-span-2 lg:col-span-1">
                                         <div class="relative h-40 rounded-lg border-dashed border-2 border-gray-200 bg-white flex justify-center items-center hover:cursor-pointer">
                                             <div class="absolute">
                                                 <div class="flex flex-col items-center "> <i class="fa fa-cloud-upload-alt fa-3x text-gray-200"></i> <span class="block text-gray-400 font-normal px-2 lg:text-md text-xs">Upload you ID/Passport For Verification</span> <span class="block text-blue-400 font-normal">Browse files</span> </div>
                                             </div> <input type="file" class="h-full w-full opacity-0" name="">
                                         </div>
                                         <div class="text-xs sm:text-md flex justify-between items-center text-gray-400"> <span>Accepted file type: .jpg .png .pdf </span> <span class="flex items-center "><i class="fa fa-lock mr-1"></i> secure</span> </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- <div class="col-span-2">
                                     <textarea cols="30" rows="8" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Message"></textarea>
                                     </div> -->
                                     <div class="col-span-2 text-right">
-                                    <button class="py-3 px-6 bg-blue-500 hover:bg-black text-white font-bold w-full sm:w-32">
-                                        Proceed
+                                    <button @click="updateVendor" class="py-3 px-6 bg-blue-500 hover:bg-black text-white font-bold w-full sm:w-32">
+                                        Update Seller Details
                                     </button>
                                     </div>
 
@@ -85,6 +105,7 @@
                                 </div>
                             </div>        
                         </div>
+
                         <div id="" class="" v-if="openTab === 2">
                             <div class="">
                                 <div class="max-w-full bg-white py-2 m-auto w-full">
@@ -92,15 +113,15 @@
                                 <div class="grid grid-cols-2 gap-2 max-w-full m-auto">
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Business Name"/>
+                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" v-model="form.name" placeholder="Business Name"/>
                                     </div>
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <input type="email" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Business Email"/>
+                                    <input type="email" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" v-model="form.email" placeholder="Business Email"/>
                                     </div>
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Primary Business Phone Number"/>
+                                    <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" v-model="form.name" placeholder="Primary Business Phone Number"/>
                                     </div>
 
                                     <div class="col-span-2 lg:col-span-1">
@@ -211,14 +232,6 @@
                                     </div>
 
                                     <div class="col-span-2 lg:col-span-1">
-                                    <select class="border-solid border-gray-400 border-2 p-3 md:text-xl  w-full " id="category">
-                                        <option value="">- Do you have a Pin or Vat Number?  -</option>
-                                        <option value="0">Yes</option>
-                                        <option value="1">No</option>
-                                    </select>    
-                                    </div>
-
-                                    <div class="col-span-2 lg:col-span-1">
                                     <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Busniess Pin or VAT Number"/>
                                     </div>
 
@@ -232,6 +245,7 @@
                                 </div>
                             </div> 
                         </div>
+
                         <div id="" class="" v-if="openTab === 3">
                             <div class="">
                                 <div class="max-w-full bg-white py-2 m-auto w-full">
@@ -296,6 +310,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -313,10 +328,91 @@ import Layout from '../Dashboard'
 export default {
     name:"Profile",
     layout: Layout,
+    props: {
+        user:Object,
+    },
+    computed: {
+      showSecNumber(){
+          if(this.user.secondary_number == null){
+              return true;
+          }else{
+              return false;
+          }
+      },  
+      showLocation(){
+          if(this.user.location == null){
+              return true;
+          }else{
+              return false;
+          }
+      },
+      showAddress(){
+          if(this.user.address == null){
+              return true;
+          }else{
+              return false;
+          }
+      },
+      showGender(){
+          if(this.user.gender == null){
+              return true;
+          }else{
+              return false;
+          }
+      },
+      name(){
+          return this.$page.props.auth.user.name
+      },
+      email(){
+          return this.$page.props.auth.user.email
+      },
+        
+    },
     data(){
         return{
-          openTab: 1,     
+          openTab: 1,
+          form: this.$inertia.form({
+                name:'',
+                email:'',
+                primary: '',
+                alternate: '',
+                location:'',
+                address:'',
+                identification:'',
+                gender:'',
+            }),      
         }
+    },
+    methods: {
+        updateVendor(){
+            if(this.form.name == ''){
+                this.form.name = this.user.name
+            }
+            if(this.form.email == ''){
+                this.form.email = this.user.email
+            }
+            if(this.form.primary == ''){
+                this.form.primary = this.user.primary_number
+            }
+            if(this.form.alternate == ''){
+                this.form.alternate = this.user.secondary_number
+            }
+            if(this.form.identification == ''){
+                this.form.identification = this.user.identification
+            }
+            if(this.form.location == ''){
+                this.form.location = this.user.location
+            }
+            if(this.form.gender == ''){
+                this.form.gender = this.user.gender
+            }
+            if(this.form.address == ''){
+                this.form.address = this.user.phone
+            }
+
+            this.form.post(this.route('updateVendor'))
+            this.form = ''
+        },
     }
 }
 </script>

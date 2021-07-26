@@ -115,14 +115,32 @@ Route::get('profile', [ProfileController::class, 'index'])
 Route::get('profile/client', [ProfileController::class, 'clientIndex'])
     ->name('clientProfile')
     ->middleware('auth');
+    
+
+Route::post('update/client', [UserController::class, 'updateClient'])
+    ->name('updateClient');  
+
+Route::post('update/vendor', [UserController::class, 'updateVendor'])
+    ->name('updateVendor');  
+
+Route::post('update/clientPassword', [UserController::class, 'updatePass'])
+    ->name('updateClientPass');     
 
 // Order
 
 Route::get('orders', [OrderController::class, 'index'])
     ->name('orders')
+    ->middleware('auth');   
+  
+Route::get('orders/client', [OrderController::class, 'clientIndex'])
+    ->name('clientOrders')
     ->middleware('auth');    
 
 Route::get('orders/{order}', [OrderController::class, 'show'])
     ->name('order.view')
+    ->middleware('auth');   
+
+Route::get('clinet/orders/{order}', [OrderController::class, 'clientShow'])
+    ->name('client.order.view')
     ->middleware('auth');        
 
