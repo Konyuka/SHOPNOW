@@ -42,7 +42,7 @@
                         <tbody class="text-gray-700">
                             <tr v-for="product in products" :key="product.id">
                                 <td class="w-1/4 text-left py-3 px-4">{{ product.title }}</td>
-                                <td class="w-1/4 text-left py-3 px-4">{{ product.type }}</td>
+                                <td class="w-1/4 text-left py-3 px-4">{{ product.subCategory }}</td>
                                 <td class="w-1/4 text-left py-3 px-4">{{ product.price }}</td>
                                 <td class="w-1/4 text-left py-3 px-4">{{ product.created_at }}</td>
                                 <td class="text-left py-3 px-4">

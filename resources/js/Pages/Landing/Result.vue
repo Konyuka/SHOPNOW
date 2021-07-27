@@ -29,14 +29,14 @@
                             <section class="text-gray-600 body-font relative">
                             <div class="container px-5 py-2 mx-auto">
                                 <div class="flex w-full">
-                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
-                                        <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow w-3/4">
+                                        <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-">
                                             <p class="italic">Products in {{ this.category }}</p>
                                         </div>
 
-                                        <div class="group float-right top-0 right-0 m-3">
+                                        <div class="group float-right top-0 right-0 m-3 ml-96">
                                             <!-- <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div> -->
-                                            <div class="hover:scale-125  transform transition text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-search"> </i> </div>
+                                            <div class="hover:scale-125  transform transition text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-level-down-alt"> </i> </div>
                                         </div>
                                         
                                     </div>
@@ -44,7 +44,7 @@
 
                                 <div class="flex flex-wrap -m-4"> 
 
-                                <div v-for="product in allProducts" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <div v-for="product in allProducts" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-auto md:w-1/2 min-auto p-2 mb-2">
                                 <inertia-link :href="route('product.view', product._id)">
                                     <div class="block relative h-48 rounded overflow-hidden">
                                     <div class="absolute flex flex-col top-0 right-0 p-3">

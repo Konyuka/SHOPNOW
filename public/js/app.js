@@ -60151,14 +60151,14 @@ var render = function() {
                                               "div",
                                               {
                                                 staticClass:
-                                                  "flex-1 my-3 relative rounded bg-gray-50 shadow"
+                                                  "flex-1 my-3 relative rounded bg-gray-50 shadow w-3/4"
                                               },
                                               [
                                                 _c(
                                                   "div",
                                                   {
                                                     staticClass:
-                                                      "bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl"
+                                                      "bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-"
                                                   },
                                                   [
                                                     _c(
@@ -60195,7 +60195,7 @@ var render = function() {
                                               {
                                                 key: product._id,
                                                 staticClass:
-                                                  "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2"
+                                                  "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-auto md:w-1/2 min-auto p-2 mb-2"
                                               },
                                               [
                                                 _c(
@@ -60666,16 +60666,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "group float-right top-0 right-0 m-3" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "hover:scale-125  transform transition text-pink-600 duration-300 ease-in-out text-right text-3xl"
-        },
-        [_c("i", { staticClass: "fa fa-search" })]
-      )
-    ])
+    return _c(
+      "div",
+      { staticClass: "group float-right top-0 right-0 m-3 ml-96" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "hover:scale-125  transform transition text-pink-600 duration-300 ease-in-out text-right text-3xl"
+          },
+          [_c("i", { staticClass: "fa fa-level-down-alt" })]
+        )
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -62035,7 +62039,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("td", { staticClass: "w-1/4 text-left py-3 px-4" }, [
-                        _vm._v(_vm._s(product.type))
+                        _vm._v(_vm._s(product.subCategory))
                       ]),
                       _vm._v(" "),
                       _c("td", { staticClass: "w-1/4 text-left py-3 px-4" }, [
@@ -62549,7 +62553,7 @@ var render = function() {
                                           "border-solid border-gray-400 border-2 p-3 md:text-xl w-full",
                                         attrs: {
                                           type: "text",
-                                          placeholder: _vm.user.address
+                                          placeholder: _vm.user.location
                                         },
                                         domProps: { value: _vm.form.location },
                                         on: {
