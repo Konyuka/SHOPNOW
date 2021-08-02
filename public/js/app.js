@@ -4374,6 +4374,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // import throttle from 'lodash/throttle'
 
@@ -4422,7 +4465,10 @@ window.Toast = Toast;
     }
   },
   data: function data() {
-    return {};
+    return {
+      showBanner: true,
+      something: false
+    };
   },
   methods: {
     reset: function reset() {
@@ -4449,8 +4495,7 @@ window.Toast = Toast;
         });
       } else {
         sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire('Cannot Add Item', 'This item is already in your cart', 'warning');
-      } //   alert(product)
-
+      }
     }
   }
 });
@@ -6956,6 +7001,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Products",
@@ -6972,7 +7021,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     saveProduct: function saveProduct() {
       alert("Saved");
-    }
+    },
+    edit: function edit() {}
   }
 });
 
@@ -7481,13 +7531,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _SubNav_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SubNav.vue */ "./resources/js/Pages/components/SubNav.vue");
-/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
-/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/mapValues */ "./node_modules/lodash/mapValues.js");
-/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_mapValues__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash_pickBy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/pickBy */ "./node_modules/lodash/pickBy.js");
-/* harmony import */ var lodash_pickBy__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_pickBy__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
+/* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/mapValues */ "./node_modules/lodash/mapValues.js");
+/* harmony import */ var lodash_mapValues__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_mapValues__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_pickBy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/pickBy */ "./node_modules/lodash/pickBy.js");
+/* harmony import */ var lodash_pickBy__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_pickBy__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -7671,17 +7720,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-
+// import Categories from './SubNav.vue'
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Header',
-  components: {
-    Categories: _SubNav_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  components: {//   Categories,
   },
   data: function data() {
     return {
@@ -7713,7 +7758,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     search: function search() {
-      this.$inertia.get(this.route('product.search'), lodash_pickBy__WEBPACK_IMPORTED_MODULE_3___default()(this.form), {
+      this.$inertia.get(this.route('product.search'), lodash_pickBy__WEBPACK_IMPORTED_MODULE_2___default()(this.form), {
         preserveState: true
       });
     }
@@ -9831,7 +9876,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media(max-width:1520px) {\n.left-svg {\n        display: none;\n}\n}\n#summary {\n  background-color: #f6f6f6;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media(max-width:1520px) {\n.left-svg {\n            display: none;\n}\n}\n#summary {\n      background-color: #f6f6f6;\n}\n.carousel-open:checked + .carousel-item {\n\t\t\t\tposition: static;\n        opacity: 100;\n}\n.carousel-item {\n        transition: opacity 0.6s ease-out;\n}\n#carousel-1:checked ~ .control-1,\n    #carousel-2:checked ~ .control-2,\n    #carousel-3:checked ~ .control-3 {\n        display: block;\n}\n.carousel-indicators {\n        list-style: none;\n        margin: 0;\n        padding: 0;\n        position: absolute;\n        bottom: 2%;\n        left: 0;\n        right: 0;\n        text-align: center;\n        z-index: 10;\n}\n#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,\n    #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,\n    #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {\n        color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53978,917 +54023,109 @@ var render = function() {
         "div",
         { staticClass: "flex flex-col h-screen" },
         [
-          _c("main-navigation"),
-          _vm._v(" "),
-          _c("main", { staticClass: "flex-1 overflow-y-auto z-40 mt-10" }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "relative w-full px-8 py-10 md:py-1 lg:py-2 xl:py-1 xl:px-0",
-                attrs: { id: "features" }
-              },
-              [
+          _vm.showBanner
+            ? _c("div", { staticClass: "bg-indigo-600" }, [
                 _c(
                   "div",
                   {
-                    staticClass:
-                      "container flex flex-col items-center justify-between h-full max-w-6xl mx-auto"
+                    staticClass: "max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8"
                   },
                   [
                     _c(
                       "div",
-                      { staticClass: "mb-5 mt-4 flex justify-items-center" },
-                      [_c("flash-messages")],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "h3",
                       {
                         staticClass:
-                          "max-w-2xl px-5 mt-1 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl"
-                      },
-                      [_vm._v("\n                      Multi Vendor")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "flex flex-col w-full mt-0 lg:flex-row sm:mt-1 lg:mt-1"
+                          "flex items-center justify-between flex-wrap"
                       },
                       [
                         _c(
                           "div",
-                          {
-                            staticClass:
-                              "w-full max-w-md p-1 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3"
-                          },
+                          { staticClass: "w-0 flex-1 flex items-center" },
                           [
                             _c(
-                              "div",
+                              "span",
                               {
-                                staticClass:
-                                  "relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+                                staticClass: "flex p-2 rounded-lg bg-indigo-800"
                               },
                               [
                                 _c(
                                   "svg",
                                   {
-                                    staticClass:
-                                      "absolute w-full h-full text-gray-100 fill-current",
+                                    staticClass: "h-6 w-6 text-white",
                                     attrs: {
-                                      viewBox: "0 0 377 340",
-                                      xmlns: "http://www.w3.org/2000/svg"
-                                    }
-                                  },
-                                  [
-                                    _c("g", [
-                                      _c("g", [
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M342.8 3.7c24.7 14 18.1 75 22.1 124s18.6 85.8 8.7 114.2c-9.9 28.4-44.4 48.3-76.4 62.4-32 14.1-61.6 22.4-95.9 28.9-34.3 6.5-73.3 11.1-95.5-6.2-22.2-17.2-27.6-56.5-47.2-96C38.9 191.4 5 151.5.9 108.2-3.1 64.8 22.7 18 61.8 8.7c39.2-9.2 91.7 19 146 16.6 54.2-2.4 110.3-35.6 135-21.6z"
-                                          }
-                                        })
-                                      ])
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "svg",
-                                  {
-                                    staticClass: "relative w-20 h-20",
-                                    attrs: {
-                                      viewBox: "0 0 58 58",
                                       xmlns: "http://www.w3.org/2000/svg",
-                                      "xmlns:xlink":
-                                        "http://www.w3.org/1999/xlink"
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor",
+                                      "aria-hidden": "true"
                                     }
                                   },
                                   [
-                                    _c(
-                                      "defs",
-                                      [
-                                        _c(
-                                          "linearGradient",
-                                          {
-                                            attrs: {
-                                              x1: "0%",
-                                              y1: "0%",
-                                              x2: "100%",
-                                              y2: "100%",
-                                              id:
-                                                "linearGradient-1TriangleIcon1"
-                                            }
-                                          },
-                                          [
-                                            _c("stop", {
-                                              attrs: {
-                                                "stop-color": "#9C09DB",
-                                                offset: "0%"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("stop", {
-                                              attrs: {
-                                                "stop-color": "#1C0FD7",
-                                                offset: "100%"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "filter",
-                                          {
-                                            attrs: {
-                                              x: "-14%",
-                                              y: "-10%",
-                                              width: "128%",
-                                              height: "128%",
-                                              filterUnits: "objectBoundingBox",
-                                              id: "filter-3TriangleIcon1"
-                                            }
-                                          },
-                                          [
-                                            _c("feOffset", {
-                                              attrs: {
-                                                dy: "2",
-                                                in: "SourceAlpha",
-                                                result: "shadowOffsetOuter1"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("feGaussianBlur", {
-                                              attrs: {
-                                                stdDeviation: "2",
-                                                in: "shadowOffsetOuter1",
-                                                result: "shadowBlurOuter1"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("feColorMatrix", {
-                                              attrs: {
-                                                values:
-                                                  "0 0 0 0 0.141176471 0 0 0 0 0.031372549 0 0 0 0 0.501960784 0 0 0 0.15 0",
-                                                in: "shadowBlurOuter1"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z",
-                                            id: "path-2TriangleIcon1"
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "g",
-                                      {
-                                        attrs: {
-                                          id: "Page-1TriangleIcon1",
-                                          stroke: "none",
-                                          "stroke-width": "1",
-                                          fill: "none",
-                                          "fill-rule": "evenodd"
-                                        }
-                                      },
-                                      [
-                                        _c(
-                                          "g",
-                                          {
-                                            attrs: {
-                                              id: "Desktop-HDTriangleIcon1",
-                                              transform: "translate(-291 -1278)"
-                                            }
-                                          },
-                                          [
-                                            _c(
-                                              "g",
-                                              {
-                                                attrs: {
-                                                  id: "FeaturesTriangleIcon1",
-                                                  transform:
-                                                    "translate(170 915)"
-                                                }
-                                              },
-                                              [
-                                                _c(
-                                                  "g",
-                                                  {
-                                                    attrs: {
-                                                      id:
-                                                        "Group-9TriangleIcon1",
-                                                      transform:
-                                                        "translate(0 365)"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "g",
-                                                      {
-                                                        attrs: {
-                                                          id:
-                                                            "Group-8TriangleIcon1",
-                                                          transform:
-                                                            "translate(125)"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "g",
-                                                          {
-                                                            attrs: {
-                                                              id:
-                                                                "Rectangle-9TriangleIcon1"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("use", {
-                                                              attrs: {
-                                                                fill: "#000",
-                                                                filter:
-                                                                  "url(#filter-3TriangleIcon1)",
-                                                                "xlink:href":
-                                                                  "#path-2TriangleIcon1"
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c("use", {
-                                                              attrs: {
-                                                                fill:
-                                                                  "url(#linearGradient-1TriangleIcon1)",
-                                                                "xlink:href":
-                                                                  "#path-2TriangleIcon1"
-                                                              }
-                                                            })
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "g",
-                                                          {
-                                                            attrs: {
-                                                              id:
-                                                                "playTriangleIcon1",
-                                                              transform:
-                                                                "translate(18 15)",
-                                                              fill: "#FFF",
-                                                              "fill-rule":
-                                                                "nonzero"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("path", {
-                                                              attrs: {
-                                                                d:
-                                                                  "M9.432 2.023l8.919 14.879a1.05 1.05 0 01-.384 1.452 1.097 1.097 0 01-.548.146H-.42A1.07 1.07 0 01-1.5 17.44c0-.19.052-.375.15-.538L7.567 2.023a1.092 1.092 0 011.864 0z",
-                                                                id:
-                                                                  "TriangleIcon1",
-                                                                transform:
-                                                                  "rotate(90 8.5 10)"
-                                                              }
-                                                            })
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "h4",
-                                  {
-                                    staticClass:
-                                      "relative mt-6 text-lg font-bold"
-                                  },
-                                  [_vm._v("Customer Journey")]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "p",
-                                  {
-                                    staticClass:
-                                      "relative mt-2 text-base text-center text-gray-600"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                              Experience a simple user interface thats gets you to you product fast\n                              "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass:
-                                      "relative flex mt-2 text-sm font-medium text-indigo-500 underline",
-                                    attrs: { href: "#_" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Learn\n                                  More"
-                                    )
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d:
+                                          "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                                      }
+                                    })
                                   ]
                                 )
                               ]
-                            )
+                            ),
+                            _vm._v(" "),
+                            _vm._m(0)
                           ]
                         ),
+                        _vm._v(" "),
+                        _vm._m(1),
                         _vm._v(" "),
                         _c(
                           "div",
                           {
                             staticClass:
-                              "w-full max-w-md p-1 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3"
+                              "order-2 flex-shrink-0 sm:order-3 sm:ml-3"
                           },
                           [
                             _c(
-                              "div",
+                              "button",
                               {
                                 staticClass:
-                                  "relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+                                  "-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2",
+                                attrs: { type: "button" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.showBanner = !_vm.showBanner
+                                  }
+                                }
                               },
                               [
-                                _c(
-                                  "svg",
-                                  {
-                                    staticClass:
-                                      "absolute w-full h-full text-gray-100 fill-current",
-                                    attrs: {
-                                      viewBox: "0 0 358 372",
-                                      xmlns: "http://www.w3.org/2000/svg"
-                                    }
-                                  },
-                                  [
-                                    _c("g", [
-                                      _c("g", [
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M315.7 6.5c30.2 15.1 42.6 61.8 41.5 102.5-1.1 40.6-15.7 75.2-24.3 114.8-8.7 39.7-11.3 84.3-34.3 107.2-23 22.9-66.3 23.9-114.5 30.7-48.2 6.7-101.3 19.1-123.2-4.1-21.8-23.2-12.5-82.1-21.6-130.2C30.2 179.3 2.6 141.9.7 102c-2-39.9 21.7-82.2 57.4-95.6 35.7-13.5 83.3 2.1 131.2 1.7 47.9-.4 96.1-16.8 126.4-1.6z"
-                                          }
-                                        })
-                                      ])
-                                    ])
-                                  ]
-                                ),
+                                _c("span", { staticClass: "sr-only" }, [
+                                  _vm._v("Dismiss")
+                                ]),
                                 _vm._v(" "),
                                 _c(
                                   "svg",
                                   {
-                                    staticClass: "relative w-20 h-20",
+                                    staticClass: "h-6 w-6 text-white",
                                     attrs: {
-                                      viewBox: "0 0 58 58",
                                       xmlns: "http://www.w3.org/2000/svg",
-                                      "xmlns:xlink":
-                                        "http://www.w3.org/1999/xlink"
+                                      fill: "none",
+                                      viewBox: "0 0 24 24",
+                                      stroke: "currentColor",
+                                      "aria-hidden": "true"
                                     }
                                   },
                                   [
-                                    _c(
-                                      "defs",
-                                      [
-                                        _c(
-                                          "linearGradient",
-                                          {
-                                            attrs: {
-                                              x1: "0%",
-                                              y1: "0%",
-                                              x2: "100%",
-                                              y2: "100%",
-                                              id: "linearGradient-1Icon2"
-                                            }
-                                          },
-                                          [
-                                            _c("stop", {
-                                              attrs: {
-                                                "stop-color": "#F2C314",
-                                                offset: "0%"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("stop", {
-                                              attrs: {
-                                                "stop-color": "#FC3832",
-                                                offset: "100%"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "filter",
-                                          {
-                                            attrs: {
-                                              x: "-14%",
-                                              y: "-10%",
-                                              width: "128%",
-                                              height: "128%",
-                                              filterUnits: "objectBoundingBox",
-                                              id: "filter-3Icon2"
-                                            }
-                                          },
-                                          [
-                                            _c("feOffset", {
-                                              attrs: {
-                                                dy: "2",
-                                                in: "SourceAlpha",
-                                                result: "shadowOffsetOuter1"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("feGaussianBlur", {
-                                              attrs: {
-                                                stdDeviation: "2",
-                                                in: "shadowOffsetOuter1",
-                                                result: "shadowBlurOuter1"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("feColorMatrix", {
-                                              attrs: {
-                                                values:
-                                                  "0 0 0 0 0.501960784 0 0 0 0 0.125490196 0 0 0 0 0 0 0 0 0.15 0",
-                                                in: "shadowBlurOuter1"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z",
-                                            id: "path-2Icon2"
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "g",
-                                      {
-                                        attrs: {
-                                          id: "Page-1Icon2",
-                                          stroke: "none",
-                                          "stroke-width": "1",
-                                          fill: "none",
-                                          "fill-rule": "evenodd"
-                                        }
-                                      },
-                                      [
-                                        _c(
-                                          "g",
-                                          {
-                                            attrs: {
-                                              id: "Desktop-HDIcon2",
-                                              transform: "translate(-691 -1278)"
-                                            }
-                                          },
-                                          [
-                                            _c(
-                                              "g",
-                                              {
-                                                attrs: {
-                                                  id: "FeaturesIcon2",
-                                                  transform:
-                                                    "translate(170 915)"
-                                                }
-                                              },
-                                              [
-                                                _c(
-                                                  "g",
-                                                  {
-                                                    attrs: {
-                                                      id: "Group-9-CopyIcon2",
-                                                      transform:
-                                                        "translate(400 365)"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "g",
-                                                      {
-                                                        attrs: {
-                                                          id: "Group-8Icon2",
-                                                          transform:
-                                                            "translate(125)"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "g",
-                                                          {
-                                                            attrs: {
-                                                              id:
-                                                                "Rectangle-9Icon2"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("use", {
-                                                              attrs: {
-                                                                fill: "#000",
-                                                                filter:
-                                                                  "url(#filter-3Icon2)",
-                                                                "xlink:href":
-                                                                  "#path-2Icon2"
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c("use", {
-                                                              attrs: {
-                                                                fill:
-                                                                  "url(#linearGradient-1Icon2)",
-                                                                "xlink:href":
-                                                                  "#path-2Icon2"
-                                                              }
-                                                            })
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "g",
-                                                          {
-                                                            attrs: {
-                                                              id:
-                                                                "machine-learningIcon2",
-                                                              transform:
-                                                                "translate(14 12)",
-                                                              fill: "#FFF",
-                                                              "fill-rule":
-                                                                "nonzero"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("path", {
-                                                              attrs: {
-                                                                d:
-                                                                  "M10.554 21.418v-2.68c-1.1-.204-1.932-1.143-1.932-2.271 0-.468.143-.903.388-1.267l-2.32-1.662L4.367 15.2a2.254 2.254 0 01-.005 2.541l5.28 4.05c.268-.182.577-.311.911-.373zm.892 0c.334.062.643.191.912.373l5.28-4.05a2.254 2.254 0 01-.006-2.54l-2.321-1.663L12.99 15.2c.245.364.388.8.388 1.267 0 1.128-.832 2.067-1.932 2.27v2.681zm1.538.997c.25.365.394.803.394 1.274C13.378 24.965 12.314 26 11 26s-2.378-1.035-2.378-2.311c0-.471.145-.91.394-1.274l-5.28-4.05c-.385.26-.853.413-1.358.413C1.065 18.778 0 17.743 0 16.467c0-1.129.832-2.068 1.932-2.27v-2.393C.832 11.6 0 10.662 0 9.534c0-1.277 1.065-2.312 2.378-2.312.505 0 .973.153 1.358.414l5.28-4.05a2.254 2.254 0 01-.394-1.275C8.622 1.035 9.686 0 11 0s2.378 1.035 2.378 2.311c0 .471-.145.91-.394 1.274l5.28 4.05c.385-.26.853-.413 1.358-.413C20.935 7.222 22 8.257 22 9.533c0 1.129-.832 2.068-1.932 2.27v2.393c1.1.203 1.932 1.142 1.932 2.27 0 1.277-1.065 2.312-2.378 2.312-.505 0-.973-.153-1.358-.414l-5.28 4.05zm-9.243-7.843L5.937 13l-2.196-1.572c-.27.183-.58.314-.917.376v2.392c.336.062.647.193.917.376zm.627-3.772l2.321 1.662L9.01 10.8a2.254 2.254 0 01-.388-1.267c0-1.128.832-2.067 1.932-2.27V4.582a2.403 2.403 0 01-.912-.373l-5.28 4.05a2.254 2.254 0 01.006 2.54zm13.89 3.772c.27-.183.582-.314.918-.376v-2.392a2.403 2.403 0 01-.917-.376L16.063 13l2.196 1.572zm-.62-6.313l-5.28-4.05a2.403 2.403 0 01-.912.373v2.68c1.1.204 1.932 1.143 1.932 2.271 0 .468-.143.903-.388 1.267l2.32 1.662 2.322-1.662a2.254 2.254 0 01.005-2.541zm-8 6.313A2.415 2.415 0 0111 14.156c.507 0 .977.154 1.363.416L14.559 13l-2.196-1.572a2.415 2.415 0 01-1.363.416c-.507 0-.977-.154-1.363-.416L7.441 13l2.196 1.572zM11 10.978c.821 0 1.486-.647 1.486-1.445 0-.797-.665-1.444-1.486-1.444s-1.486.647-1.486 1.444c0 .798.665 1.445 1.486 1.445zm0 6.933c.821 0 1.486-.647 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.486.647-1.486 1.445c0 .797.665 1.444 1.486 1.444zm8.622-6.933c.82 0 1.486-.647 1.486-1.445 0-.797-.665-1.444-1.486-1.444s-1.487.647-1.487 1.444c0 .798.666 1.445 1.487 1.445zm0 6.933c.82 0 1.486-.647 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.487.647-1.487 1.445c0 .797.666 1.444 1.487 1.444zM2.378 10.978c.821 0 1.487-.647 1.487-1.445 0-.797-.666-1.444-1.487-1.444-.82 0-1.486.647-1.486 1.444 0 .798.665 1.445 1.486 1.445zm0 6.933c.821 0 1.487-.647 1.487-1.444 0-.798-.666-1.445-1.487-1.445-.82 0-1.486.647-1.486 1.445 0 .797.665 1.444 1.486 1.444zM11 25.133c.821 0 1.486-.646 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.486.647-1.486 1.445.665 1.444 1.486 1.444zm0-21.377c.821 0 1.486-.647 1.486-1.445S11.821.867 11 .867s-1.486.646-1.486 1.444c0 .798.665 1.445 1.486 1.445z",
-                                                                id: "ShapeIcon2"
-                                                              }
-                                                            })
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "h4",
-                                  {
-                                    staticClass:
-                                      "relative mt-6 text-lg font-bold"
-                                  },
-                                  [_vm._v("Market Network")]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "p",
-                                  {
-                                    staticClass:
-                                      "relative mt-2 text-base text-center text-gray-600"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                              The multiple vendors give you a chance to accces the best price range for a product.   \n                              "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass:
-                                      "relative flex mt-2 text-sm font-medium text-indigo-500 underline",
-                                    attrs: { href: "#_" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Learn\n                                  More"
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "w-full max-w-md p-1 mx-auto mb-16 lg:mb-0 lg:w-1/3"
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
-                              },
-                              [
-                                _c(
-                                  "svg",
-                                  {
-                                    staticClass:
-                                      "absolute w-full h-full text-gray-100 fill-current",
-                                    attrs: {
-                                      viewBox: "0 0 378 410",
-                                      xmlns: "http://www.w3.org/2000/svg"
-                                    }
-                                  },
-                                  [
-                                    _c("g", [
-                                      _c("g", [
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M305.9 14.4c23.8 24.6 16.3 84.9 26.6 135.1 10.4 50.2 38.6 90.3 43.7 137.8 5.1 47.5-12.8 102.4-50.7 117.4-37.9 15.1-95.7-9.8-151.7-12.2-56.1-2.5-110.3 17.6-130-3.4-19.7-20.9-4.7-82.9-11.5-131.2C25.5 209.5-3 174.7 1.2 147c4.2-27.7 41-48.3 75-69.6C110.1 56.1 141 34.1 184 17.5c43.1-16.6 98.1-27.7 121.9-3.1z"
-                                          }
-                                        })
-                                      ])
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "svg",
-                                  {
-                                    staticClass: "relative w-20 h-20",
-                                    attrs: {
-                                      viewBox: "0 0 58 58",
-                                      xmlns: "http://www.w3.org/2000/svg",
-                                      "xmlns:xlink":
-                                        "http://www.w3.org/1999/xlink"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "defs",
-                                      [
-                                        _c(
-                                          "linearGradient",
-                                          {
-                                            attrs: {
-                                              x1: "0%",
-                                              y1: "0%",
-                                              x2: "100%",
-                                              y2: "100%",
-                                              id: "linearGradient-1Icon3"
-                                            }
-                                          },
-                                          [
-                                            _c("stop", {
-                                              attrs: {
-                                                "stop-color": "#32FBFC",
-                                                offset: "0%"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("stop", {
-                                              attrs: {
-                                                "stop-color": "#3214F2",
-                                                offset: "100%"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "filter",
-                                          {
-                                            attrs: {
-                                              x: "-14%",
-                                              y: "-10%",
-                                              width: "128%",
-                                              height: "128%",
-                                              filterUnits: "objectBoundingBox",
-                                              id: "filter-3Icon3"
-                                            }
-                                          },
-                                          [
-                                            _c("feOffset", {
-                                              attrs: {
-                                                dy: "2",
-                                                in: "SourceAlpha",
-                                                result: "shadowOffsetOuter1"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("feGaussianBlur", {
-                                              attrs: {
-                                                stdDeviation: "2",
-                                                in: "shadowOffsetOuter1",
-                                                result: "shadowBlurOuter1"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("feColorMatrix", {
-                                              attrs: {
-                                                values:
-                                                  "0 0 0 0 0.031372549 0 0 0 0 0.149019608 0 0 0 0 0.658823529 0 0 0 0.15 0",
-                                                in: "shadowBlurOuter1"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c("path", {
-                                          attrs: {
-                                            d:
-                                              "M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z",
-                                            id: "path-2Icon3"
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "g",
-                                      {
-                                        attrs: {
-                                          id: "Page-1Icon3",
-                                          stroke: "none",
-                                          "stroke-width": "1",
-                                          fill: "none",
-                                          "fill-rule": "evenodd"
-                                        }
-                                      },
-                                      [
-                                        _c(
-                                          "g",
-                                          {
-                                            attrs: {
-                                              id: "Desktop-HDIcon3",
-                                              transform:
-                                                "translate(-1091 -1278)"
-                                            }
-                                          },
-                                          [
-                                            _c(
-                                              "g",
-                                              {
-                                                attrs: {
-                                                  id: "FeaturesIcon3",
-                                                  transform:
-                                                    "translate(170 915)"
-                                                }
-                                              },
-                                              [
-                                                _c(
-                                                  "g",
-                                                  {
-                                                    attrs: {
-                                                      id: "Group-9-Copy-2Icon3",
-                                                      transform:
-                                                        "translate(800 365)"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "g",
-                                                      {
-                                                        attrs: {
-                                                          id: "Group-8Icon3",
-                                                          transform:
-                                                            "translate(125)"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "g",
-                                                          {
-                                                            attrs: {
-                                                              id:
-                                                                "Rectangle-9Icon3"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("use", {
-                                                              attrs: {
-                                                                fill: "#000",
-                                                                filter:
-                                                                  "url(#filter-3Icon3)",
-                                                                "xlink:href":
-                                                                  "#path-2Icon3"
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c("use", {
-                                                              attrs: {
-                                                                fill:
-                                                                  "url(#linearGradient-1Icon3)",
-                                                                "xlink:href":
-                                                                  "#path-2Icon3"
-                                                              }
-                                                            })
-                                                          ]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "g",
-                                                          {
-                                                            attrs: {
-                                                              id:
-                                                                "smart-notificationsIcon3",
-                                                              transform:
-                                                                "translate(15 11)",
-                                                              fill: "#FFF",
-                                                              "fill-rule":
-                                                                "nonzero"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("path", {
-                                                              attrs: {
-                                                                d:
-                                                                  "M12.519 3.243a6.808 6.808 0 00-.187 1.298h-8.44a2.595 2.595 0 00-2.595 2.594v12.973a2.595 2.595 0 002.595 2.595h12.973a2.595 2.595 0 002.594-2.595v-8.44c.445-.02.88-.084 1.298-.187v8.627A3.892 3.892 0 0116.865 24H3.892A3.892 3.892 0 010 20.108V7.135a3.892 3.892 0 013.892-3.892h8.627zm6.616 6.487a4.865 4.865 0 110-9.73 4.865 4.865 0 010 9.73z",
-                                                                id: "IconIcon3"
-                                                              }
-                                                            })
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "h4",
-                                  {
-                                    staticClass:
-                                      "relative mt-6 text-lg font-bold"
-                                  },
-                                  [_vm._v("Device Compatibilty")]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "p",
-                                  {
-                                    staticClass:
-                                      "relative mt-2 text-base text-center text-gray-600"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                              Use any of your devices to track and make orders using one synchronized account\n                              "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass:
-                                      "relative flex mt-2 text-sm font-medium text-indigo-500 underline",
-                                    attrs: { href: "#_" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "Learn\n                                  More"
-                                    )
+                                    _c("path", {
+                                      attrs: {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        "stroke-width": "2",
+                                        d: "M6 18L18 6M6 6l12 12"
+                                      }
+                                    })
                                   ]
                                 )
                               ]
@@ -54899,14 +54136,329 @@ var render = function() {
                     )
                   ]
                 )
-              ]
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("main-navigation"),
+          _vm._v(" "),
+          _c("main", { staticClass: "flex-1 overflow-y-auto z-40 mt-2" }, [
+            _c(
+              "div",
+              { staticClass: "flex justify-items-center" },
+              [_c("flash-messages")],
+              1
             ),
             _vm._v(" "),
             _c(
               "div",
               {
                 staticClass:
-                  "shadow-2xl relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0"
+                  "p-2 container flex flex-col justify-around max-w-7xl  mx-auto"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative grid grid-cols-5 gap-4 justify-around"
+                  },
+                  [
+                    _c("div", { staticClass: "z-50" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "w-full rounded shadow-2xl justify-around bg-gray-200 flex flex-col border-box p-4",
+                          staticStyle: { height: "60vh" }
+                        },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "group cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  _vm.something = true
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-rainbow" }),
+                              _vm._v(" Supermartket\n                      ")
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm._m(2),
+                          _vm._v(" "),
+                          _vm._m(3),
+                          _vm._v(" "),
+                          _vm._m(4),
+                          _vm._v(" "),
+                          _vm._m(5),
+                          _vm._v(" "),
+                          _vm._m(6),
+                          _vm._v(" "),
+                          _vm._m(7),
+                          _vm._v(" "),
+                          _vm._m(8),
+                          _vm._v(" "),
+                          _vm._m(9),
+                          _vm._v(" "),
+                          _vm._m(10),
+                          _vm._v(" "),
+                          _vm._m(11),
+                          _vm._v(" "),
+                          _vm._m(12)
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                        on: {
+                          mouseleave: function($event) {
+                            _vm.something = false
+                          }
+                        }
+                      },
+                      [_vm._m(13)]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(14)
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "flex items-center text-gray-800 mt-4" },
+                  [
+                    _c("div", { staticClass: "py-2 w-full" }, [
+                      _c("div", { staticClass: "grid grid-cols-12 gap-4" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-span-12 sm:col-span-6 md:col-span-3"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex flex-row bg-gray-200 shadow-sm rounded p-4"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-blue-100 text-blue-500"
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-6 h-6",
+                                        attrs: {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            "stroke-linecap": "round",
+                                            "stroke-linejoin": "round",
+                                            "stroke-width": "2",
+                                            d:
+                                              "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(15)
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-span-12 sm:col-span-6 md:col-span-3"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex flex-row bg-gray-200 shadow-sm rounded p-4"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-green-100 text-green-500"
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-6 h-6",
+                                        attrs: {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            "stroke-linecap": "round",
+                                            "stroke-linejoin": "round",
+                                            "stroke-width": "2",
+                                            d:
+                                              "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(16)
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-span-12 sm:col-span-6 md:col-span-3"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex flex-row bg-gray-200 shadow-sm rounded p-4"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-orange-100 text-orange-500"
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-6 h-6",
+                                        attrs: {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            "stroke-linecap": "round",
+                                            "stroke-linejoin": "round",
+                                            "stroke-width": "2",
+                                            d:
+                                              "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(17)
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-span-12 sm:col-span-6 md:col-span-3"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex flex-row bg-gray-200 shadow-sm rounded p-4"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-red-100 text-red-500"
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "w-6 h-6",
+                                        attrs: {
+                                          fill: "none",
+                                          stroke: "currentColor",
+                                          viewBox: "0 0 24 24",
+                                          xmlns: "http://www.w3.org/2000/svg"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            "stroke-linecap": "round",
+                                            "stroke-linejoin": "round",
+                                            "stroke-width": "2",
+                                            d:
+                                              "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(18)
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "relative py-10 md:py-1 lg:py-24 xl:py-1 xl:px-0"
               },
               [
                 _vm.showProducts
@@ -54914,7 +54466,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "container flex flex-col items-center h-full max-w-6xl mx-auto",
+                          "container flex flex-col items-center h-full max-w-7xl mx-auto",
                         attrs: { id: "pricing" }
                       },
                       [
@@ -54931,7 +54483,7 @@ var render = function() {
                           "div",
                           {
                             staticClass:
-                              "max-w-full mx-auto md:max-w-6xl sm:px-8"
+                              "max-w-full mx-auto md:max-w-7xl sm:px-8"
                           },
                           [
                             _c(
@@ -54966,7 +54518,7 @@ var render = function() {
                                                   "flex-1 my-3 relative rounded bg-gray-50 shadow"
                                               },
                                               [
-                                                _vm._m(0),
+                                                _vm._m(19),
                                                 _vm._v(" "),
                                                 _c(
                                                   "inertia-link",
@@ -55250,6 +54802,8 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
+            _vm._m(20),
+            _vm._v(" "),
             _c(
               "footer",
               {
@@ -55341,9 +54895,9 @@ var render = function() {
                           "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                       },
                       [
-                        _vm._m(1),
+                        _vm._m(21),
                         _vm._v(" "),
-                        _vm._m(2),
+                        _vm._m(22),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -55495,6 +55049,414 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "ml-3 font-medium text-white truncate" }, [
+      _c("span", { staticClass: "md:hidden" }, [
+        _vm._v(
+          "\n                  We announced a new product!\n              "
+        )
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "hidden md:inline" }, [
+        _vm._v(
+          "\n                  Big news! We're excited to announce a brand new product.\n              "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
+      },
+      [
+        _c(
+          "a",
+          {
+            staticClass:
+              "flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50",
+            attrs: { href: "#" }
+          },
+          [_vm._v("\n              Learn more\n              ")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [
+        _c("i", { staticClass: "mr-2 fa fa-medkit" }),
+        _vm._v(" Health & Beauty")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [
+        _c("i", { staticClass: "mr-2 fa fa-laptop-house" }),
+        _vm._v(" Home & Office")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [
+        _c("i", { staticClass: "mr-2 fa fa-mobile-alt" }),
+        _vm._v(" Phones & Tablets")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [_c("i", { staticClass: "mr-2 fa fa-microchip" }), _vm._v(" Computing")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [
+        _c("i", { staticClass: "mr-2 fa fa-charging-station" }),
+        _vm._v(" Electronics")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [_c("i", { staticClass: "mr-2 fa fa-tshirt" }), _vm._v(" Fashion")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [_c("i", { staticClass: "mr-2 fa fa-gamepad" }), _vm._v(" Gaming")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [_c("i", { staticClass: "mr-2 fa fa-baby" }), _vm._v(" Baby Products")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [
+        _c("i", { staticClass: "mr-2 fa fa-running" }),
+        _vm._v(" Sporting Goods")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [_c("i", { staticClass: "mr-2 fa fa-sun" }), _vm._v(" Garden & Outdoors")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
+      },
+      [
+        _c("i", { staticClass: "mr-2 fa fa-angle-double-right" }),
+        _vm._v(" Other Categories")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Food Cupboard ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Cooking Ingredients")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Snacks, Cripps & Nuts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Grains & Rice")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sugar & Flour")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Breakfast Cereals")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Candy & Chocolate")]),
+            _vm._v(" "),
+            _c("span", [_vm._v("Margarine, Jams, Honey & Spreads")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Drinks ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Beer, Wines & Spirits")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Carbonated Drinks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Coffee, Tea & Cocoa")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Dairy")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Juice & Non Carbonated Drinks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Syrup and Cordials")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Water")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Household Supplies ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Air Fresheners")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bathroom Cleaners")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bulb & Batteries")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Floor Cleaners")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Household Cleaners & Sundries")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Kitchen Cleaner")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Laundry")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Pappers & Rolls")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Shop by brands ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Velvex")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Dettol")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Huggies")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full rounded shadow-2xl justify-around bg-indigo-500 flex flex-col border-box p-4",
+          staticStyle: { height: "60vh" }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "inline-flex flex-col space-y-1 items-center justify-end flex-1 h-full p-4 bg-blue-700 rounded-xl"
+            },
+            [
+              _c(
+                "p",
+                { staticClass: "w-full text-2xl font-semibold text-white" },
+                [_vm._v("Welcome!")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "w-full pb-8 text-sm tracking-wide leading-tight text-white"
+                },
+                [
+                  _vm._v(
+                    "\n                          Welcome to Multi-Vendor\n                          We can’t wait for customers to come to us instead we figure out where they are, go there and bring them back to your store\n                          For a vendor to achieve the goals, customer must first achieve theirs and thats why we have a clean user experience \n                          "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "rounded mr-auto" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "opacity-95 border rounded-lg border-white px-4"
+                  },
+                  [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "m-auto inset-0 text-sm font-medium leading-normal text-center text-white py-2"
+                      },
+                      [_vm._v("Buy Now")]
+                    )
+                  ]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col flex-grow ml-4" }, [
+      _c("div", { staticClass: "text-sm text-gray-500" }, [_vm._v("Users")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "font-bold text-lg" }, [_vm._v("1259")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col flex-grow ml-4" }, [
+      _c("div", { staticClass: "text-sm text-gray-500" }, [_vm._v("Orders")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "font-bold text-lg" }, [_vm._v("230")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col flex-grow ml-4" }, [
+      _c("div", { staticClass: "text-sm text-gray-500" }, [
+        _vm._v("New Clients")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "font-bold text-lg" }, [_vm._v("190")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col flex-grow ml-4" }, [
+      _c("div", { staticClass: "text-sm text-gray-500" }, [_vm._v("Revenue")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "font-bold text-lg" }, [_vm._v("+32k")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       {
@@ -55503,6 +55465,57 @@ var staticRenderFns = [
       },
       [_c("p", { staticClass: "italic" }, [_vm._v("Electornics")])]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "px-4" }, [
+      _c("section", { staticClass: "relative py-24 px-4" }, [
+        _c(
+          "div",
+          { staticClass: "z-20 relative text-white container mx-auto" },
+          [
+            _c("h1", { staticClass: "mb-4" }, [
+              _vm._v("Tailwind Banner with Object Fit Image")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "leading-normal" }, [
+              _vm._v(
+                "This is a banner that can be resized to your heart’s content without using a background image property."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "leading-normal" }, [
+              _vm._v(
+                "Integer eu massa ipsum. Quisque dui purus, congue in urna sed, volutpat condimentum nisi. Ut elementum tellus quam, sit amet congue ante tempus id. Phasellus ultricies enim in est posuere, quis semper urna consequat."
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "inline-block bg-blue-500 text-white no-underline hover:bg-blue-800 mt-4 p-4 rounded",
+                attrs: { href: "#" }
+              },
+              [_vm._v("A Call to Action")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "absolute inset-0 h-auto z-10" }, [
+          _c("img", {
+            staticClass: "h-full w-full object-fit-cover",
+            attrs: {
+              src:
+                "https://images.unsplash.com/photo-1509315047084-af74f1192bee",
+              alt: ""
+            }
+          })
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -62033,7 +62046,7 @@ var render = function() {
                   "tbody",
                   { staticClass: "text-gray-700" },
                   _vm._l(_vm.products, function(product) {
-                    return _c("tr", { key: product.id }, [
+                    return _c("tr", { key: product._id }, [
                       _c("td", { staticClass: "w-1/4 text-left py-3 px-4" }, [
                         _vm._v(_vm._s(product.title))
                       ]),
@@ -62050,7 +62063,57 @@ var render = function() {
                         _vm._v(_vm._s(product.created_at))
                       ]),
                       _vm._v(" "),
-                      _vm._m(3, true)
+                      _c("td", { staticClass: "text-left py-3 px-4" }, [
+                        _c(
+                          "span",
+                          { staticClass: "flex flex-row justify-around" },
+                          [
+                            _c(
+                              "inertia-link",
+                              {
+                                attrs: {
+                                  href: _vm.route("products.edit", product._id)
+                                }
+                              },
+                              [
+                                _c(
+                                  "a",
+                                  { staticClass: "mr-5", attrs: { href: "" } },
+                                  [
+                                    _c("i", {
+                                      staticClass:
+                                        "fas fa-edit mr-3 text-green-600"
+                                    }),
+                                    _vm._v(" Edit ")
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "inertia-link",
+                              {
+                                attrs: {
+                                  href: _vm.route(
+                                    "products.destroy",
+                                    product._id
+                                  )
+                                }
+                              },
+                              [
+                                _c("a", { attrs: { href: "" } }, [
+                                  _c("i", {
+                                    staticClass:
+                                      "fas fa-trash mr-3 text-red-600"
+                                  }),
+                                  _vm._v(" Delete ")
+                                ])
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ])
                     ])
                   }),
                   0
@@ -62165,24 +62228,6 @@ var staticRenderFns = [
           },
           [_vm._v("Actions")]
         )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "text-left py-3 px-4" }, [
-      _c("span", { staticClass: "flex flex-row justify-around" }, [
-        _c("a", { staticClass: "mr-5", attrs: { href: "" } }, [
-          _c("i", { staticClass: "fas fa-edit mr-3 text-green-600" }),
-          _vm._v(" Edit ")
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "" } }, [
-          _c("i", { staticClass: "fas fa-trash mr-3 text-red-600" }),
-          _vm._v(" Delete ")
-        ])
       ])
     ])
   }
@@ -63668,367 +63713,340 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "header",
-      { staticClass: "relative z-50 w-full h-14 shadow-2xl" },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-around xl:px-0"
-          },
-          [
+    _c("header", { staticClass: "relative z-50 w-full h-14 shadow-2xl" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "relative container flex items-center justify-center h-full max-w-6xl px-2 mx-auto sm:justify-between xl:px-0"
+        },
+        [
+          _c(
+            "a",
+            {
+              staticClass:
+                "relative flex items-center inline-block h-5 h-full font-black leading-none",
+              attrs: { href: "/" }
+            },
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "w-auto h-6 text-indigo-600 fill-current",
+                  attrs: {
+                    viewBox: "0 0 194 116",
+                    xmlns: "http://www.w3.org/2000/svg"
+                  }
+                },
+                [
+                  _c("g", { attrs: { "fill-rule": "evenodd" } }, [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
+                      }
+                    })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "relative ml-10 hidden md:flex" }, [
             _c(
-              "a",
+              "span",
               {
-                staticClass:
-                  "relative flex items-center inline-block h-5 h-full font-black leading-none",
-                attrs: { href: "/" }
+                staticClass: "absolute inset-y-0 left-0 pl-3 flex items-center"
               },
               [
                 _c(
                   "svg",
                   {
-                    staticClass: "w-auto h-6 text-indigo-600 fill-current",
-                    attrs: {
-                      viewBox: "0 0 194 116",
-                      xmlns: "http://www.w3.org/2000/svg"
-                    }
+                    staticClass: "h-5 w-5 text-gray-500",
+                    attrs: { viewBox: "0 0 24 24", fill: "none" }
                   },
                   [
-                    _c("g", { attrs: { "fill-rule": "evenodd" } }, [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"
-                        }
-                      })
-                    ])
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z",
+                        stroke: "currentColor",
+                        "stroke-width": "2",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round"
+                      }
+                    })
                   ]
-                ),
-                _vm._v(" "),
-                _vm._m(0)
+                )
               ]
             ),
             _vm._v(" "),
-            _vm.showMenu
-              ? _c(
-                  "nav",
-                  {
-                    staticClass:
-                      "ml-10 absolute top-0 left-0 z-50 flex flex-col items-center justify-between w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative",
-                    attrs: { id: "nav" }
-                  },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
-                        attrs: { href: "/" }
-                      },
-                      [_vm._v("Home")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600",
-                        attrs: { href: "#features" }
-                      },
-                      [_vm._v("About")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600",
-                        attrs: { href: "#pricing" }
-                      },
-                      [_vm._v("Contacts")]
-                    ),
-                    _vm._v(" "),
-                    _vm.noAuth
-                      ? _c("div", { staticClass: "ml-10" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black",
-                              attrs: { href: "#" },
-                              on: {
-                                click: function($event) {
-                                  _vm.regModal = !_vm.regModal
-                                }
-                              }
-                            },
-                            [_vm._v("Register")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "mr-0 font-bold duration-100  transition-color text-pink-600 hover:text-black",
-                              attrs: { href: "/login" }
-                            },
-                            [_vm._v("Login")]
-                          )
-                        ])
-                      : _c("div", [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "mr-10 font-bold duration-100 transition-color text-pink-600 hover:text-black",
-                              attrs: { href: "/admin" }
-                            },
-                            [_vm._v("Dashboard")]
-                          )
-                        ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
-                      },
-                      [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.search,
+                  expression: "form.search"
+                }
+              ],
+              staticClass:
+                "text-sm w-96  border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline",
+              attrs: {
+                type: "text",
+                placeholder: "Search Products, Brands, Categories"
+              },
+              domProps: { value: _vm.form.search },
+              on: {
+                keyup: function($event) {
+                  if (
+                    !$event.type.indexOf("key") &&
+                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                  ) {
+                    return null
+                  }
+                  return _vm.search.apply(null, arguments)
+                },
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "search", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "ml-2 bg-transparent hover:bg-indigo-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded",
+                on: { click: _vm.search }
+              },
+              [_vm._v("\n           Search\n          ")]
+            )
+          ]),
+          _vm._v(" "),
+          _vm.showMenu
+            ? _c(
+                "nav",
+                {
+                  staticClass:
+                    "ml-10 absolute top-0 left-0 z-50 flex flex-col items-center justify-between w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative",
+                  attrs: { id: "nav" }
+                },
+                [
+                  _vm.noAuth
+                    ? _c("div", { staticClass: "ml-10" }, [
                         _c(
-                          "inertia-link",
+                          "a",
                           {
                             staticClass:
-                              "w-full py-2 font-bold text-center text-pink-500",
-                            attrs: { href: "#" }
+                              "mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black",
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                _vm.regModal = !_vm.regModal
+                              }
+                            }
                           },
-                          [_vm._v("Filters")]
+                          [_vm._v("Register")]
                         ),
                         _vm._v(" "),
                         _c(
-                          "inertia-link",
-                          { attrs: { href: _vm.route("cart") } },
-                          [
-                            _c(
-                              "a",
-                              {
-                                staticClass:
-                                  "relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold",
-                                attrs: { href: "#" }
-                              },
-                              [
-                                _c("span", [
-                                  _c("i", {
-                                    staticClass: "fa fa-shopping-cart"
-                                  }),
-                                  _vm._v(" Cart ")
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "svg",
-                              {
-                                staticClass: "flex-1 w-8 h-8 fill-current",
-                                attrs: { viewbox: "0 0 24 24" }
-                              },
-                              [
-                                _c("path", {
-                                  attrs: {
-                                    d:
-                                      "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                      " +
-                                    _vm._s(_vm.cartNumber) +
-                                    "\n                  "
-                                )
-                              ]
-                            )
-                          ]
+                          "a",
+                          {
+                            staticClass:
+                              "mr-0 font-bold duration-100  transition-color text-pink-600 hover:text-black",
+                            attrs: { href: "/login" }
+                          },
+                          [_vm._v("Login")]
                         )
-                      ],
-                      1
-                    )
-                  ]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _c("div", { staticClass: "relative ml-10 hidden md:flex" }, [
+                      ])
+                    : _c("div", [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "mr-10 font-bold duration-100 transition-color text-pink-600 hover:text-black",
+                            attrs: { href: "/admin" }
+                          },
+                          [_vm._v("Dashboard")]
+                        )
+                      ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
+                    },
+                    [
+                      _c(
+                        "inertia-link",
+                        {
+                          staticClass:
+                            "w-full py-2 font-bold text-center text-pink-500",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Filters")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "inertia-link",
+                        { attrs: { href: _vm.route("cart") } },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold",
+                              attrs: { href: "#" }
+                            },
+                            [
+                              _c("span", [
+                                _c("i", { staticClass: "fa fa-shopping-cart" }),
+                                _vm._v(" Cart ")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "flex-1 w-8 h-8 fill-current",
+                              attrs: { viewbox: "0 0 24 24" }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
+                            },
+                            [
+                              _vm._v(
+                                "\n                      " +
+                                  _vm._s(_vm.cartNumber) +
+                                  "\n                  "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "inertia-link",
+            {
+              staticClass: "hidden md:flex",
+              attrs: { href: _vm.route("cart") }
+            },
+            [
               _c(
-                "span",
+                "a",
                 {
                   staticClass:
-                    "absolute inset-y-0 left-0 pl-3 flex items-center"
+                    "group relative flex z-40 px-2 py-2 text-lg font-bold text-indigo-600 md:mt-0",
+                  attrs: { href: "#", role: "button" }
                 },
                 [
                   _c(
+                    "span",
+                    {
+                      staticClass:
+                        "mr-1 font-bold duration-100 transition-color text-indigo-600 group-hover:text-black"
+                    },
+                    [_vm._v("Cart")]
+                  ),
+                  _vm._v(" "),
+                  _c(
                     "svg",
                     {
-                      staticClass: "h-5 w-5 text-gray-500",
-                      attrs: { viewBox: "0 0 24 24", fill: "none" }
+                      staticClass:
+                        "group-hover:text-black flex-1 w-8 h-8 fill-current",
+                      attrs: { viewbox: "0 0 24 24" }
                     },
                     [
                       _c("path", {
                         attrs: {
                           d:
-                            "M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z",
-                          stroke: "currentColor",
-                          "stroke-width": "2",
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round"
+                            "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
                         }
                       })
                     ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "absolute right-0 top-0 rounded-full bg-black group-hover:bg-indigo-600 w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
+                    },
+                    [
+                      _vm._v(
+                        "\n                      " +
+                          _vm._s(_vm.cartNumber) +
+                          "\n                  "
+                      )
+                    ]
                   )
                 ]
-              ),
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10",
+              attrs: { id: "nav-mobile-btn" },
+              on: {
+                click: function($event) {
+                  _vm.showMenu = !_vm.showMenu
+                }
+              }
+            },
+            [
+              _c("span", {
+                staticClass:
+                  "block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
+              }),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.search,
-                    expression: "form.search"
-                  }
-                ],
+              _c("span", {
                 staticClass:
-                  "text-sm w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline",
-                attrs: { type: "text", placeholder: "Type and Press Enter" },
-                domProps: { value: _vm.form.search },
-                on: {
-                  keyup: function($event) {
-                    if (
-                      !$event.type.indexOf("key") &&
-                      _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                    ) {
-                      return null
-                    }
-                    return _vm.search.apply(null, arguments)
-                  },
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.form, "search", $event.target.value)
-                  }
-                }
+                  "block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
               })
-            ]),
-            _vm._v(" "),
-            _c(
-              "inertia-link",
-              {
-                staticClass: "hidden md:flex",
-                attrs: { href: _vm.route("cart") }
-              },
-              [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "group relative flex z-40 px-2 py-2 text-lg font-bold text-indigo-600 md:mt-0",
-                    attrs: { href: "#", role: "button" }
-                  },
-                  [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "mr-1 font-bold duration-100 transition-color text-indigo-600 group-hover:text-black"
-                      },
-                      [_vm._v("Cart")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "svg",
-                      {
-                        staticClass:
-                          "group-hover:text-black flex-1 w-8 h-8 fill-current",
-                        attrs: { viewbox: "0 0 24 24" }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "absolute right-0 top-0 rounded-full bg-black group-hover:bg-indigo-600 w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center"
-                      },
-                      [
-                        _vm._v(
-                          "\n                      " +
-                            _vm._s(_vm.cartNumber) +
-                            "\n                  "
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10",
-                attrs: { id: "nav-mobile-btn" },
-                on: {
-                  click: function($event) {
-                    _vm.showMenu = !_vm.showMenu
-                  }
-                }
-              },
-              [
-                _c("span", {
-                  staticClass:
-                    "block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
-                }),
-                _vm._v(" "),
-                _c("span", {
-                  staticClass:
-                    "block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
-                })
-              ]
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("Categories")
-      ],
-      1
-    ),
+            ]
+          )
+        ],
+        1
+      )
+    ]),
     _vm._v(" "),
     _vm.regModal
       ? _c(

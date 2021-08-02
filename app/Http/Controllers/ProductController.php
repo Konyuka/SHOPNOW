@@ -31,40 +31,9 @@ class ProductController extends Controller
 
         return Inertia::render('Products/Index', [ 'products' =>  $products ]); 
         
-
-        return json_decode($products);
-        
-        $account = User::where('account_id', $id);
-       
-        return dd($user);        
-        $posts = Post::where('author.name', 'John')
-            ->get();
-
-        return Inertia::render('Products/Index', [
-            // 'filters' => Request::all('search', 'trashed'),
-            'products' => Auth::user()->account->products()
-                ->orderBy('title')
-                // ->filter(Request::only('search', 'trashed'))
-                ->paginate(10)
-                ->withQueryString()
-                ->through(fn ($product) => [
-                    'id' => $product->id,
-                    'title' => $product->title,
-                    'type' => $product->type,
-                    'price' => $product->price,
-                    'description' => $product->description,
-                    // 'created_at' => $product->created_at,
-                    'created_at' => format($product->created_at,'H:i:s D M Y '),
-                    'deleted_at' => $product->deleted_at,
-                ]),
-        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         return Inertia::render('Products/Create');
@@ -113,42 +82,21 @@ class ProductController extends Controller
                 }
             }
 
-            return Redirect::route('products')->with('success', 'Product created.');
+            return Redirect::route('products')->with('success', 'Product created successfully.');
 
+    }
+
+    public function destroy(Product $product)
+    {      
+        $product->delete();
+        return Redirect::route('products')->with('success', 'Product deleted successfully.');
     }
 
    
     public function show($id)
     {
-        //
+        
     }
-
     
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }

@@ -86,21 +86,24 @@ Route::get('products/create', [ProductController::class, 'create'])
     ->name('products.create')
     ->middleware('auth');
 
+Route::get('products/{product}/edit', [ProductController::class, 'edit'])
+    ->name('products.edit')
+    ->middleware('auth');   
+  
+Route::put('products/{product}', [ProductController::class, 'update'])
+    ->name('products.update')
+    ->middleware('auth');    
+
+Route::get('delete/{product}', [ProductController::class, 'destroy'])
+    ->name('products.destroy')
+    ->middleware('auth');    
+
 Route::post('products', [ProductController::class, 'store'])
     ->name('products.store')
     ->middleware('auth');
 
-Route::get('products/{organization}/edit', [ProductController::class, 'edit'])
-    ->name('products.edit')
-    ->middleware('auth');
 
-Route::put('products/{organization}', [ProductController::class, 'update'])
-    ->name('products.update')
-    ->middleware('auth');
 
-Route::delete('products/{organization}', [ProductController::class, 'destroy'])
-    ->name('products.destroy')
-    ->middleware('auth');
 
 Route::put('products/{organization}/restore', [ProductController::class, 'restore'])
     ->name('products.restore')

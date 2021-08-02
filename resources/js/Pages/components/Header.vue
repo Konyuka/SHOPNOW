@@ -2,7 +2,7 @@
   <div>
     <header class="relative z-50 w-full h-14 shadow-2xl">
         <div
-            class="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-around xl:px-0">
+            class="relative container flex items-center justify-center h-full max-w-6xl px-2 mx-auto sm:justify-between xl:px-0">
 
             <a href="/" class="relative flex items-center inline-block h-5 h-full font-black leading-none">
                 <svg class="w-auto h-6 text-indigo-600 fill-current" viewBox="0 0 194 116"
@@ -16,15 +16,23 @@
                 <span class="ml-3 text-xl text-gray-800">Multi Vendor<span class="text-pink-500">.</span></span>
             </a>
 
+            <!-- Search Form -->
+            <div class="relative ml-10 hidden md:flex">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <input v-model="form.search" @keyup.enter="search" class="text-sm w-96  border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline" type="text" placeholder="Search Products, Brands, Categories">
+            <button @click="search" class="ml-2 bg-transparent hover:bg-indigo-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+             Search
+            </button>
+            </div>
+
             <nav id="nav"
                 v-if="showMenu"
                 class="ml-10 absolute top-0 left-0 z-50 flex flex-col items-center justify-between w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
-                <a href="/"
-                    class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Home</a>
-                <a href="#features"
-                    class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-pink-600">About</a>
-                <a href="#pricing"
-                    class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Contacts</a>
+               
                 <div v-if="noAuth" class="ml-10">
                     <a @click="regModal = !regModal" href="#"
                         class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color text-indigo-600 hover:text-black">Register</a>     
@@ -54,17 +62,6 @@
                 </div>
 
             </nav>
-
-            <!-- Search Form -->
-            <div class="relative ml-10 hidden md:flex">
-            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-                <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
-                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <input v-model="form.search" @keyup.enter="search" class="text-sm w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline" type="text" placeholder="Type and Press Enter">
-            </div>
-            <!-- <Search   @reset="reset"  /> -->
             
 
             
@@ -147,7 +144,7 @@
 
         </div>
 
-        <Categories />
+        <!-- <Categories /> -->
 
     </header>
 
@@ -185,7 +182,7 @@
 </template>
 
 <script>
-import Categories from './SubNav.vue'
+// import Categories from './SubNav.vue'
 import throttle from 'lodash/throttle'
 import mapValues from 'lodash/mapValues'
 import pickBy from 'lodash/pickBy'
@@ -193,7 +190,7 @@ import pickBy from 'lodash/pickBy'
 export default {
   name: 'Header',
   components: {
-      Categories,
+    //   Categories,
   },
   data(){
     return{
