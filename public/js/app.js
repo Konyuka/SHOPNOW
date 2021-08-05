@@ -5029,6 +5029,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
  // import throttle from 'lodash/throttle'
 
@@ -54797,219 +54798,225 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "w-full rounded shadow-2xl justify-around bg-blue-600 flex flex-col border-box p-4",
+                            "w-full rounded shadow-2xl justify-around bg-blue-600 flex flex-col border-box p-10",
                           staticStyle: { height: "60vh" }
                         },
                         [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "group cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Supermarket")
+                          _c("div", {}, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Supermarket")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-rainbow" }),
-                              _vm._v(" Supermartket\n                      ")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Health")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-rainbow" }),
+                                _vm._v(" Supermartket")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Health")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-medkit" }),
-                              _vm._v(" Health & Beauty")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Home")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-medkit" }),
+                                _vm._v(" Health & Beauty")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Home")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "mr-2 fa fa-laptop-house"
-                              }),
-                              _vm._v(" Home & Office")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Phone")
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "mr-2 fa fa-laptop-house"
+                                }),
+                                _vm._v(" Home & Office")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Phone")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-mobile-alt" }),
-                              _vm._v(" Phones & Tablets")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Computing")
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "mr-2 fa fa-mobile-alt"
+                                }),
+                                _vm._v(" Phones & Tablets")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Computing")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-microchip" }),
-                              _vm._v(" Computing")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Electronics")
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "mr-2 fa fa-microchip"
+                                }),
+                                _vm._v(" Computing")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Electronics")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "mr-2 fa fa-charging-station"
-                              }),
-                              _vm._v(" Electronics")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Fashion")
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "mr-2 fa fa-charging-station"
+                                }),
+                                _vm._v(" Electronics")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Fashion")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-tshirt" }),
-                              _vm._v(" Fashion")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Gaming")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-tshirt" }),
+                                _vm._v(" Fashion")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Gaming")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-gamepad" }),
-                              _vm._v(" Gaming")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Baby")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-gamepad" }),
+                                _vm._v(" Gaming")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Baby")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-baby" }),
-                              _vm._v(" Baby Products")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Sporting")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-baby" }),
+                                _vm._v(" Baby Products")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Sporting")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-running" }),
-                              _vm._v(" Sporting Goods")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Garden")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-running" }),
+                                _vm._v(" Sporting Goods")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Garden")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "mr-2 fa fa-sun" }),
-                              _vm._v(" Garden & Outdoors")
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
-                              on: {
-                                mouseover: function($event) {
-                                  return _vm.setCategory("Other")
+                              },
+                              [
+                                _c("i", { staticClass: "mr-2 fa fa-sun" }),
+                                _vm._v(" Garden & Outdoors")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "mb-1 cursor-pointer relative group text-white inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                on: {
+                                  mouseover: function($event) {
+                                    return _vm.setCategory("Other")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "mr-2 fa fa-angle-double-right"
-                              }),
-                              _vm._v(" Other Categories")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "mr-2 fa fa-angle-double-right"
+                                }),
+                                _vm._v(" Other Categories")
+                              ]
+                            )
+                          ])
                         ]
                       )
                     ]),
