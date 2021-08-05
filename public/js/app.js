@@ -4417,6 +4417,618 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // import throttle from 'lodash/throttle'
 
@@ -4467,10 +5079,27 @@ window.Toast = Toast;
   data: function data() {
     return {
       showBanner: true,
-      something: false
+      selectedCategory: '',
+      Supermartket: false,
+      Health: false,
+      Home: false,
+      Phone: false,
+      Computing: false,
+      Electronics: false,
+      Fashion: false,
+      Gaming: false,
+      Baby: false,
+      Sporting: false,
+      Garden: false,
+      Other: false
     };
   },
   methods: {
+    setCategory: function setCategory(data) {
+      this.slecetedCategoty = '';
+      this.selectedCategory = data;
+      console.log(this.selectedCategory);
+    },
     reset: function reset() {
       this.form = lodash_mapValues__WEBPACK_IMPORTED_MODULE_2___default()(this.form, function () {
         return null;
@@ -54168,7 +54797,7 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "w-full rounded shadow-2xl justify-around bg-gray-200 flex flex-col border-box p-4",
+                            "w-full rounded shadow-2xl justify-around bg-blue-600 flex flex-col border-box p-4",
                           staticStyle: { height: "60vh" }
                         },
                         [
@@ -54176,10 +54805,10 @@ var render = function() {
                             "a",
                             {
                               staticClass:
-                                "group cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                                "group cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
                               on: {
                                 mouseover: function($event) {
-                                  _vm.something = true
+                                  return _vm.setCategory("Supermarket")
                                 }
                               }
                             },
@@ -54189,45 +54818,401 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._m(2),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Health")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-medkit" }),
+                              _vm._v(" Health & Beauty")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(3),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Home")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "mr-2 fa fa-laptop-house"
+                              }),
+                              _vm._v(" Home & Office")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(4),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Phone")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-mobile-alt" }),
+                              _vm._v(" Phones & Tablets")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(5),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Computing")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-microchip" }),
+                              _vm._v(" Computing")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(6),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Electronics")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "mr-2 fa fa-charging-station"
+                              }),
+                              _vm._v(" Electronics")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(7),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Fashion")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-tshirt" }),
+                              _vm._v(" Fashion")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(8),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Gaming")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-gamepad" }),
+                              _vm._v(" Gaming")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(9),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Baby")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-baby" }),
+                              _vm._v(" Baby Products")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(10),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Sporting")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-running" }),
+                              _vm._v(" Sporting Goods")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(11),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Garden")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "mr-2 fa fa-sun" }),
+                              _vm._v(" Garden & Outdoors")
+                            ]
+                          ),
                           _vm._v(" "),
-                          _vm._m(12)
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.setCategory("Other")
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "mr-2 fa fa-angle-double-right"
+                              }),
+                              _vm._v(" Other Categories")
+                            ]
+                          )
                         ]
                       )
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "z-10 col-span-3 bg-gray-200 shadow-2xl",
-                        on: {
-                          mouseleave: function($event) {
-                            _vm.something = false
-                          }
-                        }
-                      },
-                      [_vm._m(13)]
-                    ),
+                    this.selectedCategory == "Supermarket"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(2)]
+                        )
+                      : _vm._e(),
                     _vm._v(" "),
-                    _vm._m(14)
+                    this.selectedCategory == "Health"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(3)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Home"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(4)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Phone"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(5)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Computing"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(6)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Electronics"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(7)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Fashion"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(8)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Gaming"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(9)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Baby"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(10)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Sporting"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(11)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Garden"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(12)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == "Other"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "z-10 col-span-3 bg-gray-200 shadow-2xl",
+                            on: {
+                              mouseleave: function($event) {
+                                return _vm.setCategory("")
+                              }
+                            }
+                          },
+                          [_vm._m(13)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    this.selectedCategory == ""
+                      ? _c("div", { staticClass: "col-span-3 z-10" }, [
+                          _vm._m(14)
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm._m(15)
                   ]
                 ),
                 _vm._v(" "),
@@ -54284,7 +55269,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(15)
+                                _vm._m(16)
                               ]
                             )
                           ]
@@ -54337,7 +55322,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(16)
+                                _vm._m(17)
                               ]
                             )
                           ]
@@ -54390,7 +55375,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(17)
+                                _vm._m(18)
                               ]
                             )
                           ]
@@ -54443,7 +55428,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(18)
+                                _vm._m(19)
                               ]
                             )
                           ]
@@ -54518,7 +55503,7 @@ var render = function() {
                                                   "flex-1 my-3 relative rounded bg-gray-50 shadow"
                                               },
                                               [
-                                                _vm._m(19),
+                                                _vm._m(20),
                                                 _vm._v(" "),
                                                 _c(
                                                   "inertia-link",
@@ -54802,7 +55787,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(20),
+            _vm._m(21),
             _vm._v(" "),
             _c(
               "footer",
@@ -54895,9 +55880,9 @@ var render = function() {
                           "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                       },
                       [
-                        _vm._m(21),
-                        _vm._v(" "),
                         _vm._m(22),
+                        _vm._v(" "),
+                        _vm._m(23),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -55091,167 +56076,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [
-        _c("i", { staticClass: "mr-2 fa fa-medkit" }),
-        _vm._v(" Health & Beauty")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [
-        _c("i", { staticClass: "mr-2 fa fa-laptop-house" }),
-        _vm._v(" Home & Office")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [
-        _c("i", { staticClass: "mr-2 fa fa-mobile-alt" }),
-        _vm._v(" Phones & Tablets")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [_c("i", { staticClass: "mr-2 fa fa-microchip" }), _vm._v(" Computing")]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [
-        _c("i", { staticClass: "mr-2 fa fa-charging-station" }),
-        _vm._v(" Electronics")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [_c("i", { staticClass: "mr-2 fa fa-tshirt" }), _vm._v(" Fashion")]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [_c("i", { staticClass: "mr-2 fa fa-gamepad" }), _vm._v(" Gaming")]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [_c("i", { staticClass: "mr-2 fa fa-baby" }), _vm._v(" Baby Products")]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [
-        _c("i", { staticClass: "mr-2 fa fa-running" }),
-        _vm._v(" Sporting Goods")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [_c("i", { staticClass: "mr-2 fa fa-sun" }), _vm._v(" Garden & Outdoors")]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"
-      },
-      [
-        _c("i", { staticClass: "mr-2 fa fa-angle-double-right" }),
-        _vm._v(" Other Categories")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
       "div",
       {
         staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
@@ -55346,6 +56170,1498 @@ var staticRenderFns = [
         ])
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Hair Care ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Conditioner")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Extensions, Wigs & Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hair & Scalp Care")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hair Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hair Coloring Products")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hair Cutting Tools")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hair Loss Products")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hair Perms, Relaxers & Texturizers ")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Shampoo")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Styling Products")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Fragrances ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Men's ")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Women's")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Mens Grooming ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Anti Ageing")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Pre Shave")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sunblock")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Oral Care ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Children's Dental care")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Dental Care  ")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Mouth Wash")]),
+            _vm._v(" "),
+            _c("span", [_vm._v("  Teeth Whitening")]),
+            _vm._v(" "),
+            _c("span", [_vm._v("  Toothbrush")]),
+            _vm._v(" "),
+            _c("span", [_vm._v("  Toothpaste")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Makeup ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Eyes")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Face")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Lips")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Health Care")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Diabetes Care")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Feminine Care")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" First Aid")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sleeping & Snoring")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Personal Care ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bath & Bathing Accesories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Deodrants & Antiperspirants")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Lip Care")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Shaves & Hair Removal")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Skin Care")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Luxury Beuty ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Fragrances")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" MakeUp")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Skin Care")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Home Kitchen ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Home Decor")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bedding")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Wall Art")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bath")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Lighting")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Storage & Organization")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Kitchen Dining")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Furniture ")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Small Appliances ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Blenders")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Kettles")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Toasters")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Ironing & Laundry")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Other Small Appliances")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Large Appliances ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Refridgerator")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Freezers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Water Dispenders & Coolers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Washers & Dryers")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Cooking Appliances ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cooktops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Microwaves & Ovens")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cooking Applience Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cookers")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Office Products")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Office & School Supplies")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Office Electronics")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Office Furniture & Lighting")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Stationery")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Mobile Phones ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Smartphoness")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Featured Phones")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Featured Phones Under 2,000")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Top Smartphone Brands ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Samsung")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Xiaomi")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Nokia")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Tecno")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Infinix")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Huawei")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Oppo")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Accesories ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Portable Powerbanks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Smart Watches")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cases & Sleeves")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Screen Protecttors")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bluetooth Accesories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Headsets")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Headphones")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Batteries & Battery Packs")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Accesories Under 1,000")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Tablets ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Ipads")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Tablet Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Tablet Bags & Covers")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Best Sellers Smartphones ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Samsung A10s")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Nokia 2.4")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Tecno Pop 3")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Xiaomi Redmi 9A")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Oppo A15")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Umidigi A7's")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cubot Note 20")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" New Smartphone Launches ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Samsung A02")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Xiaomi Note 10 pro")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Nokia 1.3")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Tecno Camon 17")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Samsung A02")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Oppo Reno 5")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Laptops ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" MacBooks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" NetBooks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" UltraBooks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" 2-in-1 Laptops")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Computer & Accessories ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Laptop Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Desktops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Monitors")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Scanners")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Printers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Keyboards, Mice & Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Computer Cable & Adapters")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Printer Ink & Toner")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Netwroking Products")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Shop By Laptop Brands ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" HP Laptops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Dell Laptops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Lenovo Laptops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Apple Laptops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Asus Laptops")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Computer Components ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Internal Hard Drive")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Graphic Cards")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Fans & Cooling")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Computer Data Storage ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" External Hard Drives")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" USB Flash Drives")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Televisions ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Smart TVs")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" LED & LCD TVs")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Data Projectors")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Best Seller TV Brands ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Synix TV")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Samsung TV")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hisense TV")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sony ")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Home Audio ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v("Speakers ")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Home Theatre System")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Blutooth Speakers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sound Bars")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Compact Radio & Stereos")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hi-Fi System Under 2,000")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Cameras ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Compact Cameras")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Digital SLR Cameras")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Security & Surveillance Camera")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Accessories & Supplies Supplies ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Accessories & Video Supplies")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Batteries")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Batteries, Chargers & Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cables")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Camera & Photo Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Camera Accesories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Home Audio Acccessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Power Protection")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Television Accessories")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Women's Fashion ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Dresses")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Suits & Blazers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Tops & Tees")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Coats, Jackets & Vest")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Jumpsuits, Rompers & Overalls")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Skirts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Lingerie, Sleep & Lounge")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Jeans")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Shorts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Jewelery")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sandals")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Flats")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Handbags & Wallets")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Men's Fashion ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Shirts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" T-Shirt & Tanks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Suits & Sports Coats")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Pants")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Shorts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Jeans")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Underwear")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Watches")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Fashion Sneakers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Loafers & Slip Ons")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Belts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sunglasses & Eyewear Accessories")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Baby ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Baby Boys")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Baby Girls")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Kids Fashion ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Boys")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Girls")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Exclusive Fashion ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Maternity Wear")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Ankara Shirts")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Kitenge Dresses")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Ankara Tops")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Wedding Hair Accesories")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Shop by brands ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Curren")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Forever Young")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bata")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Playingstation ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" PlaySatation 3")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Playstation 4")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Playstation Vita")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Digital Games ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Nintendo Switch")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Xbox 360")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Nintendo ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Nintendo DS")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Nintendo 3DS")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Wii")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" PC Gaming ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v("Games")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Sony PSP ")]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Diapering ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Diaper Bags")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Disposable Diapers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Portable Changing Pads")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cloth Diapers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Changing Tables")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Wipes & Holders")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Gear ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Walkers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" BagPacks & Camera")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Swings, Jumps & Bouncers")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Bathing & Skin Care ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Soaps & Cleaners")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Grooming & Healthcare kits")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bathing Tubs & Seats")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Washclothes & Towels")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bathroom Safety")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Apparel & Accessories ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Baby Boy")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Baby Girls")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Baby & Toodler Toys ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Toy Gift Sets")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Music & Sound")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bath Toys")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Feeding ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bibs & Burp Clothes")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Bottle Feeding")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Breastfeeding")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Highchairs & Booster Seats")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Pacifiers & Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Solid Feeding")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Baby Safety ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Monitors")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Sleep Positioners")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Edge & Corner Guards")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Potty Training ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Potties & Seats")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Seat Covers")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Step Stools")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Training Pants")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Health & Baby Care  ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Nail Care")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Teethers & Teething Relief")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Thermometers")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Food Cupboard ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Exercise & Fitness")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Clothing")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Team Sports")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Sports Nutrition ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Carb Management Supplements")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Endurance & Energy")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Fat Burners & Thermogenics")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Supplements")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Post-Work & Recovery")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Pre-Workout")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Proteins")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Supplement Stacks")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Testerone Boosters")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Weight Gainers")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Outdoor Recreation ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Camping & Hiking")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Skatebaords & Scooter ")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Cycling")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Accessories")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Gardening & Lawn Care ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Hand Tools")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Watering Equipment")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Grilling & Outdoor Cooking ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Grills")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Outdoor Cooking Tools & Accessories")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Outdoor Decor ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Lighting")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Patio Furniture & Accessories ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Hammoocks , Stands & Accessories")]),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c("span")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Farm & Ranch ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Pest Control")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+      },
+      [
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Stay Safe ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Have Fun")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Stay Fit")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Stay Connected")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Supermarket")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Stay Healty")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Automobile ")]
+            ),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Car Electronic & Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Car Safety and Security")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Motorcycle & Powersports")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Lights & Lighting Accessories")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Replacement Parts")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Books, Movies & Music ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span", [_vm._v(" Education & Learning")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Biography & Autobiography")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Literature")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Children & Teens")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Study Aids")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" Christian Books & Bibles")]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Industrial & Scientific ")]
+            ),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Livestock ")]
+            ),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Miscellaneous ")]
+            ),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Musical Instrument ")]
+            ),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Pet Supplies ")]
+            ),
+            _vm._v(" "),
+            _c("span")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            { staticClass: "text-lg font-semibold text-black uppercase" },
+            [_vm._v(" Services ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-col" }, [
+            _c("span"),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Toy & Games ")]
+            ),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
+              },
+              [_vm._v(" Grocery ")]
+            ),
+            _vm._v(" "),
+            _c("span")
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "carousel relative shadow-2xl bg-white" }, [
+      _c(
+        "div",
+        { staticClass: "carousel-inner relative overflow-hidden w-full" },
+        [
+          _c("input", {
+            staticClass: "carousel-open",
+            attrs: {
+              type: "radio",
+              id: "carousel-1",
+              name: "carousel",
+              "aria-hidden": "true",
+              hidden: "",
+              checked: "checked"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "carousel-item absolute opacity-0",
+              staticStyle: { height: "60vh" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "block h-full w-full bg-indigo-500 text-white text-5xl text-center"
+                },
+                [_vm._v("Advert 1")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass:
+                "prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto",
+              attrs: { for: "carousel-3" }
+            },
+            [_vm._v("‹")]
+          ),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass:
+                "next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto",
+              attrs: { for: "carousel-2" }
+            },
+            [_vm._v("›")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "carousel-open",
+            attrs: {
+              type: "radio",
+              id: "carousel-2",
+              name: "carousel",
+              "aria-hidden": "true",
+              hidden: ""
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "carousel-item absolute opacity-0",
+              staticStyle: { height: "60vh" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "block h-full w-full bg-red-500 text-white text-5xl text-center"
+                },
+                [_vm._v("Advert 2")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass:
+                "prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto",
+              attrs: { for: "carousel-1" }
+            },
+            [_vm._v("‹")]
+          ),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass:
+                "next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto",
+              attrs: { for: "carousel-3" }
+            },
+            [_vm._v("›")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "carousel-open",
+            attrs: {
+              type: "radio",
+              id: "carousel-3",
+              name: "carousel",
+              "aria-hidden": "true",
+              hidden: ""
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "carousel-item absolute opacity-0",
+              staticStyle: { height: "60vh" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "block h-full w-full bg-green-500 text-white text-5xl text-center"
+                },
+                [_vm._v("Advert 3")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass:
+                "prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto",
+              attrs: { for: "carousel-2" }
+            },
+            [_vm._v("‹")]
+          ),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass:
+                "next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto",
+              attrs: { for: "carousel-1" }
+            },
+            [_vm._v("›")]
+          ),
+          _vm._v(" "),
+          _c("ol", { staticClass: "carousel-indicators" }, [
+            _c("li", { staticClass: "inline-block mr-3" }, [
+              _c(
+                "label",
+                {
+                  staticClass:
+                    "carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700",
+                  attrs: { for: "carousel-1" }
+                },
+                [_vm._v("•")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "inline-block mr-3" }, [
+              _c(
+                "label",
+                {
+                  staticClass:
+                    "carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700",
+                  attrs: { for: "carousel-2" }
+                },
+                [_vm._v("•")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "inline-block mr-3" }, [
+              _c(
+                "label",
+                {
+                  staticClass:
+                    "carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700",
+                  attrs: { for: "carousel-3" }
+                },
+                [_vm._v("•")]
+              )
+            ])
+          ])
+        ]
+      )
+    ])
   },
   function() {
     var _vm = this

@@ -54,24 +54,24 @@
 
             <div class="relative grid grid-cols-5 gap-4 justify-around">
                 <div class="z-50">
-                    <div  style="height:60vh;" class="w-full rounded shadow-2xl justify-around bg-gray-200 flex flex-col border-box p-4">
-                        <a @mouseover="something = true" class="group cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"> <i class="mr-2 fa fa-rainbow"></i> Supermartket
+                    <div  style="height:60vh;" class="w-full rounded shadow-2xl justify-around bg-blue-600 flex flex-col border-box p-4">
+                        <a @mouseover="setCategory('Supermarket')" class="group cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"> <i class="mr-2 fa fa-rainbow"></i> Supermartket
                         </a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-medkit"></i> Health & Beauty</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-laptop-house"></i> Home & Office</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-mobile-alt"></i> Phones & Tablets</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-microchip"></i> Computing</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-charging-station"></i> Electronics</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-tshirt"></i> Fashion</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-gamepad"></i> Gaming</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-baby"></i> Baby Products</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-running"></i> Sporting Goods</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-sun"></i> Garden & Outdoors</a>
-                        <a class="cursor-pointer relative group text-gray-900 hover:text-pink-700 inline-flex items-center px-2 text-xs font-medium transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-angle-double-right"></i> Other Categories</a>
+                        <a @mouseover="setCategory('Health')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-medkit"></i> Health & Beauty</a>
+                        <a @mouseover="setCategory('Home')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-laptop-house"></i> Home & Office</a>
+                        <a @mouseover="setCategory('Phone')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-mobile-alt"></i> Phones & Tablets</a>
+                        <a @mouseover="setCategory('Computing')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-microchip"></i> Computing</a>
+                        <a @mouseover="setCategory('Electronics')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-charging-station"></i> Electronics</a>
+                        <a @mouseover="setCategory('Fashion')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-tshirt"></i> Fashion</a>
+                        <a @mouseover="setCategory('Gaming')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-gamepad"></i> Gaming</a>
+                        <a @mouseover="setCategory('Baby')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-baby"></i> Baby Products</a>
+                        <a @mouseover="setCategory('Sporting')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-running"></i> Sporting Goods</a>
+                        <a @mouseover="setCategory('Garden')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-sun"></i> Garden & Outdoors</a>
+                        <a @mouseover="setCategory('Other')" class="cursor-pointer relative group text-white hover:text-pink-700 inline-flex items-center px-2 text-xs font-bold transform transition hover:scale-125 duration-300 ease-in-out uppercase"><i class="mr-2 fa fa-angle-double-right"></i> Other Categories</a>
                     </div>
                 </div>
 
-                <div @mouseleave="something = false" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                <div v-if="this.selectedCategory == 'Supermarket' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
                     <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Food Cupboard </span>
@@ -120,7 +120,618 @@
                     </div>
                 </div>
 
-                <!-- <div v-if="!something" class="col-span-3 z-10">
+                <div v-if="this.selectedCategory == 'Health' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Hair Care </span>
+                            <div class="flex flex-col">
+                                <span> Conditioner</span>
+                                <span> Extensions, Wigs & Accessories</span>
+                                <span> Hair & Scalp Care</span>
+                                <span> Hair Accessories</span>
+                                <span> Hair Coloring Products</span>
+                                <span> Hair Cutting Tools</span>
+                                <span> Hair Loss Products</span>
+                                <span> Hair Perms, Relaxers & Texturizers </span>
+                                <span> Shampoo</span>
+                                <span> Styling Products</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Fragrances </span>
+                                <span> Men's </span> 
+                                <span> Women's</span> 
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Mens Grooming </span>
+                            <div class="flex flex-col">
+                                <span> Anti Ageing</span>
+                                <span> Pre Shave</span>
+                                <span> Sunblock</span>
+                               
+
+                              <span class="mt-2 text-lg font-semibold text-black uppercase"> Oral Care </span>
+                               <span> Children's Dental care</span>
+                               <span> Dental Care  </span> 
+                               <span> Mouth Wash</span> 
+                               <span>  Teeth Whitening</span> 
+                               <span>  Toothbrush</span> 
+                               <span>  Toothpaste</span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Makeup </span>
+                               <span> Eyes</span>
+                               <span> Face</span>
+                               <span> Lips</span>
+                        
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Health Care</span>
+                            <div class="flex flex-col">
+                                <span> Diabetes Care</span>
+                                <span> Feminine Care</span>
+                                <span> First Aid</span>
+                                <span> Sleeping & Snoring</span>
+                               
+                              
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Personal Care </span>
+                               <span> Bath & Bathing Accesories</span> 
+                               <span> Deodrants & Antiperspirants</span>
+                               <span> Lip Care</span>
+                               <span> Shaves & Hair Removal</span>
+                               <span> Skin Care</span>
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Luxury Beuty </span>
+                               <span> Fragrances</span>
+                               <span> MakeUp</span>
+                               <span> Skin Care</span>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Home' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Home Kitchen </span>
+                            <div class="flex flex-col">
+                                <span> Home Decor</span>
+                                <span> Bedding</span>
+                                <span> Wall Art</span>
+                                <span> Bath</span>
+                                <span> Lighting</span>
+                                <span> Storage & Organization</span>
+                                <span> Kitchen Dining</span>
+                                <span> Furniture </span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Small Appliances </span>
+                                <span> Blenders</span> 
+                                <span> Kettles</span> 
+                                <span> Toasters</span> 
+                                <span> Ironing & Laundry</span> 
+                                <span> Other Small Appliances</span> 
+                                
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Large Appliances </span>
+                            <div class="flex flex-col">
+                                <span> Refridgerator</span>
+                                <span> Freezers</span>
+                                <span> Water Dispenders & Coolers</span>
+                                <span> Washers & Dryers</span>
+                               
+
+                              <span class="mt-2 text-lg font-semibold text-black uppercase"> Cooking Appliances </span>
+                               <span> Cooktops</span>
+                               <span> Microwaves & Ovens</span>
+                               <span> Cooking Applience Accessories</span>
+                               <span> Cookers</span>
+                    
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Office Products</span>
+                            <div class="flex flex-col">
+                                <span> Office & School Supplies</span>
+                                <span> Office Electronics</span>
+                                <span> Office Furniture & Lighting</span>
+                                <span> Stationery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Phone' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Mobile Phones </span>
+                            <div class="flex flex-col">
+                                <span> Smartphoness</span>
+                                <span> Featured Phones</span>
+                                <span> Featured Phones Under 2,000</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Top Smartphone Brands </span>
+                               <span> Samsung</span> 
+                               <span> Xiaomi</span>
+                               <span> Nokia</span>
+                               <span> Tecno</span>
+                               <span> Infinix</span>
+                               <span> Huawei</span>
+                               <span> Oppo</span>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Accesories </span>
+                            <div class="flex flex-col">
+                                <span> Portable Powerbanks</span>
+                                <span> Smart Watches</span>
+                                <span> Cases & Sleeves</span>
+                                <span> Screen Protecttors</span>
+                                <span> Bluetooth Accesories</span>
+                                <span> Headsets</span>
+                                <span> Headphones</span>
+                                <span> Batteries & Battery Packs</span>
+                                <span> Accesories Under 1,000</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Tablets </span>
+                                <span> Ipads</span>
+                                <span> Tablet Accessories</span>
+                                <span> Tablet Bags & Covers</span>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Best Sellers Smartphones </span>
+                            <div class="flex flex-col">
+                                <span> Samsung A10s</span>
+                                <span> Nokia 2.4</span>
+                                <span> Tecno Pop 3</span>
+                                <span> Xiaomi Redmi 9A</span>
+                                <span> Oppo A15</span>
+                                <span> Umidigi A7's</span>
+                                <span> Cubot Note 20</span>
+
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> New Smartphone Launches </span>
+                               <span> Samsung A02</span> 
+                               <span> Xiaomi Note 10 pro</span>
+                               <span> Nokia 1.3</span>
+                               <span> Tecno Camon 17</span>
+                               <span> Samsung A02</span>
+                               <span> Oppo Reno 5</span>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Computing' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Laptops </span>
+                            <div class="flex flex-col">
+                                <span> MacBooks</span>
+                                <span> NetBooks</span>
+                                <span> UltraBooks</span>
+                                <span> 2-in-1 Laptops</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Computer & Accessories </span>    
+                                <span> Laptop Accessories</span>
+                                <span> Desktops</span>
+                                <span> Monitors</span>
+                                <span> Scanners</span>
+                                <span> Printers</span>
+                                <span> Keyboards, Mice & Accessories</span>
+                                <span> Computer Cable & Adapters</span>
+                                <span> Printer Ink & Toner</span>
+                                <span> Netwroking Products</span>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Shop By Laptop Brands </span>
+                            <div class="flex flex-col">
+                               <span> HP Laptops</span> 
+                               <span> Dell Laptops</span> 
+                               <span> Lenovo Laptops</span> 
+                               <span> Apple Laptops</span> 
+                               <span> Asus Laptops</span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Computer Components </span>
+                               <span> Internal Hard Drive</span> 
+                               <span> Graphic Cards</span> 
+                               <span> Fans & Cooling</span> 
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Computer Data Storage </span>
+                            <div class="flex flex-col">
+                                <span> External Hard Drives</span>
+                                <span> USB Flash Drives</span>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Electronics' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Televisions </span>
+                            <div class="flex flex-col">
+                                <span> Smart TVs</span>
+                                <span> LED & LCD TVs</span>
+                                <span> Data Projectors</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Best Seller TV Brands </span>
+                                <span> Synix TV</span>
+                                <span> Samsung TV</span>
+                                <span> Hisense TV</span>
+                                <span> Sony </span>
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Home Audio </span>
+                            <div class="flex flex-col">
+                                <span>Speakers </span>
+                                <span> Home Theatre System</span>
+                                <span> Blutooth Speakers</span>
+                                <span> Sound Bars</span>
+                                <span> Compact Radio & Stereos</span>
+                                <span> Hi-Fi System Under 2,000</span>
+
+                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Cameras </span>
+                               <span> Compact Cameras</span> 
+                               <span> Digital SLR Cameras</span> 
+                               <span> Security & Surveillance Camera</span> 
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Accessories & Supplies Supplies </span>
+                            <div class="flex flex-col">
+                                <span> Accessories & Video Supplies</span>
+                                <span> Batteries</span>
+                                <span> Batteries, Chargers & Accessories</span>
+                                <span> Cables</span>
+                                <span> Camera & Photo Accessories</span>
+                                <span> Camera Accesories</span>
+                                <span> Home Audio Acccessories</span>
+                                <span> Power Protection</span>
+                                <span> Television Accessories</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Fashion' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Women's Fashion </span>
+                            <div class="flex flex-col">
+                                <span> Dresses</span>
+                                <span> Suits & Blazers</span>
+                                <span> Tops & Tees</span>
+                                <span> Coats, Jackets & Vest</span>
+                                <span> Jumpsuits, Rompers & Overalls</span>
+                                <span> Skirts</span>
+                                <span> Lingerie, Sleep & Lounge</span>
+                                <span> Jeans</span>
+                                <span> Shorts</span>
+                                <span> Jewelery</span>
+                                <span> Sandals</span>
+                                <span> Flats</span>
+                                <span> Handbags & Wallets</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Men's Fashion </span>
+                            <div class="flex flex-col">
+                                <span> Shirts</span>
+                                <span> T-Shirt & Tanks</span>
+                                <span> Suits & Sports Coats</span>
+                                <span> Pants</span>
+                                <span> Shorts</span>
+                                <span> Jeans</span>
+                                <span> Underwear</span>
+                                <span> Watches</span>
+                                <span> Fashion Sneakers</span>
+                                <span> Loafers & Slip Ons</span>
+                                <span> Belts</span>
+                                <span> Sunglasses & Eyewear Accessories</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Baby </span>
+                                <span> Baby Boys</span>   
+                                <span> Baby Girls</span>   
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Kids Fashion </span>
+                            <div class="flex flex-col">
+                                <span> Boys</span>   
+                                <span> Girls</span> 
+                                
+                              
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Exclusive Fashion </span>
+                               <span> Maternity Wear</span>
+                               <span> Ankara Shirts</span>
+                               <span> Kitenge Dresses</span>
+                               <span> Ankara Tops</span>
+                               <span> Wedding Hair Accesories</span>
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Shop by brands </span>
+                               <span> Curren</span> 
+                               <span> Forever Young</span> 
+                               <span> Bata</span> 
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Gaming' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Playingstation </span>
+                            <div class="flex flex-col">
+                                <span> PlaySatation 3</span>
+                                <span> Playstation 4</span>
+                                <span> Playstation Vita</span>
+
+                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Digital Games </span>
+                                <span> Nintendo Switch</span>
+                                <span> Xbox 360</span>
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Nintendo </span>
+                            <div class="flex flex-col">
+                                <span> Nintendo DS</span>
+                                <span> Nintendo 3DS</span>
+                                <span> Wii</span>
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> PC Gaming </span>
+                            <div class="flex flex-col">
+                                <span>Games</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Sony PSP </span>
+                                
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Baby' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Diapering </span>
+                            <div class="flex flex-col">
+                                <span> Diaper Bags</span>
+                                <span> Disposable Diapers</span>
+                                <span> Portable Changing Pads</span>
+                                <span> Cloth Diapers</span>
+                                <span> Changing Tables</span>
+                                <span> Wipes & Holders</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Gear </span>
+                               <span> Walkers</span> 
+                               <span> BagPacks & Camera</span> 
+                               <span> Swings, Jumps & Bouncers</span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Bathing & Skin Care </span>
+                               <span> Soaps & Cleaners</span>
+                               <span> Grooming & Healthcare kits</span>
+                               <span> Bathing Tubs & Seats</span>
+                               <span> Washclothes & Towels</span>
+                               <span> Bathroom Safety</span>
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Apparel & Accessories </span>
+                            <div class="flex flex-col">
+                                <span> Baby Boy</span> 
+                                <span> Baby Girls</span> 
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Baby & Toodler Toys </span>
+                               <span> Toy Gift Sets</span>
+                               <span> Music & Sound</span>
+                               <span> Bath Toys</span>
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Feeding </span>
+                               <span> Bibs & Burp Clothes</span>
+                               <span> Bottle Feeding</span>
+                               <span> Breastfeeding</span>
+                               <span> Highchairs & Booster Seats</span>
+                               <span> Pacifiers & Accessories</span>
+                               <span> Solid Feeding</span>
+
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Baby Safety </span>
+                            <div class="flex flex-col">
+                               <span> Monitors</span>
+                               <span> Sleep Positioners</span>
+                               <span> Edge & Corner Guards</span>
+                              
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Potty Training </span>
+                               <span> Potties & Seats</span>
+                               <span> Seat Covers</span>
+                               <span> Step Stools</span>
+                               <span> Training Pants</span>
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Health & Baby Care  </span>
+                               <span> Nail Care</span>
+                               <span> Teethers & Teething Relief</span>
+                               <span> Thermometers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Sporting' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Food Cupboard </span>
+                            <div class="flex flex-col">
+                                <span> Exercise & Fitness</span>
+                                <span> Accessories</span>
+                                <span> Clothing</span>
+                                <span> Team Sports</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Sports Nutrition </span>
+                            <div class="flex flex-col">
+                                <span> Carb Management Supplements</span>
+                                <span> Endurance & Energy</span>
+                                <span> Fat Burners & Thermogenics</span>
+                                <span> Supplements</span>
+                                <span> Post-Work & Recovery</span>
+                                <span> Pre-Workout</span>
+                                <span> Proteins</span>
+                                <span> Supplement Stacks</span>
+                                <span> Testerone Boosters</span>
+                                <span> Weight Gainers</span>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Outdoor Recreation </span>
+                            <div class="flex flex-col">
+                                <span> Camping & Hiking</span>
+                                <span> Skatebaords & Scooter </span>
+                                <span> Cycling</span>
+                                <span> Accessories</span>
+                              
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Garden' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Gardening & Lawn Care </span>
+                            <div class="flex flex-col">
+                                <span> Hand Tools</span>
+                                <span> Watering Equipment</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Grilling & Outdoor Cooking </span>
+                               <span> Grills</span>
+                               <span> Outdoor Cooking Tools & Accessories</span>
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Outdoor Decor </span>
+                            <div class="flex flex-col">
+                                <span> Lighting</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Patio Furniture & Accessories </span>
+                               <span> Hammoocks , Stands & Accessories</span>
+                               <span> </span>
+                               <span> </span>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Farm & Ranch </span>
+                            <div class="flex flex-col">
+                                <span> Pest Control</span>
+                              
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-if="this.selectedCategory == 'Other' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
+                    <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Stay Safe </span>
+                            <div class="flex flex-col">
+                                <span> Have Fun</span>
+                                <span> Stay Fit</span>
+                                <span> Stay Connected</span>
+                                <span> Supermarket</span>
+                                <span> Stay Healty</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Automobile </span>
+                               <span> Car Electronic & Accessories</span> 
+                               <span> Car Safety and Security</span> 
+                               <span> Motorcycle & Powersports</span> 
+                               <span> Lights & Lighting Accessories</span> 
+                               <span> Replacement Parts</span> 
+
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Books, Movies & Music </span>
+                            <div class="flex flex-col">
+                                <span> Education & Learning</span>
+                                <span> Biography & Autobiography</span>
+                                <span> Literature</span>
+                                <span> Children & Teens</span>
+                                <span> Study Aids</span>
+                                <span> Christian Books & Bibles</span>
+
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Industrial & Scientific </span>
+                               <span> </span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Livestock </span>
+                               <span> </span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Miscellaneous </span>
+                               <span> </span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Musical Instrument </span>
+                               <span> </span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Pet Supplies </span>
+                               <span> </span> 
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-semibold text-black uppercase"> Services </span>
+                            <div class="flex flex-col">
+                                <span> </span>
+                              
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Toy & Games </span>
+                               <span> </span> 
+
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Grocery </span>
+                               <span> </span> 
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div v-if="this.selectedCategory == '' " class="col-span-3 z-10">
                     <div class="carousel relative shadow-2xl bg-white">
                     <div class="carousel-inner relative overflow-hidden w-full">
                         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
@@ -158,7 +769,7 @@
                         
                     </div>
                 </div>
-                </div> -->
+                </div>
 
                 <div class="">
                     <div  style="height:60vh;" class="w-full rounded shadow-2xl justify-around bg-indigo-500 flex flex-col border-box p-4">
@@ -178,6 +789,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- component -->
@@ -804,10 +1416,29 @@ export default {
     data () {
         return { 
             showBanner: true,
-            something:false
+
+            selectedCategory:'',
+
+            Supermartket:false,
+            Health:false,
+            Home:false,
+            Phone:false,
+            Computing:false,
+            Electronics:false,
+            Fashion:false,
+            Gaming:false,
+            Baby:false,
+            Sporting:false,
+            Garden:false,
+            Other:false,
         }
     },
     methods: {
+      setCategory(data){
+          this.slecetedCategoty = ''
+          this.selectedCategory = data
+          console.log(this.selectedCategory)
+      },  
       reset() {
         this.form = mapValues(this.form, () => null)
       },  
