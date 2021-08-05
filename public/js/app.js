@@ -5030,6 +5030,598 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // import throttle from 'lodash/throttle'
 
@@ -55033,7 +55625,641 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(2)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Food Cupboard ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cooking"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cooking Ingredients")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Snacks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Snacks, Cripps & Nuts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Grains"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Grains & Rice")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sugar"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sugar & Flour")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Breakfast"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Breakfast Cereals")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Candy"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Candy & Chocolate")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Margarine"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "Margarine, Jams, Honey & Spreads"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Drinks ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Beer"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Beer, Wines & Spirits")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Carbonated"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Carbonated Drinks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Coffee"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Coffee, Tea & Cocoa")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Dairy"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Dairy")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Juice"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Juice & Non Carbonated Drinks"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Syrup"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Syrup and Cordials")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Water"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Water")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Household Supplies ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Air"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Air Fresheners")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bathroom"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bathroom Cleaners")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bulb"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bulb & Batteries")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Floor"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Floor Cleaners")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Household"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Household Cleaners & Sundries"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Kitchen"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Kitchen Cleaner")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Laundry"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Laundry")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Pappers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Pappers & Rolls")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Shop by brands ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Velvex"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Velvex")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Dettol"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Dettol")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Huggies"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Huggies")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55049,7 +56275,923 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(3)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Hair Care ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Conditioner"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Conditioner")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Extensions"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Extensions, Wigs & Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hair & Scalp Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hair & Scalp Care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hair Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hair Accessories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hair Coloring Products"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hair Coloring Products")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hair Cutting Tools"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hair Cutting Tools")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hair Loss Products"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hair Loss Products")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hair Perms, Relaxers & Texturizers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Hair Perms, Relaxers & Texturizers "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Shampoo"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Shampoo")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Styling Products"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Styling Products")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Fragrances ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Mens"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Men's ")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Womens"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Women's")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Mens Grooming ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Anti Ageing"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Anti Ageing")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Pre Shave"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Pre Shave")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sunblock"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sunblock")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Oral Care ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Childrens Dental care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Children's Dental care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Dental Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Dental Care  ")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Mouth Wash"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Mouth Wash")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Teeth Whitening"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v("  Teeth Whitening")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Toothbrush"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v("  Toothbrush")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Toothpaste"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v("  Toothpaste")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Makeup ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Eyes"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Eyes")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Face"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Face")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lips"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Lips")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Health Care")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Diabetes Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Diabetes Care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Feminine Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Feminine Care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "First Aid"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" First Aid")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sleeping & Snoring"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sleeping & Snoring")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Personal Care ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bath & Bathing Accesories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Bath & Bathing Accesories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Deodrants & Antiperspirants"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Deodrants & Antiperspirants"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lip Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Lip Care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Shaves & Hair Removal"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Shaves & Hair Removal")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Skin Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Skin Care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Luxury Beuty ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Fragrances"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Fragrances")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "MakeUp"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" MakeUp")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Skin Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Skin Care")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55065,7 +57207,654 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(4)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Home Kitchen ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Home Decor"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Home Decor")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bedding"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bedding")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Wall Art"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Wall Art")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bath"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bath")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lighting"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Lighting")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Storage & Organization"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Storage & Organization")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Kitchen Dining"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Kitchen Dining")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Furniture"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Furniture ")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Small Appliances ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Blenders"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Blenders")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Kettles"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Kettles")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Toasters"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Toasters")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Ironing & Laundry"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Ironing & Laundry")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Other Small Appliances"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Other Small Appliances")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Large Appliances ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Refridgerator"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Refridgerator")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Freezers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Freezers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Water Dispenders & Coolers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Water Dispenders & Coolers"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Washers & Dryers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Washers & Dryers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Cooking Appliances ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cooktops"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cooktops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Microwaves & Ovens"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Microwaves & Ovens")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cooking Applience Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Cooking Applience Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cookers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cookers")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Office Products")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Office & School Supplies"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Office & School Supplies"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Office Electronics"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Office Electronics")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Office Furniture & Lighting"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Office Furniture & Lighting"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Stationery"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Stationery")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55081,7 +57870,875 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(5)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Mobile Phones ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Smartphoness"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Smartphoness")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Featured Phones"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Featured Phones")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Featured Phones Under 2000"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Featured Phones Under 2,000"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Top Smartphone Brands ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Samsung"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Samsung")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Xiaomi"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Xiaomi")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Nokia"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nokia")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Tecno"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Tecno")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Infinix"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Infinix")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Huawei"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Huawei")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Oppo"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Oppo")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Accesories ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Portable Powerbanks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Portable Powerbanks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Smart Watches"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Smart Watches")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cases & Sleeves"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cases & Sleeves")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Screen Protecttors"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Screen Protecttors")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bluetooth Accesories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bluetooth Accesories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Headsets"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Headsets")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Headphones"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Headphones")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Batteries & Battery Packs"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Batteries & Battery Packs"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Accesories Under 1,000"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Accesories Under 1,000")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Tablets ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Ipads"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Ipads")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Tablet Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Tablet Accessories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Tablet Bags & Covers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Tablet Bags & Covers")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Best Sellers Smartphones ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Samsung A10s"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Samsung A10s")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Nokia 2.4"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nokia 2.4")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Tecno Pop 3"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Tecno Pop 3")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Xiaomi Redmi 9A"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Xiaomi Redmi 9A")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Oppo A15"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Oppo A15")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Umidigi A7s"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Umidigi A7's")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cubot Note 20"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cubot Note 20")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" New Smartphone Launches ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Samsung A02"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Samsung A02")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Xiaomi Note 10 pro"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Xiaomi Note 10 pro")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Nokia 1.3"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nokia 1.3")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Tecno Camon 17"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Tecno Camon 17")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Samsung A02"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Samsung A02")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Oppo Reno 5"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Oppo Reno 5")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55097,7 +58754,602 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(6)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Laptops ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "MacBooks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" MacBooks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "NetBooks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" NetBooks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "UltraBooks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" UltraBooks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "2-in-1 Laptops"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" 2-in-1 Laptops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Computer & Accessories ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Laptop Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Laptop Accessories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Desktops"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Desktops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Monitors"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Monitors")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Scanners"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Scanners")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Printers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Printers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Keyboards, Mice & Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Keyboards, Mice & Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Computer Cable & Adapters"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Computer Cable & Adapters"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Printer Ink & Toner"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Printer Ink & Toner")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Netwroking Products"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Netwroking Products")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Shop By Laptop Brands ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "HP"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" HP Laptops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Dell"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Dell Laptops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lenovo"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Lenovo Laptops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Apple"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Apple Laptops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Asus"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Asus Laptops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Computer Components ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Internal Hard Drive"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Internal Hard Drive")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Graphic Cards"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Graphic Cards")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Fans & Cooling"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Fans & Cooling")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Computer Data Storage ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "External Hard Drives"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" External Hard Drives")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "USB Flash Drives"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" USB Flash Drives")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55113,7 +59365,662 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(7)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Televisions ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Smart TVs"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Smart TVs")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "LED & LCD TVs"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" LED & LCD TVs")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Data Projectors"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Data Projectors")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Best Seller TV Brands ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Synix"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Synix TV")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Samsung"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Samsung TV")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hisense"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hisense TV")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sony"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sony ")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Home Audio ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Speakers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v("Speakers ")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Home Theatre System"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Home Theatre System")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Blutooth Speakers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Blutooth Speakers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sound Bars"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sound Bars")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Compact Radio & Stereos"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Compact Radio & Stereos")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hi-Fi System Under 2000"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Hi-Fi System Under 2,000"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Cameras ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Compact Cameras"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Compact Cameras")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Digital SLR Cameras"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Digital SLR Cameras")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Security & Surveillance Camera"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Security & Surveillance Camera"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [
+                                      _vm._v(
+                                        " Accessories & Supplies Supplies "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Accessories & Video Supplies"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Accessories & Video Supplies"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Batteries"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Batteries")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Batteries, Chargers & Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Batteries, Chargers & Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cables"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cables")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Camera & Photo Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Camera & Photo Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Camera Accesories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Camera Accesories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Home Audio Acccessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Home Audio Acccessories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Power Protection"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Power Protection")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Television Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Television Accessories")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55129,7 +60036,923 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(8)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Women's Fashion ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Dresses"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Dresses")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Suits & Blazers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Suits & Blazers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Tops & Tees"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Tops & Tees")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Coats, Jackets & Vest"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Coats, Jackets & Vest")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Jumpsuits, Rompers & Overalls"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Jumpsuits, Rompers & Overalls"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Skirts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Skirts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lingerie, Sleep & Lounge"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Lingerie, Sleep & Lounge"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Jeans"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Jeans")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Shorts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Shorts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Jewelery"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Jewelery")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sandals"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sandals")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Flats"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Flats")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Handbags & Wallets"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Handbags & Wallets")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Men's Fashion ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Shirts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Shirts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "T-Shirt & Tanks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" T-Shirt & Tanks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Suits & Sports Coats"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Suits & Sports Coats")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Pants"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Pants")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Shorts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Shorts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Jeans"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Jeans")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Underwear"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Underwear")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Watches"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Watches")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Fashion Sneakers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Fashion Sneakers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Loafers & Slip Ons"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Loafers & Slip Ons")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Belts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Belts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sunglasses & Eyewear Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Sunglasses & Eyewear Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Baby ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Baby Boys"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Baby Boys")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Baby Girls"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Baby Girls")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Kids Fashion ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Boys"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Boys")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Girls"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Girls")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Exclusive Fashion ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Maternity Wear"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Maternity Wear")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Ankara Shirts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Ankara Shirts")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Kitenge Dresses"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Kitenge Dresses")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Ankara Tops"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Ankara Tops")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Wedding Hair Accesories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Wedding Hair Accesories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Shop by brands ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Curren"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Curren")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Forever Young"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Forever Young")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bata"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bata")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55145,7 +60968,299 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(9)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Playingstation ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "PlaySatation 3"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" PlaySatation 3")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "PlaySatation 4"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Playstation 4")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "PlaySatation Vita"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Playstation Vita")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Digital Games ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Nintendo Switch"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nintendo Switch")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Xbox 360"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Xbox 360")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Nintendo ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              " "
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nintendo DS")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              " "
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nintendo 3DS")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              " "
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Wii")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" PC Gaming ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Games"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v("Games")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sony PSP"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "mt-2 text-lg font-semibold text-black uppercase"
+                                            },
+                                            [_vm._v(" Sony PSP ")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55161,7 +61276,906 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(10)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Diapering ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Diaper Bags"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Diaper Bags")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Disposable Diapers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Disposable Diapers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Portable Changing Pads"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Portable Changing Pads")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cloth Diapers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cloth Diapers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Changing Tables"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Changing Tables")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Wipes & Holders"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Wipes & Holders")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Gear ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Walkers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Walkers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "BagPacks & Camera"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" BagPacks & Camera")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Swings, Jumps & Bouncers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Swings, Jumps & Bouncers"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Bathing & Skin Care ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Soaps & Cleaners"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Soaps & Cleaners")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Grooming & Healthcare kits"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Grooming & Healthcare kits"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bathing Tubs & Seats"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bathing Tubs & Seats")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Washclothes & Towels"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Washclothes & Towels")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bathroom Safety"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bathroom Safety")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Apparel & Accessories ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Baby Boy"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Baby Boy")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Baby Girls"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Baby Girls")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Baby & Toodler Toys ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Toy Gift Sets"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Toy Gift Sets")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Music & Sound"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Music & Sound")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bath Toys"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bath Toys")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Feeding ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bibs & Burp Clothes"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bibs & Burp Clothes")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Bottle Feeding"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Bottle Feeding")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Breastfeeding"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Breastfeeding")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Highchairs & Booster Seats"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Highchairs & Booster Seats"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                        },
+                                        [_vm._v(" Pacifiers & Accessories")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("inertia-link", {
+                                        attrs: {
+                                          href: _vm.route(
+                                            "product.result",
+                                            "Pacifiers & Accessories"
+                                          )
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Solid Feeding"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Solid Feeding")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Baby Safety ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Monitors"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Monitors")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Sleep Positioners"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Sleep Positioners")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Edge & Corner Guards"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Edge & Corner Guards")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Potty Training ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Potties & Seats"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Potties & Seats")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Seat Covers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Seat Covers")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Step Stools"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Step Stools")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Training Pants"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Training Pants")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Health & Baby Care  ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Nail Care"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Nail Care")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Teethers & Teething Relief"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Teethers & Teething Relief"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Thermometers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Thermometers")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55177,7 +62191,474 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(11)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Food Cupboard ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Exercise & Fitness"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Exercise & Fitness")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Accessories")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Clothing"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Clothing")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Team Sports"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Team Sports")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Sports Nutrition ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Carb Management Supplements"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Carb Management Supplements"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Endurance & Energy"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Endurance & Energy")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Fat Burners & Thermogenics"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Fat Burners & Thermogenics"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Supplements"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Supplements")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "ost-Work & Recovery"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Post-Work & Recovery")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Pre-Workout"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Pre-Workout")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Proteins"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Proteins")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Supplement Stacks"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Supplement Stacks")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Testerone Boosters"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Testerone Boosters")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Weight Gainers"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Weight Gainers")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Outdoor Recreation ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Camping & Hiking"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Camping & Hiking")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Skatebaords & Scooter"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Skatebaords & Scooter ")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Cycling"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Cycling")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Accessories")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55193,7 +62674,290 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(12)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Gardening & Lawn Care ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hand Tools"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Hand Tools")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Watering Equipment"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Watering Equipment")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Grilling & Outdoor Cooking ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Grills"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Grills")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Outdoor Cooking Tools & Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Outdoor Cooking Tools & Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Outdoor Decor ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lighting"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Lighting")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [
+                                          _vm._v(
+                                            " Patio Furniture & Accessories "
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Hammoocks , Stands & Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Hammoocks , Stands & Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              " "
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c("span", {
+                                            staticClass:
+                                              "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              " "
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c("span", {
+                                            staticClass:
+                                              "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                          })
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Farm & Ranch ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Pest Control"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Pest Control")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
@@ -55209,17 +62973,545 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._m(13)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
+                              },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Stay Safe ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Have Fun"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Have Fun")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Stay Fit"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Stay Fit")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Stay Connected"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Stay Connected")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Supermarket"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Supermarket")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Stay Healty"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Stay Healty")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Automobile ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Car Electronic & Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Car Electronic & Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Car Safety and Security"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Car Safety and Security")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Motorcycle & Powersports"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Motorcycle & Powersports"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Lights & Lighting Accessories"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Lights & Lighting Accessories"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Replacement Parts"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Replacement Parts")]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "text-lg font-semibold text-black uppercase"
+                                    },
+                                    [_vm._v(" Books, Movies & Music ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex flex-col" },
+                                    [
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Education & Learning"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Education & Learning")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Biography & Autobiography"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Biography & Autobiography"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Literature"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Literature")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Children & Teens"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Children & Teens")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Study Aids"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [_vm._v(" Study Aids")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Christian Books & Bibles"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Christian Books & Bibles"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Industrial & Scientific"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "mt-2 text-lg font-semibold text-black uppercase"
+                                            },
+                                            [
+                                              _vm._v(
+                                                " Industrial & Scientific "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass:
+                                          "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "inertia-link",
+                                        {
+                                          attrs: {
+                                            href: _vm.route(
+                                              "product.result",
+                                              "Livestock"
+                                            )
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "mt-2 text-lg font-semibold text-black uppercase"
+                                            },
+                                            [_vm._v(" Livestock ")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass:
+                                          "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Miscellaneous ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass:
+                                          "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Musical Instrument ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass:
+                                          "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "mt-2 text-lg font-semibold text-black uppercase"
+                                        },
+                                        [_vm._v(" Pet Supplies ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass:
+                                          "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(2)
+                              ]
+                            )
+                          ]
                         )
                       : _vm._e(),
                     _vm._v(" "),
                     this.selectedCategory == ""
                       ? _c("div", { staticClass: "col-span-3 z-10" }, [
-                          _vm._m(14)
+                          _vm._m(3)
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm._m(15)
+                    _vm._m(4)
                   ]
                 ),
                 _vm._v(" "),
@@ -55276,7 +63568,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(16)
+                                _vm._m(5)
                               ]
                             )
                           ]
@@ -55329,7 +63621,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(17)
+                                _vm._m(6)
                               ]
                             )
                           ]
@@ -55382,7 +63674,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(18)
+                                _vm._m(7)
                               ]
                             )
                           ]
@@ -55435,7 +63727,7 @@ var render = function() {
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _vm._m(19)
+                                _vm._m(8)
                               ]
                             )
                           ]
@@ -55466,7 +63758,7 @@ var render = function() {
                           "h3",
                           {
                             staticClass:
-                              "w-full max-w-2xl px-5 mt- text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0"
+                              "w-full max-w-7xl px-1 mt-3 text-xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-lg md:px-0"
                           },
                           [_vm._v("\n                      Featured Products")]
                         ),
@@ -55496,7 +63788,7 @@ var render = function() {
                                       "div",
                                       {
                                         staticClass:
-                                          "container px-5 py-10 mx-auto"
+                                          "container py-2 mb-10 mx-auto"
                                       },
                                       [
                                         _c(
@@ -55510,7 +63802,7 @@ var render = function() {
                                                   "flex-1 my-3 relative rounded bg-gray-50 shadow"
                                               },
                                               [
-                                                _vm._m(20),
+                                                _vm._m(9),
                                                 _vm._v(" "),
                                                 _c(
                                                   "inertia-link",
@@ -55794,7 +64086,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(21),
+            _vm._m(10),
             _vm._v(" "),
             _c(
               "footer",
@@ -55887,9 +64179,9 @@ var render = function() {
                           "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                       },
                       [
-                        _vm._m(22),
+                        _vm._m(11),
                         _vm._v(" "),
-                        _vm._m(23),
+                        _vm._m(12),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -56082,1395 +64374,42 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Food Cupboard ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Cooking Ingredients")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Snacks, Cripps & Nuts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Grains & Rice")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sugar & Flour")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Breakfast Cereals")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Candy & Chocolate")]),
-            _vm._v(" "),
-            _c("span", [_vm._v("Margarine, Jams, Honey & Spreads")])
-          ])
-        ]),
+    return _c("div", [
+      _c(
+        "span",
+        { staticClass: "text-lg font-semibold text-black uppercase" },
+        [_vm._v(" Services ")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex flex-col" }, [
+        _c("span", {
+          staticClass:
+            "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+        }),
         _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Drinks ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Beer, Wines & Spirits")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Carbonated Drinks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Coffee, Tea & Cocoa")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Dairy")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Juice & Non Carbonated Drinks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Syrup and Cordials")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Water")])
-          ])
-        ]),
+        _c(
+          "span",
+          { staticClass: "mt-2 text-lg font-semibold text-black uppercase" },
+          [_vm._v(" Toy & Games ")]
+        ),
         _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Household Supplies ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Air Fresheners")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bathroom Cleaners")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bulb & Batteries")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Floor Cleaners")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Household Cleaners & Sundries")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Kitchen Cleaner")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Laundry")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Pappers & Rolls")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Shop by brands ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Velvex")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Dettol")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Huggies")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Hair Care ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Conditioner")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Extensions, Wigs & Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hair & Scalp Care")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hair Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hair Coloring Products")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hair Cutting Tools")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hair Loss Products")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hair Perms, Relaxers & Texturizers ")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Shampoo")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Styling Products")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Fragrances ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Men's ")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Women's")])
-          ])
-        ]),
+        _c("span", {
+          staticClass:
+            "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+        }),
         _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Mens Grooming ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Anti Ageing")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Pre Shave")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sunblock")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Oral Care ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Children's Dental care")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Dental Care  ")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Mouth Wash")]),
-            _vm._v(" "),
-            _c("span", [_vm._v("  Teeth Whitening")]),
-            _vm._v(" "),
-            _c("span", [_vm._v("  Toothbrush")]),
-            _vm._v(" "),
-            _c("span", [_vm._v("  Toothpaste")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Makeup ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Eyes")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Face")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Lips")])
-          ])
-        ]),
+        _c(
+          "span",
+          { staticClass: "mt-2 text-lg font-semibold text-black uppercase" },
+          [_vm._v(" Grocery ")]
+        ),
         _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Health Care")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Diabetes Care")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Feminine Care")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" First Aid")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sleeping & Snoring")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Personal Care ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bath & Bathing Accesories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Deodrants & Antiperspirants")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Lip Care")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Shaves & Hair Removal")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Skin Care")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Luxury Beuty ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Fragrances")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" MakeUp")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Skin Care")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Home Kitchen ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Home Decor")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bedding")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Wall Art")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bath")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Lighting")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Storage & Organization")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Kitchen Dining")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Furniture ")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Small Appliances ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Blenders")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Kettles")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Toasters")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Ironing & Laundry")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Other Small Appliances")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Large Appliances ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Refridgerator")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Freezers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Water Dispenders & Coolers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Washers & Dryers")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Cooking Appliances ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cooktops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Microwaves & Ovens")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cooking Applience Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cookers")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Office Products")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Office & School Supplies")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Office Electronics")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Office Furniture & Lighting")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Stationery")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Mobile Phones ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Smartphoness")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Featured Phones")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Featured Phones Under 2,000")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Top Smartphone Brands ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Samsung")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Xiaomi")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Nokia")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Tecno")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Infinix")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Huawei")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Oppo")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Accesories ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Portable Powerbanks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Smart Watches")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cases & Sleeves")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Screen Protecttors")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bluetooth Accesories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Headsets")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Headphones")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Batteries & Battery Packs")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Accesories Under 1,000")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Tablets ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Ipads")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Tablet Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Tablet Bags & Covers")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Best Sellers Smartphones ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Samsung A10s")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Nokia 2.4")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Tecno Pop 3")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Xiaomi Redmi 9A")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Oppo A15")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Umidigi A7's")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cubot Note 20")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" New Smartphone Launches ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Samsung A02")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Xiaomi Note 10 pro")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Nokia 1.3")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Tecno Camon 17")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Samsung A02")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Oppo Reno 5")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Laptops ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" MacBooks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" NetBooks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" UltraBooks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" 2-in-1 Laptops")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Computer & Accessories ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Laptop Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Desktops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Monitors")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Scanners")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Printers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Keyboards, Mice & Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Computer Cable & Adapters")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Printer Ink & Toner")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Netwroking Products")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Shop By Laptop Brands ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" HP Laptops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Dell Laptops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Lenovo Laptops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Apple Laptops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Asus Laptops")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Computer Components ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Internal Hard Drive")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Graphic Cards")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Fans & Cooling")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Computer Data Storage ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" External Hard Drives")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" USB Flash Drives")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Televisions ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Smart TVs")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" LED & LCD TVs")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Data Projectors")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Best Seller TV Brands ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Synix TV")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Samsung TV")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hisense TV")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sony ")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Home Audio ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v("Speakers ")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Home Theatre System")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Blutooth Speakers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sound Bars")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Compact Radio & Stereos")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hi-Fi System Under 2,000")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Cameras ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Compact Cameras")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Digital SLR Cameras")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Security & Surveillance Camera")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Accessories & Supplies Supplies ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Accessories & Video Supplies")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Batteries")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Batteries, Chargers & Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cables")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Camera & Photo Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Camera Accesories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Home Audio Acccessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Power Protection")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Television Accessories")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Women's Fashion ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Dresses")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Suits & Blazers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Tops & Tees")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Coats, Jackets & Vest")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Jumpsuits, Rompers & Overalls")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Skirts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Lingerie, Sleep & Lounge")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Jeans")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Shorts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Jewelery")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sandals")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Flats")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Handbags & Wallets")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Men's Fashion ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Shirts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" T-Shirt & Tanks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Suits & Sports Coats")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Pants")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Shorts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Jeans")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Underwear")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Watches")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Fashion Sneakers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Loafers & Slip Ons")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Belts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sunglasses & Eyewear Accessories")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Baby ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Baby Boys")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Baby Girls")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Kids Fashion ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Boys")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Girls")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Exclusive Fashion ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Maternity Wear")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Ankara Shirts")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Kitenge Dresses")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Ankara Tops")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Wedding Hair Accesories")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Shop by brands ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Curren")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Forever Young")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bata")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Playingstation ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" PlaySatation 3")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Playstation 4")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Playstation Vita")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Digital Games ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Nintendo Switch")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Xbox 360")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Nintendo ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Nintendo DS")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Nintendo 3DS")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Wii")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" PC Gaming ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v("Games")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Sony PSP ")]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Diapering ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Diaper Bags")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Disposable Diapers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Portable Changing Pads")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cloth Diapers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Changing Tables")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Wipes & Holders")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Gear ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Walkers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" BagPacks & Camera")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Swings, Jumps & Bouncers")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Bathing & Skin Care ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Soaps & Cleaners")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Grooming & Healthcare kits")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bathing Tubs & Seats")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Washclothes & Towels")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bathroom Safety")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Apparel & Accessories ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Baby Boy")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Baby Girls")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Baby & Toodler Toys ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Toy Gift Sets")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Music & Sound")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bath Toys")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Feeding ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bibs & Burp Clothes")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Bottle Feeding")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Breastfeeding")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Highchairs & Booster Seats")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Pacifiers & Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Solid Feeding")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Baby Safety ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Monitors")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Sleep Positioners")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Edge & Corner Guards")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Potty Training ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Potties & Seats")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Seat Covers")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Step Stools")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Training Pants")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Health & Baby Care  ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Nail Care")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Teethers & Teething Relief")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Thermometers")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Food Cupboard ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Exercise & Fitness")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Clothing")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Team Sports")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Sports Nutrition ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Carb Management Supplements")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Endurance & Energy")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Fat Burners & Thermogenics")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Supplements")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Post-Work & Recovery")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Pre-Workout")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Proteins")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Supplement Stacks")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Testerone Boosters")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Weight Gainers")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Outdoor Recreation ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Camping & Hiking")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Skatebaords & Scooter ")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Cycling")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Accessories")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Gardening & Lawn Care ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Hand Tools")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Watering Equipment")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Grilling & Outdoor Cooking ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Grills")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Outdoor Cooking Tools & Accessories")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Outdoor Decor ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Lighting")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Patio Furniture & Accessories ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Hammoocks , Stands & Accessories")]),
-            _vm._v(" "),
-            _c("span"),
-            _vm._v(" "),
-            _c("span")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Farm & Ranch ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Pest Control")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "relative grid grid-cols-3 gap-4 px-10 py-2 justify-around"
-      },
-      [
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Stay Safe ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Have Fun")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Stay Fit")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Stay Connected")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Supermarket")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Stay Healty")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Automobile ")]
-            ),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Car Electronic & Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Car Safety and Security")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Motorcycle & Powersports")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Lights & Lighting Accessories")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Replacement Parts")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Books, Movies & Music ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span", [_vm._v(" Education & Learning")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Biography & Autobiography")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Literature")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Children & Teens")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Study Aids")]),
-            _vm._v(" "),
-            _c("span", [_vm._v(" Christian Books & Bibles")]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Industrial & Scientific ")]
-            ),
-            _vm._v(" "),
-            _c("span"),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Livestock ")]
-            ),
-            _vm._v(" "),
-            _c("span"),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Miscellaneous ")]
-            ),
-            _vm._v(" "),
-            _c("span"),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Musical Instrument ")]
-            ),
-            _vm._v(" "),
-            _c("span"),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Pet Supplies ")]
-            ),
-            _vm._v(" "),
-            _c("span")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            { staticClass: "text-lg font-semibold text-black uppercase" },
-            [_vm._v(" Services ")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-col" }, [
-            _c("span"),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Toy & Games ")]
-            ),
-            _vm._v(" "),
-            _c("span"),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "mt-2 text-lg font-semibold text-black uppercase"
-              },
-              [_vm._v(" Grocery ")]
-            ),
-            _vm._v(" "),
-            _c("span")
-          ])
-        ])
-      ]
-    )
+        _c("span", {
+          staticClass:
+            "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
+        })
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -57795,48 +64734,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "px-4" }, [
       _c("section", { staticClass: "relative py-24 px-4" }, [
-        _c(
-          "div",
-          { staticClass: "z-20 relative text-white container mx-auto" },
-          [
-            _c("h1", { staticClass: "mb-4" }, [
-              _vm._v("Tailwind Banner with Object Fit Image")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "leading-normal" }, [
-              _vm._v(
-                "This is a banner that can be resized to your heart’s content without using a background image property."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "leading-normal" }, [
-              _vm._v(
-                "Integer eu massa ipsum. Quisque dui purus, congue in urna sed, volutpat condimentum nisi. Ut elementum tellus quam, sit amet congue ante tempus id. Phasellus ultricies enim in est posuere, quis semper urna consequat."
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "inline-block bg-blue-500 text-white no-underline hover:bg-blue-800 mt-4 p-4 rounded",
-                attrs: { href: "#" }
-              },
-              [_vm._v("A Call to Action")]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "absolute inset-0 h-auto z-10" }, [
-          _c("img", {
-            staticClass: "h-full w-full object-fit-cover",
-            attrs: {
-              src:
-                "https://images.unsplash.com/photo-1509315047084-af74f1192bee",
-              alt: ""
-            }
-          })
-        ])
+        _c("div", { staticClass: "z-20 relative text-white container mx-auto" })
       ])
     ])
   },

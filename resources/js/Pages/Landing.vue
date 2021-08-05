@@ -77,44 +77,94 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Food Cupboard </span>
                             <div class="flex flex-col">
-                                <span> Cooking Ingredients</span>
-                                <span> Snacks, Cripps & Nuts</span>
-                                <span> Grains & Rice</span>
-                                <span> Sugar & Flour</span>
-                                <span> Breakfast Cereals</span>
-                                <span> Candy & Chocolate</span>
-                                <span>Margarine, Jams, Honey & Spreads</span>
+                                <inertia-link :href="route('product.result', 'Cooking')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cooking Ingredients</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Snacks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Snacks, Cripps & Nuts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Grains')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Grains & Rice</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sugar')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sugar & Flour</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Breakfast')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Breakfast Cereals</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Candy')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Candy & Chocolate</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Margarine')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">Margarine, Jams, Honey & Spreads</span>
+                                </inertia-link>
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Drinks </span>
                             <div class="flex flex-col">
-                                <span> Beer, Wines & Spirits</span>
-                                <span> Carbonated Drinks</span>
-                                <span> Coffee, Tea & Cocoa</span>
-                                <span> Dairy</span>
-                                <span> Juice & Non Carbonated Drinks</span>
-                                <span> Syrup and Cordials</span>
-                                <span> Water</span>
+                                <inertia-link :href="route('product.result', 'Beer')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Beer, Wines & Spirits</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Carbonated')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Carbonated Drinks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Coffee')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Coffee, Tea & Cocoa</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Dairy')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Dairy</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Juice')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Juice & Non Carbonated Drinks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Syrup')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Syrup and Cordials</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Water')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Water</span>
+                                </inertia-link>
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Household Supplies </span>
                             <div class="flex flex-col">
-                                <span> Air Fresheners</span>
-                                <span> Bathroom Cleaners</span>
-                                <span> Bulb & Batteries</span>
-                                <span> Floor Cleaners</span>
-                                <span> Household Cleaners & Sundries</span>
-                                <span> Kitchen Cleaner</span>
-                                <span> Laundry</span>
-                                <span> Pappers & Rolls</span>
+                                <inertia-link :href="route('product.result', 'Air')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Air Fresheners</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bathroom')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bathroom Cleaners</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bulb')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bulb & Batteries</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Floor')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Floor Cleaners</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Household')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Household Cleaners & Sundries</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Kitchen')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Kitchen Cleaner</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Laundry')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Laundry</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Pappers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pappers & Rolls</span>
+                                </inertia-link>
                               
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Shop by brands </span>
-                               <span> Velvex</span> 
-                               <span> Dettol</span> 
-                               <span> Huggies</span> 
+                               <inertia-link :href="route('product.result', 'Velvex')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Velvex</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Dettol')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Dettol</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Huggies')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Huggies</span> 
+                                </inertia-link>
                         
                             </div>
                         </div>
@@ -126,43 +176,91 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Hair Care </span>
                             <div class="flex flex-col">
-                                <span> Conditioner</span>
-                                <span> Extensions, Wigs & Accessories</span>
-                                <span> Hair & Scalp Care</span>
-                                <span> Hair Accessories</span>
-                                <span> Hair Coloring Products</span>
-                                <span> Hair Cutting Tools</span>
-                                <span> Hair Loss Products</span>
-                                <span> Hair Perms, Relaxers & Texturizers </span>
-                                <span> Shampoo</span>
-                                <span> Styling Products</span>
+                                <inertia-link :href="route('product.result', 'Conditioner')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Conditioner</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Extensions')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Extensions, Wigs & Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hair & Scalp Care')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hair & Scalp Care</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hair Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hair Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hair Coloring Products')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hair Coloring Products</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hair Cutting Tools')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hair Cutting Tools</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hair Loss Products')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hair Loss Products</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hair Perms, Relaxers & Texturizers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hair Perms, Relaxers & Texturizers </span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Shampoo')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Shampoo</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Styling Products')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Styling Products</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Fragrances </span>
-                                <span> Men's </span> 
-                                <span> Women's</span> 
+                                <inertia-link :href="route('product.result', 'Mens')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Men's </span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Womens')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Women's</span> 
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Mens Grooming </span>
                             <div class="flex flex-col">
-                                <span> Anti Ageing</span>
-                                <span> Pre Shave</span>
-                                <span> Sunblock</span>
+                                <inertia-link :href="route('product.result', 'Anti Ageing')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Anti Ageing</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Pre Shave')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pre Shave</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sunblock')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sunblock</span>
+                                </inertia-link>
                                
 
                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Oral Care </span>
-                               <span> Children's Dental care</span>
-                               <span> Dental Care  </span> 
-                               <span> Mouth Wash</span> 
-                               <span>  Teeth Whitening</span> 
-                               <span>  Toothbrush</span> 
-                               <span>  Toothpaste</span> 
+                               <inertia-link :href="route('product.result', 'Childrens Dental care')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Children's Dental care</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Dental Care')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Dental Care  </span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Mouth Wash')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Mouth Wash</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Teeth Whitening')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">  Teeth Whitening</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Toothbrush')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">  Toothbrush</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Toothpaste')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">  Toothpaste</span> 
+                                </inertia-link>  
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Makeup </span>
-                               <span> Eyes</span>
-                               <span> Face</span>
-                               <span> Lips</span>
+                               <inertia-link :href="route('product.result', 'Eyes')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Eyes</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Face')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Face</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Lips')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lips</span>
+                                </inertia-link>
                         
                                 
                             </div>
@@ -170,23 +268,47 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Health Care</span>
                             <div class="flex flex-col">
-                                <span> Diabetes Care</span>
-                                <span> Feminine Care</span>
-                                <span> First Aid</span>
-                                <span> Sleeping & Snoring</span>
+                                <inertia-link :href="route('product.result', 'Diabetes Care')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Diabetes Care</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Feminine Care')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Feminine Care</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'First Aid')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> First Aid</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sleeping & Snoring')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sleeping & Snoring</span>
+                                </inertia-link>
                                
                               
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Personal Care </span>
-                               <span> Bath & Bathing Accesories</span> 
-                               <span> Deodrants & Antiperspirants</span>
-                               <span> Lip Care</span>
-                               <span> Shaves & Hair Removal</span>
-                               <span> Skin Care</span>
+                               <inertia-link :href="route('product.result', 'Bath & Bathing Accesories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bath & Bathing Accesories</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Deodrants & Antiperspirants')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Deodrants & Antiperspirants</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Lip Care')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lip Care</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Shaves & Hair Removal')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Shaves & Hair Removal</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Skin Care')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Skin Care</span>
+                                </inertia-link>
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Luxury Beuty </span>
-                               <span> Fragrances</span>
-                               <span> MakeUp</span>
-                               <span> Skin Care</span>
+                               <inertia-link :href="route('product.result', 'Fragrances')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Fragrances</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'MakeUp')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> MakeUp</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Skin Care')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Skin Care</span>
+                                </inertia-link>
                         
                             </div>
                         </div>
@@ -198,21 +320,47 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Home Kitchen </span>
                             <div class="flex flex-col">
-                                <span> Home Decor</span>
-                                <span> Bedding</span>
-                                <span> Wall Art</span>
-                                <span> Bath</span>
-                                <span> Lighting</span>
-                                <span> Storage & Organization</span>
-                                <span> Kitchen Dining</span>
-                                <span> Furniture </span>
+                                <inertia-link :href="route('product.result', 'Home Decor')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Home Decor</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bedding')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bedding</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Wall Art')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Wall Art</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bath')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bath</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Lighting')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lighting</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Storage & Organization')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Storage & Organization</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Kitchen Dining')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Kitchen Dining</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Furniture')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Furniture </span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Small Appliances </span>
-                                <span> Blenders</span> 
-                                <span> Kettles</span> 
-                                <span> Toasters</span> 
-                                <span> Ironing & Laundry</span> 
-                                <span> Other Small Appliances</span> 
+                                <inertia-link :href="route('product.result', 'Blenders')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Blenders</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Kettles')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Kettles</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Toasters')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Toasters</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Ironing & Laundry')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Ironing & Laundry</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Other Small Appliances')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Other Small Appliances</span> 
+                                </inertia-link>
                                 
 
                             </div>
@@ -220,27 +368,51 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Large Appliances </span>
                             <div class="flex flex-col">
-                                <span> Refridgerator</span>
-                                <span> Freezers</span>
-                                <span> Water Dispenders & Coolers</span>
-                                <span> Washers & Dryers</span>
+                                <inertia-link :href="route('product.result', 'Refridgerator')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Refridgerator</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Freezers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Freezers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Water Dispenders & Coolers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Water Dispenders & Coolers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Washers & Dryers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Washers & Dryers</span>
+                                </inertia-link>
                                
 
                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Cooking Appliances </span>
-                               <span> Cooktops</span>
-                               <span> Microwaves & Ovens</span>
-                               <span> Cooking Applience Accessories</span>
-                               <span> Cookers</span>
+                              <inertia-link :href="route('product.result', 'Cooktops')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cooktops</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Microwaves & Ovens')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Microwaves & Ovens</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cooking Applience Accessories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cooking Applience Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cookers')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cookers</span>
+                                </inertia-link>
                     
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Office Products</span>
                             <div class="flex flex-col">
-                                <span> Office & School Supplies</span>
-                                <span> Office Electronics</span>
-                                <span> Office Furniture & Lighting</span>
-                                <span> Stationery</span>
+                                <inertia-link :href="route('product.result', 'Office & School Supplies')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Office & School Supplies</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Office Electronics')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Office Electronics</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Office Furniture & Lighting')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Office Furniture & Lighting</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Stationery')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Stationery</span>
+                                </inertia-link>
                             </div>
                         </div>
                     </div>
@@ -252,18 +424,38 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Mobile Phones </span>
                             <div class="flex flex-col">
-                                <span> Smartphoness</span>
-                                <span> Featured Phones</span>
-                                <span> Featured Phones Under 2,000</span>
+                                <inertia-link :href="route('product.result', 'Smartphoness')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Smartphoness</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Featured Phones')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Featured Phones</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Featured Phones Under 2000')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Featured Phones Under 2,000</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Top Smartphone Brands </span>
-                               <span> Samsung</span> 
-                               <span> Xiaomi</span>
-                               <span> Nokia</span>
-                               <span> Tecno</span>
-                               <span> Infinix</span>
-                               <span> Huawei</span>
-                               <span> Oppo</span>
+                                <inertia-link :href="route('product.result', 'Samsung')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Samsung</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Xiaomi')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Xiaomi</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Nokia')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nokia</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Tecno')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Tecno</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Infinix')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Infinix</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Huawei')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Huawei</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Oppo')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Oppo</span>
+                                </inertia-link>
 
                             </div>
                         </div>
@@ -271,20 +463,44 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Accesories </span>
                             <div class="flex flex-col">
-                                <span> Portable Powerbanks</span>
-                                <span> Smart Watches</span>
-                                <span> Cases & Sleeves</span>
-                                <span> Screen Protecttors</span>
-                                <span> Bluetooth Accesories</span>
-                                <span> Headsets</span>
-                                <span> Headphones</span>
-                                <span> Batteries & Battery Packs</span>
-                                <span> Accesories Under 1,000</span>
+                                <inertia-link :href="route('product.result', 'Portable Powerbanks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Portable Powerbanks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Smart Watches')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Smart Watches</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cases & Sleeves')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cases & Sleeves</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Screen Protecttors')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Screen Protecttors</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bluetooth Accesories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bluetooth Accesories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Headsets')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Headsets</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Headphones')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Headphones</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Batteries & Battery Packs')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Batteries & Battery Packs</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Accesories Under 1,000')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Accesories Under 1,000</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Tablets </span>
-                                <span> Ipads</span>
-                                <span> Tablet Accessories</span>
-                                <span> Tablet Bags & Covers</span>
+                                <inertia-link :href="route('product.result', 'Ipads')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Ipads</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Tablet Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Tablet Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Tablet Bags & Covers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Tablet Bags & Covers</span>
+                                </inertia-link>
 
                             </div>
                         </div>
@@ -292,22 +508,48 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Best Sellers Smartphones </span>
                             <div class="flex flex-col">
-                                <span> Samsung A10s</span>
-                                <span> Nokia 2.4</span>
-                                <span> Tecno Pop 3</span>
-                                <span> Xiaomi Redmi 9A</span>
-                                <span> Oppo A15</span>
-                                <span> Umidigi A7's</span>
-                                <span> Cubot Note 20</span>
+                                <inertia-link :href="route('product.result', 'Samsung A10s')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Samsung A10s</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Nokia 2.4')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nokia 2.4</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Tecno Pop 3')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Tecno Pop 3</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Xiaomi Redmi 9A')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Xiaomi Redmi 9A</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Oppo A15')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Oppo A15</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Umidigi A7s')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Umidigi A7's</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cubot Note 20')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cubot Note 20</span>
+                                </inertia-link>
 
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> New Smartphone Launches </span>
-                               <span> Samsung A02</span> 
-                               <span> Xiaomi Note 10 pro</span>
-                               <span> Nokia 1.3</span>
-                               <span> Tecno Camon 17</span>
-                               <span> Samsung A02</span>
-                               <span> Oppo Reno 5</span>
+                               <inertia-link :href="route('product.result', 'Samsung A02')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Samsung A02</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Xiaomi Note 10 pro')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Xiaomi Note 10 pro</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Nokia 1.3')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nokia 1.3</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Tecno Camon 17')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Tecno Camon 17</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Samsung A02')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Samsung A02</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Oppo Reno 5')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Oppo Reno 5</span>
+                                </inertia-link>
                                
                             </div>
                         </div>
@@ -319,45 +561,91 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Laptops </span>
                             <div class="flex flex-col">
-                                <span> MacBooks</span>
-                                <span> NetBooks</span>
-                                <span> UltraBooks</span>
-                                <span> 2-in-1 Laptops</span>
+                                <inertia-link :href="route('product.result', 'MacBooks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> MacBooks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'NetBooks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> NetBooks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'UltraBooks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> UltraBooks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', '2-in-1 Laptops')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> 2-in-1 Laptops</span>
+                                </inertia-link>
 
-                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Computer & Accessories </span>    
-                                <span> Laptop Accessories</span>
-                                <span> Desktops</span>
-                                <span> Monitors</span>
-                                <span> Scanners</span>
-                                <span> Printers</span>
-                                <span> Keyboards, Mice & Accessories</span>
-                                <span> Computer Cable & Adapters</span>
-                                <span> Printer Ink & Toner</span>
-                                <span> Netwroking Products</span>
+                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Computer & Accessories </span>
+                                <inertia-link :href="route('product.result', 'Laptop Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Laptop Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Desktops')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Desktops</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Monitors')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Monitors</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Scanners')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Scanners</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Printers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Printers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Keyboards, Mice & Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Keyboards, Mice & Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Computer Cable & Adapters')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Computer Cable & Adapters</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Printer Ink & Toner')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Printer Ink & Toner</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Netwroking Products')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Netwroking Products</span>
+                                </inertia-link>    
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Shop By Laptop Brands </span>
                             <div class="flex flex-col">
-                               <span> HP Laptops</span> 
-                               <span> Dell Laptops</span> 
-                               <span> Lenovo Laptops</span> 
-                               <span> Apple Laptops</span> 
-                               <span> Asus Laptops</span> 
+                                <inertia-link :href="route('product.result', 'HP')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> HP Laptops</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Dell')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Dell Laptops</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Lenovo')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lenovo Laptops</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Apple')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Apple Laptops</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Asus')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Asus Laptops</span> 
+                                </inertia-link>
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Computer Components </span>
-                               <span> Internal Hard Drive</span> 
-                               <span> Graphic Cards</span> 
-                               <span> Fans & Cooling</span> 
+                               <inertia-link :href="route('product.result', 'Internal Hard Drive')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Internal Hard Drive</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Graphic Cards')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Graphic Cards</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Fans & Cooling')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Fans & Cooling</span> 
+                                </inertia-link>
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Computer Data Storage </span>
                             <div class="flex flex-col">
-                                <span> External Hard Drives</span>
-                                <span> USB Flash Drives</span>
+                                <inertia-link :href="route('product.result', 'External Hard Drives')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> External Hard Drives</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'USB Flash Drives')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> USB Flash Drives</span>
+                                </inertia-link>
                         
                             </div>
                         </div>
@@ -369,47 +657,97 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Televisions </span>
                             <div class="flex flex-col">
-                                <span> Smart TVs</span>
-                                <span> LED & LCD TVs</span>
-                                <span> Data Projectors</span>
+                                <inertia-link :href="route('product.result', 'Smart TVs')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Smart TVs</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'LED & LCD TVs')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> LED & LCD TVs</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Data Projectors')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Data Projectors</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Best Seller TV Brands </span>
-                                <span> Synix TV</span>
-                                <span> Samsung TV</span>
-                                <span> Hisense TV</span>
-                                <span> Sony </span>
+                                <inertia-link :href="route('product.result', 'Synix')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Synix TV</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Samsung')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Samsung TV</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hisense')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hisense TV</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sony')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sony </span>
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Home Audio </span>
                             <div class="flex flex-col">
-                                <span>Speakers </span>
-                                <span> Home Theatre System</span>
-                                <span> Blutooth Speakers</span>
-                                <span> Sound Bars</span>
-                                <span> Compact Radio & Stereos</span>
-                                <span> Hi-Fi System Under 2,000</span>
+                                <inertia-link :href="route('product.result', 'Speakers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">Speakers </span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Home Theatre System')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Home Theatre System</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Blutooth Speakers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Blutooth Speakers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sound Bars')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sound Bars</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Compact Radio & Stereos')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Compact Radio & Stereos</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Hi-Fi System Under 2000')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hi-Fi System Under 2,000</span>
+                                </inertia-link>
 
                                  <span class="mt-2 text-lg font-semibold text-black uppercase"> Cameras </span>
-                               <span> Compact Cameras</span> 
-                               <span> Digital SLR Cameras</span> 
-                               <span> Security & Surveillance Camera</span> 
+                                 <inertia-link :href="route('product.result', 'Compact Cameras')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Compact Cameras</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Digital SLR Cameras')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Digital SLR Cameras</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Security & Surveillance Camera')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Security & Surveillance Camera</span> 
+                                </inertia-link>
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Accessories & Supplies Supplies </span>
                             <div class="flex flex-col">
-                                <span> Accessories & Video Supplies</span>
-                                <span> Batteries</span>
-                                <span> Batteries, Chargers & Accessories</span>
-                                <span> Cables</span>
-                                <span> Camera & Photo Accessories</span>
-                                <span> Camera Accesories</span>
-                                <span> Home Audio Acccessories</span>
-                                <span> Power Protection</span>
-                                <span> Television Accessories</span>
+                                <inertia-link :href="route('product.result', 'Accessories & Video Supplies')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Accessories & Video Supplies</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Batteries')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Batteries</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Batteries, Chargers & Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Batteries, Chargers & Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cables')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cables</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Camera & Photo Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Camera & Photo Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Camera Accesories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Camera Accesories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Home Audio Acccessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Home Audio Acccessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Power Protection')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Power Protection</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Television Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Television Accessories</span>
+                                </inertia-link>
 
                             </div>
                         </div>
@@ -421,61 +759,135 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Women's Fashion </span>
                             <div class="flex flex-col">
-                                <span> Dresses</span>
-                                <span> Suits & Blazers</span>
-                                <span> Tops & Tees</span>
-                                <span> Coats, Jackets & Vest</span>
-                                <span> Jumpsuits, Rompers & Overalls</span>
-                                <span> Skirts</span>
-                                <span> Lingerie, Sleep & Lounge</span>
-                                <span> Jeans</span>
-                                <span> Shorts</span>
-                                <span> Jewelery</span>
-                                <span> Sandals</span>
-                                <span> Flats</span>
-                                <span> Handbags & Wallets</span>
+                                <inertia-link :href="route('product.result', 'Dresses')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Dresses</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Suits & Blazers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Suits & Blazers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Tops & Tees')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Tops & Tees</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Coats, Jackets & Vest')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Coats, Jackets & Vest</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Jumpsuits, Rompers & Overalls')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Jumpsuits, Rompers & Overalls</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Skirts')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Skirts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Lingerie, Sleep & Lounge')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lingerie, Sleep & Lounge</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Jeans')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Jeans</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Shorts')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Shorts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Jewelery')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Jewelery</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sandals')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sandals</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Flats')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Flats</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Handbags & Wallets')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Handbags & Wallets</span>
+                                </inertia-link>
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Men's Fashion </span>
                             <div class="flex flex-col">
-                                <span> Shirts</span>
-                                <span> T-Shirt & Tanks</span>
-                                <span> Suits & Sports Coats</span>
-                                <span> Pants</span>
-                                <span> Shorts</span>
-                                <span> Jeans</span>
-                                <span> Underwear</span>
-                                <span> Watches</span>
-                                <span> Fashion Sneakers</span>
-                                <span> Loafers & Slip Ons</span>
-                                <span> Belts</span>
-                                <span> Sunglasses & Eyewear Accessories</span>
+                                <inertia-link :href="route('product.result', 'Shirts')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Shirts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'T-Shirt & Tanks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> T-Shirt & Tanks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Suits & Sports Coats')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Suits & Sports Coats</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Pants')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pants</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Shorts')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Shorts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Jeans')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Jeans</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Underwear')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Underwear</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Watches')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Watches</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Fashion Sneakers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Fashion Sneakers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Loafers & Slip Ons')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Loafers & Slip Ons</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Belts')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Belts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sunglasses & Eyewear Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sunglasses & Eyewear Accessories</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Baby </span>
-                                <span> Baby Boys</span>   
-                                <span> Baby Girls</span>   
+                                <inertia-link :href="route('product.result', 'Baby Boys')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Boys</span>   
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Baby Girls')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Girls</span>   
+                                </inertia-link>
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Kids Fashion </span>
                             <div class="flex flex-col">
-                                <span> Boys</span>   
-                                <span> Girls</span> 
+                                <inertia-link :href="route('product.result', 'Boys')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Boys</span>   
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Girls')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Girls</span> 
+                                </inertia-link>
                                 
                               
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Exclusive Fashion </span>
-                               <span> Maternity Wear</span>
-                               <span> Ankara Shirts</span>
-                               <span> Kitenge Dresses</span>
-                               <span> Ankara Tops</span>
-                               <span> Wedding Hair Accesories</span>
+                               <inertia-link :href="route('product.result', 'Maternity Wear')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Maternity Wear</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Ankara Shirts')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Ankara Shirts</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Kitenge Dresses')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Kitenge Dresses</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Ankara Tops')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Ankara Tops</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Wedding Hair Accesories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Wedding Hair Accesories</span>
+                                </inertia-link>
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Shop by brands </span>
-                               <span> Curren</span> 
-                               <span> Forever Young</span> 
-                               <span> Bata</span> 
+                               <inertia-link :href="route('product.result', 'Curren')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Curren</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Forever Young')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Forever Young</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bata')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bata</span> 
+                                </inertia-link>
                         
                             </div>
                         </div>
@@ -487,31 +899,51 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Playingstation </span>
                             <div class="flex flex-col">
-                                <span> PlaySatation 3</span>
-                                <span> Playstation 4</span>
-                                <span> Playstation Vita</span>
+                                <inertia-link :href="route('product.result', 'PlaySatation 3')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> PlaySatation 3</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'PlaySatation 4')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Playstation 4</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'PlaySatation Vita')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Playstation Vita</span>
+                                </inertia-link>
 
                                  <span class="mt-2 text-lg font-semibold text-black uppercase"> Digital Games </span>
-                                <span> Nintendo Switch</span>
-                                <span> Xbox 360</span>
+                                 <inertia-link :href="route('product.result', 'Nintendo Switch')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nintendo Switch</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Xbox 360')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Xbox 360</span>
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Nintendo </span>
                             <div class="flex flex-col">
-                                <span> Nintendo DS</span>
-                                <span> Nintendo 3DS</span>
-                                <span> Wii</span>
+                                <inertia-link :href="route('product.result', ' ')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nintendo DS</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', ' ')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nintendo 3DS</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', ' ')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Wii</span>
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> PC Gaming </span>
                             <div class="flex flex-col">
-                                <span>Games</span>
+                                <inertia-link :href="route('product.result', 'Games')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">Games</span>
+                                </inertia-link>
 
+                                <inertia-link :href="route('product.result', 'Sony PSP')"> 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Sony PSP </span>
+                                </inertia-link>
                                 
                         
                             </div>
@@ -524,45 +956,95 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Diapering </span>
                             <div class="flex flex-col">
-                                <span> Diaper Bags</span>
-                                <span> Disposable Diapers</span>
-                                <span> Portable Changing Pads</span>
-                                <span> Cloth Diapers</span>
-                                <span> Changing Tables</span>
-                                <span> Wipes & Holders</span>
+                                <inertia-link :href="route('product.result', 'Diaper Bags')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Diaper Bags</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Disposable Diapers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Disposable Diapers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Portable Changing Pads')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Portable Changing Pads</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cloth Diapers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cloth Diapers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Changing Tables')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Changing Tables</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Wipes & Holders')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Wipes & Holders</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Gear </span>
-                               <span> Walkers</span> 
-                               <span> BagPacks & Camera</span> 
-                               <span> Swings, Jumps & Bouncers</span> 
+                                <inertia-link :href="route('product.result', 'Walkers')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Walkers</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'BagPacks & Camera')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> BagPacks & Camera</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Swings, Jumps & Bouncers')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Swings, Jumps & Bouncers</span> 
+                                </inertia-link>
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Bathing & Skin Care </span>
-                               <span> Soaps & Cleaners</span>
-                               <span> Grooming & Healthcare kits</span>
-                               <span> Bathing Tubs & Seats</span>
-                               <span> Washclothes & Towels</span>
-                               <span> Bathroom Safety</span>
+                               <inertia-link :href="route('product.result', 'Soaps & Cleaners')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Soaps & Cleaners</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Grooming & Healthcare kits')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Grooming & Healthcare kits</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bathing Tubs & Seats')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bathing Tubs & Seats</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Washclothes & Towels')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Washclothes & Towels</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bathroom Safety')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bathroom Safety</span>
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Apparel & Accessories </span>
                             <div class="flex flex-col">
-                                <span> Baby Boy</span> 
-                                <span> Baby Girls</span> 
+                                <inertia-link :href="route('product.result', 'Baby Boy')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Boy</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Baby Girls')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Girls</span> 
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Baby & Toodler Toys </span>
-                               <span> Toy Gift Sets</span>
-                               <span> Music & Sound</span>
-                               <span> Bath Toys</span>
+                                <inertia-link :href="route('product.result', 'Toy Gift Sets')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Toy Gift Sets</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Music & Sound')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Music & Sound</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bath Toys')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bath Toys</span>
+                                </inertia-link>
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Feeding </span>
-                               <span> Bibs & Burp Clothes</span>
-                               <span> Bottle Feeding</span>
-                               <span> Breastfeeding</span>
-                               <span> Highchairs & Booster Seats</span>
-                               <span> Pacifiers & Accessories</span>
-                               <span> Solid Feeding</span>
+                               <inertia-link :href="route('product.result', 'Bibs & Burp Clothes')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bibs & Burp Clothes</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Bottle Feeding')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bottle Feeding</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Breastfeeding')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Breastfeeding</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Highchairs & Booster Seats')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Highchairs & Booster Seats</span>
+                                </inertia-link>
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pacifiers & Accessories</span>
+                                <inertia-link :href="route('product.result', 'Pacifiers & Accessories')"> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Solid Feeding')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Solid Feeding</span>
+                                </inertia-link>
 
                                 
                             </div>
@@ -570,20 +1052,40 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Baby Safety </span>
                             <div class="flex flex-col">
-                               <span> Monitors</span>
-                               <span> Sleep Positioners</span>
-                               <span> Edge & Corner Guards</span>
+                                <inertia-link :href="route('product.result', 'Monitors')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Monitors</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Sleep Positioners')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sleep Positioners</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Edge & Corner Guards')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Edge & Corner Guards</span>
+                                </inertia-link>
                               
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Potty Training </span>
-                               <span> Potties & Seats</span>
-                               <span> Seat Covers</span>
-                               <span> Step Stools</span>
-                               <span> Training Pants</span>
+                               <inertia-link :href="route('product.result', 'Potties & Seats')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Potties & Seats</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Seat Covers')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Seat Covers</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Step Stools')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Step Stools</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Training Pants')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Training Pants</span>
+                                </inertia-link>
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Health & Baby Care  </span>
-                               <span> Nail Care</span>
-                               <span> Teethers & Teething Relief</span>
-                               <span> Thermometers</span>
+                               <inertia-link :href="route('product.result', 'Nail Care')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Nail Care</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Teethers & Teething Relief')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Teethers & Teething Relief</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Thermometers')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Thermometers</span>
+                                </inertia-link>
                             </div>
                         </div>
                     </div>
@@ -594,35 +1096,71 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Food Cupboard </span>
                             <div class="flex flex-col">
-                                <span> Exercise & Fitness</span>
-                                <span> Accessories</span>
-                                <span> Clothing</span>
-                                <span> Team Sports</span>
+                                <inertia-link :href="route('product.result', 'Exercise & Fitness')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Exercise & Fitness</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Clothing')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Clothing</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Team Sports')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Team Sports</span>
+                                </inertia-link>
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Sports Nutrition </span>
                             <div class="flex flex-col">
-                                <span> Carb Management Supplements</span>
-                                <span> Endurance & Energy</span>
-                                <span> Fat Burners & Thermogenics</span>
-                                <span> Supplements</span>
-                                <span> Post-Work & Recovery</span>
-                                <span> Pre-Workout</span>
-                                <span> Proteins</span>
-                                <span> Supplement Stacks</span>
-                                <span> Testerone Boosters</span>
-                                <span> Weight Gainers</span>
+                                <inertia-link :href="route('product.result', 'Carb Management Supplements')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Carb Management Supplements</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Endurance & Energy')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Endurance & Energy</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Fat Burners & Thermogenics')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Fat Burners & Thermogenics</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Supplements')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Supplements</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'ost-Work & Recovery')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Post-Work & Recovery</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Pre-Workout')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pre-Workout</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Proteins')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Proteins</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Supplement Stacks')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Supplement Stacks</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Testerone Boosters')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Testerone Boosters</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Weight Gainers')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Weight Gainers</span>
+                                </inertia-link>
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Outdoor Recreation </span>
                             <div class="flex flex-col">
-                                <span> Camping & Hiking</span>
-                                <span> Skatebaords & Scooter </span>
-                                <span> Cycling</span>
-                                <span> Accessories</span>
+                                <inertia-link :href="route('product.result', 'Camping & Hiking')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Camping & Hiking</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Skatebaords & Scooter')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Skatebaords & Scooter </span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Cycling')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cycling</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Accessories')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Accessories</span>
+                                </inertia-link>
                               
                             
                             </div>
@@ -635,31 +1173,49 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Gardening & Lawn Care </span>
                             <div class="flex flex-col">
-                                <span> Hand Tools</span>
-                                <span> Watering Equipment</span>
+                                <inertia-link :href="route('product.result', 'Hand Tools')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hand Tools</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Watering Equipment')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Watering Equipment</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Grilling & Outdoor Cooking </span>
-                               <span> Grills</span>
-                               <span> Outdoor Cooking Tools & Accessories</span>
+                                <inertia-link :href="route('product.result', 'Grills')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Grills</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Outdoor Cooking Tools & Accessories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Outdoor Cooking Tools & Accessories</span>
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Outdoor Decor </span>
                             <div class="flex flex-col">
-                                <span> Lighting</span>
+                                <inertia-link :href="route('product.result', 'Lighting')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lighting</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Patio Furniture & Accessories </span>
-                               <span> Hammoocks , Stands & Accessories</span>
-                               <span> </span>
-                               <span> </span>
+                                <inertia-link :href="route('product.result', 'Hammoocks , Stands & Accessories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Hammoocks , Stands & Accessories</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', ' ')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', ' ')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span>
+                                </inertia-link>
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Farm & Ranch </span>
                             <div class="flex flex-col">
-                                <span> Pest Control</span>
+                                <inertia-link :href="route('product.result', 'Pest Control')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pest Control</span>
+                                </inertia-link>
                               
                         
                             </div>
@@ -672,58 +1228,95 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Stay Safe </span>
                             <div class="flex flex-col">
-                                <span> Have Fun</span>
-                                <span> Stay Fit</span>
-                                <span> Stay Connected</span>
-                                <span> Supermarket</span>
-                                <span> Stay Healty</span>
+                                <inertia-link :href="route('product.result', 'Have Fun')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Have Fun</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Stay Fit')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Stay Fit</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Stay Connected')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Stay Connected</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Supermarket')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Supermarket</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Stay Healty')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Stay Healty</span>
+                                </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Automobile </span>
-                               <span> Car Electronic & Accessories</span> 
-                               <span> Car Safety and Security</span> 
-                               <span> Motorcycle & Powersports</span> 
-                               <span> Lights & Lighting Accessories</span> 
-                               <span> Replacement Parts</span> 
+                                <inertia-link :href="route('product.result', 'Car Electronic & Accessories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Car Electronic & Accessories</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Car Safety and Security')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Car Safety and Security</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Motorcycle & Powersports')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Motorcycle & Powersports</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Lights & Lighting Accessories')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Lights & Lighting Accessories</span> 
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Replacement Parts')"> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Replacement Parts</span> 
+                                </inertia-link>
 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Books, Movies & Music </span>
                             <div class="flex flex-col">
-                                <span> Education & Learning</span>
-                                <span> Biography & Autobiography</span>
-                                <span> Literature</span>
-                                <span> Children & Teens</span>
-                                <span> Study Aids</span>
-                                <span> Christian Books & Bibles</span>
+                                <inertia-link :href="route('product.result', 'Education & Learning')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Education & Learning</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Biography & Autobiography')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Biography & Autobiography</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Literature')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Literature</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Children & Teens')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Children & Teens</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Study Aids')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Study Aids</span>
+                                </inertia-link>
+                                <inertia-link :href="route('product.result', 'Christian Books & Bibles')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Christian Books & Bibles</span>
+                                </inertia-link>
 
+                                <inertia-link :href="route('product.result', 'Industrial & Scientific')"> 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Industrial & Scientific </span>
-                               <span> </span> 
+                                </inertia-link>    
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
 
-                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Livestock </span>
-                               <span> </span> 
-
-                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Miscellaneous </span>
-                               <span> </span> 
-
-                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Musical Instrument </span>
-                               <span> </span> 
-
-                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Pet Supplies </span>
-                               <span> </span> 
+                                <inertia-link :href="route('product.result', 'Livestock')"> 
+                               <span  class="mt-2 text-lg font-semibold text-black uppercase"> Livestock </span>
+                                </inertia-link>
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
+ 
+                                    
+                               <span  class="mt-2 text-lg font-semibold text-black uppercase"> Miscellaneous </span>
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
+ 
+                               <span  class="mt-2 text-lg font-semibold text-black uppercase"> Musical Instrument </span>
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
+ 
+                               <span  class="mt-2 text-lg font-semibold text-black uppercase"> Pet Supplies </span>
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
                                 
                             </div>
                         </div>
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Services </span>
                             <div class="flex flex-col">
-                                <span> </span>
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span>
                               
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Toy & Games </span>
-                               <span> </span> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
 
                                <span class="mt-2 text-lg font-semibold text-black uppercase"> Grocery </span>
-                               <span> </span> 
+                               <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> </span> 
                         
                             </div>
                         </div>
@@ -862,14 +1455,14 @@
 
                 <div v-if="showProducts" id="pricing" class="container flex flex-col items-center h-full max-w-7xl mx-auto">
                     <h3
-                        class="w-full max-w-2xl px-5 mt- text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
+                        class="w-full max-w-7xl px-1 mt-3 text-xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-lg md:px-0">
                         Featured Products</h3>
 
                     <div class="max-w-full mx-auto md:max-w-7xl sm:px-8">
                         <div class="relative flex flex-col items-center sm:flex-row">
                             <section class="text-gray-600 body-font relative">
 
-                            <div class="container px-5 py-10 mx-auto">
+                            <div class="container py-2 mb-10 mx-auto">
                                 <div class="flex w-full">
                                     <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
                                         <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
@@ -1254,14 +1847,13 @@
             <div class="px-4">
             <section class="relative py-24 px-4">
             <div class="z-20 relative text-white container mx-auto">
-                <h1 class="mb-4">Tailwind Banner with Object Fit Image</h1>
-                <p class="leading-normal">This is a banner that can be resized to your heart’s content without using a background image property.</p>
-                <p class="leading-normal">Integer eu massa ipsum. Quisque dui purus, congue in urna sed, volutpat condimentum nisi. Ut elementum tellus quam, sit amet congue ante tempus id. Phasellus ultricies enim in est posuere, quis semper urna consequat.</p>
-                <a href="#" class="inline-block bg-blue-500 text-white no-underline hover:bg-blue-800 mt-4 p-4 rounded">A Call to Action</a>
+               
             </div>
-            <div class="absolute inset-0 h-auto z-10">
-                <img src="https://images.unsplash.com/photo-1509315047084-af74f1192bee" alt="" class="h-full w-full object-fit-cover">
-            </div>
+
+            <!-- <div class="absolute inset-0 h-72">
+                <img src="https://images.unsplash.com/photo-1585155770447-2f66e2a397b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80" alt="" class="h-full w-full object-fill">
+            </div> -->
+
             </section>
             </div>
 
