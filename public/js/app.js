@@ -5620,8 +5620,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
  // import throttle from 'lodash/throttle'
 
@@ -7938,8 +7936,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Dashboard */ "./resources/js/Pages/Dashboard.vue");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8045,66 +8053,267 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   name: 'Product_Create',
   layout: _Dashboard__WEBPACK_IMPORTED_MODULE_0__.default,
   data: function data() {
-    var _ref;
-
-    return _ref = {
+    return {
       selectedCategory: '',
+      selectedSubCategory: '',
       selectedOption: '',
+      subCategories: [],
       options: [],
-      selectedCategoryLabel: ''
-    }, _defineProperty(_ref, "selectedCategory", ''), _defineProperty(_ref, "selectedOption", ''), _defineProperty(_ref, "categories", [{
-      label: "Phones",
-      options: ["Samsung", "Iphone", "Tecno", "Xiaomi", "Huawei", "Techno", "Oppo", "Nokia", "Accessories"]
-    }, {
-      label: "Computing",
-      options: ["MacBooks", "NetBooks", "UltraBooks", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards & Mice", "External Drives", "Cable & Adaptors", "Networking Products", "Printer Ink & Toner", "Graphic Cards", "2-in-1 Laptops", "Computer Accessories"]
-    }, {
-      label: "Electronics",
-      options: ["Smart TVs", "LED & LCD TVs", "Data Projectors", "Music Speakers", "Home Theater", "Bluetooth Speakers", "Electronic Cables", "Batteries", "Camera", "Power Protection", "CCTV Cameras", "Television Accessories"]
-    }, {
-      label: "Fashion",
-      options: ["Dresses", "Suits & Blazers", "Ankara", "Coats & Jackets", "Trousers", "Skirts", "Baby Clothing", "Jeans", "Shorts", "Fashion Accessories", "Handbag & Wallets", "Shirts", "Innerwear", "Fashion Sneakers", "Sunglasses & Eyewear"]
-    }, {
-      label: "Supermarket",
-      options: ["Cooking Ingredients", "Snacks", "Grains & Rice", "Sugar & Flour", "Breakfast Cereals", "Candy & Chocolate", "Margarine, Jam & Spreads", "Jeans", "Shorts", "Alcoholic Drinks", "Non Alcoholic Drinks", "Beverages", "Water", "Cleaning Products", "Papers & Rolls", "Bulb & Batteries", "Dairy"]
-    }, {
-      label: "Baby",
-      options: ["Diapers", "Walkers", "Backpack & Carriers", "Swings, Jumpers & Bouncers", "Toys", "Bathing & Skin Care", "Apparels & Accessories", "Music & Sound", "Feeding", "Health & Baby Care", "Potty Training", "Baby Safety"]
-    }, {
-      label: "Sporting",
-      options: ["Excercise & Fitness", "Accessories", "Clothing", "Team Sports", "Supplementaries", "Camping & Hiking", "Skate board & Scooters", "Cycling", "Accesories"]
-    }, {
-      label: "Health & Beauty",
-      options: ["Fragrances", "Hair Products", "Make Up", "Skin Care", "Oral Care", "Mens Grooming", "Bathing Accessories", "Health Care & Drugs"]
-    }, {
-      label: "Outdoor",
-      options: ["Hand Tools", "Watering Equipment", "Grills", "Outdoor Cooking & Accessories", "Lighting", "Tables", "Patio Seating", "Pest Control", "Hammock & Stands"]
-    }, {
-      label: "Home & Office",
-      options: ["Home Decor", "Bedding", "Wall Art", "Lighting", "Storage & Organization", "Furniture", "Kitchen Dining", "Office Electornics", "Stationery", "Cookers", "Microwaves & Ovens", "Refrigerators", "Laundy Electronics", "Water Dispensers & Coolers", "Kitchen Elecronic"]
-    }, {
-      label: "Other Categories",
-      options: ["Books", "Movies & Music", "Automobile", "Toys and Gaming", "Groceries", "Music Instruments", "Pet Supplies", "Livestock", "Industrial & Scientific", "Services"]
-    }]), _defineProperty(_ref, "form", this.$inertia.form({
-      category: '',
-      subCategory: '',
-      title: '',
-      price: '',
-      description: '',
-      photos: [],
-      account_id: parseInt(this.$page.props.auth.user.account.id)
-    })), _defineProperty(_ref, "preview", null), _defineProperty(_ref, "image", null), _defineProperty(_ref, "preview_list", []), _defineProperty(_ref, "image_list", []), _ref;
+      selectedCategoryLabel: '',
+      selectedSubCategoryLabel: '',
+      // selectedCategory: '',
+      // selectedOption: '',
+      categories: [{
+        label: "Supermarket",
+        options: ["Food Cupboard", "Drinks", "Household Supplies"]
+      }, {
+        label: "Health & Beauty",
+        options: ["Hair Care", "Fragrances", "Mens Grooming", "Oral Care", "Makeup", "Health Care", "Personal Care", "Luxury Beauty"]
+      }, {
+        label: "Home & Office",
+        options: ["Home Kitchen", "Small Appliances", "arge Appliances", "Cooking Appliances", "Office Products"]
+      }, {
+        label: "Phones & Tablets",
+        options: ["Mobile Phones", "Top Smartphone Brands", "Accessories", "Tablets"]
+      }, {
+        label: "Computing",
+        options: ["Laptops", "Computer & Accessories", "Shop By Laptop Brands", "Computer Components", "Computer Components", "Computer Data Storage"]
+      }, {
+        label: "Electronics",
+        options: ["Televisions", "Best Seller TV Brands", "Home Audio", "Cameras", "Accessories & Supplies Supplies"]
+      }, {
+        label: "Fashion",
+        options: ["Womens Fashion", "Mens Fashion", "Baby", "Kids Fashion", "Exclusive Fashion"]
+      }, {
+        label: "Gaming",
+        options: ["Playingstation", "Playingstation", "Digital Games", "Nintendo", "PC Gaming"]
+      }, {
+        label: "Baby Products",
+        options: ["Diapering", "Gear", "Bathing & Skin Care", "Apparel & Accessories", "Baby & Toodler Toys", "Feeding", "Baby Safety ", "Potty Training", "Health & Baby Care"]
+      }, {
+        label: "Sporting Goods",
+        options: ["Sports & Fitness", "Sports Nutrition", "Outdoor Recreation", ""]
+      }, {
+        label: "Garden & Outdoors",
+        options: ["Gardening & Lawn Care", "Grilling & Outdoor Cooking", "Outdoor Decor", "Patio Furniture & Accessories", "Farm & Ranch"]
+      }, {
+        label: "Other Categories",
+        options: ["Stay Safe", "Automobile", "Books, Movies & Music", "Industrial & Scientific", "Livestock", "Miscellaneous", "Musical Instrument", "Pet Supplies", "Services", "Toy & Games", "Grocery"]
+      }],
+      subOptions: [{
+        label: "Food Cupboard",
+        options: ["Cooking Ingredients", "Snacks, Cripps & Nuts", "Grains & Rice", "Sugar & Flour", "Breakfast Cereals", "Candy & Chocolate", "Margarine, Jams, Honey & Spreads"]
+      }, {
+        label: "Drinks",
+        options: ["Beer, Wines & Spirits", "Carbonated Drinks", "Coffee, Tea & Cocoa", "Dairy", "Juice & Non Carbonated Drinks", "Syrup and Cordials", "Water"]
+      }, {
+        label: "Household Supplies",
+        options: ["Air Fresheners", "Bathroom Cleaners", "Bulb & Batteries", "Floor Cleaners", "Household Cleaners & Sundries", "Kitchen Cleaner", "Laundry", "Pappers & Rolls"]
+      }, {
+        label: "Hair Care",
+        options: ["Conditioner", "Extensions, Wigs & Accessories", "Hair & Scalp Care", "Hair Accessories", "Hair Coloring Products", "Hair Cutting Tools", "Hair Loss Products", "Hair Perms, Relaxers & Texturizers", "Shampoo", "Styling Products"]
+      }, {
+        label: "Fragrances",
+        options: ["Mens", "Womens"]
+      }, {
+        label: "Mens Grooming",
+        options: ["Anti Ageing", "Pre Shave", "Sunblock"]
+      }, {
+        label: "Oral Care",
+        options: ["Childrens Dental care", "Dental Care", "Mouth Wash", "Teeth Whitening", "Toothbrush", "Toothpaste"]
+      }, {
+        label: "Makeup",
+        options: ["Eyes", "Face", "Lips"]
+      }, {
+        label: "Health Care",
+        options: ["Diabetes Care", "Feminine Care", "First Aid", "Sleeping & Snoring"]
+      }, {
+        label: "Personal Care",
+        options: ["Bath & Bathing Accesories", "Deodrants & Antiperspirants", "Lip Care", "Shaves & Hair Removal", "Skin Care"]
+      }, {
+        label: "Luxury Beauty",
+        options: ["Fragrances", "MakeUp", "Skin Care"]
+      }, {
+        label: "Home Kitchen",
+        options: ["Home Decor", "Bedding", "Wall Art", "Bath", "Lighting", "Storage & Organization", "Kitchen Dining", "Furniture"]
+      }, {
+        label: "Small Appliances",
+        options: ["Blenders", "Kettles", "Toasters", "Ironing & Laundry", "Other Small Appliances"]
+      }, {
+        label: "Large Appliances",
+        options: ["Refridgerator", "Freezers", "Water Dispenders & Coolers", "Washers & Dryers"]
+      }, {
+        label: "Cooking Appliances",
+        options: ["Cooktops", "Microwaves & Ovens", "Cooking Applience Accessories", "Cookers"]
+      }, {
+        label: "Office Products",
+        options: ["Office & School Supplies", "Office Electronics", "Office Furniture & Lighting", "Stationery"]
+      }, {
+        label: "Mobile Phones",
+        options: ["Smartphoness", "Featured Phones", "Featured Phones Under 2000"]
+      }, {
+        label: "Top Smartphone Brands",
+        options: ["Samsung", "Xiaomi", "Nokia", "Tecno", "Infinix", "Huawei", "Oppo"]
+      }, {
+        label: "Accessories",
+        options: ["Portable Powerbanks", "Smart Watches", "Cases & Sleeves", "Screen Protectors", "Bluetooth Accesories", "Headsets", "Headphones", "Batteries & Battery Packs", "Accesories Under 1000"]
+      }, {
+        label: "Tablets",
+        options: ["Ipads", "Tablet Accessories", "Tablet Bags & Covers"]
+      }, {
+        label: "Laptops",
+        options: ["MacBooks", "NetBooks", "UltraBooks", "2-in-1 Laptops"]
+      }, {
+        label: "Computer & Accessories",
+        options: ["Laptop Accessories", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards, Mice & Accessories", "Computer Cable & Adapters", "Printer Ink & Toner", "Networking Products"]
+      }, {
+        label: "Shop By Laptop Brands",
+        options: ["HP", "Dell", "Lenovo", "Apple", "Asus"]
+      }, {
+        label: "Computer Components",
+        options: ["Internal Hard Drive", "Graphic Cards", "Fans & Cooling"]
+      }, {
+        label: "Computer Data Storage",
+        options: ["External Hard Drives", "USB Flash Drives"]
+      }, {
+        label: "Televisions",
+        options: ["Smart TVs", "LED & LCD TVs", "Data Projectors"]
+      }, {
+        label: "Best Seller TV Brands",
+        options: ["Synix TV", "Samsung TV", "isense TV", "Sony"]
+      }, {
+        label: "Home Audio",
+        options: ["Speakers", "Home Theatre System", "Blutooth Speakers", "Sound Bars", "Compact Radio & Stereos", "Hi-Fi System Under 2000"]
+      }, {
+        label: "Cameras",
+        options: ["Compact Cameras", "Digital SLR Cameras", "Security & Surveillance Camera"]
+      }, {
+        label: "Accessories & Supplies Supplies",
+        options: ["Accessories & Video Supplies", "Batteries", "Batteries, Chargers & Accessories", "Cables", "Camera & Photo Accessories", "Camera Accesories", "Home Audio Acccessories", "Power Protection", "Television Accessories"]
+      }, {
+        label: "Womens Fashion",
+        options: ["Dresses", "Suits & Blazers", "Tops & Tees", "Coats, Jackets & Vest", "Jumpsuits, Rompers & Overalls", "Skirts", "Lingerie, Sleep & Lounge", "Jeans", "Shorts", "Jewelery", "Sandals", "Flats", "Handbags & Wallets"]
+      }, {
+        label: "Mens Fashion ",
+        options: ["Shirts", "T-Shirt & Tanks", "Suits & Sports Coats", "Pants", "Shorts", "Jeans", "Underwear", "Watches", "Fashion Sneakers", "Loafers & Slip Ons", "Belts", "Sunglasses & Eyewear Accessories"]
+      }, {
+        label: "Baby",
+        options: ["Baby Boys", "Baby Girls"]
+      }, {
+        label: "Kids Fashion",
+        options: ["Boys", "Girls"]
+      }, {
+        label: "Exclusive Fashion",
+        options: ["Maternity Wear", "Ankara Shirts", "Kitenge Dresses", "Ankara Tops", "Wedding Hair Accesories"]
+      }, {
+        label: "Playingstation",
+        options: ["PlaySatation 3", "PlaySatation 4", "PlaySatation Vita"]
+      }, {
+        label: "Digital Games",
+        options: ["Nintendo Switch", "Xbox 360"]
+      }, {
+        label: "Nintendo",
+        options: ["Nintendo DS", "Nintendo 3DS", "Wii"]
+      }, {
+        label: "PC Gaming",
+        options: ["Games", "Sony PSP"]
+      }, {
+        label: "Diapering",
+        options: ["Diaper Bags", "Disposable Diapers", "Portable Changing Pads", "Cloth Diapers", "Changing Tables", "Wipes & Holders"]
+      }, {
+        label: "Gear",
+        options: ["Walkers", "BagPacks & Camera", "Swings, Jumps & Bouncers"]
+      }, {
+        label: "Bathing & Skin Care",
+        options: ["Soaps & Cleaners", "Grooming & Healthcare kits", "Bathing Tubs & Seats", "Washclothes & Towels", "Bathroom Safety"]
+      }, {
+        label: "Apparel & Accessories",
+        options: ["Baby Boy", "Baby Girl"]
+      }, {
+        label: "Baby & Toodler Toys",
+        options: ["Toy Gift Sets", "Music & Sound", "Bath Toys"]
+      }, {
+        label: "Feeding",
+        options: ["Bibs & Burp Clothes", "Bottle Feeding", "Breastfeeding", "Highchairs & Booster Seats", "Pacifiers & Accessories", "Solid Feeding"]
+      }, {
+        label: "Baby Safety",
+        options: ["Monitors", "Sleep Positioners", "dge & Corner Guards"]
+      }, {
+        label: "Potty Training",
+        options: ["Potties & Seats", "Seat Covers", "Step Stools", "Training Pants"]
+      }, {
+        label: "Health & Baby Care",
+        options: ["Nail Care", "Teethers & Teething Relief", "Thermometers"]
+      }, {
+        label: "Sports & Fitness",
+        options: ["Exercise & Fitness", "Accessories", "Clothing", "Team Sports"]
+      }, {
+        label: "Sports Nutrition",
+        options: ["Carb Management Supplements", "Endurance & Energy", "Fat Burners & Thermogenics", "Supplements", "Post-Work & Recovery", "Pre-Workout", "Proteins", "Supplement Stacks", "Testerone Boosters", "Weight Gainers"]
+      }, {
+        label: "Outdoor Recreation",
+        options: ["Camping & Hiking", "Skatebaords & Scooter", "Cycling", "Accessories"]
+      }, {
+        label: "Gardening & Lawn Care",
+        options: ["Hand Tools", "Watering Equipment"]
+      }, {
+        label: "Grilling & Outdoor Cooking",
+        options: ["Grills", "Outdoor Cooking Tools & Accessories"]
+      }, {
+        label: "Outdoor Decor",
+        options: ["Lighting"]
+      }, {
+        label: "Patio Furniture & Accessories",
+        options: ["Hammoocks , Stands & Accessories"]
+      }, {
+        label: "Farm & Ranch",
+        options: ["Pest Control"]
+      }, {
+        label: "Stay Safe",
+        options: ["Have Fun", "Stay Fit", "Stay Connected", "Supermarket", "Stay Healty"]
+      }, {
+        label: "Automobile",
+        options: ["Car Electronic & Accessories", "Car Safety and Security", "Motorcycle & Powersports", "Lights & Lighting Accessories", "Replacement Parts"]
+      }, {
+        label: "Books, Movies & Music",
+        options: ["Education & Learning", "Biography & Autobiography", "Literature", "Children & Teens", "Study Aids", "Christian Books & Bibles"]
+      }, {
+        label: "",
+        options: [""]
+      }, {
+        label: "",
+        options: [""]
+      }],
+      form: this.$inertia.form({
+        category: '',
+        subCategory: '',
+        title: '',
+        price: '',
+        description: '',
+        photos: [],
+        account_id: parseInt(this.$page.props.auth.user.account.id)
+      }),
+      preview: null,
+      image: null,
+      preview_list: [],
+      image_list: []
+    };
   },
   methods: {
     store: function store() {
       this.form.post(this.route('products.store'));
     },
     selectCategory: function selectCategory() {
-      this.form.selectedOption = '';
-      this.options = this.categories[this.selectedCategory].options;
+      this.selectedSubCategory = '';
+      this.options = '';
+      this.selectedCategoryLabel = '';
+      this.selectedSubCategoryLabel = '';
+      this.subCategories = this.categories[this.selectedCategory].options;
       this.selectedCategoryLabel = this.categories[this.selectedCategory].label;
-      this.form.category = this.selectedCategoryLabel;
-      this.form.subCategory = this.selectedOption;
+    },
+    selectSubCategory: function selectSubCategory() {
+      this.selectedSubCategoryLabel = this.subOptions[this.selectedSubCategory].label;
+      this.options = this.subOptions[this.selectedSubCategory].options;
     },
     selectOption: function selectOption() {
       this.form.subCategory = this.selectedOption;
@@ -55653,7 +55862,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Cooking"
+                                              "Cooking Ingredients"
                                             )
                                           }
                                         },
@@ -55675,7 +55884,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Snacks"
+                                              "Snacks, Cripps & Nuts"
                                             )
                                           }
                                         },
@@ -55697,7 +55906,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Grains"
+                                              "Grains & Rice"
                                             )
                                           }
                                         },
@@ -55719,7 +55928,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Sugar"
+                                              "Sugar & Flour"
                                             )
                                           }
                                         },
@@ -55741,7 +55950,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Breakfast"
+                                              "Breakfast Cereals"
                                             )
                                           }
                                         },
@@ -55763,7 +55972,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Candy"
+                                              "Candy & Chocolate"
                                             )
                                           }
                                         },
@@ -55785,7 +55994,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Margarine"
+                                              "Margarine, Jams, Honey & Spreads"
                                             )
                                           }
                                         },
@@ -55829,7 +56038,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Beer"
+                                              "Beer, Wines & Spirits"
                                             )
                                           }
                                         },
@@ -55851,7 +56060,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Carbonated"
+                                              "Carbonated Drinks"
                                             )
                                           }
                                         },
@@ -55873,7 +56082,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Coffee"
+                                              "Coffee, Tea & Cocoa"
                                             )
                                           }
                                         },
@@ -55917,7 +56126,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Juice"
+                                              "Juice & Non Carbonated Drinks"
                                             )
                                           }
                                         },
@@ -55943,7 +56152,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Syrup"
+                                              "Syrup and Cordials"
                                             )
                                           }
                                         },
@@ -56005,7 +56214,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Air"
+                                              "Air Fresheners"
                                             )
                                           }
                                         },
@@ -56027,7 +56236,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Bathroom"
+                                              "Bathroom Cleaners"
                                             )
                                           }
                                         },
@@ -56049,7 +56258,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Bulb"
+                                              "Bulb & Batteries"
                                             )
                                           }
                                         },
@@ -56071,7 +56280,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Floor"
+                                              "Floor Cleaners"
                                             )
                                           }
                                         },
@@ -56093,7 +56302,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Household"
+                                              "Household Cleaners & Sundries"
                                             )
                                           }
                                         },
@@ -56119,7 +56328,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Kitchen"
+                                              "Kitchen Cleaner"
                                             )
                                           }
                                         },
@@ -56163,7 +56372,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Pappers"
+                                              "Pappers & Rolls"
                                             )
                                           }
                                         },
@@ -56325,7 +56534,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Extensions"
+                                              "Extensions, Wigs & Accessories"
                                             )
                                           }
                                         },
@@ -57117,7 +57326,7 @@ var render = function() {
                                           staticClass:
                                             "mt-2 text-lg font-semibold text-black uppercase"
                                         },
-                                        [_vm._v(" Luxury Beuty ")]
+                                        [_vm._v(" Luxury Beauty ")]
                                       ),
                                       _vm._v(" "),
                                       _c(
@@ -58136,7 +58345,7 @@ var render = function() {
                                       staticClass:
                                         "text-lg font-semibold text-black uppercase"
                                     },
-                                    [_vm._v(" Accesories ")]
+                                    [_vm._v(" Accessories ")]
                                   ),
                                   _vm._v(" "),
                                   _c(
@@ -58226,7 +58435,7 @@ var render = function() {
                                               staticClass:
                                                 "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
                                             },
-                                            [_vm._v(" Screen Protecttors")]
+                                            [_vm._v(" Screen Protectors")]
                                           )
                                         ]
                                       ),
@@ -59074,7 +59283,7 @@ var render = function() {
                                               staticClass:
                                                 "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
                                             },
-                                            [_vm._v(" Netwroking Products")]
+                                            [_vm._v(" Networking Products")]
                                           )
                                         ]
                                       )
@@ -61678,7 +61887,7 @@ var render = function() {
                                           attrs: {
                                             href: _vm.route(
                                               "product.result",
-                                              "Baby Girls"
+                                              "Baby Girl"
                                             )
                                           }
                                         },
@@ -61689,7 +61898,7 @@ var render = function() {
                                               staticClass:
                                                 "border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"
                                             },
-                                            [_vm._v(" Baby Girls")]
+                                            [_vm._v(" Baby Girl")]
                                           )
                                         ]
                                       ),
@@ -62206,7 +62415,7 @@ var render = function() {
                                       staticClass:
                                         "text-lg font-semibold text-black uppercase"
                                     },
-                                    [_vm._v(" Food Cupboard ")]
+                                    [_vm._v(" Sports & Fitness ")]
                                   ),
                                   _vm._v(" "),
                                   _c(
@@ -70602,7 +70811,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "grid grid-cols-2 gap-2 max-w-full m-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col"
+                "grid grid-cols-3 gap-2 max-w-full m-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col"
             },
             [
               _c("div", { staticClass: "col-span-2 lg:col-span-1" }, [
@@ -70667,8 +70876,76 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                Sub Categories in " +
+                        "\n                Sub-Categories in  " +
                           _vm._s(_vm.selectedCategoryLabel) +
+                          "  "
+                      ),
+                      _c("span", { staticClass: "text-red-600 text-xl" }, [
+                        _vm._v("*")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.selectedSubCategory,
+                            expression: "selectedSubCategory"
+                          }
+                        ],
+                        staticClass:
+                          "w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded",
+                        attrs: { id: "location" },
+                        on: {
+                          change: [
+                            function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.selectedSubCategory = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            },
+                            _vm.selectSubCategory
+                          ]
+                        }
+                      },
+                      _vm._l(_vm.subCategories, function(subCategory, index) {
+                        return _c(
+                          "option",
+                          { key: index, domProps: { value: index } },
+                          [_vm._v(_vm._s(subCategory))]
+                        )
+                      }),
+                      0
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-span-2 lg:col-span-1" }, [
+                _c("div", { staticClass: "md:w-full px-3 mb-6 md:mb-0" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass:
+                        "uppercase tracking-wide text-black text-xs font-bold mb-2",
+                      attrs: { for: "location" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                Products in " +
+                          _vm._s(_vm.selectedSubCategoryLabel) +
                           "  "
                       ),
                       _c("span", { staticClass: "text-red-600 text-xl" }, [
@@ -70722,7 +70999,7 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-span-2 lg:col-span-1" }, [
+              _c("div", { staticClass: "col-span-2 lg:col-span-2" }, [
                 _c("div", { staticClass: "md:w-full px-3 mb-6 md:mb-0" }, [
                   _vm._m(1),
                   _vm._v(" "),
@@ -70790,7 +71067,7 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-span-2 lg:col-span-1" }, [
+              _c("div", { staticClass: "col-span-2 lg:col-span-3" }, [
                 _c("div", { staticClass: "md:w-full px-3 mb-6 md:mb-0" }, [
                   _vm._m(3),
                   _vm._v(" "),
@@ -70907,7 +71184,7 @@ var staticRenderFns = [
         attrs: { for: "location" }
       },
       [
-        _vm._v("\n                Product Category  "),
+        _vm._v("\n                Product Categories  "),
         _c("span", { staticClass: "text-red-600 text-xl" }, [_vm._v("*")])
       ]
     )

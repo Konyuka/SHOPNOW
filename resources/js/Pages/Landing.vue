@@ -77,25 +77,25 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Food Cupboard </span>
                             <div class="flex flex-col">
-                                <inertia-link :href="route('product.result', 'Cooking')"> 
+                                <inertia-link :href="route('product.result', 'Cooking Ingredients')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cooking Ingredients</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Snacks')"> 
+                                <inertia-link :href="route('product.result', 'Snacks, Cripps & Nuts')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Snacks, Cripps & Nuts</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Grains')"> 
+                                <inertia-link :href="route('product.result', 'Grains & Rice')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Grains & Rice</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Sugar')"> 
+                                <inertia-link :href="route('product.result', 'Sugar & Flour')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Sugar & Flour</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Breakfast')"> 
+                                <inertia-link :href="route('product.result', 'Breakfast Cereals')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Breakfast Cereals</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Candy')"> 
+                                <inertia-link :href="route('product.result', 'Candy & Chocolate')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Candy & Chocolate</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Margarine')"> 
+                                <inertia-link :href="route('product.result', 'Margarine, Jams, Honey & Spreads')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer">Margarine, Jams, Honey & Spreads</span>
                                 </inertia-link>
                             </div>
@@ -103,22 +103,22 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Drinks </span>
                             <div class="flex flex-col">
-                                <inertia-link :href="route('product.result', 'Beer')"> 
+                                <inertia-link :href="route('product.result', 'Beer, Wines & Spirits')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Beer, Wines & Spirits</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Carbonated')"> 
+                                <inertia-link :href="route('product.result', 'Carbonated Drinks')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Carbonated Drinks</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Coffee')"> 
+                                <inertia-link :href="route('product.result', 'Coffee, Tea & Cocoa')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Coffee, Tea & Cocoa</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Dairy')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Dairy</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Juice')"> 
+                                <inertia-link :href="route('product.result', 'Juice & Non Carbonated Drinks')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Juice & Non Carbonated Drinks</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Syrup')"> 
+                                <inertia-link :href="route('product.result', 'Syrup and Cordials')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Syrup and Cordials</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Water')"> 
@@ -130,28 +130,28 @@
                         <div>
                             <span class="text-lg font-semibold text-black uppercase"> Household Supplies </span>
                             <div class="flex flex-col">
-                                <inertia-link :href="route('product.result', 'Air')"> 
+                                <inertia-link :href="route('product.result', 'Air Fresheners')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Air Fresheners</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Bathroom')"> 
+                                <inertia-link :href="route('product.result', 'Bathroom Cleaners')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bathroom Cleaners</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Bulb')"> 
+                                <inertia-link :href="route('product.result', 'Bulb & Batteries')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bulb & Batteries</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Floor')"> 
+                                <inertia-link :href="route('product.result', 'Floor Cleaners')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Floor Cleaners</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Household')"> 
+                                <inertia-link :href="route('product.result', 'Household Cleaners & Sundries')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Household Cleaners & Sundries</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Kitchen')"> 
+                                <inertia-link :href="route('product.result', 'Kitchen Cleaner')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Kitchen Cleaner</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Laundry')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Laundry</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Pappers')"> 
+                                <inertia-link :href="route('product.result', 'Pappers & Rolls')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Pappers & Rolls</span>
                                 </inertia-link>
                               
@@ -179,7 +179,7 @@
                                 <inertia-link :href="route('product.result', 'Conditioner')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Conditioner</span>
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Extensions')"> 
+                                <inertia-link :href="route('product.result', 'Extensions, Wigs & Accessories')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Extensions, Wigs & Accessories</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Hair & Scalp Care')"> 
@@ -299,7 +299,7 @@
                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Skin Care</span>
                                 </inertia-link>
 
-                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Luxury Beuty </span>
+                               <span class="mt-2 text-lg font-semibold text-black uppercase"> Luxury Beauty </span>
                                <inertia-link :href="route('product.result', 'Fragrances')"> 
                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Fragrances</span>
                                 </inertia-link>
@@ -461,7 +461,7 @@
                         </div>
 
                         <div>
-                            <span class="text-lg font-semibold text-black uppercase"> Accesories </span>
+                            <span class="text-lg font-semibold text-black uppercase"> Accessories </span>
                             <div class="flex flex-col">
                                 <inertia-link :href="route('product.result', 'Portable Powerbanks')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Portable Powerbanks</span>
@@ -473,7 +473,7 @@
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Cases & Sleeves</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Screen Protecttors')"> 
-                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Screen Protecttors</span>
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Screen Protectors</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Bluetooth Accesories')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Bluetooth Accesories</span>
@@ -600,7 +600,7 @@
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Printer Ink & Toner</span>
                                 </inertia-link>
                                 <inertia-link :href="route('product.result', 'Netwroking Products')"> 
-                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Netwroking Products</span>
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Networking Products</span>
                                 </inertia-link>    
                                 
                             </div>
@@ -1011,8 +1011,8 @@
                                 <inertia-link :href="route('product.result', 'Baby Boy')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Boy</span> 
                                 </inertia-link>
-                                <inertia-link :href="route('product.result', 'Baby Girls')"> 
-                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Girls</span> 
+                                <inertia-link :href="route('product.result', 'Baby Girl')"> 
+                                <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Baby Girl</span> 
                                 </inertia-link>
 
                                 <span class="mt-2 text-lg font-semibold text-black uppercase"> Baby & Toodler Toys </span>
@@ -1094,7 +1094,7 @@
                 <div v-if="this.selectedCategory == 'Sporting' " @mouseleave="setCategory('')" class="z-10 col-span-3 bg-gray-200 shadow-2xl">
                     <div class="relative grid grid-cols-3 gap-4 px-10 py-2 justify-around">
                         <div>
-                            <span class="text-lg font-semibold text-black uppercase"> Food Cupboard </span>
+                            <span class="text-lg font-semibold text-black uppercase"> Sports & Fitness </span>
                             <div class="flex flex-col">
                                 <inertia-link :href="route('product.result', 'Exercise & Fitness')"> 
                                 <span class="border-b-2 hover:border-indigo-500 border-transparent cursor-pointer"> Exercise & Fitness</span>
@@ -1322,8 +1322,6 @@
                         </div>
                     </div>
                 </div>
-
-                
 
                 <div v-if="this.selectedCategory == '' " class="col-span-3 z-10">
                     <div class="carousel relative shadow-2xl bg-white">
