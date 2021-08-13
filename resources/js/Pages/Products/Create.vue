@@ -60,7 +60,7 @@
                     <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
                     Product Price <span class="text-red-600 text-xl">*</span>
                     </label>
-                    <input v-model="form.price" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="application-link" type="number" placeholder="Kshs. 5,000">
+                    <input v-model="form.price" class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="application-link" type="number" placeholder="Digits only i.e 3000">
                 </div>
                 </div>
 
@@ -124,77 +124,31 @@ export default {
             options: [],
             selectedCategoryLabel: '',
             selectedSubCategoryLabel: '',
-            // selectedCategory: '',
-            // selectedOption: '',
             categories: [
                 {
                   label: "Supermarket",
-                  options: ["Food Cupboard", "Drinks", "Household Supplies"]
+                  options: ["Food", "Drinks", "Household Supplies"],
+                  subOptions: [
+                    {
+                    label: "Food",
+                    options: ["Cooking Ingredients", "Snacks, Cripps & Nuts", "Grains & Rice", "Sugar & Flour", "Breakfast Cereals", "Candy & Chocolate", "Margarine, Jams, Honey & Spreads" ]
+                    },
+                    {
+                    label: "Drinks",
+                    options: ["Beer, Wines & Spirits", "Carbonated Drinks", "Coffee, Tea & Cocoa", "Dairy", "Juice & Non Carbonated Drinks", "Syrup and Cordials", "Water"]
+                    },
+                    {
+                    label:"Household Supplies",
+                    options:["Air Fresheners", "Bathroom Cleaners", "Bulb & Batteries", "Floor Cleaners", "Household Cleaners & Sundries", "Kitchen Cleaner", "Laundry", "Pappers & Rolls"]
+                    },
+                  ],
                 },
 
                 {
                   label: "Health & Beauty",
-                  options: ["Hair Care", "Fragrances", "Mens Grooming", "Oral Care", "Makeup", "Health Care", "Personal Care", "Luxury Beauty"]
-                },
-                {
-                  label: "Home & Office",
-                  options: ["Home Kitchen", "Small Appliances", "arge Appliances", "Cooking Appliances", "Office Products"]
-                },
-                {
-                  label: "Phones & Tablets",
-                  options: ["Mobile Phones", "Top Smartphone Brands", "Accessories", "Tablets"]
-                },
-                {
-                  label: "Computing",
-                  options: ["Laptops", "Computer & Accessories", "Shop By Laptop Brands", "Computer Components", "Computer Components", "Computer Data Storage"]
-                },
-                {
-                  label: "Electronics",
-                  options: ["Televisions", "Best Seller TV Brands", "Home Audio", "Cameras", "Accessories & Supplies Supplies"]
-                },
-                {
-                  label: "Fashion",
-                  options: ["Womens Fashion", "Mens Fashion", "Baby", "Kids Fashion", "Exclusive Fashion"]
-                },
-                {
-                  label: "Gaming",
-                  options: ["Playingstation", "Playingstation", "Digital Games", "Nintendo", "PC Gaming"]
-                },
-                {
-                  label: "Baby Products",
-                  options: ["Diapering", "Gear", "Bathing & Skin Care", "Apparel & Accessories", "Baby & Toodler Toys", "Feeding", "Baby Safety ", "Potty Training", "Health & Baby Care"]
-                },
-                {
-                  label: "Sporting Goods",
-                  options: ["Sports & Fitness", "Sports Nutrition", "Outdoor Recreation", ""]
-                },
-                {
-                  label: "Garden & Outdoors",
-                  options: ["Gardening & Lawn Care", "Grilling & Outdoor Cooking", "Outdoor Decor", "Patio Furniture & Accessories", "Farm & Ranch"]
-                },
-                {
-                  label: "Other Categories",
-                  options: ["Stay Safe", "Automobile", "Books, Movies & Music", "Industrial & Scientific", "Livestock", "Miscellaneous", "Musical Instrument", "Pet Supplies", "Services", "Toy & Games", "Grocery"]
-                },
-  
-            ],
-
-            subOptions: [
-                {
-                  label: "Food Cupboard",
-                  options: ["Cooking Ingredients", "Snacks, Cripps & Nuts", "Grains & Rice", "Sugar & Flour", "Breakfast Cereals", "Candy & Chocolate", "Margarine, Jams, Honey & Spreads" ]
-                },
-
-                {
-                  label: "Drinks",
-                  options: ["Beer, Wines & Spirits", "Carbonated Drinks", "Coffee, Tea & Cocoa", "Dairy", "Juice & Non Carbonated Drinks", "Syrup and Cordials", "Water"]
-                },
-
-                {
-                    label:"Household Supplies",
-                    options:["Air Fresheners", "Bathroom Cleaners", "Bulb & Batteries", "Floor Cleaners", "Household Cleaners & Sundries", "Kitchen Cleaner", "Laundry", "Pappers & Rolls"]
-                },
-                {
+                  options: ["Hair Care", "Fragrances", "Mens Grooming", "Oral Care", "Makeup", "Health Care", "Personal Care", "Luxury Beauty"],
+                  subOptions:[
+                      {
                     label:"Hair Care",
                     options:["Conditioner", "Extensions, Wigs & Accessories", "Hair & Scalp Care", "Hair Accessories", "Hair Coloring Products", "Hair Cutting Tools", "Hair Loss Products", "Hair Perms, Relaxers & Texturizers", "Shampoo", "Styling Products"]
                 },
@@ -226,7 +180,14 @@ export default {
                     label:"Luxury Beauty",
                     options:["Fragrances", "MakeUp", "Skin Care"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Home & Office",
+                  options: ["Home Kitchen", "Small Appliances", "Large Appliances", "Cooking Appliances", "Office Products"],
+                  subOptions:[
+                      {
                     label:"Home Kitchen",
                     options:["Home Decor", "Bedding", "Wall Art", "Bath", "Lighting", "Storage & Organization", "Kitchen Dining", "Furniture"]
                 },
@@ -246,7 +207,14 @@ export default {
                     label:"Office Products",
                     options:["Office & School Supplies", "Office Electronics", "Office Furniture & Lighting", "Stationery"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Phones & Tablets",
+                  options: ["Mobile Phones", "Top Smartphone Brands", "Accessories", "Tablets"],
+                  subOptions:[
+                      {
                     label:"Mobile Phones",
                     options:["Smartphoness", "Featured Phones", "Featured Phones Under 2000"]
                 },
@@ -262,7 +230,14 @@ export default {
                     label:"Tablets",
                     options:["Ipads", "Tablet Accessories", "Tablet Bags & Covers"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Computing",
+                  options: ["Laptops", "Computer & Accessories", "Shop By Laptop Brands", "Computer Components", "Computer Components", "Computer Data Storage"],
+                  subOptions:[
+                       {
                     label:"Laptops",
                     options:["MacBooks", "NetBooks", "UltraBooks", "2-in-1 Laptops"]
                 },
@@ -282,7 +257,14 @@ export default {
                     label:"Computer Data Storage",
                     options:["External Hard Drives", "USB Flash Drives"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Electronics",
+                  options: ["Televisions", "Best Seller TV Brands", "Home Audio", "Cameras", "Accessories & Supplies Supplies"],
+                  subOptions:[
+                      {
                     label:"Televisions",
                     options:["Smart TVs", "LED & LCD TVs", "Data Projectors"]
                 },
@@ -302,7 +284,14 @@ export default {
                     label:"Accessories & Supplies Supplies",
                     options:["Accessories & Video Supplies", "Batteries", "Batteries, Chargers & Accessories", "Cables", "Camera & Photo Accessories", "Camera Accesories", "Home Audio Acccessories", "Power Protection", "Television Accessories"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Fashion",
+                  options: ["Womens Fashion", "Mens Fashion", "Baby", "Kids Fashion", "Exclusive Fashion"],
+                  subOptions:[
+                      {
                     label:"Womens Fashion",
                     options:["Dresses", "Suits & Blazers", "Tops & Tees", "Coats, Jackets & Vest", "Jumpsuits, Rompers & Overalls", "Skirts", "Lingerie, Sleep & Lounge", "Jeans", "Shorts", "Jewelery", "Sandals", "Flats", "Handbags & Wallets"]
                 },
@@ -322,7 +311,14 @@ export default {
                     label:"Exclusive Fashion",
                     options:["Maternity Wear", "Ankara Shirts", "Kitenge Dresses", "Ankara Tops", "Wedding Hair Accesories"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Gaming",
+                  options: ["Playingstation", "Playingstation", "Digital Games", "Nintendo", "PC Gaming"],
+                  subOptions:[
+                      {
                     label:"Playingstation",
                     options:["PlaySatation 3", "PlaySatation 4", "PlaySatation Vita"]
                 },
@@ -338,7 +334,14 @@ export default {
                     label:"PC Gaming",
                     options:["Games", "Sony PSP"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Baby Products",
+                  options: ["Diapering", "Gear", "Bathing & Skin Care", "Apparel & Accessories", "Baby & Toodler Toys", "Feeding", "Baby Safety ", "Potty Training", "Health & Baby Care"],
+                  subOptions:[
+                      {
                     label:"Diapering",
                     options:["Diaper Bags", "Disposable Diapers", "Portable Changing Pads", "Cloth Diapers", "Changing Tables", "Wipes & Holders"]
                 },
@@ -374,7 +377,14 @@ export default {
                     label:"Health & Baby Care",
                     options:["Nail Care", "Teethers & Teething Relief", "Thermometers"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Sporting Goods",
+                  options: ["Sports & Fitness", "Sports Nutrition", "Outdoor Recreation", ""],
+                  subOptions:[
+                      {
                     label:"Sports & Fitness",
                     options:["Exercise & Fitness", "Accessories", "Clothing", "Team Sports"]
                 },
@@ -386,7 +396,14 @@ export default {
                     label:"Outdoor Recreation",
                     options:["Camping & Hiking", "Skatebaords & Scooter", "Cycling", "Accessories"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Garden & Outdoors",
+                  options: ["Gardening & Lawn Care", "Grilling & Outdoor Cooking", "Outdoor Decor", "Patio Furniture & Accessories", "Farm & Ranch"],
+                  subOptions:[
+                      {
                     label:"Gardening & Lawn Care",
                     options:["Hand Tools", "Watering Equipment"]
                 },
@@ -406,7 +423,14 @@ export default {
                     label:"Farm & Ranch",
                     options:["Pest Control"]
                 },
+                  ]
+                },
+
                 {
+                  label: "Other Categories",
+                  options: ["Stay Safe", "Automobile", "Books, Movies & Music", "Industrial & Scientific", "Livestock", "Miscellaneous", "Musical Instrument", "Pet Supplies", "Services", "Toy & Games", "Grocery"],
+                  subOptions:[
+                      {
                     label:"Stay Safe",
                     options:["Have Fun", "Stay Fit", "Stay Connected", "Supermarket", "Stay Healty"]
                 },
@@ -418,13 +442,7 @@ export default {
                     label:"Books, Movies & Music",
                     options:["Education & Learning", "Biography & Autobiography", "Literature", "Children & Teens", "Study Aids", "Christian Books & Bibles"]
                 },
-                {
-                    label:"",
-                    options:[""]
-                },
-                {
-                    label:"",
-                    options:[""]
+                  ]
                 },
   
             ],
@@ -432,6 +450,7 @@ export default {
             form: this.$inertia.form({
                 category:'',
                 subCategory:'',
+                option:'',
                 title: '',
                 price: '',
                 description: '',
@@ -457,16 +476,17 @@ export default {
                 this.selectedSubCategoryLabel = '';
                 this.subCategories = this.categories[this.selectedCategory].options;
                 this.selectedCategoryLabel = this.categories[this.selectedCategory].label;
+                this.form.category = this.selectedCategoryLabel
             
         },
         selectSubCategory(){
 
-                this.selectedSubCategoryLabel = this.subOptions[this.selectedSubCategory].label;
-                this.options = this.subOptions[this.selectedSubCategory].options;
-
+                this.selectedSubCategoryLabel = this.categories[this.selectedCategory].options[this.selectedSubCategory];
+                this.options = this.categories[this.selectedCategory].subOptions[this.selectedSubCategory].options;     
+                this.form.subCategory = this.selectedSubCategoryLabel
         },
         selectOption: function () {
-                this.form.subCategory = this.selectedOption;
+                this.form.option = this.selectedOption;
         },
         previewMultiImage: function(event) {
             if(this.image_list.length <= 4 ){

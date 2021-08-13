@@ -5367,259 +5367,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
  // import throttle from 'lodash/throttle'
 
@@ -8061,232 +7808,236 @@ __webpack_require__.r(__webpack_exports__);
       options: [],
       selectedCategoryLabel: '',
       selectedSubCategoryLabel: '',
-      // selectedCategory: '',
-      // selectedOption: '',
       categories: [{
         label: "Supermarket",
-        options: ["Food Cupboard", "Drinks", "Household Supplies"]
+        options: ["Food", "Drinks", "Household Supplies"],
+        subOptions: [{
+          label: "Food",
+          options: ["Cooking Ingredients", "Snacks, Cripps & Nuts", "Grains & Rice", "Sugar & Flour", "Breakfast Cereals", "Candy & Chocolate", "Margarine, Jams, Honey & Spreads"]
+        }, {
+          label: "Drinks",
+          options: ["Beer, Wines & Spirits", "Carbonated Drinks", "Coffee, Tea & Cocoa", "Dairy", "Juice & Non Carbonated Drinks", "Syrup and Cordials", "Water"]
+        }, {
+          label: "Household Supplies",
+          options: ["Air Fresheners", "Bathroom Cleaners", "Bulb & Batteries", "Floor Cleaners", "Household Cleaners & Sundries", "Kitchen Cleaner", "Laundry", "Pappers & Rolls"]
+        }]
       }, {
         label: "Health & Beauty",
-        options: ["Hair Care", "Fragrances", "Mens Grooming", "Oral Care", "Makeup", "Health Care", "Personal Care", "Luxury Beauty"]
+        options: ["Hair Care", "Fragrances", "Mens Grooming", "Oral Care", "Makeup", "Health Care", "Personal Care", "Luxury Beauty"],
+        subOptions: [{
+          label: "Hair Care",
+          options: ["Conditioner", "Extensions, Wigs & Accessories", "Hair & Scalp Care", "Hair Accessories", "Hair Coloring Products", "Hair Cutting Tools", "Hair Loss Products", "Hair Perms, Relaxers & Texturizers", "Shampoo", "Styling Products"]
+        }, {
+          label: "Fragrances",
+          options: ["Mens", "Womens"]
+        }, {
+          label: "Mens Grooming",
+          options: ["Anti Ageing", "Pre Shave", "Sunblock"]
+        }, {
+          label: "Oral Care",
+          options: ["Childrens Dental care", "Dental Care", "Mouth Wash", "Teeth Whitening", "Toothbrush", "Toothpaste"]
+        }, {
+          label: "Makeup",
+          options: ["Eyes", "Face", "Lips"]
+        }, {
+          label: "Health Care",
+          options: ["Diabetes Care", "Feminine Care", "First Aid", "Sleeping & Snoring"]
+        }, {
+          label: "Personal Care",
+          options: ["Bath & Bathing Accesories", "Deodrants & Antiperspirants", "Lip Care", "Shaves & Hair Removal", "Skin Care"]
+        }, {
+          label: "Luxury Beauty",
+          options: ["Fragrances", "MakeUp", "Skin Care"]
+        }]
       }, {
         label: "Home & Office",
-        options: ["Home Kitchen", "Small Appliances", "arge Appliances", "Cooking Appliances", "Office Products"]
+        options: ["Home Kitchen", "Small Appliances", "Large Appliances", "Cooking Appliances", "Office Products"],
+        subOptions: [{
+          label: "Home Kitchen",
+          options: ["Home Decor", "Bedding", "Wall Art", "Bath", "Lighting", "Storage & Organization", "Kitchen Dining", "Furniture"]
+        }, {
+          label: "Small Appliances",
+          options: ["Blenders", "Kettles", "Toasters", "Ironing & Laundry", "Other Small Appliances"]
+        }, {
+          label: "Large Appliances",
+          options: ["Refridgerator", "Freezers", "Water Dispenders & Coolers", "Washers & Dryers"]
+        }, {
+          label: "Cooking Appliances",
+          options: ["Cooktops", "Microwaves & Ovens", "Cooking Applience Accessories", "Cookers"]
+        }, {
+          label: "Office Products",
+          options: ["Office & School Supplies", "Office Electronics", "Office Furniture & Lighting", "Stationery"]
+        }]
       }, {
         label: "Phones & Tablets",
-        options: ["Mobile Phones", "Top Smartphone Brands", "Accessories", "Tablets"]
+        options: ["Mobile Phones", "Top Smartphone Brands", "Accessories", "Tablets"],
+        subOptions: [{
+          label: "Mobile Phones",
+          options: ["Smartphoness", "Featured Phones", "Featured Phones Under 2000"]
+        }, {
+          label: "Top Smartphone Brands",
+          options: ["Samsung", "Xiaomi", "Nokia", "Tecno", "Infinix", "Huawei", "Oppo"]
+        }, {
+          label: "Accessories",
+          options: ["Portable Powerbanks", "Smart Watches", "Cases & Sleeves", "Screen Protectors", "Bluetooth Accesories", "Headsets", "Headphones", "Batteries & Battery Packs", "Accesories Under 1000"]
+        }, {
+          label: "Tablets",
+          options: ["Ipads", "Tablet Accessories", "Tablet Bags & Covers"]
+        }]
       }, {
         label: "Computing",
-        options: ["Laptops", "Computer & Accessories", "Shop By Laptop Brands", "Computer Components", "Computer Components", "Computer Data Storage"]
+        options: ["Laptops", "Computer & Accessories", "Shop By Laptop Brands", "Computer Components", "Computer Components", "Computer Data Storage"],
+        subOptions: [{
+          label: "Laptops",
+          options: ["MacBooks", "NetBooks", "UltraBooks", "2-in-1 Laptops"]
+        }, {
+          label: "Computer & Accessories",
+          options: ["Laptop Accessories", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards, Mice & Accessories", "Computer Cable & Adapters", "Printer Ink & Toner", "Networking Products"]
+        }, {
+          label: "Shop By Laptop Brands",
+          options: ["HP", "Dell", "Lenovo", "Apple", "Asus"]
+        }, {
+          label: "Computer Components",
+          options: ["Internal Hard Drive", "Graphic Cards", "Fans & Cooling"]
+        }, {
+          label: "Computer Data Storage",
+          options: ["External Hard Drives", "USB Flash Drives"]
+        }]
       }, {
         label: "Electronics",
-        options: ["Televisions", "Best Seller TV Brands", "Home Audio", "Cameras", "Accessories & Supplies Supplies"]
+        options: ["Televisions", "Best Seller TV Brands", "Home Audio", "Cameras", "Accessories & Supplies Supplies"],
+        subOptions: [{
+          label: "Televisions",
+          options: ["Smart TVs", "LED & LCD TVs", "Data Projectors"]
+        }, {
+          label: "Best Seller TV Brands",
+          options: ["Synix TV", "Samsung TV", "isense TV", "Sony"]
+        }, {
+          label: "Home Audio",
+          options: ["Speakers", "Home Theatre System", "Blutooth Speakers", "Sound Bars", "Compact Radio & Stereos", "Hi-Fi System Under 2000"]
+        }, {
+          label: "Cameras",
+          options: ["Compact Cameras", "Digital SLR Cameras", "Security & Surveillance Camera"]
+        }, {
+          label: "Accessories & Supplies Supplies",
+          options: ["Accessories & Video Supplies", "Batteries", "Batteries, Chargers & Accessories", "Cables", "Camera & Photo Accessories", "Camera Accesories", "Home Audio Acccessories", "Power Protection", "Television Accessories"]
+        }]
       }, {
         label: "Fashion",
-        options: ["Womens Fashion", "Mens Fashion", "Baby", "Kids Fashion", "Exclusive Fashion"]
+        options: ["Womens Fashion", "Mens Fashion", "Baby", "Kids Fashion", "Exclusive Fashion"],
+        subOptions: [{
+          label: "Womens Fashion",
+          options: ["Dresses", "Suits & Blazers", "Tops & Tees", "Coats, Jackets & Vest", "Jumpsuits, Rompers & Overalls", "Skirts", "Lingerie, Sleep & Lounge", "Jeans", "Shorts", "Jewelery", "Sandals", "Flats", "Handbags & Wallets"]
+        }, {
+          label: "Mens Fashion ",
+          options: ["Shirts", "T-Shirt & Tanks", "Suits & Sports Coats", "Pants", "Shorts", "Jeans", "Underwear", "Watches", "Fashion Sneakers", "Loafers & Slip Ons", "Belts", "Sunglasses & Eyewear Accessories"]
+        }, {
+          label: "Baby",
+          options: ["Baby Boys", "Baby Girls"]
+        }, {
+          label: "Kids Fashion",
+          options: ["Boys", "Girls"]
+        }, {
+          label: "Exclusive Fashion",
+          options: ["Maternity Wear", "Ankara Shirts", "Kitenge Dresses", "Ankara Tops", "Wedding Hair Accesories"]
+        }]
       }, {
         label: "Gaming",
-        options: ["Playingstation", "Playingstation", "Digital Games", "Nintendo", "PC Gaming"]
+        options: ["Playingstation", "Playingstation", "Digital Games", "Nintendo", "PC Gaming"],
+        subOptions: [{
+          label: "Playingstation",
+          options: ["PlaySatation 3", "PlaySatation 4", "PlaySatation Vita"]
+        }, {
+          label: "Digital Games",
+          options: ["Nintendo Switch", "Xbox 360"]
+        }, {
+          label: "Nintendo",
+          options: ["Nintendo DS", "Nintendo 3DS", "Wii"]
+        }, {
+          label: "PC Gaming",
+          options: ["Games", "Sony PSP"]
+        }]
       }, {
         label: "Baby Products",
-        options: ["Diapering", "Gear", "Bathing & Skin Care", "Apparel & Accessories", "Baby & Toodler Toys", "Feeding", "Baby Safety ", "Potty Training", "Health & Baby Care"]
+        options: ["Diapering", "Gear", "Bathing & Skin Care", "Apparel & Accessories", "Baby & Toodler Toys", "Feeding", "Baby Safety ", "Potty Training", "Health & Baby Care"],
+        subOptions: [{
+          label: "Diapering",
+          options: ["Diaper Bags", "Disposable Diapers", "Portable Changing Pads", "Cloth Diapers", "Changing Tables", "Wipes & Holders"]
+        }, {
+          label: "Gear",
+          options: ["Walkers", "BagPacks & Camera", "Swings, Jumps & Bouncers"]
+        }, {
+          label: "Bathing & Skin Care",
+          options: ["Soaps & Cleaners", "Grooming & Healthcare kits", "Bathing Tubs & Seats", "Washclothes & Towels", "Bathroom Safety"]
+        }, {
+          label: "Apparel & Accessories",
+          options: ["Baby Boy", "Baby Girl"]
+        }, {
+          label: "Baby & Toodler Toys",
+          options: ["Toy Gift Sets", "Music & Sound", "Bath Toys"]
+        }, {
+          label: "Feeding",
+          options: ["Bibs & Burp Clothes", "Bottle Feeding", "Breastfeeding", "Highchairs & Booster Seats", "Pacifiers & Accessories", "Solid Feeding"]
+        }, {
+          label: "Baby Safety",
+          options: ["Monitors", "Sleep Positioners", "dge & Corner Guards"]
+        }, {
+          label: "Potty Training",
+          options: ["Potties & Seats", "Seat Covers", "Step Stools", "Training Pants"]
+        }, {
+          label: "Health & Baby Care",
+          options: ["Nail Care", "Teethers & Teething Relief", "Thermometers"]
+        }]
       }, {
         label: "Sporting Goods",
-        options: ["Sports & Fitness", "Sports Nutrition", "Outdoor Recreation", ""]
+        options: ["Sports & Fitness", "Sports Nutrition", "Outdoor Recreation", ""],
+        subOptions: [{
+          label: "Sports & Fitness",
+          options: ["Exercise & Fitness", "Accessories", "Clothing", "Team Sports"]
+        }, {
+          label: "Sports Nutrition",
+          options: ["Carb Management Supplements", "Endurance & Energy", "Fat Burners & Thermogenics", "Supplements", "Post-Work & Recovery", "Pre-Workout", "Proteins", "Supplement Stacks", "Testerone Boosters", "Weight Gainers"]
+        }, {
+          label: "Outdoor Recreation",
+          options: ["Camping & Hiking", "Skatebaords & Scooter", "Cycling", "Accessories"]
+        }]
       }, {
         label: "Garden & Outdoors",
-        options: ["Gardening & Lawn Care", "Grilling & Outdoor Cooking", "Outdoor Decor", "Patio Furniture & Accessories", "Farm & Ranch"]
+        options: ["Gardening & Lawn Care", "Grilling & Outdoor Cooking", "Outdoor Decor", "Patio Furniture & Accessories", "Farm & Ranch"],
+        subOptions: [{
+          label: "Gardening & Lawn Care",
+          options: ["Hand Tools", "Watering Equipment"]
+        }, {
+          label: "Grilling & Outdoor Cooking",
+          options: ["Grills", "Outdoor Cooking Tools & Accessories"]
+        }, {
+          label: "Outdoor Decor",
+          options: ["Lighting"]
+        }, {
+          label: "Patio Furniture & Accessories",
+          options: ["Hammoocks , Stands & Accessories"]
+        }, {
+          label: "Farm & Ranch",
+          options: ["Pest Control"]
+        }]
       }, {
         label: "Other Categories",
-        options: ["Stay Safe", "Automobile", "Books, Movies & Music", "Industrial & Scientific", "Livestock", "Miscellaneous", "Musical Instrument", "Pet Supplies", "Services", "Toy & Games", "Grocery"]
-      }],
-      subOptions: [{
-        label: "Food Cupboard",
-        options: ["Cooking Ingredients", "Snacks, Cripps & Nuts", "Grains & Rice", "Sugar & Flour", "Breakfast Cereals", "Candy & Chocolate", "Margarine, Jams, Honey & Spreads"]
-      }, {
-        label: "Drinks",
-        options: ["Beer, Wines & Spirits", "Carbonated Drinks", "Coffee, Tea & Cocoa", "Dairy", "Juice & Non Carbonated Drinks", "Syrup and Cordials", "Water"]
-      }, {
-        label: "Household Supplies",
-        options: ["Air Fresheners", "Bathroom Cleaners", "Bulb & Batteries", "Floor Cleaners", "Household Cleaners & Sundries", "Kitchen Cleaner", "Laundry", "Pappers & Rolls"]
-      }, {
-        label: "Hair Care",
-        options: ["Conditioner", "Extensions, Wigs & Accessories", "Hair & Scalp Care", "Hair Accessories", "Hair Coloring Products", "Hair Cutting Tools", "Hair Loss Products", "Hair Perms, Relaxers & Texturizers", "Shampoo", "Styling Products"]
-      }, {
-        label: "Fragrances",
-        options: ["Mens", "Womens"]
-      }, {
-        label: "Mens Grooming",
-        options: ["Anti Ageing", "Pre Shave", "Sunblock"]
-      }, {
-        label: "Oral Care",
-        options: ["Childrens Dental care", "Dental Care", "Mouth Wash", "Teeth Whitening", "Toothbrush", "Toothpaste"]
-      }, {
-        label: "Makeup",
-        options: ["Eyes", "Face", "Lips"]
-      }, {
-        label: "Health Care",
-        options: ["Diabetes Care", "Feminine Care", "First Aid", "Sleeping & Snoring"]
-      }, {
-        label: "Personal Care",
-        options: ["Bath & Bathing Accesories", "Deodrants & Antiperspirants", "Lip Care", "Shaves & Hair Removal", "Skin Care"]
-      }, {
-        label: "Luxury Beauty",
-        options: ["Fragrances", "MakeUp", "Skin Care"]
-      }, {
-        label: "Home Kitchen",
-        options: ["Home Decor", "Bedding", "Wall Art", "Bath", "Lighting", "Storage & Organization", "Kitchen Dining", "Furniture"]
-      }, {
-        label: "Small Appliances",
-        options: ["Blenders", "Kettles", "Toasters", "Ironing & Laundry", "Other Small Appliances"]
-      }, {
-        label: "Large Appliances",
-        options: ["Refridgerator", "Freezers", "Water Dispenders & Coolers", "Washers & Dryers"]
-      }, {
-        label: "Cooking Appliances",
-        options: ["Cooktops", "Microwaves & Ovens", "Cooking Applience Accessories", "Cookers"]
-      }, {
-        label: "Office Products",
-        options: ["Office & School Supplies", "Office Electronics", "Office Furniture & Lighting", "Stationery"]
-      }, {
-        label: "Mobile Phones",
-        options: ["Smartphoness", "Featured Phones", "Featured Phones Under 2000"]
-      }, {
-        label: "Top Smartphone Brands",
-        options: ["Samsung", "Xiaomi", "Nokia", "Tecno", "Infinix", "Huawei", "Oppo"]
-      }, {
-        label: "Accessories",
-        options: ["Portable Powerbanks", "Smart Watches", "Cases & Sleeves", "Screen Protectors", "Bluetooth Accesories", "Headsets", "Headphones", "Batteries & Battery Packs", "Accesories Under 1000"]
-      }, {
-        label: "Tablets",
-        options: ["Ipads", "Tablet Accessories", "Tablet Bags & Covers"]
-      }, {
-        label: "Laptops",
-        options: ["MacBooks", "NetBooks", "UltraBooks", "2-in-1 Laptops"]
-      }, {
-        label: "Computer & Accessories",
-        options: ["Laptop Accessories", "Desktops", "Monitors", "Scanners", "Printers", "Keyboards, Mice & Accessories", "Computer Cable & Adapters", "Printer Ink & Toner", "Networking Products"]
-      }, {
-        label: "Shop By Laptop Brands",
-        options: ["HP", "Dell", "Lenovo", "Apple", "Asus"]
-      }, {
-        label: "Computer Components",
-        options: ["Internal Hard Drive", "Graphic Cards", "Fans & Cooling"]
-      }, {
-        label: "Computer Data Storage",
-        options: ["External Hard Drives", "USB Flash Drives"]
-      }, {
-        label: "Televisions",
-        options: ["Smart TVs", "LED & LCD TVs", "Data Projectors"]
-      }, {
-        label: "Best Seller TV Brands",
-        options: ["Synix TV", "Samsung TV", "isense TV", "Sony"]
-      }, {
-        label: "Home Audio",
-        options: ["Speakers", "Home Theatre System", "Blutooth Speakers", "Sound Bars", "Compact Radio & Stereos", "Hi-Fi System Under 2000"]
-      }, {
-        label: "Cameras",
-        options: ["Compact Cameras", "Digital SLR Cameras", "Security & Surveillance Camera"]
-      }, {
-        label: "Accessories & Supplies Supplies",
-        options: ["Accessories & Video Supplies", "Batteries", "Batteries, Chargers & Accessories", "Cables", "Camera & Photo Accessories", "Camera Accesories", "Home Audio Acccessories", "Power Protection", "Television Accessories"]
-      }, {
-        label: "Womens Fashion",
-        options: ["Dresses", "Suits & Blazers", "Tops & Tees", "Coats, Jackets & Vest", "Jumpsuits, Rompers & Overalls", "Skirts", "Lingerie, Sleep & Lounge", "Jeans", "Shorts", "Jewelery", "Sandals", "Flats", "Handbags & Wallets"]
-      }, {
-        label: "Mens Fashion ",
-        options: ["Shirts", "T-Shirt & Tanks", "Suits & Sports Coats", "Pants", "Shorts", "Jeans", "Underwear", "Watches", "Fashion Sneakers", "Loafers & Slip Ons", "Belts", "Sunglasses & Eyewear Accessories"]
-      }, {
-        label: "Baby",
-        options: ["Baby Boys", "Baby Girls"]
-      }, {
-        label: "Kids Fashion",
-        options: ["Boys", "Girls"]
-      }, {
-        label: "Exclusive Fashion",
-        options: ["Maternity Wear", "Ankara Shirts", "Kitenge Dresses", "Ankara Tops", "Wedding Hair Accesories"]
-      }, {
-        label: "Playingstation",
-        options: ["PlaySatation 3", "PlaySatation 4", "PlaySatation Vita"]
-      }, {
-        label: "Digital Games",
-        options: ["Nintendo Switch", "Xbox 360"]
-      }, {
-        label: "Nintendo",
-        options: ["Nintendo DS", "Nintendo 3DS", "Wii"]
-      }, {
-        label: "PC Gaming",
-        options: ["Games", "Sony PSP"]
-      }, {
-        label: "Diapering",
-        options: ["Diaper Bags", "Disposable Diapers", "Portable Changing Pads", "Cloth Diapers", "Changing Tables", "Wipes & Holders"]
-      }, {
-        label: "Gear",
-        options: ["Walkers", "BagPacks & Camera", "Swings, Jumps & Bouncers"]
-      }, {
-        label: "Bathing & Skin Care",
-        options: ["Soaps & Cleaners", "Grooming & Healthcare kits", "Bathing Tubs & Seats", "Washclothes & Towels", "Bathroom Safety"]
-      }, {
-        label: "Apparel & Accessories",
-        options: ["Baby Boy", "Baby Girl"]
-      }, {
-        label: "Baby & Toodler Toys",
-        options: ["Toy Gift Sets", "Music & Sound", "Bath Toys"]
-      }, {
-        label: "Feeding",
-        options: ["Bibs & Burp Clothes", "Bottle Feeding", "Breastfeeding", "Highchairs & Booster Seats", "Pacifiers & Accessories", "Solid Feeding"]
-      }, {
-        label: "Baby Safety",
-        options: ["Monitors", "Sleep Positioners", "dge & Corner Guards"]
-      }, {
-        label: "Potty Training",
-        options: ["Potties & Seats", "Seat Covers", "Step Stools", "Training Pants"]
-      }, {
-        label: "Health & Baby Care",
-        options: ["Nail Care", "Teethers & Teething Relief", "Thermometers"]
-      }, {
-        label: "Sports & Fitness",
-        options: ["Exercise & Fitness", "Accessories", "Clothing", "Team Sports"]
-      }, {
-        label: "Sports Nutrition",
-        options: ["Carb Management Supplements", "Endurance & Energy", "Fat Burners & Thermogenics", "Supplements", "Post-Work & Recovery", "Pre-Workout", "Proteins", "Supplement Stacks", "Testerone Boosters", "Weight Gainers"]
-      }, {
-        label: "Outdoor Recreation",
-        options: ["Camping & Hiking", "Skatebaords & Scooter", "Cycling", "Accessories"]
-      }, {
-        label: "Gardening & Lawn Care",
-        options: ["Hand Tools", "Watering Equipment"]
-      }, {
-        label: "Grilling & Outdoor Cooking",
-        options: ["Grills", "Outdoor Cooking Tools & Accessories"]
-      }, {
-        label: "Outdoor Decor",
-        options: ["Lighting"]
-      }, {
-        label: "Patio Furniture & Accessories",
-        options: ["Hammoocks , Stands & Accessories"]
-      }, {
-        label: "Farm & Ranch",
-        options: ["Pest Control"]
-      }, {
-        label: "Stay Safe",
-        options: ["Have Fun", "Stay Fit", "Stay Connected", "Supermarket", "Stay Healty"]
-      }, {
-        label: "Automobile",
-        options: ["Car Electronic & Accessories", "Car Safety and Security", "Motorcycle & Powersports", "Lights & Lighting Accessories", "Replacement Parts"]
-      }, {
-        label: "Books, Movies & Music",
-        options: ["Education & Learning", "Biography & Autobiography", "Literature", "Children & Teens", "Study Aids", "Christian Books & Bibles"]
-      }, {
-        label: "",
-        options: [""]
-      }, {
-        label: "",
-        options: [""]
+        options: ["Stay Safe", "Automobile", "Books, Movies & Music", "Industrial & Scientific", "Livestock", "Miscellaneous", "Musical Instrument", "Pet Supplies", "Services", "Toy & Games", "Grocery"],
+        subOptions: [{
+          label: "Stay Safe",
+          options: ["Have Fun", "Stay Fit", "Stay Connected", "Supermarket", "Stay Healty"]
+        }, {
+          label: "Automobile",
+          options: ["Car Electronic & Accessories", "Car Safety and Security", "Motorcycle & Powersports", "Lights & Lighting Accessories", "Replacement Parts"]
+        }, {
+          label: "Books, Movies & Music",
+          options: ["Education & Learning", "Biography & Autobiography", "Literature", "Children & Teens", "Study Aids", "Christian Books & Bibles"]
+        }]
       }],
       form: this.$inertia.form({
         category: '',
         subCategory: '',
+        option: '',
         title: '',
         price: '',
         description: '',
@@ -8310,13 +8061,15 @@ __webpack_require__.r(__webpack_exports__);
       this.selectedSubCategoryLabel = '';
       this.subCategories = this.categories[this.selectedCategory].options;
       this.selectedCategoryLabel = this.categories[this.selectedCategory].label;
+      this.form.category = this.selectedCategoryLabel;
     },
     selectSubCategory: function selectSubCategory() {
-      this.selectedSubCategoryLabel = this.subOptions[this.selectedSubCategory].label;
-      this.options = this.subOptions[this.selectedSubCategory].options;
+      this.selectedSubCategoryLabel = this.categories[this.selectedCategory].options[this.selectedSubCategory];
+      this.options = this.categories[this.selectedCategory].subOptions[this.selectedSubCategory].options;
+      this.form.subCategory = this.selectedSubCategoryLabel;
     },
     selectOption: function selectOption() {
-      this.form.subCategory = this.selectedOption;
+      this.form.option = this.selectedOption;
     },
     previewMultiImage: function previewMultiImage(event) {
       var _this = this;
@@ -64065,6 +63818,284 @@ var render = function() {
                                           {
                                             staticClass: "flex flex-wrap -m-4"
                                           },
+                                          _vm._l(
+                                            _vm.allProducts.slice(0, 8),
+                                            function(product) {
+                                              return _c(
+                                                "div",
+                                                {
+                                                  key: product._id,
+                                                  staticClass:
+                                                    "transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2"
+                                                },
+                                                [
+                                                  _c(
+                                                    "inertia-link",
+                                                    {
+                                                      attrs: {
+                                                        href: _vm.route(
+                                                          "product.view",
+                                                          product._id
+                                                        )
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "block relative h-48 rounded overflow-hidden"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "absolute flex flex-col top-0 right-0 p-3"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1"
+                                                                },
+                                                                [
+                                                                  _c("i", {
+                                                                    staticClass:
+                                                                      "fa fa-star"
+                                                                  })
+                                                                ]
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("img", {
+                                                            staticClass:
+                                                              "object-cover object-center w-full h-full block",
+                                                            attrs: {
+                                                              alt: "ecommerce",
+                                                              src:
+                                                                product.photos
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "mt-4 flex-auto justify-evenly"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "flex flex-wrap "
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "w-full flex-none text-sm flex items-center text-gray-600"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "span",
+                                                                {
+                                                                  staticClass:
+                                                                    "text-gray-400 whitespace-nowrap mr-3 capitalize"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    _vm._s(
+                                                                      product.type
+                                                                    )
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "flex items-center w-full justify-between min-w-0 "
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "h2",
+                                                                {
+                                                                  staticClass:
+                                                                    "text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                                                  " +
+                                                                      _vm._s(
+                                                                        product.title
+                                                                      ) +
+                                                                      "\n                                              "
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "div",
+                                                                {
+                                                                  staticClass:
+                                                                    "flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                                                  INSTOCK\n                                              "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "text-xl text-indigo-600 font-semibold mt-1"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "KSh." +
+                                                              _vm._s(
+                                                                product.price
+                                                              )
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "flex space-x-2 text-sm font-medium justify-end mt-2"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "button",
+                                                            {
+                                                              staticClass:
+                                                                "hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ",
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  $event.preventDefault()
+                                                                  return _vm.addToCart(
+                                                                    product._id
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("span", [
+                                                                _vm._v(
+                                                                  "Add Cart"
+                                                                )
+                                                              ])
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            }
+                                          ),
+                                          0
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "container py-2 mb-10 mx-auto"
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "flex w-full" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "flex-1 my-3 relative rounded bg-gray-50 shadow"
+                                              },
+                                              [
+                                                _vm._m(10),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "inertia-link",
+                                                  {
+                                                    attrs: {
+                                                      href: _vm.route("landing")
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "group float-right top-0 right-0 m-3"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm"
+                                                          },
+                                                          [_vm._v("See All")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"
+                                                          },
+                                                          [
+                                                            _c("i", {
+                                                              staticClass:
+                                                                "fa fa-directions"
+                                                            })
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "flex flex-wrap -m-4"
+                                          },
                                           _vm._l(_vm.allProducts, function(
                                             product
                                           ) {
@@ -64295,7 +64326,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(10),
+            _vm._m(11),
             _vm._v(" "),
             _c(
               "footer",
@@ -64388,9 +64419,9 @@ var render = function() {
                           "block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0"
                       },
                       [
-                        _vm._m(11),
-                        _vm._v(" "),
                         _vm._m(12),
+                        _vm._v(" "),
+                        _vm._m(13),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -64934,7 +64965,20 @@ var staticRenderFns = [
         staticClass:
           "bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl"
       },
-      [_c("p", { staticClass: "italic" }, [_vm._v("Electornics")])]
+      [_c("p", { staticClass: "italic" }, [_vm._v("Featured Products")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl"
+      },
+      [_c("p", { staticClass: "italic" }, [_vm._v("Featured Products")])]
     )
   },
   function() {
@@ -71052,7 +71096,7 @@ var render = function() {
                     attrs: {
                       id: "application-link",
                       type: "number",
-                      placeholder: "Kshs. 5,000"
+                      placeholder: "Digits only i.e 3000"
                     },
                     domProps: { value: _vm.form.price },
                     on: {

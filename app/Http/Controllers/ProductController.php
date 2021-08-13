@@ -46,6 +46,7 @@ class ProductController extends Controller
             $postData = Request::validate([
                 'category' => ['nullable', 'max:100'],
                 'subCategory' => ['nullable', 'max:100'],
+                'option' => ['nullable', 'max:100'],
                 'title' => ['required', 'max:50'],
                 'price' => ['nullable', 'max:50'],
                 'description' => ['nullable'],
@@ -56,14 +57,13 @@ class ProductController extends Controller
             $addedProduct = Product::create([
                 'category' => $postData['category'],
                 'subCategory' => $postData['subCategory'],
+                'option' => $postData['option'],
                 'title' => $postData['title'],
                 'price' => $postData['price'],
                 'description' => $postData['description'],
                 'account_id' => (int) $postData['account_id'],
                 // 'photos' => $upload_url
             ]);
-
-            // return dd($addedProduct['account_id']);
 
             $images=$postData['photos'];
             $collection = collect([]);
