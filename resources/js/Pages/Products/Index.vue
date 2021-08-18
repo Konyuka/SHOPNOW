@@ -35,7 +35,7 @@
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Title</th>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Type</th>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Price</th>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Date Added</th>
+                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Date Added/Updated</th>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
                             </tr>
                         </thead>

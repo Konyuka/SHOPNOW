@@ -99,7 +99,7 @@
 
             
             <button type="submit" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
-                Save Product
+                Update Product
             </button>
 
             </form>
@@ -457,6 +457,8 @@ export default {
             form: this.$inertia.form({
                 category:'',
                 subCategory:'',
+                selectedCategory: '',
+                selectedSubCategory: '',
                 option:'',
                 title: '',
                 price: '',
@@ -479,13 +481,17 @@ export default {
             this.selectedSubCategory =    this.product.selectedSubCategory
             this.setSelectSubCategory()
             this.selectedOption =    this.product.option
+            this.selectOption()
             this.form.title =    this.product.title
             this.form.price =    this.product.price
             this.form.description =    this.product.description
-            this.form.photos =    this.product.photos
+            this.image_list = this.product.photos
+            this.form.photos = this.image_list
+            // this.previewMultiImage()
+            // this.form.photos =    this.image_list
         },
         store() {
-            this.form.post(this.route('products.store'))
+            this.form.put(this.route('products.update', this.product._id))
         },
         selectCategory: function () {
 
@@ -496,7 +502,6 @@ export default {
                 this.subCategories = this.categories[this.selectedCategory].options;
                 this.selectedCategoryLabel = this.categories[this.selectedCategory].label;
                 this.form.category = this.selectedCategoryLabel
-            
         },
         setSelectCategory: function () {
                 // this.selectedCategory =   this.product.category
@@ -507,6 +512,8 @@ export default {
                 this.subCategories = this.categories[this.selectedCategory].options;
                 this.selectedCategoryLabel = this.categories[this.selectedCategory].label;
                 this.form.category = this.selectedCategoryLabel
+                this.form.selectedCategory = this.selectedCategory
+
             
         },
         selectSubCategory(){
@@ -520,6 +527,8 @@ export default {
                 this.selectedSubCategoryLabel = this.categories[this.selectedCategory].options[this.selectedSubCategory];
                 this.options = this.categories[this.selectedCategory].subOptions[this.selectedSubCategory].options;     
                 this.form.subCategory = this.selectedSubCategoryLabel
+                this.form.selectedSubCategory = this.selectedSubCategory
+
         },
         selectOption: function () {
                 this.form.option = this.selectedOption;

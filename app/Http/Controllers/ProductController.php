@@ -56,6 +56,8 @@ class ProductController extends Controller
                 'photos' => ['nullable'],
             ]);
 
+            // return dd($postData);
+
             $addedProduct = Product::create([
                 'category' => $postData['category'],
                 'selectedCategory' => $postData['selectedCategory'],
@@ -94,33 +96,41 @@ class ProductController extends Controller
     {
 
         $product = Product::where('_id', $id)
-            //    ->orderBy('updated_at', 'desc')
-            //    ->take(10)
                ->first();
 
-        // return dd($products);
         return Inertia::render('Products/Edit', [ 'product' =>  $product ]);        
-               
-        return Inertia::render('Organizations/Edit', [
-            'organization' => [
-                'id' => $organization->id,
-                'name' => $organization->name,
-                'email' => $organization->email,
-                'phone' => $organization->phone,
-                'address' => $organization->address,
-                'city' => $organization->city,
-                'region' => $organization->region,
-                'country' => $organization->country,
-                'postal_code' => $organization->postal_code,
-                'deleted_at' => $organization->deleted_at,
-                'contacts' => $organization->contacts()->orderByName()->get()->map->only('id', 'name', 'city', 'phone'),
-            ],
-        ]);
         
     }
 
-    public function update($id)
+    public function update(Product $product)
     {
+        $postData = Request::validate([
+                'category' => ['nullable', 'max:100'],
+                'subCategory' => ['nullable', 'max:100'],
+                'option' => ['nullable', 'max:100'],
+                'title' => ['required', 'max:50'],
+                'price' => ['nullable', 'max:50'],
+                'description' => ['nullable'],
+                'selectedCategory' => ['required', 'integer'],
+                'selectedSubCategory' => ['required', 'integer'],
+                'account_id' => ['required', 'integer'],
+                'photos' => ['nullable'],
+            ]);
+
+        $updatedProduct = Product::where('_id', $product->_id)
+        ->update([
+                'category' => $postData['category'],
+                'selectedCategory' => $postData['selectedCategory'],
+                'subCategory' => $postData['subCategory'],
+                'selectedSubCategory' => $postData['selectedSubCategory'],
+                'option' => $postData['option'],
+                'title' => $postData['title'],
+                'price' => $postData['price'],
+                'description' => $postData['description'],
+                'account_id' => (int) $postData['account_id'],
+        ]);     
+
+        return Redirect::route('products')->with('success', 'Product updated successfully.');
         
     }
 

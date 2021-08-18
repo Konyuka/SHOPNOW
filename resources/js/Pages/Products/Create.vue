@@ -450,13 +450,13 @@ export default {
             form: this.$inertia.form({
                 category:'',
                 subCategory:'',
+                selectedCategory: '',
+                selectedSubCategory: '',
                 option:'',
                 title: '',
                 price: '',
                 description: '',
                 photos:[],
-                selectedCategory: '',
-                selectedSubCategory: '',
                 account_id: parseInt(this.$page.props.auth.user.account.id),
             }),
 
@@ -468,7 +468,7 @@ export default {
     },
     methods: {
         store() {
-            this.form.post(this.route('products.store'))
+            this.form.post(this.route('products.store'),)
         },
         selectCategory: function () {
 
