@@ -455,6 +455,8 @@ export default {
                 price: '',
                 description: '',
                 photos:[],
+                selectedCategory: '',
+                selectedSubCategory: '',
                 account_id: parseInt(this.$page.props.auth.user.account.id),
             }),
 
@@ -477,6 +479,7 @@ export default {
                 this.subCategories = this.categories[this.selectedCategory].options;
                 this.selectedCategoryLabel = this.categories[this.selectedCategory].label;
                 this.form.category = this.selectedCategoryLabel
+                this.form.selectedCategory = this.selectedCategory
             
         },
         selectSubCategory(){
@@ -484,6 +487,7 @@ export default {
                 this.selectedSubCategoryLabel = this.categories[this.selectedCategory].options[this.selectedSubCategory];
                 this.options = this.categories[this.selectedCategory].subOptions[this.selectedSubCategory].options;     
                 this.form.subCategory = this.selectedSubCategoryLabel
+                this.form.selectedSubCategory = this.selectedSubCategory
         },
         selectOption: function () {
                 this.form.option = this.selectedOption;

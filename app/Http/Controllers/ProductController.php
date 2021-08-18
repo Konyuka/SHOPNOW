@@ -50,13 +50,17 @@ class ProductController extends Controller
                 'title' => ['required', 'max:50'],
                 'price' => ['nullable', 'max:50'],
                 'description' => ['nullable'],
+                'selectedCategory' => ['required', 'integer'],
+                'selectedSubCategory' => ['required', 'integer'],
                 'account_id' => ['required', 'integer'],
                 'photos' => ['nullable'],
             ]);
 
             $addedProduct = Product::create([
                 'category' => $postData['category'],
+                'selectedCategory' => $postData['selectedCategory'],
                 'subCategory' => $postData['subCategory'],
+                'selectedSubCategory' => $postData['selectedSubCategory'],
                 'option' => $postData['option'],
                 'title' => $postData['title'],
                 'price' => $postData['price'],
@@ -84,6 +88,40 @@ class ProductController extends Controller
 
             return Redirect::route('products')->with('success', 'Product created successfully.');
 
+    }
+
+    public function edit($id)
+    {
+
+        $product = Product::where('_id', $id)
+            //    ->orderBy('updated_at', 'desc')
+            //    ->take(10)
+               ->first();
+
+        // return dd($products);
+        return Inertia::render('Products/Edit', [ 'product' =>  $product ]);        
+               
+        return Inertia::render('Organizations/Edit', [
+            'organization' => [
+                'id' => $organization->id,
+                'name' => $organization->name,
+                'email' => $organization->email,
+                'phone' => $organization->phone,
+                'address' => $organization->address,
+                'city' => $organization->city,
+                'region' => $organization->region,
+                'country' => $organization->country,
+                'postal_code' => $organization->postal_code,
+                'deleted_at' => $organization->deleted_at,
+                'contacts' => $organization->contacts()->orderByName()->get()->map->only('id', 'name', 'city', 'phone'),
+            ],
+        ]);
+        
+    }
+
+    public function update($id)
+    {
+        
     }
 
     public function destroy(Product $product)
