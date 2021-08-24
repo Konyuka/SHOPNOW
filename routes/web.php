@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Request;
 
 // Landing
 
+Route::get('email', [LandingController::class, 'newMail'])
+    ->name('email');
+
+Route::get('email/show', [LandingController::class, 'showMail'])
+    ->name('email.show');
+
+
 Route::get('/', [LandingController::class, 'index'])
     ->name('landing');
 
@@ -30,7 +37,10 @@ Route::post('checkout/success', [OrderController::class, 'store'])
     ->name('order.store');
 
 Route::get('subcategory/{result}', [LandingController::class, 'result'])
-    ->name('product.result');   
+    ->name('product.result');
+
+Route::get('allcategory/{result}', [LandingController::class, 'categories'])
+    ->name('product.category');   
 
 Route::get('category/{result}', [LandingController::class, 'allResult'])
     ->name('product.allResult');  

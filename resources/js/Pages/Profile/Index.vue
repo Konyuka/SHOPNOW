@@ -12,12 +12,12 @@
                             <li class="-mb-px mr-1" @click="openTab = 1">
                                 <a :class="openTab === 1 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Seller Details</a>
                             </li>
-                            <li class="mr-1" @click="openTab = 2">
+                            <!-- <li class="mr-1" @click="openTab = 2">
                                 <a :class="openTab === 2 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Businness Details</a>
                             </li>
                             <li class="mr-1" @click="openTab = 3">
                                 <a :class="openTab === 3 ? 'border-l border-t border-r rounded-t text-white font-semibold bg-black' : 'text-blue-500 hover:text-black bg-white'" class=" inline-block py-2 px-4 font-semibold text-xs sm:text-lg" href="#">Payment Details</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="bg-white p-6">
@@ -97,7 +97,7 @@
                                     </div> -->
                                     <div class="col-span-2 text-right">
                                     <button @click="updateVendor" class="py-3 px-6 bg-blue-500 hover:bg-black text-white font-bold w-full sm:w-32">
-                                        Update Seller Details
+                                        Update
                                     </button>
                                     </div>
 

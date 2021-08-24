@@ -24,7 +24,7 @@
 
                 <div v-if="showProducts" id="pricing" class="container flex flex-col items-center h-full max-w-6xl mx-auto">
                    
-                    <div class="max-w-full mx-auto md:max-w-6xl ">
+                    <div class="max-w-full mx-auto md:max-w-full">
                         <div class="relative flex flex-col items-center sm:flex-row">
                             <section class="text-gray-600 body-font relative">
                             <div class="container px-5 py-2 mx-auto">
@@ -44,7 +44,7 @@
 
                                 <div class="flex flex-wrap -m-4"> 
 
-                                <div v-for="product in allProducts" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-auto md:w-1/2 min-auto p-2 mb-2">
+                                <div v-for="product in allProducts" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-64 md:w-1/2 min-auto p-2 mb-2">
                                 <inertia-link :href="route('product.view', product._id)">
                                     <div class="block relative h-48 rounded overflow-hidden">
                                     <div class="absolute flex flex-col top-0 right-0 p-3">

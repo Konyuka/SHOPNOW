@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 // use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailNotify;
 use Inertia\Inertia;
 
 class OrderController extends Controller
@@ -164,7 +165,31 @@ class OrderController extends Controller
                 'orderTime' => now()->format('Y-m-d'),
             ]);
 
-        return Redirect::route('landing')->with('success', 'Order Placed Successfully');    
+            //send email
+            $details = Request::validate([
+                'to' => ['required', 'max:100'],
+                'from' => ['required', 'max:100'],
+                'subject' => ['nullable', 'max:1000'],
+                'title' => ['required', 'max:100'],
+                'body' => ['required', 'max:5000'],
+            ]);
+
+            $vendorDetails = Request::validate([
+                'alertadmin' => ['required', 'max:100'],
+                'newOrder' => ['required', 'max:100'],
+                'orderedproducts' => ['required', 'max:5000'],
+                'emailSubject' => ['nullable', 'max:1000'],
+                // 'title' => ['required', 'max:100'],
+            ]);
+
+            \Mail::to($details['to'])->send(new \App\Mail\Mailer($details));
+            \Mail::to($vendorDetails['alertadmin'])->send(new \App\Mail\adminMailer($vendorDetails));
+
+            if (Mail::failures()) {
+                return Redirect::route('landing')->with('error', 'Order not succesfull. System Error. Please Try again');
+            }
+
+        return Redirect::route('landing')->with('success', 'Order Placed Successfully. Check your email for details');    
 
          $order = Order::create([
                 'product_id' => $request->products,

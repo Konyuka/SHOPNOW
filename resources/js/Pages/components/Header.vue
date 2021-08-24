@@ -27,6 +27,9 @@
             <button @click="search" class="ml-2 bg-transparent hover:bg-indigo-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
              Search
             </button>
+            <button @click="mail" class="ml-2 bg-transparent hover:bg-indigo-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+             Send Mail
+            </button>
             </div>
 
             <nav id="nav"
@@ -198,6 +201,15 @@ export default {
       form: {
         search: '',
       },
+      email: this.$inertia.form(
+          {
+            to:'beatcrime.ke@gmail.com',
+            from:'michaelsaiba84@gmail.com',
+            subject:'Test',
+            title:'Test Mail',
+            body:'C',
+          },
+      ),
       regModal: false,
     }
   },
@@ -222,6 +234,9 @@ export default {
       },
   },
   methods: {
+      mail(){
+         this.email.get(this.route('email'))
+      },
       search(){
            this.$inertia.get(this.route('product.search'), pickBy(this.form), { preserveState: true })
       },

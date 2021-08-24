@@ -401,6 +401,19 @@ export default {
                 payment:'',
                 products:this.$store.state.cartItems,
                 userAccount:this.$page.props.auth.user,
+                // to:this.$page.props.auth.user.email,
+                to:'beatcrime.ke@gmail.com',
+                from:'michaelsaiba84@gmail.com',
+                subject:'Order Confirmed',
+                title:'The are your order details',
+                body:'Information about order details',
+
+                alertadmin:'michaelsaiba84@gmail.com',
+                newOrder:'beatcrime.ke@gmail.com',
+                orderedproducts:this.$store.state.cartItems,
+                emailSubject:'You have a New Order',
+
+                
             }),
         }
     },

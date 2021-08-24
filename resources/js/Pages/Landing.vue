@@ -1500,7 +1500,6 @@
             </div>
             </div>
 
-
             </div>
 
             <!-- Pricing Section -->
@@ -1511,19 +1510,19 @@
                         class="w-full max-w-7xl px-1 mt-3 text-xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-lg md:px-0">
                         Featured Products</h3>
 
-                    <div class="max-w-full mx-auto md:max-w-7xl sm:px-8">
+                    <div class="max-w-full mx-auto md:max-w-full sm:px-8">
                         <div class="relative flex flex-col items-center sm:flex-row">
                             <section class="text-gray-600 body-font relative">
 
-                            <!-- Featured Products         -->
-                            <div class="container py-2 mb-10 mx-auto">
+                            <!-- Supermarket Products         -->
+                            <div v-if="this.supermarket.length" class="container py-2 mb-10 mx-auto">
                                 <div class="flex w-full">
                                     <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
                                         <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
-                                            <p class="italic">Phones & Tablets</p>
+                                            <p class="italic">Supermarket</p>
                                         </div>
 
-                                        <inertia-link :href="route('landing')">
+                                        <inertia-link :href="route('product.category', 'Supermarket')">
                                         <div class="group float-right top-0 right-0 m-3">
                                             <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
                                             <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
@@ -1535,7 +1534,7 @@
 
                                 <div class="flex flex-wrap -m-4"> 
 
-                                <div v-for="product in allProducts.slice(0, 8)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <div v-for="product in supermarket.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
                                 <inertia-link :href="route('product.view', product._id)">
                                     <div class="block relative h-48 rounded overflow-hidden">
                                     <div class="absolute flex flex-col top-0 right-0 p-3">
@@ -1576,12 +1575,73 @@
                                 </div>
                             </div>
                         
-                            <!-- Su Products         -->
-                            <div class="container py-2 mb-10 mx-auto">
+                            <!-- Health & Beauty -->
+                            <div v-if="this.healthBeauty.length" class="container py-2 mb-10 mx-auto">
                                 <div class="flex w-full">
                                     <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
-                                        <div class="bg-pink-500 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
-                                            <p class="italic">Featured Products</p>
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Health & Products</p>
+                                        </div>
+
+                                        <inertia-link :href="route('product.category', 'Healt')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in healthBeauty.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- homeOffice -->
+                            <div v-if="this.homeOffice.length" class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Home & Office</p>
                                         </div>
 
                                         <inertia-link :href="route('landing')">
@@ -1596,7 +1656,556 @@
 
                                 <div class="flex flex-wrap -m-4"> 
 
-                                <div v-for="product in allProducts" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-1/4 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <div v-for="product in homeOffice.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- PhonesTablets -->
+                            <div v-if="this.phonesTablets.length" class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Phones & Tablets</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in PhonesTablets.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- computing -->
+                            <div v-if="this.computing.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Computing</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in computing.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- electronics -->
+                            <div v-if="this.electronics.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Electronics</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in electronics.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- fashion-->
+                            <div v-if="this.fashion.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Fashion</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in fashion.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- gaming -->
+                            <div v-if="this.gaming.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Gaming</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in gaming.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- baby -->
+                            <div v-if="this.baby.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Baby Products</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in baby.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- sporting -->
+                            <div v-if="this.sporting.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Sporting Goods</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in sporting.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Garden -->
+                            <div v-if="this.gardenOutdoors.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Garden & Outdoors</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in gardenOutdoors.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
+                                <inertia-link :href="route('product.view', product._id)">
+                                    <div class="block relative h-48 rounded overflow-hidden">
+                                    <div class="absolute flex flex-col top-0 right-0 p-3">
+                                            <button class="hover:scale-110 transform transition duration-300 ease-in-out bg-gray-50 hover:text-yellow-600 shadow hover:shadow-md text-black rounded-full w-8 h-8 text-center p-1">
+                                            <i class="fa fa-star"></i>
+                                            </button>
+                                        </div>  
+                                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src=" product.photos ">
+                                    <!-- <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"> -->
+                                    </div>
+                                </inertia-link>      
+                                    <div class="mt-4 flex-auto justify-evenly">
+
+                                        <div class="flex flex-wrap ">
+                                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
+                                                <span class="text-gray-400 whitespace-nowrap mr-3 capitalize">{{ product.type }}</span>
+                                            </div>
+                                            <div class="flex items-center w-full justify-between min-w-0 ">
+                                                <h2 class="text-lg mr-auto cursor-pointer text-black hover:text-purple-500 truncate capitalize">
+                                                    {{ product.title }}
+                                                </h2>
+                                                <div class="flex items-center bg-indigo-500 text-white text-xs px-2 py-1 ml-3 rounded-lg">
+                                                    INSTOCK
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="text-xl text-indigo-600 font-semibold mt-1">KSh.{{ product.price }}</div>
+
+                                        <div class="flex space-x-2 text-sm font-medium justify-end mt-2">
+                                            <button @click.prevent="addToCart(product._id)" class="hover:scale-125 transform transition duration-300 ease-in-out inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-sm hover:bg-indigo-800 ">
+                                                <span>Add Cart</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Other -->
+                            <div v-if="this.other.length"  class="container py-2 mb-10 mx-auto">
+                                <div class="flex w-full">
+                                    <div class="flex-1 my-3 relative rounded bg-gray-50 shadow">
+                                        <div class="bg-indigo-600 pl-10 pr-10 pt-6 pb-6 ml-3 absolute top-0 -mt-4 -mr-4 rounded text-white fill-current shadow-2xl">
+                                            <p class="italic">Other Categories</p>
+                                        </div>
+
+                                        <inertia-link :href="route('landing')">
+                                        <div class="group float-right top-0 right-0 m-3">
+                                            <div class="hover:scale-125 transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-sm">See All</div>
+                                            <div class="hover:scale-125  transform transition group-hover:text-pink-600 duration-300 ease-in-out text-right text-3xl"> <i class="fa fa-directions"> </i> </div>
+                                        </div>
+                                        </inertia-link>
+                                        
+                                    </div>
+                                </div>  
+
+                                <div class="flex flex-wrap -m-4"> 
+
+                                <div v-for="product in other.slice(0, 4)" :key="product._id" class="transform transition hover:scale-90 duration-300 ease-in-out  shadow-2xl bg-gray-100 lg:w-72 md:w-1/2 min-w-1/2 w-full p-2 mb-2">
                                 <inertia-link :href="route('product.view', product._id)">
                                     <div class="block relative h-48 rounded overflow-hidden">
                                     <div class="absolute flex flex-col top-0 right-0 p-3">
@@ -1889,6 +2498,66 @@ export default {
           }
     },
     computed: {
+      other(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Other Categories')
+            }
+      },  
+      gardenOutdoors(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Garden & Outdoors')
+            }
+      },  
+      sporting(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Sporting Goods')
+            }
+      },  
+      baby(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Baby Products')
+            }
+      },  
+      gaming(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Gaming')
+            }
+      },  
+      fashion(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Fashion')
+            }
+      },  
+      electronics(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Electronics')
+            }
+      },  
+      computing(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Computing')
+            }
+      },  
+      phonesTablets(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Phones & Tablets')
+            }
+      },  
+      homeOffice(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Home & Office')
+            }
+      },  
+      healthBeauty(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Health & Beauty')
+            }
+      },  
+      supermarket(){
+          for(var i = 0; i <= this.allProducts.length; i++) {
+                return this.allProducts.filter(i=>i.category == 'Supermarket')
+            }
+      },  
       cartItems(){
           return this.$store.state.cartItems
       }, 
