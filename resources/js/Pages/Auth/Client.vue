@@ -270,7 +270,16 @@ export default {
         // error: String,
     },
     computed: {
-        
+        emailError(){
+            return this.$page.props.flash.error
+        }
+    },
+    watch: {
+      emailError(newValue){
+          if(newValue == 'Email Address already Registered'){
+              this.taken()
+          }
+      }  
     },
     data () {
         return {
@@ -287,15 +296,27 @@ export default {
         }
     },
     methods: {
+        taken(){
+            Swal.fire(
+                    'Registration Error',
+                    'The email address has already been registered',
+                    'question'
+                ) 
+        },
         register(){
-            if( this.form.password == this.form.confirmPass ){
-                this.passError = ''
-                this.form.post(this.route('registerUser'))
-                localStorage.setItem('email', this.form.email)
+            if(this.emailError == 'Email Address already Registered'){
+                this.taken() 
             }else{
-                this.passError = 'Passwords do not match'
+                if( this.form.password == this.form.confirmPass ){
+                    this.passError = ''
+                    this.form.post(this.route('registerUser'))
+                    localStorage.setItem('email', this.form.email)
+                }else{
+                    this.passError = 'Passwords do not match'
+                }
+                // console.log(this.error)
             }
-            // console.log(this.error)
+
         }
     }
     

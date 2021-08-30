@@ -374,7 +374,11 @@ export default {
           this.cartEmpty = true
       }else{
           this.cartEmpty = false
-      }  
+      } 
+      
+      if(this.$page.props.flash.error == 'Email Address already Registered'){
+        this.taken()  
+      }
     },
     computed: {
         noAuth(){
@@ -418,6 +422,14 @@ export default {
         }
     },
     methods: {
+        taken(){
+            console.log('radar chafu')
+            Swal.fire(
+                    'Registration Error',
+                    'The email address has already been registered',
+                    'question'
+                ) 
+        },
         submit(){
             if(this.$store.state.cartItems == ''){
                 Swal.fire(

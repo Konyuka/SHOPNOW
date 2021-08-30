@@ -2150,7 +2150,18 @@ __webpack_require__.r(__webpack_exports__);
   name: 'Register',
   props: {// error: String,
   },
-  computed: {},
+  computed: {
+    emailError: function emailError() {
+      return this.$page.props.flash.error;
+    }
+  },
+  watch: {
+    emailError: function emailError(newValue) {
+      if (newValue == 'Email Address already Registered') {
+        this.taken();
+      }
+    }
+  },
   data: function data() {
     return {
       form: this.$inertia.form({
@@ -2166,15 +2177,22 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    taken: function taken() {
+      Swal.fire('Registration Error', 'The email address has already been registered', 'question');
+    },
     register: function register() {
-      if (this.form.password == this.form.confirmPass) {
-        this.passError = '';
-        this.form.post(this.route('registerUser'));
-        localStorage.setItem('email', this.form.email);
+      if (this.emailError == 'Email Address already Registered') {
+        this.taken();
       } else {
-        this.passError = 'Passwords do not match';
-      } // console.log(this.error)
+        if (this.form.password == this.form.confirmPass) {
+          this.passError = '';
+          this.form.post(this.route('registerUser'));
+          localStorage.setItem('email', this.form.email);
+        } else {
+          this.passError = 'Passwords do not match';
+        } // console.log(this.error)
 
+      }
     }
   }
 });
@@ -2902,7 +2920,19 @@ if (document.getElementById('nav-mobile-btn')) {
   name: 'Register',
   props: {// error: String,
   },
-  computed: {},
+  computed: {
+    emailError: function emailError() {
+      return this.$page.props.flash.error;
+    }
+  },
+  watch: {
+    emailError: function emailError(newValue) {
+      if (newValue == 'Email Address already Registered') {
+        this.taken();
+      }
+    }
+  },
+  created: function created() {},
   data: function data() {
     return {
       form: this.$inertia.form({
@@ -2919,14 +2949,21 @@ if (document.getElementById('nav-mobile-btn')) {
     };
   },
   methods: {
+    taken: function taken() {
+      Swal.fire('Registration Error', 'The email address has already been registered', 'question');
+    },
     register: function register() {
-      if (this.form.password == this.form.confirmPass) {
-        this.passError = '';
-        console.log(Ziggy.routes);
-        this.form.post(this.route('registerAdmin'));
-        localStorage.setItem('email', this.form.email);
+      if (this.emailError == 'Email Address already Registered') {
+        this.taken();
       } else {
-        this.passError = 'Passwords do not match';
+        if (this.form.password == this.form.confirmPass) {
+          this.passError = ''; // console.log(Ziggy.routes)
+
+          this.form.post(this.route('registerAdmin'));
+          localStorage.setItem('email', this.form.email);
+        } else {
+          this.passError = 'Passwords do not match';
+        }
       } // console.log(this.error)
 
     }
@@ -7283,6 +7320,10 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       this.cartEmpty = false;
     }
+
+    if (this.$page.props.flash.error == 'Email Address already Registered') {
+      this.taken();
+    }
   },
   computed: {
     noAuth: function noAuth() {
@@ -7323,6 +7364,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    taken: function taken() {
+      console.log('radar chafu');
+      Swal.fire('Registration Error', 'The email address has already been registered', 'question');
+    },
     submit: function submit() {
       if (this.$store.state.cartItems == '') {
         Swal.fire('Your Cart is Empty', 'Please add products to cart for checkout', 'question');
@@ -55570,7 +55615,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                    Update Details\n                                "
+                                        "\n                                    Update\n                                "
                                       )
                                     ]
                                   )
@@ -56289,46 +56334,6 @@ var render = function() {
                           )
                         ]
                       )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("inertia-link", { attrs: { href: _vm.route("orders") } }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item",
-                        class: _vm.isUrl("delivery") ? "bg-black" : "",
-                        on: {
-                          click: function($event) {
-                            return _vm.setMenu("delivery")
-                          }
-                        }
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-truck-moving mr-3" }),
-                        _vm._v(
-                          "\n                    Delivery\n                "
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item",
-                      class: _vm.isUrl("whishlist") ? "bg-black" : "",
-                      on: {
-                        click: function($event) {
-                          return _vm.setMenu("whishlist")
-                        }
-                      }
-                    },
-                    [
-                      _c("i", { staticClass: "fas fa-star mr-3" }),
-                      _vm._v("\n                    Wishlist\n                ")
                     ]
                   )
                 ],
@@ -78653,7 +78658,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "ml-3 text-xl text-gray-800" }, [
-      _vm._v("Multi Vendor"),
+      _vm._v("SHOPIFIE"),
       _c("span", { staticClass: "text-pink-500" }, [_vm._v(".")])
     ])
   },

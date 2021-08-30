@@ -13,7 +13,7 @@
                         <path d="M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z" />
                     </g>
                 </svg>
-                <span class="ml-3 text-xl text-gray-800">Multi Vendor<span class="text-pink-500">.</span></span>
+                <span class="ml-3 text-xl text-gray-800">SHOPIFIE<span class="text-pink-500">.</span></span>
             </a>
 
             <!-- Search Form -->

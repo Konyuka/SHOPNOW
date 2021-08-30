@@ -37,12 +37,17 @@ class UserController extends Controller
                 'vendor' => ['required', 'max:100'],
             ]);
 
+            $checkUser = User::where('email', '=', Request::get('email'))->first();
+            // return dd($checkUser);
+            if ($checkUser === null) {
+            // user doesn't exist
+            
             $account = Account::create([
                 'name' => $postData['store'],
             ]);
-
+            
             $accountId =  json_decode($account['id']);  
-
+            
             $registerUser = User::create([
                 'account_id' => $accountId,
                 'name' => $postData['name'],
@@ -52,7 +57,15 @@ class UserController extends Controller
                 'password' => bcrypt($postData['password']),
                 'owner' => $postData['vendor'],
             ]);
+            
+            }
+            else{
 
+             return redirect()
+            ->back()
+            ->with('error', 'Email Address already Registered');
+
+            }
             return redirect()
             ->route('login')
             ->with('success', 'Welcome! Login to Continue');
@@ -71,7 +84,10 @@ class UserController extends Controller
                 'vendor' => ['required', 'max:100'],
             ]);
 
-            $account = Account::create([
+            $checkUser = User::where('email', '=', Request::get('email'))->first();
+            if ($checkUser === null){
+
+                $account = Account::create([
                 'name' => $postData['store'],
             ]);
 
@@ -89,6 +105,15 @@ class UserController extends Controller
             return redirect()
             ->route('login')
             ->with('success', 'Welcome! Login to Continue');
+
+            }else{
+                return redirect()
+                 ->back()
+                 ->with('error', 'Email Address already Registered');
+
+            }
+
+            
 
     }
 

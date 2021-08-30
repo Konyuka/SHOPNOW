@@ -78,7 +78,7 @@
                                     </div> -->
                                     <div class="col-span-2 text-right">
                                     <button @click="updateClient" class="py-3 px-6 bg-blue-500 hover:bg-black text-white font-bold w-full sm:w-32">
-                                        Update Details
+                                        Update
                                     </button>
                                     </div>
 

@@ -55,16 +55,16 @@
                         Orders
                     </a>
                     </inertia-link>
-                    <inertia-link :href="route('orders')">
+                    <!-- <inertia-link :href="route('orders')">
                     <a @click="setMenu('delivery')" :class="isUrl('delivery') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-truck-moving mr-3"></i>
                         Delivery
                     </a>
-                    </inertia-link>
-                    <a @click="setMenu('whishlist')" :class="isUrl('whishlist') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
+                    </inertia-link> -->
+                    <!-- <a @click="setMenu('whishlist')" :class="isUrl('whishlist') ? 'bg-black' : ''" class="flex items-center text-white hover:opacity-75 py-4 pl-6 nav-item">
                         <i class="fas fa-star mr-3"></i>
                         Wishlist
-                    </a>
+                    </a> -->
                 </nav>
                 <a href="/" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
                     <i class="fas fa-arrow-circle-up mr-3"></i>
