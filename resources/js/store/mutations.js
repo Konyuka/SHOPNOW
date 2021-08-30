@@ -7,7 +7,7 @@ const mutations = {
     state.cartItems.push(data)
   },
   resetCart(state, data){
-    state.cartItems = data
+    state.cartItems = data;
   },
   removeFromCart(state, data){
     var item = state.cartItems.find(x => x._id == data)

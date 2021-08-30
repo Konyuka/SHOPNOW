@@ -2492,7 +2492,7 @@ export default {
     watch: {
     },
     mounted () {
-        if(this.$page.props.flash.success == 'Order Placed Successfully'){
+        if(this.$page.props.flash.success == 'Order Placed Successfully. Check your email for details'){
                this.resetCart()
           }else{
           }

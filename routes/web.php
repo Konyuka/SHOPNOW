@@ -153,7 +153,7 @@ Route::get('orders/{order}', [OrderController::class, 'show'])
     ->name('order.view')
     ->middleware('auth');   
 
-Route::get('clinet/orders/{order}', [OrderController::class, 'clientShow'])
+Route::get('client/orders/{order}', [OrderController::class, 'clientShow'])
     ->name('client.order.view')
     ->middleware('auth');        
 

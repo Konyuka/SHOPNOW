@@ -87,8 +87,12 @@ class OrderController extends Controller
     public function clientShow(Order $order)
 
     {
-        // $order_id = $product->account_id; 
-        // $user_account = DB::table('users')->where('account_id', $account_id)->first();
+        $product = $order->products[0];
+        $productObject = (object) $product;
+        $account_id = $productObject->account_id; 
+        $user_account = DB::table('users')->where('account_id', $account_id)->first();
+        // return dd($productObject);
+        // return dd($user_account);
         // $account = DB::table('accounts')->where('id', $user_account->account_id)->first();
 
         return Inertia::render('Client/showOrder', [
@@ -104,6 +108,9 @@ class OrderController extends Controller
                 'userAccount' => $order->userAccount,
                 'created_at' => date_format($order->created_at,'H:i:s D M Y '),
                 'updated_at' => $order->updated_at,
+            ],
+            'vendorDetails' => [
+                $user_account
             ],
             // 'account' => $account,
             // 'vendor' => $user_account

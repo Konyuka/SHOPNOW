@@ -426,7 +426,17 @@ export default {
                     'question'
                 )
             }else{
-                this.form.post(this.route('order.store'))
+                if(this.$page.props.auth.user.owner != true ){
+
+                    this.form.post(this.route('order.store'))
+                }else{
+                    Swal.fire(
+                    'Opps!',
+                    'You Need a Client Account to Buy Products. Please Logout to Register',
+                    'question'
+                )
+                    
+                }
             }
         },
         login(){
